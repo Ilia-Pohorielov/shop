@@ -65,7 +65,7 @@ a:hover, a:focus, a:active {
   line-height: inherit; }
 
 .button {
-  padding: 25px 40px;
+  padding: 24px 40px;
   background: #69d5cc;
   font-weight: 500;
   font-size: 16px;
@@ -140,15 +140,73 @@ a:hover, a:focus, a:active {
     -webkit-transform: translateY(-50%) rotate(180deg);
             transform: translateY(-50%) rotate(180deg); }
 
+.scroll-anchor {
+  position: absolute;
+  left: 10%;
+  bottom: 0;
+  cursor: pointer; }
+  .scroll-anchor span {
+    display: block;
+    width: 1px;
+    height: 130px;
+    background: rgba(255, 255, 255, 0.5); }
+  .scroll-anchor:before {
+    content: '';
+    display: block;
+    width: 9px;
+    height: 9px;
+    background: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -4.5px;
+    -webkit-animation-name: animation-scroll;
+            animation-name: animation-scroll;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-direction: alternate;
+            animation-direction: alternate; }
+
 .title {
-  font-size: 180px; }
-  .title .sub-title {
-    font-size: 55px; }
+  font-size: 9.45vw;
+  line-height: 1;
+  color: white;
+  mix-blend-mode: difference;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  position: absolute;
+  top: 48.6%;
+  font-weight: 500; }
+  .title span {
+    display: block;
+    font-size: 2.9vw;
+    margin-top: -7px; }
+
+.title p {
+  text-rendering: optimizeLegibility; }
 
 .wrapper {
   max-width: 1610px;
   margin: 0 auto;
   padding: 0 40px; }
+
+@-webkit-keyframes animation-scroll {
+  0% {
+    top: 0; }
+  100% {
+    top: 90%; } }
+
+@keyframes animation-scroll {
+  0% {
+    top: 0; }
+  100% {
+    top: 90%; } }
 
 html {
   height: 100%;
@@ -166,7 +224,7 @@ body {
   font-family: "Gotham","Roboto", "Arial", sans-serif;
   font-size: 14px;
   font-weight: normal;
-  background: #ffffff;
+  background: #eef0f2;
   line-height: 20px;
   height: 100%;
   min-width: 320px;
@@ -337,7 +395,7 @@ header {
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.8);
     display: block;
-    padding: 11px 0; }
+    padding: 14px 0; }
     .top-header .contact-call .contact-item:hover, .top-header .contact-call .contact-item:active, .top-header .contact-call .contact-item:focus, .top-header .contact-info .contact-item:hover, .top-header .contact-info .contact-item:active, .top-header .contact-info .contact-item:focus {
       -webkit-box-shadow: inset 0 -3px 0 #69d5cc;
               box-shadow: inset 0 -3px 0 #69d5cc; }
@@ -347,7 +405,7 @@ header {
         -ms-flex-pack: end;
             justify-content: flex-end; }
     .top-header .contact-call ul .contact-item {
-      padding: 12px 0;
+      padding: 16px 0;
       line-height: normal; }
       .top-header .contact-call ul .contact-item:hover, .top-header .contact-call ul .contact-item:active, .top-header .contact-call ul .contact-item:focus {
         color: #69d5cc;
@@ -719,35 +777,92 @@ header {
       opacity: 1; }
 
 .main-slider {
+  overflow: hidden; }
+  .main-slider .main-slider-item {
+    height: 100vh; }
+  .main-slider .image-slide {
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 0;
+    width: 100%;
+    height: 100%; }
+    .main-slider .image-slide:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 451px;
+      background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.65)), to(transparent));
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.65) 0%, transparent 100%); }
+    .main-slider .image-slide:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      -webkit-box-shadow: inset 0 -40px 200px 290px rgba(0, 0, 0, 0.25);
+              box-shadow: inset 0 -40px 200px 290px rgba(0, 0, 0, 0.25); }
+  .main-slider .slick-dots {
+    bottom: 50px; }
+    .main-slider .slick-dots li[role="presentation"] {
+      width: auto; }
+      .main-slider .slick-dots li[role="presentation"] button {
+        width: 61px;
+        height: 2px;
+        background: rgba(255, 255, 255, 0.5);
+        position: relative;
+        padding: 0; }
+        .main-slider .slick-dots li[role="presentation"] button:before {
+          content: none; }
+        .main-slider .slick-dots li[role="presentation"] button:after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 2px;
+          width: 0;
+          background: #ffffff;
+          padding: 0; }
+      .main-slider .slick-dots li[role="presentation"].slick-active button:after {
+        -webkit-animation-name: animation-line-slide;
+                animation-name: animation-line-slide;
+        -webkit-animation-duration: 5s;
+                animation-duration: 5s;
+        -webkit-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
+        -webkit-animation-timing-function: linear;
+                animation-timing-function: linear; }
+
+.slick-dotted.slick-slider {
+  margin-bottom: 0; }
+
+.top-main {
   position: relative;
   height: 100vh;
   overflow: hidden; }
-  .main-slider:before {
-    content: '';
-    display: block;
+  .top-main .description-slide {
     position: absolute;
-    top: 0;
     left: 0;
-    right: 0;
-    height: 451px;
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.65)), to(transparent));
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.65) 0%, transparent 100%); }
-  .main-slider:after {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    -webkit-box-shadow: inset 0 -40px 200px 290px rgba(0, 0, 0, 0.25);
-            box-shadow: inset 0 -40px 200px 290px rgba(0, 0, 0, 0.25); }
-  .main-slider .description-slide {
-    position: absolute;
-    left: 50%;
     top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%); }
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%); }
+
+@-webkit-keyframes animation-line-slide {
+  0% {
+    width: 0; }
+  100% {
+    width: 100%; } }
+
+@keyframes animation-line-slide {
+  0% {
+    width: 0; }
+  100% {
+    width: 100%; } }
 
 footer {
   padding: 67px 0 34px;

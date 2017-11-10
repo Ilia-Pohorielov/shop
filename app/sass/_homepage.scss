@@ -1,14 +1,44 @@
 .main-slider {
+   overflow: hidden;
+  .main-slider-item {
+    height: 100vh;
+  }
+  .image-slide {
+    position: relative; background-repeat:no-repeat; background-size: cover; background-position: 0 0; width:100%; height: 100%;
+    &:before {
+      content: ''; display: block; position: absolute; top: 0; left: 0; right: 0; height: 451px; background: -moz-linear-gradient(top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%);
+      background: -webkit-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);
+      background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);
+    }
+    &:after {
+      content: ''; display: block; position: absolute; top: 0; bottom: 0; left: 0; right: 0; box-shadow: inset 0 -40px 200px 290px rgba(0, 0, 0, 0.25);
+    }
+  }
+  .slick-dots {
+    bottom: 50px;
+    li[role="presentation"] {
+      width: auto;
+      button {
+        width: 61px; height: 2px; background: rgba($color-white,.5); position: relative; padding: 0;
+        &:before { content: none; }
+        &:after {
+         content: ''; position: absolute; top:0; left:0; height: 2px; width: 0; background: $color-white; padding: 0;
+        }
+      }
+      &.slick-active {
+        button:after { animation-name: animation-line-slide; animation-duration: 5s; animation-fill-mode: forwards; animation-timing-function: linear; }
+      }
+    }
+  }
+}
+.slick-dotted.slick-slider { margin-bottom: 0; }
+.top-main {
   position: relative; height: 100vh; overflow: hidden;
-  &:before {
-    content: ''; display: block; position: absolute; top: 0; left: 0; right: 0; height: 451px; background: -moz-linear-gradient(top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%);
-    background: -webkit-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);
-    background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);
-  }
-  &:after {
-    content: ''; display: block; position: absolute; top: 0; bottom: 0; left: 0; right: 0; box-shadow: inset 0 -40px 200px 290px rgba(0, 0, 0, 0.25);
-  }
   .description-slide {
-    position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+    position: absolute; left: 0; top: 50%; transform: translateY(-50%);
   }
+}
+@keyframes animation-line-slide {
+  0% { width: 0; }
+  100% { width: 100%; }
 }
