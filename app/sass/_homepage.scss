@@ -33,9 +33,87 @@
 }
 .slick-dotted.slick-slider { margin-bottom: 0; }
 .top-main {
-  position: relative; height: 100vh; overflow: hidden;
+  position: relative; height: 100vh; overflow: hidden; margin-bottom: 70px;
   .description-slide {
     position: absolute; left: 0; top: 50%; transform: translateY(-50%);
+  }
+}
+.block-collection {
+  padding-left: 9.83%; margin-bottom: 69px;
+  .nav {
+    margin-bottom: 49px; border: none;
+    li {
+      margin-right: 14px;
+      a {
+        font-family: "Roboto","Gotham", "Arial", sans-serif; font-weight: bold; text-transform: uppercase; font-size: 18px; letter-spacing: 2.5px; padding: 7px 13px 3px; position: relative;
+        transition: color .3s ease; border-radius: 0; border: none;
+        &:hover, &:active, &:focus {
+          color: $color-blue-text;
+        }
+      }
+      &.active {
+        a {
+          background: $color-button-text; color: $color-white; font-weight: 500; border: none;
+          &:before {
+            content: ''; display: block; width: 0; height: 0; border-style: solid; border-width: 17px 17px 0 0; border-color: #393939 transparent transparent transparent;
+            position: absolute; bottom: -17px; left: 0;
+          }
+          &:hover, &:focus, &:active {
+            color: $color-white;
+          }
+        }
+      }
+    }
+  }
+  .slick-list {
+    padding-right: 12.8%;
+  }
+  .collection-item {
+    position: relative; margin-right: 1px;
+    .image {
+      display: block; position: relative; overflow: hidden; margin-bottom: 2px; height: 574px;
+      img { height: 100%; }
+      .favorite {
+        position: absolute; top: 10px; right: 8px; background: $color-white; width: 39px; height: 38px; border-radius: 50%;
+        &:before { content: '\0041'; display: block; font-size: 15px; font-family: "Glyphter"; position: absolute; left: 50%; top: 50%; transform: translate(-65%, -50%); transition: all .3s ease; }
+      }
+      .preview {
+        position: absolute; left: 0; right:0; bottom: 0; background: $color-blue-bg; padding: 18px 0 16px; text-align: center; font-weight: 500; color: $color-button-text; font-size: 15px;
+        transform: translateY(100%); transition: all .3s ease; z-index: 20;
+        span {
+          padding-left: 47px; display: inline-block; position: relative; margin-top: -16px;
+          &:before {
+            content: ''; display: block; @include sprite($preview-ico); position: absolute; top: 50%; left: 6px; margin-top: -16px;
+          }
+        }
+      }
+      &:before { content: ''; display: block; position: absolute; left: 0; right: 0; top: 0; bottom: 0; background: transparent; transition: all .3s ease; }
+      &:hover {
+        &:before { background: rgba($color-white, .2); }
+        .favorite:before { color: $color-light-blue; }
+        .preview {
+          transform: translateY(0);
+        }
+      }
+    }
+    .description {
+      padding: 26px 50px; text-align: center; font-size: 15px; line-height: normal; color: $color-black; background: $color-white;
+      .text {
+        margin-bottom: 16px;
+      }
+    }
+  }
+  .collection {
+    .slick-arrow {
+      width: 86px; height: 86px; background: rgba($color-white,.9); text-indent: -9999px; z-index: 25; border-radius: 50%; right: 59px; top: 40%;
+      &:before { content: ''; display: block; @include sprite($arrow-right-pages-ico); position: absolute; left: 50%; transform: translateX(-50%); }
+    }
+  }
+  .tab-content {
+    text-align: center; position: relative; padding-bottom: 96px;
+    .btn-collection {
+      position: absolute; bottom: 0; left: 36.7%;
+    }
   }
 }
 @keyframes animation-line-slide {

@@ -5,7 +5,14 @@ $(document).ready(function () {
     $('.main-slider').slick({
         arrows: false,
         dots: true,
-/*        autoplay: true,
-        autoplaySpeed: 5000*/
+        autoplay: true,
+        autoplaySpeed: 5000,
+        pauseOnHover: false
     });
+    $('.block-collection .collection').slick({
+        arrows: true,
+        slidesToShow: 4,
+        initialSlide: 0,
+        slidesToScroll: 1
+    })
 });
