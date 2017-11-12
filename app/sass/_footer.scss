@@ -24,16 +24,6 @@ footer { padding: 67px 0 34px; border-top: 1px solid $color-light-gray; }
     margin-left: 9.433333%;
   }
   .subscribe-block {
-    .subscribe-form {
-      position: relative; margin-bottom: 19px;
-      input { width: 100%; height: 45px; border: 1px solid $color-light-gray; padding-left: 20px; }
-      .btn-subscribe {
-        width: 58px; height: 45px; background: $color-button-text; position: absolute; top: 0; right: 0; z-index: 10;
-        &:before {
-          content: '\0051'; display: block; color: $color-white; font-size: 19px; position: absolute; top: 0; left: 50%; transform: translateX(-50%); line-height: 45px; font-family: "Glyphter";
-        }
-      }
-    }
     .social-link {
       ul {
         display: flex;
@@ -63,7 +53,7 @@ footer { padding: 67px 0 34px; border-top: 1px solid $color-light-gray; }
  .developers {
    text-align: right;
    a {
-     color: $color-text; transition: all .3s ease;
+     color: $color-blue-text; transition: all .3s ease;
      &:hover, &:focus, &:active {
        color: $color-black;
      }

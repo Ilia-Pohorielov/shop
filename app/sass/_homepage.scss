@@ -1,7 +1,13 @@
 .main-slider {
    overflow: hidden;
   .main-slider-item {
-    height: 100vh;
+    height: 100vh; position: relative;
+    .button {
+      position: absolute; bottom: 17.4%; left: 50%; transform: translateX(-50%);
+      &:hover, &:focus, &:active {
+        background: $color-white; color: $color-black;
+      }
+    }
   }
   .image-slide {
     position: relative; background-repeat:no-repeat; background-size: cover; background-position: 0 0; width:100%; height: 100%;
@@ -39,7 +45,7 @@
   }
 }
 .block-collection {
-  padding-left: 9.83%; margin-bottom: 69px;
+  margin-bottom: 69px;
   .nav {
     margin-bottom: 49px; border: none;
     li {
@@ -65,56 +71,118 @@
       }
     }
   }
-  .slick-list {
-    padding-right: 12.8%;
-  }
-  .collection-item {
-    position: relative; margin-right: 1px;
-    .image {
-      display: block; position: relative; overflow: hidden; margin-bottom: 2px; height: 574px;
-      img { height: 100%; }
-      .favorite {
-        position: absolute; top: 10px; right: 8px; background: $color-white; width: 39px; height: 38px; border-radius: 50%;
-        &:before { content: '\0041'; display: block; font-size: 15px; font-family: "Glyphter"; position: absolute; left: 50%; top: 50%; transform: translate(-65%, -50%); transition: all .3s ease; }
-      }
-      .preview {
-        position: absolute; left: 0; right:0; bottom: 0; background: $color-blue-bg; padding: 18px 0 16px; text-align: center; font-weight: 500; color: $color-button-text; font-size: 15px;
-        transform: translateY(100%); transition: all .3s ease; z-index: 20;
-        span {
-          padding-left: 47px; display: inline-block; position: relative; margin-top: -16px;
-          &:before {
-            content: ''; display: block; @include sprite($preview-ico); position: absolute; top: 50%; left: 6px; margin-top: -16px;
-          }
-        }
-      }
-      &:before { content: ''; display: block; position: absolute; left: 0; right: 0; top: 0; bottom: 0; background: transparent; transition: all .3s ease; }
-      &:hover {
-        &:before { background: rgba($color-white, .2); }
-        .favorite:before { color: $color-light-blue; }
-        .preview {
-          transform: translateY(0);
-        }
-      }
-    }
-    .description {
-      padding: 26px 50px; text-align: center; font-size: 15px; line-height: normal; color: $color-black; background: $color-white;
-      .text {
-        margin-bottom: 16px;
-      }
-    }
-  }
-  .collection {
-    .slick-arrow {
-      width: 86px; height: 86px; background: rgba($color-white,.9); text-indent: -9999px; z-index: 25; border-radius: 50%; right: 59px; top: 40%;
-      &:before { content: ''; display: block; @include sprite($arrow-right-pages-ico); position: absolute; left: 50%; transform: translateX(-50%); }
-    }
-  }
   .tab-content {
     text-align: center; position: relative; padding-bottom: 96px;
     .btn-collection {
       position: absolute; bottom: 0; left: 36.7%;
     }
   }
+}
+.collection-item {
+  position: relative; margin-right: 1px;
+  .image {
+    display: block; position: relative; overflow: hidden; margin-bottom: 2px; height: 574px;
+    img { height: 100%; }
+    .favorite {
+      position: absolute; top: 10px; right: 8px; background: $color-white; width: 39px; height: 38px; border-radius: 50%;
+      &:before { content: '\0041'; display: block; font-size: 15px; font-family: "Glyphter"; position: absolute; left: 50%; top: 50%; transform: translate(-65%, -50%); transition: all .3s ease; }
+    }
+    .preview {
+      position: absolute; left: 0; right:0; bottom: 0; background: $color-blue-bg; padding: 18px 0 16px; text-align: center; font-weight: 500; color: $color-button-text; font-size: 15px;
+      transform: translateY(100%); transition: all .3s ease; z-index: 20;
+      span {
+        padding-left: 47px; display: inline-block; position: relative; margin-top: -16px;
+        &:before {
+          content: ''; display: block; @include sprite($preview-ico); position: absolute; top: 50%; left: 6px; margin-top: -16px;
+        }
+      }
+    }
+    &:before { content: ''; display: block; position: absolute; left: 0; right: 0; top: 0; bottom: 0; background: transparent; transition: all .3s ease; }
+    &:hover, &:focus, &:active {
+      &:before { background: rgba($color-white, .2); }
+      .favorite:before { color: $color-light-blue; }
+      .preview {
+        transform: translateY(0);
+      }
+    }
+  }
+  .description {
+    padding: 26px 50px; text-align: center; font-size: 15px; line-height: normal; color: $color-black; background: $color-white;
+    .text {
+      margin-bottom: 16px;
+    }
+  }
+}
+.block-product {
+  margin-bottom: 100px; overflow: hidden;
+  .row {
+    margin: 0;
+  }
+  .left, .right {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .right {
+    padding-top: 14.34%;
+  }
+  .product-item {
+    position: relative; display: block;
+    img { width: 100%; }
+    &:before { content: ''; display: block; position: absolute; left: 0; right: 0; top: 0; bottom: 0; background: transparent; transition: all .3s ease; }
+    &:hover, &:focus, &:active {
+      &:before { background: rgba($color-white, .2); }
+      .title-product {
+        color: $color-button-text;
+        span {  background: $color-light-blue; }
+      }
+    }
+  }
+  .title-product {
+    position: absolute; top: 40px; letter-spacing: 3px; left: 42px;
+  }
+}
+.block-instagram {
+  position: relative; padding-top: 163px; margin-bottom: 69px;
+  .title-inst {
+    position: absolute; top: 0; left: 39.3%;
+  }
+  .collection-item {
+    .image {
+      height: auto;
+    }
+    .favorite {
+      right: 13px;
+      &:before { content: '\0061'; transform: translate(-50%, -50%); }
+    }
+    .name {
+      display: block; background: $color-white; position: absolute; left: 0; bottom: 0; font-family: "Roboto", "Gotham", "Arial", sans-serif; font-size: 15px; color: $color-button-text;
+      padding: 4px 10px;
+    }
+  }
+}
+.block-special-offer {
+  position: relative; margin-bottom: 119px;
+  .wrap-subscribe {
+    position: absolute; top: 23.2%; left: 47%;
+  }
+  .subscribe-form {
+    max-width: 689px; background: $color-gray-bg; padding: 47px 70px 60px;
+    input {
+      max-width: 490px; height: 60px;
+    }
+    .btn-subscribe {
+      width: 75px; height: 59px; right: 56px;
+      &:before { line-height: 59px; font-size: 22px; }
+    }
+  }
+}
+.description-page {
+  font-weight: 300; color: $color-text; font-size: 14px; margin-bottom: 63px;
+  .text {
+    margin-bottom: 24px; line-height: 21px;
+  }
+  .description-title { font-size: 30px; margin-bottom: 21px; }
+  .description-title-small { font-size: 25px; margin-bottom: 21px; }
 }
 @keyframes animation-line-slide {
   0% { width: 0; }

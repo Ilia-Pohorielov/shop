@@ -136,7 +136,6 @@ header {
         position: relative; font-weight: 500; color: rgba($color-white,.5); padding: 0 15px 0 30px; margin-right: 28px; text-transform: none;
         &:after, &:before { content: ''; display: block; font-family: 'Glyphter'; color: rgba($color-white,.5); position: absolute; top: 50%; transform: translateY(-50%);}
         &:before { content:'\0033'; left: 0; right: auto; font-size: 22px; }
-        &:after { content: '\0044'; font-size: 7px; right: 0; }
         &:hover, &:focus, &:active {
           box-shadow: none;
         }
@@ -173,7 +172,7 @@ header {
         }
       }
       .dropdown-menu {
-        width: auto; border: none; top: auto; right: 0; margin: 0; overflow-y: scroll; max-height: 367px;
+        width: auto; border: none; top: auto; right: 0; margin: 0; overflow: hidden; max-height: 367px;
         .dropdown-item {
           font-size: 15px; font-weight: normal; text-transform: none; cursor: pointer;
           &:hover, &:focus, &:active {

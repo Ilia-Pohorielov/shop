@@ -9,6 +9,7 @@ $color-blue-bg: #f2fdfc;
 $color-button-text: #393939;
 $color-gray: #cecdcd;
 $color-light-gray: #c6c6c6;
+$color-gray-bg: #eef0f2;
 a {
   &:hover, &:focus, &:active {
     color: $color-light-blue;
@@ -32,7 +33,7 @@ a {
 .dropdown {
   padding: 0 7px;
   .btn {
-    color: $color-light-blue; font-weight: 500; font-size: 12px; text-transform: uppercase; padding: 8px 14px 8px 0; transition: all .3s ease;
+    color: $color-light-blue; font-weight: 500; font-size: 12px; text-transform: uppercase; padding: 13px 14px 13px 0; transition: all .3s ease;
     &:before {
       content: '\0044'; font-family: 'Glyphter'; display: block; color: rgba($color-white, .8); position: absolute; right: 0;
       top: 50%; transform: translateY(-50%); font-size: 7px; transition: all .3s ease;
@@ -41,7 +42,7 @@ a {
       box-shadow: inset 0 -3px 0 $color-light-blue;
     }
   }
-  .dropdown-menu { top: 33px; left: 0; width: 195px; padding: 20px 0 0; border-radius: 0; box-shadow: 5px 5px 5px rgba($color-black, .07); border: none; }
+  .dropdown-menu { top: 44px; left: 0; width: 195px; padding: 20px 0 0; border-radius: 0; box-shadow: 5px 5px 5px rgba($color-black, .07); border: none; }
   .dropdown-item {
     display: block; font-weight: normal; font-size: 12px; padding: 12px 0 12px 15px; color: $color-button-text; text-transform: uppercase; line-height: normal;
     &:hover, &:active, &:focus {
@@ -68,9 +69,38 @@ a {
   span {
     display: block; font-size: 2.9vw; margin-top: -7px;
   }
+  p {
+    text-rendering: optimizeLegibility;
+  }
 }
-.title p {
-  text-rendering: optimizeLegibility;
+.title-block,
+.title-product {
+  display: flex; flex-direction: column; align-items: baseline; color: $color-white; font-family: "Roboto", "Gotham", "Arial", sans-serif; font-weight: 500; text-transform: uppercase; font-size: 20px; line-height: normal;
+  span {
+    display: block; background: $color-button-text; padding: 5px 11px 5px 10px; transition: all .3s ease;
+    &.sub-title {
+      margin-left: 40px; padding: 5px 5px 5px 10px;
+    }
+  }
+}
+.title-block {
+  font-size: 77px; margin-bottom: 80px; position: relative; left: 74px;
+  span {
+    padding: 0 5px 0 18px; letter-spacing: 11px;
+    &.sub-title {
+      font-size: 20px; padding: 5px 10px 5px 19px; letter-spacing: 3px; margin-left: 32px;
+    }
+  }
+}
+.title-inst {
+  text-align: center; text-transform: uppercase; display: flex; flex-direction: column; align-items: center;
+  span { display: inline-block; background: $color-button-text; color: $color-white; font-family: "Roboto", "Gotham", "Arial", sans-serif; font-weight: 500;  font-size: 35px; padding: 20px 15px; letter-spacing: 5.2px;}
+  .sub-title {
+    color: $color-button-text; display: inline-block; padding-right: 38px; position: relative; font-size: 20px; margin-top: 34px; letter-spacing: 1.6px;
+    &:after {
+      content: ''; display: block; @include sprite($inst-heart); position: absolute; top: 50%; right: 0; transform: translateY(-50%);
+    }
+  }
 }
 .price {
   display: inline-block; font-weight: bold; font-size: 18px; color: $color-black;
@@ -94,6 +124,52 @@ a {
 }
 .btn-collection {
   padding: 18px 35px 18px; font-size: 15px;
+}
+main {
+  position: relative;
+  &:before {
+    content: ''; display: block; position: absolute; left: 0; right: 0; height: 50%; background: $color-gray-bg;
+  }
+}
+.collection .slick-list {
+  padding-right: 12.8%;
+}
+.collection {
+  .slick-arrow {
+    width: 86px; height: 86px; background: rgba($color-white,.9); text-indent: -9999px; z-index: 25; border-radius: 50%; right: 59px; top: 40%;
+    &:before { content: ''; display: block; @include sprite($arrow-right-pages-ico); position: absolute; left: 50%; transform: translateX(-50%); }
+  }
+}
+.padding-fix {
+  padding-left: 9.83%;
+}
+.subscribe-form {
+  position: relative; margin-bottom: 19px;
+  .subscribe-title {
+    font-size: 30px; color: $color-button-text; margin-bottom: 32px; line-height: normal;
+  }
+  form { position: relative; }
+  input { width: 100%; height: 45px; border: 1px solid $color-light-gray; padding-left: 20px; }
+  .btn-subscribe {
+    width: 58px; height: 45px; background: $color-button-text; position: absolute; top: 0; right: 0; z-index: 10; transition: all .3s ease;
+    &:before {
+      content: '\0051'; display: block; color: $color-white; font-size: 19px; position: absolute; top: 0; left: 50%; transform: translateX(-50%); line-height: 45px; font-family: "Glyphter";
+    }
+    &:hover, &:focus, &:active {
+      background: $color-blue-text;
+    }
+  }
+}
+.mCSB_scrollTools  {
+  .mCSB_draggerRail {
+    background: none;
+  }
+  .mCSB_dragger .mCSB_dragger_bar {
+    background: rgba($color-button-text,.2); width: 4px; height: 73px; border-radius: 2px;
+  }
+  .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+    background: rgba($color-button-text,.2);
+  }
 }
 @keyframes animation-scroll {
   0% { top: 0; }

@@ -110,14 +110,7 @@
                 <div class="personal-area col-lg-4">
                     <div class="user-info">
                         <div class="user-login">
-                            <div class="dropdown">
-                                <button class="btn btn-secondary dropdown-toggle user-login-btn" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Войти
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">Регситрация</a>
-                                </div>
-                            </div>
+                            <a href="#" class="user-login-btn">Войти</a>
                         </div>
                         <a href="#" class="wishlist"></a>
                     </div>
@@ -133,13 +126,22 @@
                         <button class="btn btn-secondary dropdown-toggle user-login-btn" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Вся продукция
                         </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <div class="dropdown-menu js-scroll" aria-labelledby="dropdownMenuButton">
+                            <span class="dropdown-item">Новинки</span>
                             <span class="dropdown-item">Новинки</span>
                             <span class="dropdown-item">Сумки и кошельки</span>
+                            <span class="dropdown-item">Сумки и кошельки</span>
+                            <span class="dropdown-item">Ремни</span>
                             <span class="dropdown-item">Ремни</span>
                             <span class="dropdown-item">Блузы</span>
+                            <span class="dropdown-item">Блузы</span>
+                            <span class="dropdown-item">Бижутерия</span>
                             <span class="dropdown-item">Бижутерия</span>
                             <span class="dropdown-item">Шапки, шарфи, перчатки</span>
+                            <span class="dropdown-item">Шапки, шарфи, перчатки</span>
+                            <span class="dropdown-item">Шапки, шарфи, перчатки</span>
+                            <span class="dropdown-item">Летний стиль</span>
+                            <span class="dropdown-item">Летний стиль</span>
                             <span class="dropdown-item">Летний стиль</span>
                         </div>
                     </div>
@@ -149,10 +151,9 @@
     </header>
     <main>
         <div class="top-main">
-            <div class="main-slider">
+            <div class="main-slider js-slider">
                 <div class="main-slider-item">
                     <div class="image-slide" style="background: url('assets/images/slider-img.jpg')">
-<!--                        <img src="assets/images/slider-img.jpg" alt="#" />-->
                         <div class="title">
                             <p>bafimoda’18</p>
                             <span class="sub-title">осень - зима 17-18</span>
@@ -162,25 +163,34 @@
                 </div>
                 <div class="main-slider-item">
                     <div class="image-slide" style="background: url('assets/images/slider-img.jpg')">
-                        <!--<img src="assets/images/slider-img.jpg" alt="#" />-->
+                        <div class="title">
+                            <p>bafimoda’18</p>
+                            <span class="sub-title">осень - зима 17-18</span>
+                        </div>
                     </div>
-                    <div class="description-slide">
-                        <div class="title">bafimoda’18 <span class="sub-title">осень - зима 17-18</span></div>
-                        <a href="#" class="button">Смотреть коллекцию</a>
+                    <a href="#" class="button">Смотреть коллекцию</a>
+                </div>
+                <div class="main-slider-item">
+                    <div class="image-slide" style="background: url('assets/images/slider-img.jpg')">
+                        <div class="title">
+                            <p>bafimoda’18</p>
+                            <span class="sub-title">осень - зима 17-18</span>
+                        </div>
                     </div>
+                    <a href="#" class="button">Смотреть коллекцию</a>
                 </div>
             </div>
             <div class="scroll-anchor">
                 <span></span>
             </div>
         </div>
-        <section class="block-collection">
+        <section class="block-collection padding-fix">
             <ul class="nav nav-tabs">
                 <li class="active"><a data-toggle="tab" href="#new-collection">Новая коллекция</a></li>
                 <li><a data-toggle="tab" href="#top-sales">Топ продаж</a></li>
             </ul>
             <div class="tab-content">
-                <div id="new-collection" class="tab-pane fade in active collection">
+                <div id="new-collection" class="tab-pane fade in active collection js-slider">
                     <div class="collection-item">
                         <a href="#" class="image">
                             <img src="assets/images/col-1.jpg" alt="#">
@@ -258,7 +268,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="top-sales" class="tab-pane fade collection">
+                <div id="top-sales" class="tab-pane fade collection js-slider">
                     <div class="collection-item">
                         <a href="#" class="image">
                             <img src="assets/images/col-1.jpg" alt="#">
@@ -339,6 +349,129 @@
                 <a href="#" class="button btn-collection">Смотреть всю коллекцию</a>
             </div>
         </section>
+        <section class="block-product js-animate-parallax">
+            <div class="wrapper container-fluid">
+                <div class="row">
+                    <div class="left col-lg-6 col-md-6 col-xs-12">
+                        <a href="#" class="product-item">
+                            <div class="image">
+                                <img src="assets/images/pr-1.jpg" alt="#">
+                                <div class="title-product">
+                                    <span>Платья</span>
+                                    <span class="sub-title">от bafimoda</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="product-item">
+                            <div class="image">
+                                <img src="assets/images/pr-3.jpg" alt="#">
+                                <div class="title-product">
+                                    <span>Юбки</span>
+                                    <span class="sub-title">от bafimoda</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="right col-lg-6 col-md-6 col-xs-12">
+                        <a href="#" class="product-item">
+                            <div class="image">
+                                <img src="assets/images/pr-2.jpg" alt="#">
+                                <div class="title-product">
+                                    <span>блузы</span>
+                                    <span class="sub-title">от bafimoda</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="product-item">
+                            <div class="image">
+                                <img src="assets/images/pr-4.jpg" alt="#">
+                                <div class="title-product">
+                                    <span>куртки</span>
+                                    <span class="sub-title">от bafimoda</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="block-instagram padding-fix">
+            <div class="title-inst">
+                <span>#bafimoda</span>
+                <b class="sub-title">Любовь с первого взгляда</b>
+            </div>
+            <div class="collection instagram js-slider">
+                <div class="collection-item">
+                    <a href="#" class="image">
+                        <img src="assets/images/in-1.jpg" alt="#">
+                        <span class="favorite"></span>
+                        <span class="name">@juliabeauty</span>
+                    </a>
+                </div>
+                <div class="collection-item">
+                    <a href="#" class="image">
+                        <img src="assets/images/in-2.jpg" alt="#">
+                        <span class="favorite"></span>
+                        <span class="name">@alisawonderland</span>
+                    </a>
+                </div>
+                <div class="collection-item">
+                    <a href="#" class="image">
+                        <img src="assets/images/in-3.jpg" alt="#">
+                        <span class="favorite"></span>
+                        <span class="name">@marinastasya</span>
+                    </a>
+                </div>
+                <div class="collection-item">
+                    <a href="#" class="image">
+                        <img src="assets/images/in-3.jpg" alt="#">
+                        <span class="favorite"></span>
+                        <span class="name">@oksanamira</span>
+                    </a>
+                </div>
+                <div class="collection-item">
+                    <a href="#" class="image">
+                        <img src="assets/images/in-2.jpg" alt="#">
+                        <span class="favorite"></span>
+                        <span class="name">@juliabeauty</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="block-special-offer">
+            <div class="bg-image">
+                <img src="assets/images/bg-offer.jpg" alt="#">
+            </div>
+            <div class="wrap-subscribe">
+                <div class="title-block">
+                    <span>-30%</span>
+                    <span class="sub-title">на новую коллекцию</span>
+                </div>
+                <div class="subscribe-form">
+                    <div class="subscribe-title">
+                        Следите за специальными предложениями
+                    </div>
+                    <form action="/">
+                        <input type="text" placeholder="Email">
+                        <button class="btn btn-subscribe"></button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <div class="description-page">
+            <div class="wrapper">
+                <div class="text">
+                    <div class="description-title">BafiModa - это стильно и выгодно!</div>
+                    <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.</p>
+                    <p>Многие думают, что Lorem Ipsum - взятый с потолка псевдо-латинский набор слов, но это не совсем так. Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более двух тысячелетий назад. Ричард МакКлинток, профессор латыни из колледжа Hampden-Sydney, штат Вирджиния, взял одно из самых странных слов в Lorem Ipsum, "consectetur".</p>
+                </div>
+                <div class="text">
+                    <div class="description-title-small">Лучшее предложение только для вас!</div>
+                    <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.</p>
+                    <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.</p>
+                </div>
+            </div>
+        </div>
     </main>
     <footer>
         <div class="wrapper top-footer container-fluid">
