@@ -1,4 +1,5 @@
 $color-text: #8d8d8d;
+$color-text-light: #969696;
 $color-white: #ffffff;
 $color-black: #000000;
 $color-light-black: #1a1a1a;
@@ -15,6 +16,72 @@ a {
     color: $color-light-blue;
   }
 }
+
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  ::-moz-placeholder          {@content}
+  :-moz-placeholder           {@content}
+  :-ms-input-placeholder      {@content}
+}
+
+.wrapper {
+  max-width: 1610px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+main {
+  position: relative; flex: 1;
+  &:before {
+    content: ''; display: block; position: absolute; left: 0; right: 0; height: 50%; background: $color-gray-bg;
+  }
+}
+
+.breadcrumbs {
+  color: $color-button-text; margin-bottom: 11px; text-align: left;
+  ul {
+    font-size: 0;
+    li {
+      padding-right: 9px; margin-right: 5px; position: relative; display: inline-block; font-size: 12px; letter-spacing: -0.4px;
+      a { color: $color-button-text; font-size: 12px; }
+      &:before {
+        content: '-'; display: block; position: absolute; right: 0;
+      }
+      &:last-child { margin: 0; padding: 0; }
+    }
+  }
+}
+
+.slick-dots {
+  bottom: 50px;
+  li[role="presentation"] {
+    width: auto;
+    button {
+      width: 61px; height: 2px; background: rgba($color-white,.5); position: relative; padding: 0;
+      &:before { content: none; }
+      &:after {
+        content: ''; position: absolute; top:0; left:0; height: 2px; width: 0; background: $color-white; padding: 0;
+      }
+    }
+    &.slick-active {
+      button:after { animation-name: animation-line-slide; animation-duration: 5s; animation-fill-mode: forwards; animation-timing-function: linear; }
+    }
+  }
+}
+
+.mCSB_scrollTools  {
+  .mCSB_draggerRail {
+    background: none;
+  }
+  .mCSB_dragger .mCSB_dragger_bar {
+    background: rgba($color-button-text,.2); width: 4px; height: 73px; border-radius: 2px;
+  }
+  .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+    background: rgba($color-button-text,.2);
+  }
+}
+
+/* BEGIN BUTTON STYLE*/
 .btn {
   background: none; padding: 0; border: none; border-radius: 0; line-height: inherit; }
 .button {
@@ -25,11 +92,46 @@ a {
   }
 }
 .btn-cart {
-  background: rgba($color-white, .15); color: rgba($color-white, .5); padding: 13px 15px; transition: all .3s ease;
+  background: rgba($color-white, .15); color: rgba($color-white, .5); padding: 13px 15px; transition: all .3s ease; position: relative;
+  &.btn-cart-ico {
+    font-weight: 500; font-size: 13px; padding: 12px 30px 12px 47px; transition: all .3s ease;
+    &:before {
+      content: '\0048'; display: block; font-family: "Glyphter"; color: $color-white; font-size: 18px; position: absolute; left: 19px; top: 8px; transition: all .3s ease;
+    }
+    &:hover, &:focus, &:active {
+      color: $color-button-text;
+      &:before { color: $color-button-text; }
+    }
+  }
   &:hover, &:focus, &:active {
     color: $color-blue-text;
   }
 }
+.btn-collection {
+  padding: 18px 35px 18px; font-size: 15px;
+}
+.scroll-anchor {
+  position: absolute; left: 9.8%; bottom: 0; cursor: pointer;
+  span {
+    display:block; width: 1px; height: 130px; background: rgba($color-white,.5);
+  }
+  &:before {
+    content: ''; display: block; width: 9px; height: 9px; background: $color-white; border-radius: 50%; position: absolute; top:0; left: 50%; margin-left: -4.5px;
+    animation-name: animation-scroll; animation-duration: 2s; animation-iteration-count: infinite; animation-timing-function: linear; animation-direction: alternate;
+  }
+}
+.btn-primary {
+  display:inline-block; background: $color-button-text; color: $color-white; font-size: 13px; font-weight: 500; padding: 13px 77px 13px 15px; position: relative; transition: all .3s ease; width: 230px; text-align: left;
+  &:before { content: ''; display: block; position: absolute; right: 15px; top: 50%; transform: translateY(-50%); @include sprite($lock-ico); transition: all .3s ease; }
+  &:after { content: ''; display: block; position: absolute; left: 0; right: 0; top: 0; bottom: 0; background: transparent; }
+  &:hover, &:focus, &:active {
+    background: $color-button-text; border: none;
+    &:after { background: rgba($color-white, .2); }
+  }
+}
+/* END BUTTON STYLE*/
+
+/* BEGIN DROPDOWN STYLE*/
 .dropdown {
   padding: 0 7px;
   .btn {
@@ -54,16 +156,9 @@ a {
     .btn:before { transform: translateY(-50%) rotate(180deg); }
   }
 }
-.scroll-anchor {
-  position: absolute; left: 9.8%; bottom: 0; cursor: pointer;
-  span {
-    display:block; width: 1px; height: 130px; background: rgba($color-white,.5);
-  }
-  &:before {
-    content: ''; display: block; width: 9px; height: 9px; background: $color-white; border-radius: 50%; position: absolute; top:0; left: 50%; margin-left: -4.5px;
-    animation-name: animation-scroll; animation-duration: 2s; animation-iteration-count: infinite; animation-timing-function: linear; animation-direction: alternate;
-  }
-}
+/* END DROPDOWN STYLE*/
+
+/* BEGIN TITLE STYLE*/
 .title {
   font-size: 9.45vw; line-height: 1; color: white; mix-blend-mode: difference; width: 100%; text-align: center; text-transform: uppercase; position: absolute; top: 48.6%; font-weight: 500;
   span {
@@ -102,6 +197,9 @@ a {
     }
   }
 }
+.title-form {
+  font-size: 30px; color: $color-button-text; text-align: left; margin-bottom: 39px;
+}
 .price {
   display: inline-block; font-weight: bold; font-size: 18px; color: $color-black;
 }
@@ -111,26 +209,9 @@ a {
     content: ''; display: block; position: absolute; bottom: 7px; left: 0; right: 0; height: 1px; background: rgba($color-black, .7);
   }
 }
-@mixin placeholder {
-  ::-webkit-input-placeholder {@content}
-  ::-moz-placeholder          {@content}
-  :-moz-placeholder           {@content}
-  :-ms-input-placeholder      {@content}
-}
-.wrapper {
-  max-width: 1610px;
-  margin: 0 auto;
-  padding: 0 40px;
-}
-.btn-collection {
-  padding: 18px 35px 18px; font-size: 15px;
-}
-main {
-  position: relative;
-  &:before {
-    content: ''; display: block; position: absolute; left: 0; right: 0; height: 50%; background: $color-gray-bg;
-  }
-}
+/* END TITLE STYLE*/
+
+/* BEGIN ITEM ARE COMMON STYLE*/
 .collection .slick-list {
   padding-right: 12.8%;
 }
@@ -138,6 +219,7 @@ main {
   .slick-arrow {
     width: 86px; height: 86px; background: rgba($color-white,.9); text-indent: -9999px; z-index: 25; border-radius: 50%; right: 59px; top: 40%;
     &:before { content: ''; display: block; @include sprite($arrow-right-pages-ico); position: absolute; left: 50%; transform: translateX(-50%); }
+    &.slick-prev[aria-disabled="true"] { display: none!important; }
   }
 }
 .padding-fix {
@@ -160,17 +242,28 @@ main {
     }
   }
 }
-.mCSB_scrollTools  {
-  .mCSB_draggerRail {
-    background: none;
+
+/* END ITEM ARE COMMON STYLE*/
+
+/* BEGIN FORM STYLE*/
+.form-group {
+  .control-label {
+    font-weight: 500; font-size: 13px; color: $color-button-text; margin-bottom: 4px;
   }
-  .mCSB_dragger .mCSB_dragger_bar {
-    background: rgba($color-button-text,.2); width: 4px; height: 73px; border-radius: 2px;
-  }
-  .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
-    background: rgba($color-button-text,.2);
+  .input-group {
+    width: 100%; margin-bottom: 15px;
+    input { height: 45px; border: 1px solid $color-gray; }
+    .error-text { display: none; position: absolute; top: 0; bottom: 0; left: 13px; right: 0; line-height: 45px; color: #e5231f; z-index: 10; font-size: 12px;}
+    &.has-error {
+      .form-control {
+        border-color: #e5231f;
+        &:focus { box-shadow: none; }
+      }
+      .error-text { display: block; }
+    }
   }
 }
+/* BEGIN FORM STYLE*/
 @keyframes animation-scroll {
   0% { top: 0; }
   100% { top: 90%; }

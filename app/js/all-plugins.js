@@ -6,3 +6,4 @@
 //= ScrollMagic.min.js
 //= animation.gsap.min.js
 //= jquery.mCustomScrollbar.concat.min.js
+//= validate.js

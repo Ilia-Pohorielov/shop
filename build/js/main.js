@@ -13,13 +13,21 @@ $(document).ready(function () {
         arrows: true,
         slidesToShow: 4,
         initialSlide: 0,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        infinite: false
     });
     $('.block-instagram .js-slider').slick({
         arrows: false,
         slidesToShow: 3,
         initialSlide: 0,
         slidesToScroll: 1
+    });
+    $('.js-slider').slick({
+        arrows: false,
+        dots: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        pauseOnHover: false
     });
     var controller = new ScrollMagic.Controller();
     new ScrollMagic.Scene({
@@ -39,4 +47,9 @@ $(document).ready(function () {
         .addTo(controller);
 
     $(".search-block .js-scroll").mCustomScrollbar();
+
+    $('.js_validate [type="submit"]').on("click", function(){
+        return validate($(this).parents(".js_validate"));
+    });
+
 });

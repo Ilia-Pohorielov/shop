@@ -141,9 +141,12 @@ header {
         }
       }
       .wishlist {
-        display: block; margin-right: 35px;
-        &:before { content: '\0076'; font-family: 'Glyphter'; font-size: 20px; color: rgba($color-white,.5); transition: all .3s ease; }
+        display: block; margin-right: 35px; padding-left: 30px; position: relative; color: rgba($color-white,.5); font-size: 12px;
+        &:before {
+          content: '\0076'; font-family: 'Glyphter'; font-size: 20px; color: rgba($color-white,.5); transition: all .3s ease; position: absolute; left: 0; top: 50%; transform: translateY(-50%);
+        }
         &:hover, &:focus, &:active {
+          color: $color-blue-text;
           &:before { color: $color-blue-text; }
         }
       }
@@ -184,6 +187,37 @@ header {
     }
     &.open {
       visibility: visible; transition: all .3s linear; transform: translateY(0); opacity: 1;
+    }
+  }
+}
+.header-sign {
+  position: static; background: #f0f2f3;
+  .personal-area .user-info .user-login-btn,
+  .personal-area .user-info .user-login-btn:after,
+  .personal-area .user-info .user-login-btn:before,
+  .personal-area .user-info .wishlist:before,
+  .personal-area .user-info .wishlist,
+  .header-search .btn-search,
+  .main-menu .menu-item,
+  .main-menu .menu-item a {
+    color: $color-button-text;
+  }
+  .main-menu .sub-menu .hamburger-menu span {
+    background: $color-button-text;
+  }
+  .bottom-header {
+    border-bottom: 1px solid rgba($color-button-text, 0.1);
+  }
+  .btn-cart {
+    border: 1px solid $color-button-text; color: $color-button-text;
+    &.btn-cart-ico {
+      &:before {
+        color: $color-button-text;
+      }
+      &:hover, &:focus, &:active {
+        background: $color-button-text; color: $color-white;
+        &:before { color: $color-white; }
+      }
     }
   }
 }
