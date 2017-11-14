@@ -25,9 +25,9 @@ a {
 }
 
 .wrapper {
-  max-width: 1610px;
+  max-width: 1545px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 15px;
 }
 
 main {
@@ -83,7 +83,8 @@ main {
 
 /* BEGIN BUTTON STYLE*/
 .btn {
-  background: none; padding: 0; border: none; border-radius: 0; line-height: inherit; }
+  background: none; padding: 0; border: none; border-radius: 0; line-height: inherit;
+}
 .button {
   padding: 24px 40px; background: $color-light-blue; font-weight: 500; font-size: 16px; color: $color-button-text; transition: all .3s ease;
   &:hover, &:focus, &:active {
@@ -128,6 +129,12 @@ main {
     background: $color-button-text; border: none;
     &:after { background: rgba($color-white, .2); }
   }
+}
+.btn-filter {
+  display: inline-block; width: 100%; max-width: 321px; border: 1px solid $color-gray-bg; text-align: center; font-weight: 500; padding: 11px 0 11px;
+}
+.btn-product {
+  display: inline-block; width: 100%; max-width: 270px; padding: 17px 0; border: 1px solid $color-black; color: $color-black; text-align: center; letter-spacing: 0.6px;
 }
 /* END BUTTON STYLE*/
 
@@ -197,8 +204,8 @@ main {
     }
   }
 }
-.title-form {
-  font-size: 30px; color: $color-button-text; text-align: left; margin-bottom: 39px;
+.title-page {
+  font-size: 30px; color: $color-button-text; text-align: left; margin-bottom: 43px;
 }
 .price {
   display: inline-block; font-weight: bold; font-size: 18px; color: $color-black;
@@ -244,6 +251,36 @@ main {
 }
 
 /* END ITEM ARE COMMON STYLE*/
+
+/*BEGIN PANEL STYLE*/
+.panel.panel-default {
+  border: none; border-radius: 0; background: transparent; box-shadow: none; margin-bottom: 0;
+  > .panel-heading {
+    background: transparent; border: none; border-radius: 0; color: $color-black; padding: 0;
+    .accordion-toggle {
+      position: relative;
+      &:before {
+        content: '+'; position: absolute; right: 20px; top: 50%; transform: translateY(-50%); font-size: 20px; font-weight: 300; color: $color-button-text;
+      }
+      &[aria-expanded="true"]:before {
+        content: '-';
+      }
+    }
+  }
+  .panel-collapse {
+    margin-bottom: 0; border-bottom: 1px solid $color-gray-bg;
+    ul {
+      padding: 13px 22px 20px;
+      li {
+        padding-left: 16px; position: relative; margin-bottom: 5px;
+        &:before {
+          content: '\0075'; font-family: "Glyphter"; display: block; position: absolute; top: 50%; left: 0; transform: translateY(-50%); font-size: 6px; color: $color-black;
+        }
+      }
+    }
+  }
+}
+/*END PANEL STYLE*/
 
 /* BEGIN FORM STYLE*/
 .form-group {

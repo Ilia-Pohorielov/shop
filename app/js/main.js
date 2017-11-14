@@ -52,4 +52,46 @@ $(document).ready(function () {
         return validate($(this).parents(".js_validate"));
     });
 
+    if (document.querySelector('.range-slider') !== null) {
+        var range = document.getElementById('range'),
+            _thisMin, _thisMax, _thisMinCur, _thisMaxCur;
+
+        _thisMin = parseInt(range.getAttribute('data-min'));
+        _thisMax = parseInt(range.getAttribute('data-max'));
+        _thisMinCur = parseInt(range.getAttribute('data-slider-min'));
+        _thisMaxCur = parseInt(range.getAttribute('data-slider-max'));
+        if (!_thisMaxCur) {
+            _thisMinCur = _thisMin;
+        }
+        if (!_thisMaxCur) {
+            _thisMaxCur = _thisMax;
+        }
+        if(_thisMax != 0 && _thisMin != 0) {
+            noUiSlider.create(range, {
+                start: [_thisMinCur, _thisMaxCur],
+                connect: true,
+                step: 1,
+                range: {
+                    'min': _thisMin,
+                    'max': _thisMax
+                },
+            });
+
+            var thisInputFrom = $(range).parents('.range-slider').find('.js_from'),
+                thisInputTo = $(range).parents('.range-slider').find('.js_to');
+            range.noUiSlider.on('update', function (values, handle) {
+                var value = parseInt(values[handle]);
+                if (handle) {
+                    thisInputTo.val(value);
+                } else {
+                    thisInputFrom.val(value);
+                }
+            });
+
+            var sliderIt = range;
+            range.noUiSlider.on('end', function (values, handle) {
+                getCatalog();
+            });
+        }
+    }
 });

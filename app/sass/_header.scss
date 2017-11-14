@@ -119,7 +119,7 @@ header {
     }
   }
   .personal-area {
-    display: flex; justify-content: flex-end; align-items: center; font-size: 13px; line-height: normal; width: 35%;
+    display: flex; justify-content: flex-end; align-items: center; font-size: 13px; line-height: normal; width: 35%; padding-right: 0;
     .user-info {
       display: flex; align-items: center;
       .user-login {
@@ -133,7 +133,7 @@ header {
       .dropdown.open .user-login-btn { box-shadow: none; }
       .dropdown-item { text-transform: none; }
       .user-login-btn {
-        position: relative; font-weight: 500; color: rgba($color-white,.5); padding: 0 15px 0 30px; margin-right: 28px; text-transform: none;
+        position: relative; font-weight: 500; color: rgba($color-white,.5); padding: 0 15px 0 30px; margin-right: 19px; text-transform: none; font-size: 13px;
         &:after, &:before { content: ''; display: block; font-family: 'Glyphter'; color: rgba($color-white,.5); position: absolute; top: 50%; transform: translateY(-50%);}
         &:before { content:'\0033'; left: 0; right: auto; font-size: 22px; }
         &:hover, &:focus, &:active {
@@ -141,13 +141,16 @@ header {
         }
       }
       .wishlist {
-        display: block; margin-right: 35px; padding-left: 30px; position: relative; color: rgba($color-white,.5); font-size: 12px;
+        display: block; margin-right: 30px; padding-left: 30px; position: relative; color: rgba($color-white,.5); font-size: 12px;
         &:before {
           content: '\0076'; font-family: 'Glyphter'; font-size: 20px; color: rgba($color-white,.5); transition: all .3s ease; position: absolute; left: 0; top: 50%; transform: translateY(-50%);
         }
         &:hover, &:focus, &:active {
           color: $color-blue-text;
           &:before { color: $color-blue-text; }
+        }
+        &.active:before {
+          color: $color-blue-text;
         }
       }
     }
@@ -190,7 +193,7 @@ header {
     }
   }
 }
-.header-sign {
+.header-inner {
   position: static; background: #f0f2f3;
   .personal-area .user-info .user-login-btn,
   .personal-area .user-info .user-login-btn:after,
@@ -217,6 +220,34 @@ header {
       &:hover, &:focus, &:active {
         background: $color-button-text; color: $color-white;
         &:before { color: $color-white; }
+      }
+    }
+  }
+  .user-login {
+    display: flex; align-items: center; position: relative;
+    .user-image {
+      width: 44px; height: 44px; border-radius: 50%; overflow: hidden; background-repeat:no-repeat; background-position: 50% 0;
+    }
+    .dropdown {
+      position: static;
+      .dropdown-menu {
+        top: 72px;
+        .logout {
+          border-top: 1px solid $color-gray-bg; position: relative;
+          &:after {
+            content: ''; display: block; position: absolute; top: 0; right: 0;
+          }
+        }
+      }
+      .user-login-btn {
+        padding: 0 15px 0 0;
+        &:before { content: none; }
+        &:after { content: '\0044'; right: 0; font-size: 7px; }
+      }
+      &.open {
+        .dropdown-menu {
+          box-shadow: 0 -3px 0 $color-blue-text;
+        }
       }
     }
   }
