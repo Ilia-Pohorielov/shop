@@ -14,15 +14,53 @@ $(document).ready(function () {
         slidesToShow: 4,
         initialSlide: 0,
         slidesToScroll: 1,
-        infinite: false
+        infinite: false,
+        responsive: [
+            {
+                breakpoint: 1320,
+                settings: {
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 2,
+                    arrows: false
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 1,
+                    arrows: false
+                }
+            }
+        ]
     });
     $('.block-instagram .js-slider').slick({
         arrows: false,
         slidesToShow: 3,
         initialSlide: 0,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 2,
+                    arrows: false
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 1,
+                    arrows: false
+                }
+            }
+        ]
     });
-    $('.js-slider').slick({
+    $('.slider.js-slider').slick({
         arrows: false,
         dots: true,
         autoplay: true,
@@ -30,22 +68,23 @@ $(document).ready(function () {
         pauseOnHover: false
     });
     var controller = new ScrollMagic.Controller();
-    new ScrollMagic.Scene({
-        triggerElement: ".js-animate-parallax",
-        triggerHook: .8,
-        duration: "500%"
-    })
-        .setTween(".js-animate-parallax .right", {y: "-50%", ease: Power0.easeNone})
-        .addTo(controller);
+    if ($(window).width() >= '991') {
+        new ScrollMagic.Scene({
+            triggerElement: ".js-animate-parallax",
+            triggerHook: .8,
+            duration: "500%"
+        })
+            .setTween(".js-animate-parallax .right", {y: "-50%", ease: Power0.easeNone})
+            .addTo(controller);
 
-    new ScrollMagic.Scene({
-        triggerElement: ".js-animate-parallax",
-        triggerHook: .8,
-        duration: "500%"
-    })
-        .setTween(".js-animate-parallax .left", {y: "50%", ease: Power0.easeNone})
-        .addTo(controller);
-
+        new ScrollMagic.Scene({
+            triggerElement: ".js-animate-parallax",
+            triggerHook: .8,
+            duration: "500%"
+        })
+            .setTween(".js-animate-parallax .left", {y: "50%", ease: Power0.easeNone})
+            .addTo(controller);
+    }
     $(".search-block .js-scroll").mCustomScrollbar();
 
     $('.js_validate [type="submit"]').on("click", function(){
@@ -74,9 +113,8 @@ $(document).ready(function () {
                 range: {
                     'min': _thisMin,
                     'max': _thisMax
-                },
+                }
             });
-
             var thisInputFrom = $(range).parents('.range-slider').find('.js_from'),
                 thisInputTo = $(range).parents('.range-slider').find('.js_to');
             range.noUiSlider.on('update', function (values, handle) {
@@ -87,11 +125,24 @@ $(document).ready(function () {
                     thisInputFrom.val(value);
                 }
             });
-
             var sliderIt = range;
             range.noUiSlider.on('end', function (values, handle) {
                 getCatalog();
             });
         }
+    }
+
+   $('.js-mobile-menu').on('click', function () {
+       $('.header-menu').toggleClass('open');
+       $('.search-block').removeClass('open');
+   });
+    $('.js-sub-menu').on('click', function () {
+        $('.sub-menu-category').toggleClass('open');
+    });
+    if ($(window).width() <= '1200') {
+        $('.js-mobile-scroll').mCustomScrollbar();
+        $('.js-search').on('click', function () {
+           $('.header-menu').removeClass('open');
+        });
     }
 });

@@ -47,6 +47,36 @@ footer { padding: 67px 0 34px; border-top: 1px solid $color-light-gray; }
       }
     }
   }
+  @media (max-width: 1555px) {
+    .category-clothes {
+      width: 240px;
+    }
+    .info-block {
+      margin-left: 3.333333%;
+    }
+  }
+  @media (max-width: 1125px) {
+    .subscribe-block {
+      margin-left: 9.666667%;
+    }
+    .info-block {
+      width: 36.333333%;
+    }
+  }
+  @media (max-width: 991px) {
+    .info-block {
+      margin-bottom: 20px; width: 50%;
+    }
+    .subscribe-block {
+      margin-left: 0;
+    }
+  }
+  @media (max-width: 767px) {
+    .info-block {
+      margin: 20px 0; width: 100%;
+      .about-us { margin-bottom: 20px; }
+    }
+  }
 }
 .bottom-footer {
   font-size: 12px; color: $color-light-gray;
@@ -59,4 +89,7 @@ footer { padding: 67px 0 34px; border-top: 1px solid $color-light-gray; }
      }
    }
  }
+  @media (max-width: 767px) {
+    .developers { text-align: left; }
+  }
 }
