@@ -15,7 +15,7 @@
 <header class="header-inner">
     <div class="top-header container-fluid">
         <div class="row">
-            <div class="contact-info col-lg-4 col-md-4 col-xs-12">
+            <div class="contact-info col-lg-5 col-md-5 col-xs-12">
                 <ul>
                     <li><a href="#" class="contact-item">о нас</a></li>
                     <li><a href="#" class="contact-item">Оплата и доставка</a></li>
@@ -35,7 +35,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="contact-call сol-lg-5 col-md-5 col-xs-12 col-md-offset-3">
+            <div class="contact-call сol-lg-7 col-md-7">
                 <ul>
                     <li><a href="tel:+380665898989" class="contact-item">+38 (066) 589 89 89 </a></li>
                     <li><a href="tel:+380665898989" class="contact-item">+38 (066) 589 89 89 </a></li>
@@ -55,14 +55,14 @@
             </div>
             <nav class="header-menu col-lg-6">
                 <ul class="main-menu">
-                    <li class="menu-item sub-menu">
+                    <li class="menu-item sub-menu js-sub-menu">
                         <div class="hamburger-menu">
                             <span></span>
                             <span></span>
                             <span></span>
                         </div>
                         <span>Каталог</span>
-                        <div class="sub-menu-category category">
+                        <div class="sub-menu-category category js-mobile-scroll">
                             <div class="category-item">
                                 <div class="category-title">ОДЕЖДА</div>
                                 <ul class="category-menu">
@@ -161,6 +161,11 @@
                     </div>
                 </div>
             </div>
+            <div class="main-hamburger js-mobile-menu">
+                <i></i>
+                <i></i>
+                <i></i>
+            </div>
         </div>
     </div>
 </header>
@@ -177,137 +182,144 @@
             <div class="title-page">Платья от BafiModa</div>
             <div class="row">
                 <aside class="left-sidebar col-lg-3 col-md-3 col-xs-12">
-                    <div class="block-filter">
-                        <div class="filter-title">Фильтры</div>
-                        <div class="filters">
-                            <div class="filter">
-                                <span class="filter-name">Категория:</span> Платья
-                            </div>
-                            <div class="filter">
-                                <span class="filter-name">Цена:</span> 150 - 2500, грн
-                            </div>
-                            <div class="filter">
-                                <span class="filter-name">Размер:</span> M
-                            </div>
+                    <div class="panel panel-default main-panel js-panel">
+                        <div class="panel-heading">
+                            <a href="#criteria-collapse-mobile" class="accordion-toggle" data-toggle="collapse">Фильтры</a>
                         </div>
-                        <a href="#" class="btn btn-filter">Очистить фильтры</a>
+                        <div id="criteria-collapse-mobile" class="panel-collapse collapse in">
+                            <div class="block-filter">
+                                <div class="filter-title">Фильтры</div>
+                                <div class="filters">
+                                    <div class="filter">
+                                        <span class="filter-name">Категория:</span> Платья
+                                    </div>
+                                    <div class="filter">
+                                        <span class="filter-name">Цена:</span> 150 - 2500, грн
+                                    </div>
+                                    <div class="filter">
+                                        <span class="filter-name">Размер:</span> M
+                                    </div>
+                                </div>
+                                <a href="#" class="btn btn-filter">Очистить фильтры</a>
+                            </div>
+                            <div class="block-criteria">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <a href="#criteria-collapse" class="accordion-toggle collapsed" data-toggle="collapse" aria-expanded="true">Категории</a>
+                                    </div>
+                                    <div id="criteria-collapse" class="panel-collapse collapse in">
+                                        <ul>
+                                            <li><a href="#">Новинки</a></li>
+                                            <li><a href="#">Платья</a></li>
+                                            <li><a href="#">Туники</a></li>
+                                            <li><a href="#">Блузы</a></li>
+                                            <li><a href="#">Юбки</a></li>
+                                            <li><a href="#">Костюмы</a></li>
+                                            <li><a href="#">Комбинезоны</a></li>
+                                            <li><a href="#">Купальники, пляжные туники</a></li>
+                                            <li><a href="#">Свитера</a></li>
+                                            <li><a href="#">Футболки</a></li>
+                                            <li><a href="#">Шапки, шарфы</a></li>
+                                            <li><a href="#">Спортивные костюмы</a></li>
+                                            <li><a href="#">Шапки</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <a href="#criteria-collapse2" class="accordion-toggle" data-toggle="collapse">Цена</a>
+                                    </div>
+                                    <div id="criteria-collapse2" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            <div class="range-slider">
+                                                <div id="range" data-min="360" data-max="790" data-slider-min="360" data-slider-max="790" value="360-790"></div>
+                                                <div class="price-slider-input range-text">
+                                                    <span>от</span>
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control js_from" name="num">
+                                                    </div>
+                                                    <span>до</span>
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control js_to" name="num">
+                                                    </div>
+                                                    <span>грн.</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <a href="#criteria-collapse3" class="accordion-toggle" data-toggle="collapse">Размер</a>
+                                    </div>
+                                    <div id="criteria-collapse3" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            <div class="size-list">
+                                                <label>
+                                                    <input type="checkbox" name="size[]" class="product-size" value="m" >
+                                                    <span class="size-name">M</span>
+                                                </label>
+                                                <label>
+                                                    <input type="checkbox" name="size[]" class="product-size" value="l" >
+                                                    <span class="size-name">L</span>
+                                                </label>
+                                                <label>
+                                                    <input type="checkbox" name="size[]" class="product-size" value="xl" >
+                                                    <span class="size-name">XL</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <a href="#criteria-collapse4" class="accordion-toggle" data-toggle="collapse">Цвет</a>
+                                    </div>
+                                    <div id="criteria-collapse4" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            <div class="color-list">
+                                                <label class="color-item">
+                                                    <input type="checkbox" name="color" class="product-color" value="" >
+                                                    <span class="checked"></span>
+                                                </label>
+                                                <label class="color-item">
+                                                    <input type="checkbox" name="color" class="product-color" value="" >
+                                                    <span class="checked"></span>
+                                                </label>
+                                                <label class="color-item">
+                                                    <input type="checkbox" name="color" class="product-color" value="" >
+                                                    <span class="checked"></span>
+                                                </label>
+                                                <label class="color-item">
+                                                    <input type="checkbox" name="color" class="product-color" value="" >
+                                                    <span class="checked"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="product product-day">
+                                <div class="image">
+                                    <img src="assets/images/pd-1.jpg" alt="#">
+                                </div>
+                                <div class="title-product">
+                                    <span>Товар дня</span>
+                                </div>
+                                <span class="product-ico"></span>
+                            </a>
+                            <a href="#" class="product hot-new">
+                                <div class="image">
+                                    <img src="assets/images/pd-2.jpg" alt="#">
+                                </div>
+                                <div class="title-product">
+                                    <span>Горящая</span>
+                                    <span class="sub-title">новинка</span>
+                                </div>
+                                <span class="product-ico"></span>
+                            </a>
+                        </div>
                     </div>
-                    <div class="block-criteria">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <a href="#criteria-collapse" class="accordion-toggle collapsed" data-toggle="collapse" aria-expanded="true">Категории</a>
-                            </div>
-                            <div id="criteria-collapse" class="panel-collapse collapse in">
-                                <ul>
-                                    <li><a href="#">Новинки</a></li>
-                                    <li><a href="#">Платья</a></li>
-                                    <li><a href="#">Туники</a></li>
-                                    <li><a href="#">Блузы</a></li>
-                                    <li><a href="#">Юбки</a></li>
-                                    <li><a href="#">Костюмы</a></li>
-                                    <li><a href="#">Комбинезоны</a></li>
-                                    <li><a href="#">Купальники, пляжные туники</a></li>
-                                    <li><a href="#">Свитера</a></li>
-                                    <li><a href="#">Футболки</a></li>
-                                    <li><a href="#">Шапки, шарфы</a></li>
-                                    <li><a href="#">Спортивные костюмы</a></li>
-                                    <li><a href="#">Шапки</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <a href="#criteria-collapse2" class="accordion-toggle" data-toggle="collapse">Цена</a>
-                            </div>
-                            <div id="criteria-collapse2" class="panel-collapse collapse">
-                                <div class="panel-body">
-                                        <div class="range-slider">
-                                            <div id="range" data-min="360" data-max="790" data-slider-min="360" data-slider-max="790" value="360-790"></div>
-                                            <div class="price-slider-input range-text">
-                                                <span>от</span>
-                                                <div class="form-group">
-                                                    <input type="text" class="form-control js_from" name="num">
-                                                </div>
-                                                <span>до</span>
-                                                <div class="form-group">
-                                                    <input type="text" class="form-control js_to" name="num">
-                                                </div>
-                                                <span>грн.</span>
-                                        </div>
-                                    </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <a href="#criteria-collapse3" class="accordion-toggle" data-toggle="collapse">Размер</a>
-                                </div>
-                                <div id="criteria-collapse3" class="panel-collapse collapse">
-                                    <div class="panel-body">
-                                        <div class="size-list">
-                                            <label>
-                                                <input type="checkbox" name="size[]" class="product-size" value="m" >
-                                                <span class="size-name">M</span>
-                                            </label>
-                                            <label>
-                                                <input type="checkbox" name="size[]" class="product-size" value="l" >
-                                                <span class="size-name">L</span>
-                                            </label>
-                                            <label>
-                                                <input type="checkbox" name="size[]" class="product-size" value="xl" >
-                                                <span class="size-name">XL</span>
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <a href="#criteria-collapse4" class="accordion-toggle" data-toggle="collapse">Цвет</a>
-                                </div>
-                                <div id="criteria-collapse4" class="panel-collapse collapse">
-                                    <div class="panel-body">
-                                        <div class="color-list">
-                                            <label class="color-item">
-                                                <input type="checkbox" name="color" class="product-color" value="" >
-                                                <span class="checked"></span>
-                                            </label>
-                                            <label class="color-item">
-                                                <input type="checkbox" name="color" class="product-color" value="" >
-                                                <span class="checked"></span>
-                                            </label>
-                                            <label class="color-item">
-                                                <input type="checkbox" name="color" class="product-color" value="" >
-                                                <span class="checked"></span>
-                                            </label>
-                                            <label class="color-item">
-                                                <input type="checkbox" name="color" class="product-color" value="" >
-                                                <span class="checked"></span>
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    <a href="#" class="product product-day">
-                        <div class="image">
-                            <img src="assets/images/pd-1.jpg" alt="#">
-                        </div>
-                        <div class="title-product">
-                            <span>Товар дня</span>
-                        </div>
-                        <span class="product-ico"></span>
-                    </a>
-                    <a href="#" class="product hot-new">
-                        <div class="image">
-                            <img src="assets/images/pd-2.jpg" alt="#">
-                        </div>
-                        <div class="title-product">
-                            <span>Горящая</span>
-                            <span class="sub-title">новинка</span>
-                        </div>
-                        <span class="product-ico"></span>
-                    </a>
                 </aside>
                 <div class="right-content col-lg-9 col-md-9 col-xs-12">
                     <div class="block-sort">
@@ -346,7 +358,7 @@
                                 </div>
                                 <span class="favorite"></span>
                             </a>
-                            <div class="description">
+                            <div class="description height">
                                 <div class="text">Костюм небесно-голубого цвета с большими голубыми пуговицами</div>
                                 <div class="price-wrap">
                                     <div class="price">858 UAH</div>
@@ -361,7 +373,7 @@
                                 </div>
                                 <span class="favorite"></span>
                             </a>
-                            <div class="description">
+                            <div class="description height">
                                 <div class="text">Бежевое платье без рукавов, расклешенное к низу</div>
                                 <div class="price-wrap">
                                     <div class="price">858 UAH</div>
@@ -376,7 +388,7 @@
                                 </div>
                                 <span class="favorite"></span>
                             </a>
-                            <div class="description">
+                            <div class="description height">
                                 <div class="text">Платье с разрезами на рукавах нежно розового цвета</div>
                                 <div class="price-wrap">
                                     <div class="price">858 UAH</div>
@@ -391,7 +403,7 @@
                                 </div>
                                 <span class="favorite"></span>
                             </a>
-                            <div class="description">
+                            <div class="description height">
                                 <div class="text">Платье с разрезами на рукавах нежно розового цвета</div>
                                 <div class="price-wrap">
                                     <div class="price">858 UAH</div>
@@ -406,7 +418,7 @@
                                 </div>
                                 <span class="favorite"></span>
                             </a>
-                            <div class="description">
+                            <div class="description height">
                                 <div class="text">Костюм небесно-голубого цвета с большими голубыми пуговицами</div>
                                 <div class="price-wrap">
                                     <div class="price">858 UAH</div>
@@ -421,7 +433,7 @@
                                 </div>
                                 <span class="favorite"></span>
                             </a>
-                            <div class="description">
+                            <div class="description height">
                                 <div class="text">Бежевое платье без рукавов, расклешенное к низу</div>
                                 <div class="price-wrap">
                                     <div class="price">858 UAH</div>
@@ -436,7 +448,7 @@
                                 </div>
                                 <span class="favorite"></span>
                             </a>
-                            <div class="description">
+                            <div class="description height">
                                 <div class="text">Платье с разрезами на рукавах нежно розового цвета</div>
                                 <div class="price-wrap">
                                     <div class="price">858 UAH</div>
@@ -451,7 +463,7 @@
                                 </div>
                                 <span class="favorite"></span>
                             </a>
-                            <div class="description">
+                            <div class="description height">
                                 <div class="text">Платье с разрезами на рукавах нежно розового цвета</div>
                                 <div class="price-wrap">
                                     <div class="price">858 UAH</div>
@@ -466,7 +478,7 @@
                                 </div>
                                 <span class="favorite"></span>
                             </a>
-                            <div class="description">
+                            <div class="description height">
                                 <div class="text">Костюм небесно-голубого цвета с большими голубыми пуговицами</div>
                                 <div class="price-wrap">
                                     <div class="price">858 UAH</div>
@@ -481,7 +493,7 @@
                                 </div>
                                 <span class="favorite"></span>
                             </a>
-                            <div class="description">
+                            <div class="description height">
                                 <div class="text">Бежевое платье без рукавов, расклешенное к низу</div>
                                 <div class="price-wrap">
                                     <div class="price">858 UAH</div>
@@ -496,7 +508,7 @@
                                 </div>
                                 <span class="favorite"></span>
                             </a>
-                            <div class="description">
+                            <div class="description height">
                                 <div class="text">Платье с разрезами на рукавах нежно розового цвета</div>
                                 <div class="price-wrap">
                                     <div class="price">858 UAH</div>
@@ -511,7 +523,7 @@
                                 </div>
                                 <span class="favorite"></span>
                             </a>
-                            <div class="description">
+                            <div class="description height">
                                 <div class="text">Платье с разрезами на рукавах нежно розового цвета</div>
                                 <div class="price-wrap">
                                     <div class="price">858 UAH</div>
@@ -525,7 +537,9 @@
         </div>
     </div>
     <div class="block-top-sales">
+        <div class="wrap">
         <div class="title-page">Топ продаж</div>
+        <a href="#" class="btn-see-all">Смотреть все</a>
         <div class="top-product">
             <div class="collection-item">
                 <a href="#" class="image">
@@ -535,7 +549,7 @@
                     </div>
                     <span class="favorite"></span>
                 </a>
-                <div class="description">
+                <div class="description height">
                     <div class="text">Костюм небесно-голубого цвета с большими голубыми пуговицами</div>
                     <div class="price-wrap">
                         <div class="price">858 UAH</div>
@@ -550,7 +564,7 @@
                     </div>
                     <span class="favorite"></span>
                 </a>
-                <div class="description">
+                <div class="description height">
                     <div class="text">Бежевое платье без рукавов, расклешенное к низу</div>
                     <div class="price-wrap">
                         <div class="price">858 UAH</div>
@@ -565,7 +579,7 @@
                     </div>
                     <span class="favorite"></span>
                 </a>
-                <div class="description">
+                <div class="description height">
                     <div class="text">Платье с разрезами на рукавах нежно розового цвета</div>
                     <div class="price-wrap">
                         <div class="price">858 UAH</div>
@@ -574,13 +588,13 @@
             </div>
             <div class="collection-item">
                 <a href="#" class="image">
-                    <img src="assets/images/col-5.jpg" alt="#">
+                    <img src="assets/images/col-6.jpg" alt="#">
                     <div class="preview">
                         <span>Предпросмотр</span>
                     </div>
                     <span class="favorite"></span>
                 </a>
-                <div class="description">
+                <div class="description height">
                     <div class="text">Платье с разрезами на рукавах нежно розового цвета</div>
                     <div class="price-wrap">
                         <div class="price">858 UAH</div>
@@ -589,13 +603,13 @@
             </div>
             <div class="collection-item">
                 <a href="#" class="image">
-                    <img src="assets/images/col-5.jpg" alt="#">
+                    <img src="assets/images/col-7.jpg" alt="#">
                     <div class="preview">
                         <span>Предпросмотр</span>
                     </div>
                     <span class="favorite"></span>
                 </a>
-                <div class="description">
+                <div class="description height">
                     <div class="text">Платье с разрезами на рукавах нежно розового цвета</div>
                     <div class="price-wrap">
                         <div class="price">858 UAH</div>
@@ -603,21 +617,44 @@
                 </div>
             </div>
         </div>
+        </div>
+    </div>
+    <div class="block-image-info container-fluid" style="background-image: url('assets/images/info-image.jpg');">
+        <div class="row">
+            <div class="col-lg-7 col-md-7 col-lg-offset-5 col-sm-offset-0 title-block">
+                <span>Holiday</span>
+                <span class="sub-title">новая коллекция</span>
+            </div>
+        </div>
+    </div>
+    <div class="description-page description-fix" style="background-image: url('assets/images/bg-descr.jpg')">
+        <div class="wrapper">
+            <div class="text">
+                <div class="description-title">BafiModa - это стильно и выгодно!</div>
+                <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.</p>
+                <p>Многие думают, что Lorem Ipsum - взятый с потолка псевдо-латинский набор слов, но это не совсем так. Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более двух тысячелетий назад. Ричард МакКлинток, профессор латыни из колледжа Hampden-Sydney, штат Вирджиния, взял одно из самых странных слов в Lorem Ipsum, "consectetur".</p>
+            </div>
+            <div class="text">
+                <div class="description-title-small">Лучшее предложение только для вас!</div>
+                <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.</p>
+                <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.</p>
+            </div>
+        </div>
     </div>
 </main>
 <footer>
     <div class="wrapper top-footer container-fluid">
         <div class="row">
-            <div class="category-clothes col-lg-3">
+            <div class="category-clothes col-lg-3 col-md-3 col-sm-6 col-xs-12">
                 <div class="footer-title">Одежда</div>
                 <div class="row">
-                    <ul class="col-md-6">
+                    <ul class="col-md-6 col-sm-6 col-xs-6">
                         <li class="item"><a href="#">Новинки</a></li>
                         <li class="item"><a href="#">Юбки</a></li>
                         <li class="item"><a href="#">Платья</a></li>
                         <li class="item"><a href="#">Блузы</a></li>
                     </ul>
-                    <ul class="col-md-6">
+                    <ul class="col-md-6 col-sm-6 col-xs-6">
                         <li class="item"><a href="#">Распродажа</a></li>
                         <li class="item"><a href="#">Сарафаны</a></li>
                         <li class="item"><a href="#">Туники</a></li>
@@ -625,9 +662,9 @@
                     </ul>
                 </div>
             </div>
-            <div class="info-block col-lg-4 col-md-offset-1">
+            <div class="info-block col-lg-4 col-md-4 col-sm-6 col-xs-12 col-md-offset-1 col-xs-offset-0">
                 <div class="row">
-                    <div class="about-us col-md-6">
+                    <div class="about-us col-md-6 col-sm-6 col-xs-12">
                         <div class="footer-title">о нас</div>
                         <ul>
                             <li class="item"><a href="#">Оплата и доставка</a></li>
@@ -636,7 +673,7 @@
                             <li class="item"><a href="#">Карта сайта</a></li>
                         </ul>
                     </div>
-                    <div class="contact col-md-6">
+                    <div class="contact col-md-6 col-sm-6 col-xs-12">
                         <div class="footer-title">контакты</div>
                         <ul>
                             <li class="item"><a href="tel:+380665898989">+38 (066) 589 89 89</a></li>
@@ -647,7 +684,7 @@
                     </div>
                 </div>
             </div>
-            <div class="subscribe-block col-lg-3 col-md-offset-2">
+            <div class="subscribe-block col-lg-3 col-md-3 col-sm-6 col-xs-12 col-md-offset-2">
                 <div class="footer-title">Подписаться на рассылку</div>
                 <div class="subscribe-form">
                     <form action="/">

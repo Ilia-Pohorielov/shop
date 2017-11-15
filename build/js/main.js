@@ -39,10 +39,11 @@ $(document).ready(function () {
         ]
     });
     $('.block-instagram .js-slider').slick({
-        arrows: false,
+        arrows: true,
         slidesToShow: 3,
         initialSlide: 0,
         slidesToScroll: 1,
+        infinite: false,
         responsive: [
             {
                 breakpoint: 991,
@@ -67,6 +68,16 @@ $(document).ready(function () {
         autoplaySpeed: 5000,
         pauseOnHover: false
     });
+    if ($(window).width() <= '991') {
+        $(window).on('resize', function() {
+            $('.js-panel').addClass('open');
+            $('.js-panel #criteria-collapse-mobile').removeClass('in');
+        });
+        $(window).on('load', function() {
+            $('.js-panel').addClass('open');
+            $('.js-panel #criteria-collapse-mobile').removeClass('in');
+        });
+    }
     var controller = new ScrollMagic.Controller();
     if ($(window).width() >= '991') {
         new ScrollMagic.Scene({
@@ -139,10 +150,45 @@ $(document).ready(function () {
     $('.js-sub-menu').on('click', function () {
         $('.sub-menu-category').toggleClass('open');
     });
+    if ($(window).width() > 767) {
+        $(window).on('resize', function() {
+            heightEL();
+        });
+        $(window).on('load', function() {
+            heightEL();
+        });
+    }
     if ($(window).width() <= '1200') {
         $('.js-mobile-scroll').mCustomScrollbar();
         $('.js-search').on('click', function () {
-           $('.header-menu').removeClass('open');
+            $('.header-menu').removeClass('open');
         });
     }
+    /* ========================================same height======================================*/
+
+    function heightEL() {
+        var elH = document.getElementsByClassName("height");
+        var maxHeight = 0;
+        for (var i = 0; i < elH.length; ++i) {
+            elH[i].style.height = "";
+            // elH[i].style.lineHeight = "";
+            if (maxHeight < elH[i].clientHeight) {
+                maxHeight = elH[i].clientHeight;
+            }
+        }
+        for (var i = 0; i < elH.length; ++i) {
+            elH[i].style.height = maxHeight + "px";
+            // elH[i].style.lineHeight = maxHeight + "px";
+        }
+    }
+    if ($(window).width() > 767) {
+        $(window).on('resize', function() {
+            heightEL();
+        });
+        $(window).on('load', function() {
+            heightEL();
+        });
+    }
+
+    /* ========================================same height======================================*/
 });

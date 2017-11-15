@@ -1,8 +1,22 @@
 .block-content.container-fluid {
-  padding: 22px 0 0; margin-bottom: 60px;
+  padding: 24px 0 0; margin-bottom: 61px;
 }
 .left-sidebar {
-  padding-right: 10px;
+  padding-right: 10px; margin-bottom: 20px;
+}
+.main-panel {
+  .panel-heading {
+    display: none;
+    a {
+      background: $color-white; text-align: center; text-transform: uppercase; display: none;
+    }
+  }
+  &.open {
+    .panel-heading {
+      display: block;
+      a { text-align: center; }
+    }
+  }
 }
 .panel-default > .panel-heading a,
 .filter-title {
@@ -19,7 +33,7 @@
   }
 }
 .block-criteria {
-  background: $color-white; margin-bottom: 10px;
+  background: $color-white; margin-bottom: 8px;
 }
 .product {
   text-align: right; position: relative; margin-bottom: 5px; display: block;
@@ -40,6 +54,9 @@
   }
   &.hot-new .product-ico {
     @include sprite($hot-product-ico);
+  }
+  @media (max-width: 991px) {
+    display: none;
   }
 }
 .block-sort {
@@ -62,20 +79,35 @@
     }
   }
   .sort-price {
-    margin-right: 22px;
+    margin-right: 22px; display: flex; align-items: center;
+  }
+  .sort-show {
+    display: flex; align-items: center;
   }
   .sort-info {
     width: 50%; text-align: right;
+    @media (max-width: 991px) {
+      display: none;
+    }
+  }
+  @media (max-width: 767px) {
+    flex-wrap: wrap;
+    .sort-price {
+      flex-direction: column; align-items: flex-start; margin-bottom: 10px;
+      .dropdown {
+        padding: 0;
+      }
+    }
   }
 }
 .right-content {
-  padding: 0 0 0 20px; text-align: center;
+  padding: 0 0 0 19px; text-align: center;
   .collection {
     display: flex; flex-wrap: wrap; margin-bottom: 17px;
     .collection-item {
-      width: 24.8%; margin-bottom: 14px;
+      width: 24.9%; margin-bottom: 14px;
       .image {
-        height: 431px;
+        max-height: 431px;
       }
       .description {
         font-size: 12px; line-height: 15px; padding: 17px 15px;
@@ -91,24 +123,86 @@
           &:before { color: $color-light-blue; }
         }
       }
+      @media (max-width: 1334px) {
+        width: 33.2%;
+      }
+      @media (max-width: 1038px) {
+        width: 49.8%;
+      }
+      @media (max-width: 991px) {
+        width: 33.2%;
+      }
+      @media (max-width: 787px) {
+        width: 100%;
+      }
     }
+  }
+  @media (max-width: 991px) {
+    padding: 0 15px;
   }
 }
 .block-top-sales {
-  padding: 60px 15px 0; position: relative; max-width: 1545px; margin: 0 auto;
+  border-top: 1px solid #dddddd;
+  .wrap {
+    padding: 60px 15px 0; position: relative; max-width: 1545px; margin: 0 auto 81px;
+  }
   .title-page {
     font-size: 25px;
-  }
-  &:before {
-    content: ''; display: block; height: 1px; position: absolute; top: 0; left: 0; right: 0; margin: 0 -5000px; padding: 0 5000px; background: #dddddd;
   }
   .top-product {
     display: flex;
     .collection-item {
       width: 20%;
       .image {
-        height: 463px;
+        max-height: 463px;
       }
+      .description {
+        font-size: 12px; line-height: 15px; padding: 17px 15px;
+        .text { margin-bottom: 10px; }
+        .price {
+          font-size: 14px;
+        }
+      }
+      .favorite {
+        width: 29px; height: 28px;
+        &:before { color: #d7d7d7; }
+        &:hover, &:focus, &:active {
+          &:before { color: $color-light-blue; }
+        }
+      }
+      @media (max-width: 1330px) {
+        width: 24.9%; margin-bottom: 10px;
+      }
+      @media (max-width: 1032px) {
+        width: 33.2%;
+      }
+      @media (max-width: 787px) {
+        width: 100%;
+      }
+    }
+    @media (max-width: 1330px) {
+        flex-wrap: wrap;
+    }
+  }
+  .btn-see-all {
+    font-weight: 500; font-size: 14px; color: $color-button-text; border-bottom: 1px solid $color-button-text; padding-bottom: 6px; position: absolute; top: 55px; right: 0; transition: all .3s ease;
+    &:hover, &:focus, &:active {
+      color: $color-blue-text;
+      border-color: $color-blue-text;
+    }
+    @media (max-width: 767px) {
+      right: 30px;
+    }
+  }
+}
+.block-image-info {
+  background-position: 50% 0; background-repeat: no-repeat; background-size: cover; padding-top: 29.157%; position: relative; min-height: 200px;
+  .title-block {
+    position: absolute; left: 0; top: 46%; transform: translateY(-50%); padding-left: 104px;
+    .sub-title { margin-left: 185px; }
+    @media (max-width: 767px) {
+      padding-left: 15px; left: 0; font-size: 45px;
+      .sub-title { margin-left: 25px; }
     }
   }
 }

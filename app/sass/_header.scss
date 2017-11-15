@@ -42,7 +42,7 @@ header {
   @media (max-width: 1193px) {
     .contact-info { width: 100%; }
     .contact-info ul li { margin-right: 10px; }
-    .contact-call { display: none; }
+    .contact-call ul { display: none; }
   }
   @media (max-width: 767px) {
     .contact-info ul {
@@ -54,7 +54,7 @@ header {
   }
 }
 .bottom-header {
-  padding: 26px 40px 0; line-height: 45px; border-bottom: 1px solid rgba($color-white, .10); position: relative;
+  padding: 24px 40px 0; line-height: 45px; border-bottom: 1px solid rgba($color-white, .10); position: relative;
   .logo { padding-top: 9px; width: 216px; }
   .header-menu {
     display: flex; align-items: center;  position: static;
@@ -115,6 +115,9 @@ header {
             img { height: 100%; object-fit: cover; }
           }
         }
+        @media (max-width: 1515px) {
+          left: 0;
+        }
       }
       &:hover, &:focus, &:active {
         color: $color-light-blue;
@@ -138,7 +141,7 @@ header {
     }
   }
   .personal-area {
-    display: flex; justify-content: flex-end; align-items: center; font-size: 13px; line-height: normal; width: 35%; padding-right: 0;
+    display: flex; justify-content: flex-end; align-items: center; font-size: 13px; line-height: normal; width: 35%; padding-right: 0; position: static;
     .user-info {
       display: flex; align-items: center;
       .user-login {
@@ -175,7 +178,7 @@ header {
     }
   }
   .search-block {
-    position: absolute; top: 100px; left: 0; right: 0; display: flex; background: #fff; padding: 0 160px; height: 64px; box-shadow: -5px 0 5px rgba($color-black, .07);  visibility: hidden; opacity: 0; transform: translateY(50px);
+    position: absolute; top: 90%; left: 0; right: 0; display: flex; background: #fff; padding: 0 160px; height: 64px; box-shadow: -5px 0 5px rgba($color-black, .07);  visibility: hidden; opacity: 0; transform: translateY(50px);
     .field-search {
       width: 81%; position: relative;
       @include placeholder { font-size: 18px; color: rgba($color-button-text,.43); }
@@ -223,26 +226,32 @@ header {
     }
   }
   @media (max-width: 1507px) {
-    .personal-area { float: right; width: 22%; padding-right: 15px; }
-    .header-menu { width: 55%; }
+    .personal-area {
+      float: right; width: 22%; padding-right: 15px;
+      .user-info {
+        .user-login-btn {
+          margin-right: 5px;
+        }
+        .wishlist {
+          margin-right: 15px;
+        }
+      }
+    }
+    .header-menu { width: 52%; }
+    .main-menu .menu-item { margin-right: 10px; }
   }
   @media (max-width: 1331px) {
     padding: 26px 15px 0;
   }
-  @media (max-width: 1243px) {
-    .main-menu .menu-item { margin-right: 10px; }
-    .logo { width: 180px; }
-    .header-menu { padding-left: 0; }
-  }
-  @media (max-width: 1200px) {
-    padding: 26px 15px 28px;
+  @media (max-width: 1287px) {
+    padding: 24px 15px 28px;
     .main-hamburger {
       display: block; float: right; top: 9px;
     }
     .logo {
-      float: left; width: auto;
+      float: left; width: 180px;
     }
-    .personal-area { width: 330px; }
+    .personal-area { width: 315px; }
     .header-menu {
       position: absolute; background: $color-white; top: 100px; left: 0; right: 0; width: 100%; padding: 0 15px; box-shadow: 0 5px 20px 0px #000; transform: translateY(50px); visibility: hidden; opacity: 0;
       &.open { transform: translateY(0); visibility: visible; opacity: 1; transition: all .3s ease; }
@@ -308,7 +317,7 @@ header {
       float: none;
     }
     .logo {
-      text-align: center;
+      text-align: center; width: auto;
       a {
         display: inline-block;
       }
@@ -318,6 +327,13 @@ header {
     }
     .personal-area {
       width: 100%; display: flex; justify-content: center; margin-bottom: 5px;
+      .user-info {  flex-wrap: wrap; }
+      .user-login {
+        margin-bottom: 15px;
+        .dropdown .dropdown-menu {
+          top: 100%;
+        }
+      }
     }
     .search-block, .header-menu { top: 90%; }
     .search-block {
@@ -344,6 +360,15 @@ header {
   }
   .bottom-header {
     border-bottom: 1px solid rgba($color-button-text, 0.1);
+    .logo {
+      width: 15%;
+    }
+    @media (max-width: 1287px) {
+      .logo { width: 180px; }
+    }
+    @media (max-width: 1200px) {
+      .logo { width: auto; }
+    }
   }
   .btn-cart {
     border: 1px solid $color-button-text; color: $color-button-text;
@@ -383,6 +408,17 @@ header {
           box-shadow: 0 -3px 0 $color-blue-text;
         }
       }
+    }
+  }
+  .main-hamburger i { background: $color-button-text; }
+  @media (max-width: 1507px) {
+    .personal-area {
+      width: 33%;
+    }
+  }
+  @media (max-width: 1287px){
+    .bottom-header .personal-area {
+      width: 385px;
     }
   }
 }

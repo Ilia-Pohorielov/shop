@@ -55,6 +55,7 @@
       }
     }
   }
+  .collection .slick-arrow { top: 40%; }
   .tab-content {
     text-align: center; position: relative; padding-bottom: 96px;
     .btn-collection {
@@ -76,10 +77,10 @@
   position: relative; margin-right: 1px;
   .image {
     display: block; position: relative; overflow: hidden; margin-bottom: 2px; max-height: 574px;
-    img { height: 100%; }
+    img { height: 100%; object-fit: cover; }
     .favorite {
       position: absolute; top: 10px; right: 8px; background: $color-white; width: 39px; height: 38px; border-radius: 50%;
-      &:before { content: '\0041'; display: block; font-size: 15px; font-family: "Glyphter"; position: absolute; left: 50%; top: 50%; transform: translate(-65%, -50%); transition: all .3s ease; }
+      &:before { content: '\0041'; display: block; font-size: 15px; font-family: "Glyphter"; color: $color-button-text; position: absolute; left: 50%; top: 50%; transform: translate(-65%, -50%); transition: all .3s ease; }
       &:hover, &:focus, &:active {
         &:before { color: $color-light-blue; }
       }
@@ -108,12 +109,7 @@
       margin-bottom: 16px;
     }
   }
-  @media (max-width: 1666px){
-    .image img {
-      height: auto;
-    }
-  }
-  @media (max-width: 767px) {
+  @media (max-width: 787px) {
     .image img {
       width: 100%;
     }
@@ -171,6 +167,7 @@
       padding: 4px 10px;
     }
   }
+  .slick-arrow.slick-prev { left: 25px; }
 }
 .block-special-offer {
   position: relative; margin-bottom: 119px; background-position: 50% 0; background-repeat: no-repeat; background-size: cover; height: 550px;
@@ -214,12 +211,19 @@
   }
 }
 .description-page {
-  font-weight: 300; color: $color-text; font-size: 14px; margin-bottom: 63px;
+  font-weight: 300; color: $color-text; font-size: 14px; margin-bottom: 63px; background-position: 50% 0; background-size: cover; background-repeat: no-repeat;
   .text {
     margin-bottom: 24px; line-height: 21px;
+    &:last-child { margin-bottom: 0; }
   }
-  .description-title { font-size: 30px; margin-bottom: 21px; }
-  .description-title-small { font-size: 25px; margin-bottom: 21px; }
+  .description-title { font-size: 30px; margin-bottom: 21px; line-height: 1; }
+  .description-title-small { font-size: 25px; margin-bottom: 21px; line-height: 1; }
+  &.description-fix {
+    margin-bottom: 0; padding: 71px 0 50px;
+    .text {
+      max-width: 1170px;
+    }
+  }
 }
 @keyframes animation-line-slide {
   0% { width: 0; }

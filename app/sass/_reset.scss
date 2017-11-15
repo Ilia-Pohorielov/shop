@@ -4,10 +4,10 @@ html {
 }
 body {
   display: flex; flex-direction: column; font-family: "Gotham","Roboto", "Arial", sans-serif; font-size: 14px; font-weight: normal; background: $color-white; line-height: 20px;
-  height:100%; min-width: 320px; color: $color-text; margin: 0; overflow-x: hidden; overflow-y: scroll;
+  height:100%; min-width: 320px; color: $color-text; margin: 0;
 }
 *,:after,:before {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
 form,fieldset,input,textarea,p,blockquote,th,td { padding:0;margin:0; }
@@ -18,7 +18,7 @@ input:focus, button:focus,a:focus, textarea:focus, select:focus { outline:none !
 textarea { resize:none; }
 section { max-width:100%; }
 a { color:#393939; text-decoration:none; }
-a:hover, a:active, a:focus { text-decoration:none; color:#be88ac; }
+a:hover, a:active, a:focus { text-decoration:none;  color: $color-light-blue; }
 a img { border:none; }
 img { max-width:100%; display:block; border-style:none; }
 noscript div {
