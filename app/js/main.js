@@ -197,6 +197,23 @@ $(document).ready(function () {
             heightEL();
         });
     }
-
     /* ========================================same height======================================*/
+    /* ========================================same download image======================================*/
+    if (window.File && window.FileList && window.FileReader) {
+        $(".input-file").on("change", function(e) {
+            var $this = $(this);
+            var value = $this.val();
+            if (value) {
+                var filename = $this.val().replace(/C:\\fakepath\\/i, '');
+                var FR = new FileReader();
+                FR.onload = function(e){
+                    $this.parents('.upload-user-photo').find('img').attr('src', e.target.result);
+                };
+                FR.readAsDataURL(e.target.files[0]);
+            }
+        });
+    }
+    else {
+        alert('File API не поддерживается данным браузером');
+    }
 });

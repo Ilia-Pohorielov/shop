@@ -2350,6 +2350,75 @@ header {
         .block-image-info .title-block .sub-title {
           margin-left: 25px; } }
 
+.profile {
+  padding: 40px;
+  background: #ffffff; }
+  .profile .profile-title {
+    font-size: 20px;
+    font-weight: 500;
+    color: #393939;
+    margin-bottom: 20px; }
+  .profile .control-label {
+    display: inline-block;
+    width: 21%; }
+  .profile .input-group {
+    display: inline-block;
+    max-width: 376px;
+    margin-bottom: 0;
+    vertical-align: middle; }
+  .profile .personal-data-form {
+    position: relative;
+    color: #393939; }
+    .profile .personal-data-form .upload-user-photo {
+      position: absolute;
+      top: 0;
+      right: 0; }
+      .profile .personal-data-form .upload-user-photo .photo {
+        width: 116px;
+        height: 116px;
+        border-radius: 50%;
+        overflow: hidden; }
+        .profile .personal-data-form .upload-user-photo .photo img {
+          width: 100%;
+          -o-object-fit: cover;
+             object-fit: cover; }
+      .profile .personal-data-form .upload-user-photo .upload-photo-overlay input[type="file"] {
+        display: none; }
+      .profile .personal-data-form .upload-user-photo .upload-photo-overlay .upload-link {
+        cursor: pointer;
+        font-size: 12px;
+        font-weight: normal;
+        margin-bottom: 0;
+        border-bottom: 1px solid #eef0f2;
+        line-height: normal;
+        position: relative;
+        margin-left: 25px;
+        -webkit-transition: all .3s ease;
+        transition: all .3s ease; }
+        .profile .personal-data-form .upload-user-photo .upload-photo-overlay .upload-link:before {
+          content: '\0050';
+          font-family: "Glyphter";
+          display: block;
+          position: absolute;
+          left: -25px;
+          top: 0;
+          font-size: 13px;
+          -webkit-transition: all .3s ease;
+          transition: all .3s ease; }
+        .profile .personal-data-form .upload-user-photo .upload-photo-overlay .upload-link:hover, .profile .personal-data-form .upload-user-photo .upload-photo-overlay .upload-link:focus, .profile .personal-data-form .upload-user-photo .upload-photo-overlay .upload-link:active {
+          color: #75c6c3; }
+          .profile .personal-data-form .upload-user-photo .upload-photo-overlay .upload-link:hover:before, .profile .personal-data-form .upload-user-photo .upload-photo-overlay .upload-link:focus:before, .profile .personal-data-form .upload-user-photo .upload-photo-overlay .upload-link:active:before {
+            color: #75c6c3; }
+    .profile .personal-data-form .password-field, .profile .personal-data-form .phone-field {
+      max-width: 230px; }
+    .profile .personal-data-form .phone-field {
+      position: relative; }
+      .profile .personal-data-form .phone-field .input-group-btn {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 10; }
+
 footer {
   padding: 67px 0 34px;
   border-top: 1px solid #c6c6c6; }

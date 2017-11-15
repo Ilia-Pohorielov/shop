@@ -2,6 +2,7 @@ $(document).ready(function () {
    $('.js-search').on('click',function () {
       $('.search-block').toggleClass('open');
    });
+   /* ========================================same slider======================================*/
     $('.top-main .js-slider').slick({
         arrows: false,
         dots: true,
@@ -78,6 +79,9 @@ $(document).ready(function () {
             $('.js-panel #criteria-collapse-mobile').removeClass('in');
         });
     }
+    /* ========================================end slider======================================*/
+
+    /* ========================================same parallax======================================*/
     var controller = new ScrollMagic.Controller();
     if ($(window).width() >= '991') {
         new ScrollMagic.Scene({
@@ -96,8 +100,11 @@ $(document).ready(function () {
             .setTween(".js-animate-parallax .left", {y: "50%", ease: Power0.easeNone})
             .addTo(controller);
     }
-    $(".search-block .js-scroll").mCustomScrollbar();
+    /* ========================================end parallax======================================*/
 
+
+    $(".search-block .js-scroll").mCustomScrollbar();
+    /* ========================================same validate======================================*/
     $('.js_validate [type="submit"]').on("click", function(){
         return validate($(this).parents(".js_validate"));
     });
@@ -142,6 +149,7 @@ $(document).ready(function () {
             });
         }
     }
+    /* ========================================end validate======================================*/
 
    $('.js-mobile-menu').on('click', function () {
        $('.header-menu').toggleClass('open');
@@ -189,6 +197,23 @@ $(document).ready(function () {
             heightEL();
         });
     }
-
     /* ========================================same height======================================*/
+    /* ========================================same download image======================================*/
+    if (window.File && window.FileList && window.FileReader) {
+        $(".input-file").on("change", function(e) {
+            var $this = $(this);
+            var value = $this.val();
+            if (value) {
+                var filename = $this.val().replace(/C:\\fakepath\\/i, '');
+                var FR = new FileReader();
+                FR.onload = function(e){
+                    $this.parents('.upload-user-photo').find('img').attr('src', e.target.result);
+                };
+                FR.readAsDataURL(e.target.files[0]);
+            }
+        });
+    }
+    else {
+        alert('File API не поддерживается данным браузером');
+    }
 });

@@ -1,0 +1,42 @@
+.profile {
+  padding: 40px; background: $color-white;
+  .profile-title {
+    font-size: 20px; font-weight: 500; color: $color-button-text; margin-bottom: 20px;
+  }
+  .control-label {
+    display: inline-block; width: 21%;
+  }
+  .input-group {
+    display: inline-block; max-width: 376px; margin-bottom: 0; vertical-align: middle;
+  }
+  .personal-data-form {
+    position: relative; color: $color-button-text;
+    .upload-user-photo {
+      position: absolute; top: 0; right: 0;
+      .photo {
+        width: 116px; height: 116px; border-radius: 50%; overflow: hidden;
+        img { width: 100%; object-fit: cover; }
+      }
+      .upload-photo-overlay {
+        input[type="file"] { display: none; }
+        .upload-link {
+          cursor: pointer; font-size: 12px; font-weight: normal; margin-bottom: 0; border-bottom: 1px solid $color-gray-bg; line-height: normal; position: relative; margin-left: 25px; transition: all .3s ease;
+          &:before { content: '\0050'; font-family: "Glyphter";  display: block; position: absolute; left: -25px; top: 0; font-size: 13px; transition: all .3s ease;  }
+          &:hover, &:focus, &:active {
+            color: $color-blue-text;
+            &:before { color: $color-blue-text; }
+          }
+        }
+      }
+    }
+    .password-field, .phone-field {
+      max-width: 230px;
+    }
+    .phone-field {
+      position: relative;
+      .input-group-btn {
+        position: absolute; left: 0; top: 0; z-index: 10;
+      }
+    }
+  }
+}
