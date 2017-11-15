@@ -1,6 +1,9 @@
 $(document).ready(function () {
    $('.js-search').on('click',function () {
       $('.search-block').toggleClass('open');
+       setTimeout(function () {
+           $('.search-block .field-search input').focus();
+       }, 1000);
    });
    /* ========================================same slider======================================*/
     $('.top-main .js-slider').slick({

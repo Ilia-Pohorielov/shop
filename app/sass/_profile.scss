@@ -1,16 +1,41 @@
+.tab-content .personal-information {
+  display: flex; justify-content: space-between;
+}
+.profile, .delivery {
+  width: 49.4%;
+}
+.personal-area-information {
+  padding-top: 34px;
+  .nav-tabs {
+    border-top: 1px solid $color-gray; border-bottom: 1px solid $color-gray; border-left: 1px solid $color-gray; display: inline-block; margin-bottom: 35px;
+    li {
+      a {
+        display: block; padding: 16px 0 15px 37px;  font-size: 14px; color: #000; font-weight: normal; border-right: 1px solid $color-gray; border-radius: 0; width: 230px; margin-right: 0;
+        &:before {
+          content: ''; display: block; width: 0; height: 0; border-style: solid; border-width: 4px 0 4px 6px; border-color: transparent transparent transparent $color-button-text; position: absolute; left: 21px; top: 50%; margin-top: -4px;
+        }
+      }
+      &.active {
+        a { font-weight: 500; background: $color-bg-blue; }
+      }
+    }
+  }
+}
 .profile {
-  padding: 40px; background: $color-white;
-  .profile-title {
-    font-size: 20px; font-weight: 500; color: $color-button-text; margin-bottom: 20px;
+  .profile-user {
+    padding: 43px 41px 70px 41px; background: $color-white;
   }
   .control-label {
-    display: inline-block; width: 21%;
+    display: inline-block; width: 18.7%;
   }
   .input-group {
     display: inline-block; max-width: 376px; margin-bottom: 0; vertical-align: middle;
   }
   .personal-data-form {
     position: relative; color: $color-button-text;
+    .form-group {
+      margin-bottom: 20px; position: relative;
+    }
     .upload-user-photo {
       position: absolute; top: 0; right: 0;
       .photo {
@@ -35,8 +60,27 @@
     .phone-field {
       position: relative;
       .input-group-btn {
-        position: absolute; left: 0; top: 0; z-index: 10;
+        position: absolute; left: 0; top: 0; z-index: 10; width: 58px; height: 45px; line-height: 45px; text-align: center; background: #fafafa; padding: 0;
+        border: 1px solid $color-gray;
+        .btn-default {
+          width: 100%; padding: 0; color: $color-button-text;
+          &:before { content: none; }
+          &:hover, &:focus, &:active {
+            box-shadow: none;
+          }
+        }
+        &.open {
+          .btn-default { box-shadow: none; }
+        }
+        .dropdown-menu {
+          min-width: auto; padding: 0;
+        }
       }
+      input { padding-left: 69px; }
     }
+    .btn-primary { position: absolute; left: 19.2%; }
+  }
+  .pwd-link {
+    position: absolute; top: 50%; left: 56.2%; display: block; transform: translateY(-50%); font-size: 12px; line-height: normal; color: $color-button-text; border-bottom: 1px solid $color-gray;
   }
 }

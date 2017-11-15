@@ -83,7 +83,7 @@ header {
         }
       }
       .sub-menu-category {
-        position: absolute; top: 100px; background: $color-white; display: flex; justify-content: space-between; padding: 11px 28px 27px; width: 100%; max-width: 1242px;
+        position: absolute; top: 100%; background: $color-white; display: flex; justify-content: space-between; padding: 11px 28px 27px; width: 100%; max-width: 1242px;
         transition: none; transform: translateY(50px); opacity: 0; visibility: hidden;
         .category-item {
           font-size: 14px; font-weight: normal; color: $color-black; padding-right: 95px;

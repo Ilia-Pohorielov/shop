@@ -174,6 +174,7 @@
 <!--- BEGIN MAIN -->
 <main>
     <div class="wrapper">
+        <div class="personal-area-information">
             <div class="breadcrumbs">
                 <ul>
                     <li><a href="#">Главная</a></li>
@@ -181,72 +182,117 @@
                 </ul>
             </div>
             <div class="title-page">Личный кабинет</div>
-        <div class="personal-area-information">
             <ul class="nav nav-tabs">
-                <li class="active"><a data-toggle="tab" href="#personal-information">Новая коллекция</a></li>
+                <li class="active"><a data-toggle="tab" href="#personal-information">Мои данные</a></li>
                 <li><a data-toggle="tab" href="#top-sales">Топ продаж</a></li>
+                <li><a data-toggle="tab" href="#top-sales">Подписка</a></li>
             </ul>
             <div class="tab-content">
-                <div id="personal-information" class="tab-pane fade in active personal-information container-fluid">
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 col-xs-12 profile">
-                            <div class="profile-title">Личные данные</div>
-                            <div class="profile-user">
-                                <form action="/" class="personal-data-form js-validate">
-                                    <div class="upload-user-photo">
-                                        <div class="photo">
-                                            <img class="icon-profile-photo" src="images/profile-photo.svg" alt="#">
+                <div id="personal-information" class="tab-pane fade in active personal-information">
+                    <div class="profile">
+                        <div class="profile-title">Личные данные</div>
+                        <div class="profile-user">
+                            <form action="/" class="personal-data-form js-validate">
+                                <div class="upload-user-photo">
+                                    <div class="photo">
+                                        <img class="icon-profile-photo" src="images/profile-photo.svg" alt="#">
+                                    </div>
+                                    <div class="upload-photo-overlay" id="file">
+                                        <input name="photo" type="file" id="download-photo" class="input-file" accept="image/jpeg,image/png,image/gif">
+                                        <label class="upload-link" for="download-photo">Загрузить фото</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label" for="username">Имя</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" name="profile[fullname]" required value="" id="username">
+                                        <div class="error-text">Поле "Имя" не должно быть пустым</div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label" for="userlastname">Фамилия</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" name="profile[middlename]" value="" id="userlastname" required>
+                                        <div class="error-text">Поле "Фамилия" не должно быть пустым</div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label" for="useremail">Email</label>
+                                    <div class="input-group">
+                                        <input type="email" class="form-control" name="profile[email]" data-validate="email" required value="" id="useremail">
+                                        <div class="error-text">Поле "Email" не должно быть пустым</div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label" for="usertel">Телефон</label>
+                                    <div class="input-group phone-field">
+                                        <div class="input-group-btn dropdown">
+                                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                                +38 <span class="caret"></span>
+                                            </button>
+                                            <ul class="dropdown-menu pull-right">
+                                                <li><a href="#">+7</a></li>
+                                            </ul>
                                         </div>
-                                        <div class="upload-photo-overlay" id="file">
-                                            <input name="photo" type="file" id="download-photo" class="input-file" accept="image/jpeg,image/png,image/gif">
-                                            <label class="upload-link" for="download-photo">Загрузить фото</label>
-                                        </div>
+                                        <input type="tel" class="form-control js-phone-mask" name="profile[phone]" data-validate="phone" value="" required placeholder="(050) 123 45 67" id="usertel">
+                                        <div class="error-text">Поле "Телефон" не должно быть пустым</div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label control-label--lg">Пароль</label>
+                                    <div class="input-group password-field">
+                                        <input type="password" name="profile[cfm]" class=" form-control password_2" data-validate="pass2">
+                                        <div class="error-text">Поле "Пароль" не должно быть пустым</div>
+                                    </div>
+                                    <a href="#" class="pwd-link">Сменить пароль</a>
+                                </div>
+                                <button type="submit" class="btn btn--default btn-primary">Сохранить изменения</button>
+                            </form>
+                        </div>
+                    </div>
+                        <div class="delivery">
+                            <div class="profile-title">Данные по доставке</div>
+                            <div class="delivery-data-form">
+                                <form action="/" class="delivery-data-form js-validate">
+                                    <div class="form-group">
+                                        <label class="control-label" for="country">Имя</label>
+                                        <select name="country" id="country">
+                                            <option value="ua">Украина</option>
+                                            <option value="en">Англия</option>
+                                        </select>
                                     </div>
                                     <div class="form-group">
-                                        <label class="control-label" for="username">Имя</label>
-                                        <div class="input-group">
-                                            <input type="text" class="form-control" name="profile[fullname]" required value="Ilia" id="username">
-                                            <div class="error-text">Поле "Имя" не должно быть пустым</div>
-                                        </div>
+                                        <label class="control-label" for="region">Регион</label>
+                                        <select name="country" id="region">
+                                            <option value="ua">Харьковская область</option>
+                                            <option value="ki">Киев</option>
+                                        </select>
                                     </div>
                                     <div class="form-group">
-                                        <label class="control-label" for="userlastname">Фамилия</label>
-                                        <div class="input-group">
-                                            <input type="text" class="form-control" name="profile[middlename]" value="" id="userlastname" required>
-                                            <div class="error-text">Поле "Фамилия" не должно быть пустым</div>
-                                        </div>
+                                        <label class="control-label" for="city">Регион</label>
+                                        <select name="country" id="city">
+                                            <option value="kh">Харьков</option>
+                                            <option value="ki">Киев</option>
+                                        </select>
                                     </div>
                                     <div class="form-group">
-                                        <label class="control-label" for="userpatronymic">Отчество</label>
-                                        <div class="input-group">
-                                            <input type="text" class="form-control" name="profile[lastname]" value="" id="userpatronymic" required>
-                                            <div class="error-text">Поле "Отчество" не должно быть пустым</div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label" for="useremail">Email</label>
-                                        <div class="input-group">
-                                            <input type="email" class="form-control" name="profile[email]" data-validate="email" required value="1298706953490402@social.com" id="useremail">
-                                            <div class="error-text">Поле "Email" не должно быть пустым</div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label" for="usertel">Телефон</label>
-                                        <div class="input-group phone-field">
-                                            <div class="input-group-btn">
-                                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                                                    +38 <span class="caret"></span>
-                                                </button>
-                                                <ul class="dropdown-menu pull-right">
-                                                    <li><a href="#">+7</a></li>
-                                                </ul>
+                                        <div class="input-group address-field">
+                                            <label class="control-label" for="address">Адрес</label>
+                                            <div class="street-field">
+                                                <div class="input-group-btn dropdown">
+                                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                                        улица <span class="caret"></span>
+                                                    </button>
+                                                    <ul class="dropdown-menu pull-right">
+                                                        <li><a href="#">Проспект</a></li>
+                                                    </ul>
+                                                </div>
+                                                <input type="text" class="form-control" name="address" value="" id="address">
                                             </div>
-                                            <input type="tel" class="form-control js-phone-mask" name="profile[phone]" data-validate="phone" value="" required placeholder="(050) 123 45 67" id="usertel">
-                                            <div class="error-text">Поле "Телефон" не должно быть пустым</div>
+                                            <div class="exact-street-field">
+                                                input
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <a href="#" class="pwd-link">Сменить пароль</a>
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label control-label--lg">Пароль</label>
@@ -254,15 +300,12 @@
                                             <input type="password" name="profile[cfm]" class=" form-control password_2" data-validate="pass2">
                                             <div class="error-text">Поле "Пароль" не должно быть пустым</div>
                                         </div>
+                                        <a href="#" class="pwd-link">Сменить пароль</a>
                                     </div>
-                                    <button type="submit" class="btn btn--default save-btn">сохранить</button>
+                                    <button type="submit" class="btn btn--default btn-primary">Сохранить изменения</button>
                                 </form>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-md-6 col-xs-12 delivery">
-                            <div class="title-page">Данные по доставке</div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -332,8 +375,8 @@
     </div>
     <div class="bottom-footer wrapper container-fluid">
         <div class="row">
-            <div class="copyright col-md-6">© Bafimoda, 2017. Все права защищены.</div>
-            <div class="developers col-md-6">Разработка и поддержка сайта - <a href="#">Artjoker</a></div>
+            <div class="copyright col-md-6 col-sm-6 col-xs-12">© Bafimoda, 2017. Все права защищены.</div>
+            <div class="developers col-md-6 col-sm-6 col-xs-12">Разработка и поддержка сайта - <a href="#">Artjoker</a></div>
         </div>
     </div>
 </footer>

@@ -11,6 +11,7 @@ $color-button-text: #393939;
 $color-gray: #cecdcd;
 $color-light-gray: #c6c6c6;
 $color-gray-bg: #eef0f2;
+$color-bg-blue: #f7fbfc;
 
 @mixin placeholder {
   ::-webkit-input-placeholder {@content}
@@ -20,7 +21,7 @@ $color-gray-bg: #eef0f2;
 }
 
 .wrapper {
-  max-width: 1545px;
+  max-width: 1553px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -185,7 +186,7 @@ main {
   }
 }
 .title-block {
-  font-size: 77px; margin-bottom: 80px; position: relative; left: 74px;
+  font-size: 77px; margin-bottom: 80px; position: relative; left: 74px; display: inline-block;
   span {
     padding: 0 5px 0 18px; letter-spacing: 11px;
     &.sub-title {
@@ -214,6 +215,9 @@ main {
   &:before {
     content: ''; display: block; position: absolute; bottom: 7px; left: 0; right: 0; height: 1px; background: rgba($color-black, .7);
   }
+}
+.profile-title {
+  font-size: 20px; font-weight: 500; color: $color-button-text; margin-bottom: 18px;
 }
 /* END TITLE STYLE*/
 

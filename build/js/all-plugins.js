@@ -49,10 +49,21 @@ function validate(form){
     var reg         = undefined;
     var pass        = form.find('.password').val();
     var pass_1      = form.find('.password_1').val();
+    var email = false;
+    var password = false;
     function mark (object, expression) {
         if (expression) {
             object.parent('div').addClass(error_class).removeClass(norma_class);
             e++;
+            if (email && (object.val().length > 0)) {
+                object.parent('.input-group').find('.error-text').text('Некорректный формат Email');
+            }
+            if (password && (object.val().length > 0)) {
+                object.parent('.input-group').find('.error-text').text('Пароль должен быть не менее 6 символов');
+            }
+            if (pass_1 !== pass) {
+                object.parent('.password-field').find('.error-text').text('Пароли не совпадают');
+            }
         } else
             object.parent('div').addClass(norma_class).removeClass(error_class);
     }
@@ -81,7 +92,8 @@ function validate(form){
                 mark ($(this), !reg.test($.trim($(this).val())));
             break
         }
-    })
+    });
+
     $('.js_valid_radio').each(function(){
      var inp = $(this).find('input.required');
         var rezalt = 0;

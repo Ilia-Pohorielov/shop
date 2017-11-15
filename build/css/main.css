@@ -55,7 +55,7 @@
   font-style: normal; }
 
 .wrapper {
-  max-width: 1545px;
+  max-width: 1553px;
   margin: 0 auto;
   padding: 0 15px; }
 
@@ -407,7 +407,8 @@ main {
   font-size: 77px;
   margin-bottom: 80px;
   position: relative;
-  left: 74px; }
+  left: 74px;
+  display: inline-block; }
   .title-block span {
     padding: 0 5px 0 18px;
     letter-spacing: 11px; }
@@ -488,6 +489,12 @@ main {
     right: 0;
     height: 1px;
     background: rgba(0, 0, 0, 0.7); }
+
+.profile-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: #393939;
+  margin-bottom: 18px; }
 
 /* END TITLE STYLE*/
 /* BEGIN ITEM ARE COMMON STYLE*/
@@ -973,7 +980,7 @@ header {
             bottom: 0; }
       .bottom-header .main-menu .sub-menu .sub-menu-category {
         position: absolute;
-        top: 100px;
+        top: 100%;
         background: #ffffff;
         display: -webkit-box;
         display: -ms-flexbox;
@@ -2350,74 +2357,159 @@ header {
         .block-image-info .title-block .sub-title {
           margin-left: 25px; } }
 
-.profile {
-  padding: 40px;
+.tab-content .personal-information {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.profile, .delivery {
+  width: 49.4%; }
+
+.personal-area-information {
+  padding-top: 34px; }
+  .personal-area-information .nav-tabs {
+    border-top: 1px solid #cecdcd;
+    border-bottom: 1px solid #cecdcd;
+    border-left: 1px solid #cecdcd;
+    display: inline-block;
+    margin-bottom: 35px; }
+    .personal-area-information .nav-tabs li a {
+      display: block;
+      padding: 16px 0 15px 37px;
+      font-size: 14px;
+      color: #000;
+      font-weight: normal;
+      border-right: 1px solid #cecdcd;
+      border-radius: 0;
+      width: 230px;
+      margin-right: 0; }
+      .personal-area-information .nav-tabs li a:before {
+        content: '';
+        display: block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 4px 0 4px 6px;
+        border-color: transparent transparent transparent #393939;
+        position: absolute;
+        left: 21px;
+        top: 50%;
+        margin-top: -4px; }
+    .personal-area-information .nav-tabs li.active a {
+      font-weight: 500;
+      background: #f7fbfc; }
+
+.profile .profile-user {
+  padding: 43px 41px 70px 41px;
   background: #ffffff; }
-  .profile .profile-title {
-    font-size: 20px;
-    font-weight: 500;
-    color: #393939;
-    margin-bottom: 20px; }
-  .profile .control-label {
-    display: inline-block;
-    width: 21%; }
-  .profile .input-group {
-    display: inline-block;
-    max-width: 376px;
-    margin-bottom: 0;
-    vertical-align: middle; }
-  .profile .personal-data-form {
-    position: relative;
-    color: #393939; }
-    .profile .personal-data-form .upload-user-photo {
-      position: absolute;
-      top: 0;
-      right: 0; }
-      .profile .personal-data-form .upload-user-photo .photo {
-        width: 116px;
-        height: 116px;
-        border-radius: 50%;
-        overflow: hidden; }
-        .profile .personal-data-form .upload-user-photo .photo img {
-          width: 100%;
-          -o-object-fit: cover;
-             object-fit: cover; }
-      .profile .personal-data-form .upload-user-photo .upload-photo-overlay input[type="file"] {
-        display: none; }
-      .profile .personal-data-form .upload-user-photo .upload-photo-overlay .upload-link {
-        cursor: pointer;
-        font-size: 12px;
-        font-weight: normal;
-        margin-bottom: 0;
-        border-bottom: 1px solid #eef0f2;
-        line-height: normal;
-        position: relative;
-        margin-left: 25px;
+
+.profile .control-label {
+  display: inline-block;
+  width: 18.7%; }
+
+.profile .input-group {
+  display: inline-block;
+  max-width: 376px;
+  margin-bottom: 0;
+  vertical-align: middle; }
+
+.profile .personal-data-form {
+  position: relative;
+  color: #393939; }
+  .profile .personal-data-form .form-group {
+    margin-bottom: 20px;
+    position: relative; }
+  .profile .personal-data-form .upload-user-photo {
+    position: absolute;
+    top: 0;
+    right: 0; }
+    .profile .personal-data-form .upload-user-photo .photo {
+      width: 116px;
+      height: 116px;
+      border-radius: 50%;
+      overflow: hidden; }
+      .profile .personal-data-form .upload-user-photo .photo img {
+        width: 100%;
+        -o-object-fit: cover;
+           object-fit: cover; }
+    .profile .personal-data-form .upload-user-photo .upload-photo-overlay input[type="file"] {
+      display: none; }
+    .profile .personal-data-form .upload-user-photo .upload-photo-overlay .upload-link {
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: normal;
+      margin-bottom: 0;
+      border-bottom: 1px solid #eef0f2;
+      line-height: normal;
+      position: relative;
+      margin-left: 25px;
+      -webkit-transition: all .3s ease;
+      transition: all .3s ease; }
+      .profile .personal-data-form .upload-user-photo .upload-photo-overlay .upload-link:before {
+        content: '\0050';
+        font-family: "Glyphter";
+        display: block;
+        position: absolute;
+        left: -25px;
+        top: 0;
+        font-size: 13px;
         -webkit-transition: all .3s ease;
         transition: all .3s ease; }
-        .profile .personal-data-form .upload-user-photo .upload-photo-overlay .upload-link:before {
-          content: '\0050';
-          font-family: "Glyphter";
-          display: block;
-          position: absolute;
-          left: -25px;
-          top: 0;
-          font-size: 13px;
-          -webkit-transition: all .3s ease;
-          transition: all .3s ease; }
-        .profile .personal-data-form .upload-user-photo .upload-photo-overlay .upload-link:hover, .profile .personal-data-form .upload-user-photo .upload-photo-overlay .upload-link:focus, .profile .personal-data-form .upload-user-photo .upload-photo-overlay .upload-link:active {
+      .profile .personal-data-form .upload-user-photo .upload-photo-overlay .upload-link:hover, .profile .personal-data-form .upload-user-photo .upload-photo-overlay .upload-link:focus, .profile .personal-data-form .upload-user-photo .upload-photo-overlay .upload-link:active {
+        color: #75c6c3; }
+        .profile .personal-data-form .upload-user-photo .upload-photo-overlay .upload-link:hover:before, .profile .personal-data-form .upload-user-photo .upload-photo-overlay .upload-link:focus:before, .profile .personal-data-form .upload-user-photo .upload-photo-overlay .upload-link:active:before {
           color: #75c6c3; }
-          .profile .personal-data-form .upload-user-photo .upload-photo-overlay .upload-link:hover:before, .profile .personal-data-form .upload-user-photo .upload-photo-overlay .upload-link:focus:before, .profile .personal-data-form .upload-user-photo .upload-photo-overlay .upload-link:active:before {
-            color: #75c6c3; }
-    .profile .personal-data-form .password-field, .profile .personal-data-form .phone-field {
-      max-width: 230px; }
-    .profile .personal-data-form .phone-field {
-      position: relative; }
-      .profile .personal-data-form .phone-field .input-group-btn {
-        position: absolute;
-        left: 0;
-        top: 0;
-        z-index: 10; }
+  .profile .personal-data-form .password-field, .profile .personal-data-form .phone-field {
+    max-width: 230px; }
+  .profile .personal-data-form .phone-field {
+    position: relative; }
+    .profile .personal-data-form .phone-field .input-group-btn {
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 10;
+      width: 58px;
+      height: 45px;
+      line-height: 45px;
+      text-align: center;
+      background: #fafafa;
+      padding: 0;
+      border: 1px solid #cecdcd; }
+      .profile .personal-data-form .phone-field .input-group-btn .btn-default {
+        width: 100%;
+        padding: 0;
+        color: #393939; }
+        .profile .personal-data-form .phone-field .input-group-btn .btn-default:before {
+          content: none; }
+        .profile .personal-data-form .phone-field .input-group-btn .btn-default:hover, .profile .personal-data-form .phone-field .input-group-btn .btn-default:focus, .profile .personal-data-form .phone-field .input-group-btn .btn-default:active {
+          -webkit-box-shadow: none;
+                  box-shadow: none; }
+      .profile .personal-data-form .phone-field .input-group-btn.open .btn-default {
+        -webkit-box-shadow: none;
+                box-shadow: none; }
+      .profile .personal-data-form .phone-field .input-group-btn .dropdown-menu {
+        min-width: auto;
+        padding: 0; }
+    .profile .personal-data-form .phone-field input {
+      padding-left: 69px; }
+  .profile .personal-data-form .btn-primary {
+    position: absolute;
+    left: 19.2%; }
+
+.profile .pwd-link {
+  position: absolute;
+  top: 50%;
+  left: 56.2%;
+  display: block;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-size: 12px;
+  line-height: normal;
+  color: #393939;
+  border-bottom: 1px solid #cecdcd; }
 
 footer {
   padding: 67px 0 34px;

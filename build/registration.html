@@ -168,36 +168,39 @@
                 </ul>
             </div>
             <div class="title-page">Регистрация</div>
-            <form action="/" data-toggle="validator" role="form" novalidate>
+            <form action="/" class="js_validate registration-data-form" role="form" novalidate>
                 <div class="form-group">
                     <label class="control-label">Имя</label>
                     <div class="input-group">
-                        <input name="name" class="form-control" type="text">
+                        <input name="name" class="form-control" value="" type="text">
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="control-label">Фамилия</label>
                     <div class="input-group">
-                        <input name="last-name" class="form-control" type="text">
+                        <input name="last-name" class="form-control" value="" type="text">
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="control-label">Email</label>
                     <div class="input-group">
-                        <input name="email" class="form-control" type="email">
+                        <input type="email" name="email" value="" class="form-control" required data-validate="email">
+                        <span class="error-text">Некорректный формат Email</span>
                     </div>
                 </div>
                 <div class="password-wrap row">
                     <div class="form-group col-md-6">
                         <label class="control-label">Пароль</label>
                         <div class="input-group">
-                            <input name="password" class="form-control" type="password">
+                            <input type="password" name="password" class="form-control password" required data-validate="pass">
+                            <span class="error-text"></span>
                         </div>
                     </div>
                     <div class="form-group col-md-6">
                         <label class="control-label">Повторите Пароль</label>
-                        <div class="input-group">
-                            <input name="password_repeat" class="form-control" type="password">
+                        <div class="input-group password-field">
+                            <input type="password" name="password_repeat" class="form-control password_1" required data-validate="pass1">
+                            <span class="error-text"></span>
                         </div>
                     </div>
                 </div>
@@ -293,8 +296,8 @@
     </div>
     <div class="bottom-footer wrapper container-fluid">
         <div class="row">
-            <div class="copyright col-md-6">© Bafimoda, 2017. Все права защищены.</div>
-            <div class="developers col-md-6">Разработка и поддержка сайта - <a href="#">Artjoker</a></div>
+            <div class="copyright col-md-6 col-sm-6 col-xs-12">© Bafimoda, 2017. Все права защищены.</div>
+            <div class="developers col-md-6 col-sm-6 col-xs-12">Разработка и поддержка сайта - <a href="#">Artjoker</a></div>
         </div>
     </div>
 </footer>
