@@ -1,4 +1,4 @@
-.tab-content .personal-information {
+.tab-content .personal-information.active {
   display: flex; justify-content: space-between;
 }
 .personal-col {
@@ -148,3 +148,88 @@
     position: absolute; top: 50%; left: 56.2%; display: block; transform: translateY(-50%); font-size: 12px; line-height: normal; color: $color-button-text; border-bottom: 1px solid $color-gray;
   }
 }
+/*** BEGIN ORDER TAB ***/
+.order-table {
+  background: $color-white; padding: 36px 32px 36px 39px;
+  ul li { margin-bottom: 7px; }
+  table {
+    width: 100%;
+    thead {
+      td {
+        font-size: 14px; color: $color-button-text; font-weight: 500; padding: 0 5px 15px; vertical-align: top;
+      }
+    }
+    tbody {
+      tr {
+        border: 1px solid $color-gray;
+        td {
+          font-size: 14px; color: $color-button-text; padding: 26px 6px 17.5px; vertical-align: top;
+          &.col-table-md { padding-top: 25px; }
+          &:last-child {
+            width: 10%;
+          }
+        }
+      }
+    }
+  }
+  .col-table-lg {
+    width: 25.8%;
+  }
+  .col-table-md {
+    width: 13%; padding: 0 5px 17px 30px
+  }
+  .col-table-sm {
+    width: 8%;
+  }
+  .col-table-1 {
+    width: 11%;
+  }
+  .product-list {
+    li a {
+     display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 345px;
+    }
+  }
+  .product-qty {
+    padding: 0 25px;
+  }
+  .product-sales {
+    font-weight: bold; padding: 0 15px;
+  }
+  .product-total {
+    font-weight: bold;
+  }
+  .status-order {
+    .status {
+      display: block; color: $color-button-text; position: relative; font-size: 12px; padding-left: 20px; margin-bottom: 10px;
+      &.not-pay {
+        color: $color-red;
+        &:before {
+          border-color: $color-red;
+        }
+        &:after { background: $color-red; }
+      }
+      &.pay {
+        color: $color-green;
+        &:before {
+          border-color: $color-green;
+        }
+        &:after {
+          background: $color-green;
+        }
+      }
+      &:before, &:after {
+        top: 50%; transform: translateY(-50%);
+      }
+      &:before {
+        content: ''; display: block; position: absolute; left: 0; width: 15px; height: 15px; border-radius: 50%; border: 1px solid transparent;
+      }
+      &:after {
+        content: ''; display: block; width: 9px; height: 9px; background: transparent; border-radius: 50%; position: absolute; left: 2.5px;
+      }
+    }
+    .btn-pay {
+      display: block; background: $color-button-text; color: $color-white; max-width: 139px; padding: 10px 0 10px 15px; text-align: left; font-size: 12px; font-weight: 500;
+    }
+  }
+}
+/*** END ORDER TAB ***/

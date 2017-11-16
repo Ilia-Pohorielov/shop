@@ -12,6 +12,8 @@ $color-gray: #cecdcd;
 $color-light-gray: #c6c6c6;
 $color-gray-bg: #eef0f2;
 $color-bg-blue: #f7fbfc;
+$color-red: #ff3333;
+$color-green: #66bb6a;
 
 @mixin placeholder {
   ::-webkit-input-placeholder {@content}
@@ -21,7 +23,7 @@ $color-bg-blue: #f7fbfc;
 }
 
 .wrapper {
-  max-width: 1547px;
+  max-width: 1555px;
   margin: 0 auto;
   padding: 0 15px;
 }

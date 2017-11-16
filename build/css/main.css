@@ -55,7 +55,7 @@
   font-style: normal; }
 
 .wrapper {
-  max-width: 1547px;
+  max-width: 1555px;
   margin: 0 auto;
   padding: 0 15px; }
 
@@ -2383,7 +2383,7 @@ header {
         .block-image-info .title-block .sub-title {
           margin-left: 25px; } }
 
-.tab-content .personal-information {
+.tab-content .personal-information.active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2630,6 +2630,105 @@ header {
   color: #393939;
   border-bottom: 1px solid #cecdcd; }
 
+/*** BEGIN ORDER TAB ***/
+.order-table {
+  background: #ffffff;
+  padding: 36px 32px 36px 39px; }
+  .order-table ul li {
+    margin-bottom: 7px; }
+  .order-table table {
+    width: 100%; }
+    .order-table table thead td {
+      font-size: 14px;
+      color: #393939;
+      font-weight: 500;
+      padding: 0 5px 15px;
+      vertical-align: top; }
+    .order-table table tbody tr {
+      border: 1px solid #cecdcd; }
+      .order-table table tbody tr td {
+        font-size: 14px;
+        color: #393939;
+        padding: 26px 6px 17.5px;
+        vertical-align: top; }
+        .order-table table tbody tr td.col-table-md {
+          padding-top: 25px; }
+        .order-table table tbody tr td:last-child {
+          width: 10%; }
+  .order-table .col-table-lg {
+    width: 25.8%; }
+  .order-table .col-table-md {
+    width: 13%;
+    padding: 0 5px 17px 30px; }
+  .order-table .col-table-sm {
+    width: 8%; }
+  .order-table .col-table-1 {
+    width: 11%; }
+  .order-table .product-list li a {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 345px; }
+  .order-table .product-qty {
+    padding: 0 25px; }
+  .order-table .product-sales {
+    font-weight: bold;
+    padding: 0 15px; }
+  .order-table .product-total {
+    font-weight: bold; }
+  .order-table .status-order .status {
+    display: block;
+    color: #393939;
+    position: relative;
+    font-size: 12px;
+    padding-left: 20px;
+    margin-bottom: 10px; }
+    .order-table .status-order .status.not-pay {
+      color: #ff3333; }
+      .order-table .status-order .status.not-pay:before {
+        border-color: #ff3333; }
+      .order-table .status-order .status.not-pay:after {
+        background: #ff3333; }
+    .order-table .status-order .status.pay {
+      color: #66bb6a; }
+      .order-table .status-order .status.pay:before {
+        border-color: #66bb6a; }
+      .order-table .status-order .status.pay:after {
+        background: #66bb6a; }
+    .order-table .status-order .status:before, .order-table .status-order .status:after {
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%); }
+    .order-table .status-order .status:before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      border: 1px solid transparent; }
+    .order-table .status-order .status:after {
+      content: '';
+      display: block;
+      width: 9px;
+      height: 9px;
+      background: transparent;
+      border-radius: 50%;
+      position: absolute;
+      left: 2.5px; }
+  .order-table .status-order .btn-pay {
+    display: block;
+    background: #393939;
+    color: #ffffff;
+    max-width: 139px;
+    padding: 10px 0 10px 15px;
+    text-align: left;
+    font-size: 12px;
+    font-weight: 500; }
+
+/*** END ORDER TAB ***/
 footer {
   padding: 67px 0 34px;
   border-top: 1px solid #c6c6c6; }

@@ -183,12 +183,12 @@
             </div>
             <div class="title-page">Личный кабинет</div>
             <ul class="nav nav-tabs">
-                <li class="active"><a data-toggle="tab" href="#personal-information">Мои данные</a></li>
-                <li><a data-toggle="tab" href="#top-sales">Топ продаж</a></li>
+                <li><a data-toggle="tab" href="#personal-information">Мои данные</a></li>
+                <li><a data-toggle="tab" href="#personal-orders">Топ продаж</a></li>
                 <li><a data-toggle="tab" href="#top-sales">Подписка</a></li>
             </ul>
             <div class="tab-content">
-                <div id="personal-information" class="tab-pane fade in active personal-information">
+                <div id="personal-information" class="tab-pane fade personal-information">
                     <div class="personal-col">
                         <div class="personal-title">Личные данные</div>
                         <div class="profile">
@@ -334,7 +334,129 @@
                         </div>
                     </div>
                 </div>
-            </div>
+                <div id="personal-orders" class="tab-pane fade active in">
+                    <div class="personal-title">Мои заказы</div>
+                    <div class="tab-content">
+                        <div class="order-table">
+                            <table>
+                                <thead>
+                                <tr>
+                                    <td class="col-table-md">Дата заказа</td>
+                                    <td class="col-table-sm"># Заказа</td>
+                                    <td class="col-table-lg">Товар</td>
+                                    <td class="col-table-sm qty">Кол-во</td>
+                                    <td class="col-table-sm">Цена</td>
+                                    <td class="col-table-sm">Скидка</td>
+                                    <td class="col-table-sm">Итого</td>
+                                    <td>Статус</td>
+                                    <td class="col-table-sm">Общая сумма</td>
+                                </tr>
+                                </thead>
+                                <tbody class="js-scroll">
+                                <tr>
+                                    <td class="col-table-md">12 сентября 2017</td>
+                                    <td class="col-table-sm">2354</td>
+                                    <td class="col-table-lg">
+                                        <ul class="product-list">
+                                            <li>
+                                                <a href="#">Зеленое платье с длинными расклешенными расклешенными расклешенными</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Длинное платье бежевого цвета с большими большими большими</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Лазурная юбка с широким поясом</a>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                    <td class="col-table-sm">
+                                        <ul class="product-qty">
+                                            <li>1</li>
+                                            <li>1</li>
+                                            <li>2</li>
+                                        </ul>
+                                    </td>
+                                    <td class="col-table-sm">
+                                        <ul class="product-price">
+                                            <li>235 UAH</li>
+                                            <li>499 UAH</li>
+                                            <li>399 UAH</li>
+                                        </ul>
+                                    </td>
+                                    <td class="col-table-sm">
+                                        <ul class="product-sales">
+                                            <li>5%</li>
+                                        </ul>
+                                    </td>
+                                    <td class="col-table-sm">
+                                        <ul class="product-total">
+                                            <li>235 UAH</li>
+                                            <li>499 UAH</li>
+                                            <li>399 UAH</li>
+                                        </ul>
+                                    </td>
+                                    <td class="col-table-1">
+                                        <div class="status-order">
+                                            <span class="status not-pay">Не оплачен</span>
+                                            <a href="#" class="btn btn-pay">Оплатить</a>
+                                        </div>
+                                    </td>
+                                    <td class="col-table-sm">
+                                        <strong>1532 UAH</strong>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-table-md">10 сентября 2017</td>
+                                    <td class="col-table-sm">2354</td>
+                                    <td class="col-table-lg">
+                                        <ul class="product-list">
+                                            <li>
+                                                <a href="#">Зеленое платье с длинными расклешенными расклешенными расклешенными</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Длинное платье бежевого цвета с большими большими большими</a>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                    <td class="col-table-sm">
+                                        <ul class="product-qty">
+                                            <li>1</li>
+                                            <li>1</li>
+                                        </ul>
+                                    </td>
+                                    <td class="col-table-sm">
+                                        <ul class="product-price">
+                                            <li>235 UAH</li>
+                                            <li>499 UAH</li>
+                                        </ul>
+                                    </td>
+                                    <td class="col-table-sm">
+                                        <ul class="product-sales">
+                                            <li>10%</li>
+                                        </ul>
+                                    </td>
+                                    <td class="col-table-sm">
+                                        <ul class="product-total">
+                                            <li>235 UAH</li>
+                                            <li>499 UAH</li>
+                                        </ul>
+                                    </td>
+                                    <td class="col-table-1">
+                                        <div class="status-order">
+                                            <span class="status pay">Звершено</span>
+                                        </div>
+                                    </td>
+                                    <td class="col-table-sm">
+                                        <strong>734 UAH</strong>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
         </div>
     </div>
 </main>
