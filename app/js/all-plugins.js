@@ -8,3 +8,4 @@
 //= jquery.mCustomScrollbar.concat.min.js
 //= validate.js
 //= nouislider.min.js
+//= bootstrap-select.min.js

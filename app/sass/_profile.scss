@@ -1,32 +1,97 @@
 .tab-content .personal-information {
   display: flex; justify-content: space-between;
 }
+.personal-col {
+  width: 49.4%; overflow: hidden;
+}
 .profile, .delivery {
-  width: 49.4%;
+  background: $color-white; height: 100%;
 }
 .personal-area-information {
   padding-top: 34px;
   .nav-tabs {
     border-top: 1px solid $color-gray; border-bottom: 1px solid $color-gray; border-left: 1px solid $color-gray; display: inline-block; margin-bottom: 35px;
     li {
+      margin: 0;
       a {
-        display: block; padding: 16px 0 15px 37px;  font-size: 14px; color: #000; font-weight: normal; border-right: 1px solid $color-gray; border-radius: 0; width: 230px; margin-right: 0;
+        display: block; padding: 16px 0 15px 37px;  font-size: 14px; color: #000; font-weight: normal; border: none; border-right: 1px solid $color-gray; border-radius: 0; width: 230px; margin-right: 0;
+        transition: all .3s ease;
         &:before {
           content: ''; display: block; width: 0; height: 0; border-style: solid; border-width: 4px 0 4px 6px; border-color: transparent transparent transparent $color-button-text; position: absolute; left: 21px; top: 50%; margin-top: -4px;
         }
+        &:hover, &:focus, &:active {
+          background: $color-bg-blue;
+        }
       }
       &.active {
-        a { font-weight: 500; background: $color-bg-blue; }
+        a {
+          font-weight: 500; background: $color-bg-blue;
+          &:hover, &:focus, &:active {
+            border: none; border-right: 1px solid $color-gray; box-shadow: none; color: $color-black;
+          }
+        }
       }
     }
   }
 }
-.profile {
-  .profile-user {
-    padding: 43px 41px 70px 41px; background: $color-white;
+.personal-information {
+  margin-bottom: 60px;
+  .delivery-data-form {
+    padding: 22px 11px 18px 27px;
+    input {
+      display: inline-block; max-width: 128px;
+    }
+    .form-group {
+      margin-bottom: 19px;
+    }
   }
+  textarea {
+    max-width: 540px; height: 62px; padding-top: 15px;
+  }
+  span.control-label { vertical-align: top; }
   .control-label {
     display: inline-block; width: 18.7%;
+  }
+  .street-field {
+    display: inline-block; max-width: 540px; width: 100%; margin-bottom: 18px;
+    .bootstrap-select {
+      max-width: 128px;
+    }
+    input {
+      max-width: 406px; vertical-align: bottom;
+    }
+  }
+  .exact-street-field {
+    display: flex; padding-left: 19.3%;
+    .control-label {
+      width: auto;
+    }
+    .exact-field {
+      max-width: 128px; margin-right: 20px;
+    }
+  }
+  .radio-field {
+    max-width: 540px; display: inline-block;
+    input[type="radio"] {
+      display: none;
+    }
+    label {
+      font-size: 14px; font-weight: normal; color: $color-button-text; display: block; padding-left: 31px; position: relative; cursor: pointer; margin-bottom: 14px;
+      &:before { content: ''; display: block; width: 23px; height: 22px; border: 1px solid $color-gray; border-radius: 50%; background: #f7f7f7; position: absolute; left: 0; }
+      &:after {
+        content: ''; display: block; width: 11px; height: 11px; border-radius: 50%; background: $color-button-text; position: absolute; top: 6px; left: 6px; transform: scale(0);
+        transition: all .3s ease;
+      }
+    }
+    input[type="radio"]:checked + label:after {
+       transform: scale(1);
+    }
+  }
+  .btn-primary { margin-left: 19.3%; }
+}
+.profile {
+  .profile-user {
+    padding: 43px 41px 18px 41px; background: $color-white;
   }
   .input-group {
     display: inline-block; max-width: 376px; margin-bottom: 0; vertical-align: middle;
@@ -45,7 +110,7 @@
       .upload-photo-overlay {
         input[type="file"] { display: none; }
         .upload-link {
-          cursor: pointer; font-size: 12px; font-weight: normal; margin-bottom: 0; border-bottom: 1px solid $color-gray-bg; line-height: normal; position: relative; margin-left: 25px; transition: all .3s ease;
+          cursor: pointer; font-size: 12px; font-weight: normal; margin-bottom: 0; border-bottom: 1px solid $color-gray; line-height: normal; position: relative; margin-left: 25px; transition: all .3s ease;
           &:before { content: '\0050'; font-family: "Glyphter";  display: block; position: absolute; left: -25px; top: 0; font-size: 13px; transition: all .3s ease;  }
           &:hover, &:focus, &:active {
             color: $color-blue-text;
@@ -78,7 +143,6 @@
       }
       input { padding-left: 69px; }
     }
-    .btn-primary { position: absolute; left: 19.2%; }
   }
   .pwd-link {
     position: absolute; top: 50%; left: 56.2%; display: block; transform: translateY(-50%); font-size: 12px; line-height: normal; color: $color-button-text; border-bottom: 1px solid $color-gray;

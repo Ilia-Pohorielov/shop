@@ -21,7 +21,7 @@ $color-bg-blue: #f7fbfc;
 }
 
 .wrapper {
-  max-width: 1553px;
+  max-width: 1547px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -136,6 +136,20 @@ main {
 .btn-product {
   display: inline-block; width: 100%; max-width: 270px; padding: 17px 0; border: 1px solid $color-black; color: $color-black; text-align: center; letter-spacing: 0.6px;
 }
+.bootstrap-select {
+  width: 100%!important; max-width: 540px; height: 45px; background: $color-white; border: 1px solid $color-light-gray; padding-left: 13px;
+  .btn-default {
+    height: 100%; color: $color-button-text!important;
+    &:hover, &:focus, &:active {
+      background: transparent!important; border: none!important; box-shadow: none; outline: 0!important;
+    }
+  }
+  &.open {
+    .btn-default {
+      box-shadow: none; background: transparent; border: none;
+    }
+  }
+}
 /* END BUTTON STYLE*/
 
 /* BEGIN DROPDOWN STYLE*/
@@ -216,7 +230,7 @@ main {
     content: ''; display: block; position: absolute; bottom: 7px; left: 0; right: 0; height: 1px; background: rgba($color-black, .7);
   }
 }
-.profile-title {
+.personal-title {
   font-size: 20px; font-weight: 500; color: $color-button-text; margin-bottom: 18px;
 }
 /* END TITLE STYLE*/
@@ -294,20 +308,22 @@ main {
 
 /* BEGIN FORM STYLE*/
 .form-group {
+  width: 100%;  margin-bottom: 15px;
   .control-label {
     font-weight: 500; font-size: 13px; color: $color-button-text; margin-bottom: 4px;
   }
-  .input-group {
-    width: 100%; margin-bottom: 15px;
-    input { height: 45px; border: 1px solid $color-gray; }
-    .error-text { display: none; position: absolute; top: 0; bottom: 0; left: 13px; right: 0; line-height: 45px; color: #e5231f; z-index: 10; font-size: 12px;}
-    &.has-error {
-      .form-control {
-        border-color: #e5231f;
-        &:focus { box-shadow: none; }
-      }
-      .error-text { display: block; }
+  .input-group { width: 100%; }
+  textarea, input {
+    border: 1px solid $color-gray; width: 100%; padding: 0 15px;
+  }
+  input { height: 45px; }
+  .error-text { display: none; position: absolute; top: 0; bottom: 0; left: 13px; right: 0; line-height: 45px; color: #e5231f; z-index: 10; font-size: 12px;}
+  &.has-error {
+    .form-control {
+      border-color: #e5231f;
+      &:focus { box-shadow: none; }
     }
+    .error-text { display: block; }
   }
 }
 /* BEGIN FORM STYLE*/
