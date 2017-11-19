@@ -53,17 +53,22 @@
   .info-rules {
     text-align: left; margin-bottom: 24px; padding-bottom: 30px; border-bottom: 1px solid $color-text-light;
   }
-  .facebook, .google { text-decoration: none; color: $color-white; margin-bottom: 10px; }
+  .facebook, .google {
+    text-decoration: none; color: $color-white; margin-bottom: 10px;
+    &:hover, &:focus, &:active {
+      color: rgba($color-white, .3);
+    }
+  }
   .facebook {
     background: #3b5999; margin-right: 25px;
     &:before {
-      content: '\0052'; width: 8px; height: 15px; background: none; font-family: "Glyphter"; top: 47%;
+      content: '\e916'; font-size: 15px; background: none; font-family: "icomoon"; top: 47%;
     }
   }
   .google {
     background: #dd4b39;
     &:before {
-      background: url("../images/google-ico.svg")no-repeat 0 0; width: 21px; height: 13.345px;
+      content: '\e91f'; font-size: 20px; font-family: "icomoon";
     }
   }
   .social-button {

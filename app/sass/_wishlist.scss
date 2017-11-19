@@ -1,0 +1,70 @@
+.wishlist-sidebar {
+  .nav-tabs {
+    border: 1px solid $color-border; background: $color-white; margin-bottom: 30px;
+    li {
+      display: block; float: none; margin: 0;
+      &:not(:last-child) {
+        border-bottom: 1px solid $color-border;
+      }
+      .nav-img {
+        display: block; width: 42px; height: 42px; overflow: hidden; border: 1px solid $color-border; margin-right: 22px;
+      }
+      a {
+        display: flex; align-items: center; padding: 5px 6px; position: relative; transition: all .3s ease; border: none; border-radius: 0; line-height: normal; margin: 0;
+        .wishlist-name {
+          display: block; position: relative; font-size: 14px; color: $color-black;
+        }
+        &:hover, &:focus, &:active {
+          background: $color-blue-bg; border: none; border-radius: 0; color: $color-black;
+        }
+      }
+      &.active {
+        a {
+          box-shadow: inset -3px 0 0 #69d5cc;
+          .wishlist-name {
+            padding-left: 16px; font-weight: bold;
+            &:before {
+              content: '\e95c'; display: block; font-size: 8px; color: $color-black; position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-family: "icomoon";
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.wishlist-count {
+  color: $color-button-text; display: block; position: relative; padding-right: 20px; font-size: 12px; width: 80%; text-align: right; margin-right: 15px;
+  &:after {
+    content: '\e95d'; font-family: 'icomoon'; font-size: 12px; color: $color-button-text; position: absolute; right: 0; top: 50%; transform: translateY(-50%);
+  }
+
+}
+.block-content {
+  position: relative;
+}
+.wishlist-sidebar {
+  padding: 0 14px;
+}
+.tab-top {
+  display: flex; justify-content: space-between; margin-bottom: 32px; margin-top: 15px;
+  .wishlist-info {
+    display: flex;
+    .wishlist-count {
+      width: auto; margin-right: 11px;
+    }
+    .wishlist-create {
+      font-size: 14px; color: #a1a1a1;
+    }
+  }
+}
+.tab-title {
+  font-size: 25px; color: $color-button-text;
+}
+.wishlist-content {
+  padding: 0 0 0 12px;
+}
+.block-viewed-item {
+  .title-page {
+    text-align: center;
+  }
+}

@@ -5,7 +5,7 @@
   padding-right: 10px; margin-bottom: 20px;
 }
 .main-panel {
-  .panel-heading {
+  > .panel-heading {
     display: none;
     a {
       background: $color-white; text-align: center; text-transform: uppercase; display: none;
@@ -141,6 +141,8 @@
     padding: 0 15px;
   }
 }
+
+.block-viewed-item,
 .block-top-sales {
   border-top: 1px solid #dddddd;
   .wrap {
@@ -148,41 +150,6 @@
   }
   .title-page {
     font-size: 25px;
-  }
-  .top-product {
-    display: flex;
-    .collection-item {
-      width: 20%;
-      .image {
-        max-height: 463px;
-      }
-      .description {
-        font-size: 12px; line-height: 15px; padding: 17px 15px;
-        .text { margin-bottom: 10px; }
-        .price {
-          font-size: 14px;
-        }
-      }
-      .favorite {
-        width: 29px; height: 28px;
-        &:before { color: #d7d7d7; }
-        &:hover, &:focus, &:active {
-          &:before { color: $color-light-blue; }
-        }
-      }
-      @media (max-width: 1330px) {
-        width: 24.9%; margin-bottom: 10px;
-      }
-      @media (max-width: 1032px) {
-        width: 33.2%;
-      }
-      @media (max-width: 787px) {
-        width: 100%;
-      }
-    }
-    @media (max-width: 1330px) {
-        flex-wrap: wrap;
-    }
   }
   .btn-see-all {
     font-weight: 500; font-size: 14px; color: $color-button-text; border-bottom: 1px solid $color-button-text; padding-bottom: 6px; position: absolute; top: 55px; right: 0; transition: all .3s ease;
@@ -193,6 +160,41 @@
     @media (max-width: 767px) {
       right: 30px;
     }
+  }
+}
+.top-product {
+  display: flex;
+  .collection-item {
+    width: 20%;
+    .image {
+      max-height: 463px;
+    }
+    .description {
+      font-size: 12px; line-height: 15px; padding: 17px 15px;
+      .text { margin-bottom: 10px; }
+      .price {
+        font-size: 14px;
+      }
+    }
+    .favorite {
+      width: 29px; height: 28px;
+      &:before { color: #d7d7d7; }
+      &:hover, &:focus, &:active {
+        &:before { color: $color-light-blue; }
+      }
+    }
+    @media (max-width: 1330px) {
+      width: 24.9%; margin-bottom: 10px;
+    }
+    @media (max-width: 1032px) {
+      width: 33.2%;
+    }
+    @media (max-width: 787px) {
+      width: 100%;
+    }
+  }
+  @media (max-width: 1330px) {
+    flex-wrap: wrap;
   }
 }
 .block-image-info {

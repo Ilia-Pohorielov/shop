@@ -14,7 +14,8 @@ form,fieldset,input,textarea,p,blockquote,th,td { padding:0;margin:0; }
 table { border-collapse:collapse; border-spacing:0; }
 fieldset,img, iframe { border:0;}
 ul,nav { list-style:none; }
-input:focus, button:focus,a:focus, textarea:focus, select:focus { outline:none !important; }
+input:focus, button:focus, textarea:focus, select:focus { outline:0 !important;}
+input { box-shadow: none !important; }
 textarea { resize:none; }
 section { max-width:100%; }
 a { color:#393939; text-decoration:none; }

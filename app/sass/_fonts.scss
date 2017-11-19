@@ -74,3 +74,14 @@
   font-weight: 300;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('./fonts/icomoon.eot?q812rf');
+  src:  url('./fonts/icomoon.eot?q812rf#iefix') format('embedded-opentype'),
+  url('./fonts/icomoon.ttf?q812rf') format('truetype'),
+  url('./fonts/icomoon.woff?q812rf') format('woff'),
+  url('./fonts/icomoon.svg?q812rf#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

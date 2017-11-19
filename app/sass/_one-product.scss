@@ -1,0 +1,111 @@
+.content-product {
+  margin-top: 36px;
+}
+.product-slider {
+  display: flex; padding: 0;
+  .big-slider {
+    max-width: 489px; margin-right: 8px;
+    .image {
+      position: relative;
+      .zoom-img {
+        position: absolute; left: 10px; bottom: 10px;
+      }
+    }
+    .zoom-img {
+      display: block; width: 36px; height: 36px; background: $color-white; text-align: center; border-radius: 50%; cursor: pointer;
+      &:before {
+        content: '\e967'; display: inline-block; color: $color-black; line-height: 36px; font-family: "icomoon"; transition: all .3s ease;
+      }
+      &:hover, &:focus, &:active {
+        &:before {
+          color: $color-light-blue;
+        }
+      }
+    }
+  }
+  .mini-slider {
+    max-width: 83px;
+    .slick-list {
+      top: 50%; transform: translateY(-50%);
+    }
+    .image {
+      border: 1px solid $color-white; cursor: pointer; outline: 0; position: relative;
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+      &:before {
+        content: ''; display: block; position: absolute; left: 0; right: 0; top: 0; height: 100%; background: rgba($color-white, .5);
+      }
+      &.slick-current:before {
+        background: transparent;
+      }
+    }
+  }
+}
+.product-information {
+  padding: 0 0 0 10px;
+  .title-page {
+    margin-bottom: 33px;
+  }
+  .top-info {
+    display: flex; justify-content: space-between; align-items: center; padding: 26px 0; border-top: 1px solid $color-border; border-bottom: 1px solid $color-border; margin-bottom: 29px;
+    .price-all {
+      font-size: 14px; font-weight: 500; display: flex; color: $color-button-text;
+      span {
+        font-size: 20px; font-weight: bold; margin-left: 5px;
+      }
+      .wholesale {
+        margin-right: 30px;
+      }
+    }
+    .status-presence {
+      font-size: 15px; color: $color-green-light;
+    }
+  }
+}
+.product-more-about {
+  .nav-tabs.tabs-info {
+    margin-bottom: -5px; border-bottom: none;
+    li a {
+      width: auto; padding: 16px 27px 15px 37px;
+    }
+  }
+  .tab-content {
+    background: $color-white; width: 100%; width: 621px; border: 1px solid $color-border; color: $color-black; font-size: 14px; padding: 27px 0 31px 30px;
+    .tab-pane {
+      display: flex; max-height: 170px; overflow: hidden; width: 100%;
+      .mCSB_container {
+        display: flex;
+      }
+      .mCustomScrollBox {
+        width: 100%;
+        .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+          height: 30px;
+        }
+      }
+    }
+    .name-info {
+      font-weight: 500; margin-right: 30px;
+    }
+    .description-info {
+      p {
+        margin-bottom: 6px;
+      }
+    }
+  }
+}
+.more-info {
+  display: flex; align-items: flex-end; justify-content: space-between;
+  .product-color {
+    width: 236px; font-size: 0; line-height: 0;
+    .title-color {
+      font-weight: 500; font-size: 14px; color: $color-button-text; margin-bottom: 27px; line-height: normal;
+    }
+    .color {
+     display: inline-block; width: 72px; height: 110px; overflow: hidden; background-repeat: no-repeat; background-position: 0 0; background-size: contain;
+      &:not(:nth-child(3n)) {
+        margin-right: 10px;
+      }
+    }
+  }
+}

@@ -14,6 +14,11 @@ $color-gray-bg: #eef0f2;
 $color-bg-blue: #f7fbfc;
 $color-red: #ff3333;
 $color-green: #66bb6a;
+$color-blue-l: #8f98a4;
+$color-border: #dee0e2;
+$color-border: #dee0e2;
+$color-blue-s: #d2f4f1;
+$color-green-light: #40b288;
 
 @mixin placeholder {
   ::-webkit-input-placeholder {@content}
@@ -23,7 +28,7 @@ $color-green: #66bb6a;
 }
 
 .wrapper {
-  max-width: 1555px;
+  max-width: 1563px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -78,9 +83,6 @@ main {
   .mCSB_dragger .mCSB_dragger_bar {
     background: rgba($color-button-text,.2); width: 4px; height: 73px; border-radius: 2px;
   }
-  .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
-    background: rgba($color-button-text,.2);
-  }
 }
 
 /* BEGIN BUTTON STYLE*/
@@ -99,7 +101,7 @@ main {
   &.btn-cart-ico {
     font-weight: 500; font-size: 13px; padding: 12px 30px 12px 47px; transition: all .3s ease;
     &:before {
-      content: '\0048'; display: block; font-family: "Glyphter"; color: $color-white; font-size: 18px; position: absolute; left: 19px; top: 8px; transition: all .3s ease;
+      content: '\e907'; display: block; font-family: "icomoon"; color: $color-white; font-size: 18px; position: absolute; left: 19px; top: 8px; transition: all .3s ease;
     }
     &:hover, &:focus, &:active {
       color: $color-button-text;
@@ -125,11 +127,10 @@ main {
 }
 .btn-primary {
   display:inline-block; background: $color-button-text; color: $color-white; font-size: 13px; font-weight: 500; padding: 13px 77px 13px 15px; position: relative; transition: all .3s ease; width: 230px; text-align: left;
-  &:before { content: ''; display: block; position: absolute; right: 15px; top: 50%; transform: translateY(-50%); @include sprite($lock-ico); transition: all .3s ease; }
-  &:after { content: ''; display: block; position: absolute; left: 0; right: 0; top: 0; bottom: 0; background: transparent; }
+  &:before { content: '\e938'; display: block; position: absolute; right: 15px; top: 50%; transform: translateY(-50%); transition: all .3s ease; font-size: 15px; font-family: "icomoon";}
   &:hover, &:focus, &:active {
-    background: $color-button-text; border: none;
-    &:after { background: rgba($color-white, .2); }
+    color: rgba($color-white, .3); border: none; background: $color-button-text;
+    &:before { color: rgba($color-white, .3); }
   }
 }
 .btn-filter {
@@ -152,6 +153,16 @@ main {
     }
   }
 }
+.btn-link {
+  display: inline-block; font-size: 14px; color: $color-button-text; font-weight: 500; padding-left: 40px; position: relative;
+  &.btn-share:before {
+    content: '\e956';
+  }
+  &:before {
+    display: block; font-family: "icomoon"; background: $color-white; width: 33px; height: 33px; border: 1px solid $color-border; line-height: 33px; text-align: center; border-radius: 50%;
+    position: absolute; left: 0; top: 50%; margin-top: -16.5px;
+  }
+}
 /* END BUTTON STYLE*/
 
 /* BEGIN DROPDOWN STYLE*/
@@ -160,7 +171,7 @@ main {
   .btn {
     color: $color-light-blue; font-weight: 500; font-size: 12px; text-transform: uppercase; padding: 13px 14px 13px 0; transition: all .3s ease;
     &:before {
-      content: '\0044'; font-family: 'Glyphter'; display: block; color: rgba($color-white, .8); position: absolute; right: 0;
+      content: '\e903'; font-family: 'icomoon'; display: block; color: rgba($color-white, .8); position: absolute; right: 0;
       top: 50%; transform: translateY(-50%); font-size: 7px; transition: all .3s ease;
     }
     &:hover, &:active, &:focus {
@@ -268,7 +279,7 @@ main {
   .btn-subscribe {
     width: 58px; height: 45px; background: $color-button-text; position: absolute; top: 0; right: 0; z-index: 10; transition: all .3s ease;
     &:before {
-      content: '\0051'; display: block; color: $color-white; font-size: 19px; position: absolute; top: 0; left: 50%; transform: translateX(-50%); line-height: 45px; font-family: "Glyphter";
+      content: '\e915'; display: block; color: $color-white; font-size: 19px; position: absolute; top: 0; left: 50%; transform: translateX(-50%); line-height: 45px; font-family: "icomoon";
     }
     &:hover, &:focus, &:active {
       background: $color-blue-text;
@@ -329,6 +340,20 @@ main {
   }
 }
 /* BEGIN FORM STYLE*/
+.sales-advertising {
+  display: flex; background: $color-blue-s; font-size: 14px; color: $color-button-text; border-radius: 16px; border: 1px solid #8adad3; padding: 7px 10px 7px 67px;
+  position: absolute; top: 42px; right: 0; max-width: 485px; width: 100%;
+  strong { font-size: 20px; }
+  .sale-img {
+    position: absolute; left: 6px; top: 50%; transform: translateY(-50%);
+  }
+  a {
+    display: block; margin-left: 35px; padding-right: 15px; position: relative;
+    &:after {
+      content: '\e905'; font-family: "icomoon"; position: absolute; right: 0; top: 53%; transform: translateY(-50%); font-size: 10px; font-weight: bold;
+    }
+  }
+}
 @keyframes animation-scroll {
   0% { top: 0; }
   100% { top: 90%; }

@@ -80,7 +80,7 @@
     img { height: 100%; object-fit: cover; }
     .favorite {
       position: absolute; top: 10px; right: 8px; background: $color-white; width: 39px; height: 38px; border-radius: 50%;
-      &:before { content: '\0041'; display: block; font-size: 15px; font-family: "Glyphter"; color: $color-button-text; position: absolute; left: 50%; top: 50%; transform: translate(-65%, -50%); transition: all .3s ease; }
+      &:before { content: '\e937'; display: block; font-size: 15px; font-family: "icomoon"; color: $color-button-text; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); transition: all .3s ease; line-height: normal; }
       &:hover, &:focus, &:active {
         &:before { color: $color-light-blue; }
       }

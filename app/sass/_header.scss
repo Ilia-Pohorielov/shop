@@ -30,7 +30,7 @@ header {
   .feedback {
     margin-left: 39px; position: relative; border-bottom: 1px dashed $color-light-blue; line-height: 19px; cursor: pointer;
     &:before {
-      content: ''; display: block;  position: absolute; left: -26px ; bottom: 0; @include sprite($phone-ico);
+      content: '\e948'; display: block;  position: absolute; left: -26px ; bottom: 0; font-size: 17px; font-family: "icomoon"; color: $color-blue-text;
     }
   }
   @media (max-width: 1332px) {
@@ -132,7 +132,7 @@ header {
     position: relative;
     .btn-search {
       display: block; color: $color-white; text-transform: uppercase; margin-left: 11px; padding-left: 30px; position: relative; font-weight: 500; font-size: 16px; box-shadow: none;
-      &:before { content: ''; display: block; @include sprite($search-ico); position: absolute; left: 0; top: 11px; }
+      &:before { content: '\e955'; display: block; position: absolute; left: 0; color: #00cdbc; font-size: 20px; font-family: "icomoon"; }
     }
     &.menu-item {
       &:hover, &:focus, &:active {
@@ -156,8 +156,8 @@ header {
       .dropdown-item { text-transform: none; }
       .user-login-btn {
         position: relative; font-weight: 500; color: rgba($color-white,.5); padding: 0 15px 0 30px; margin-right: 19px; text-transform: none; font-size: 13px;
-        &:after, &:before { content: ''; display: block; font-family: 'Glyphter'; color: rgba($color-white,.5); position: absolute; top: 50%; transform: translateY(-50%);}
-        &:before { content:'\0033'; left: 0; right: auto; font-size: 22px; }
+        &:after, &:before { content: ''; display: block; font-family: 'icomoon'; color: rgba($color-white,.5); position: absolute; top: 50%; transform: translateY(-50%);}
+        &:before { content:'\e95e'; left: 0; right: auto; font-size: 22px; }
         &:hover, &:focus, &:active {
           box-shadow: none;
         }
@@ -165,7 +165,7 @@ header {
       .wishlist {
         display: block; margin-right: 30px; padding-left: 30px; position: relative; color: rgba($color-white,.5); font-size: 12px;
         &:before {
-          content: '\0076'; font-family: 'Glyphter'; font-size: 20px; color: rgba($color-white,.5); transition: all .3s ease; position: absolute; left: 0; top: 50%; transform: translateY(-50%);
+          content: '\e95d'; font-family: 'icomoon'; font-size: 20px; color: rgba($color-white,.5); transition: all .3s ease; position: absolute; left: 0; top: 50%; transform: translateY(-50%);
         }
         &:hover, &:focus, &:active {
           color: $color-blue-text;
@@ -184,7 +184,7 @@ header {
       @include placeholder { font-size: 18px; color: rgba($color-button-text,.43); }
       input { width: 100%; height: 100%; border: none; background: none; padding-left: 50px; }
       &:before {
-        content:'\0070'; font-family: 'Glyphter'; display: block; position: absolute; top: 50%; transform: translateY(-50%); left: 0; color: $color-button-text; font-size: 24px;
+        content:'\e955'; font-family: 'icomoon'; display: block; position: absolute; top: 50%; transform: translateY(-50%); left: 0; color: $color-button-text; font-size: 24px;
       }
     }
     .dropdown {
@@ -401,7 +401,7 @@ header {
       .user-login-btn {
         padding: 0 15px 0 0;
         &:before { content: none; }
-        &:after { content: '\0044'; right: 0; font-size: 7px; }
+        &:after { content: '\e903'; right: 0; font-size: 7px; }
       }
       &.open {
         .dropdown-menu {

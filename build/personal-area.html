@@ -10,7 +10,10 @@
 </head>
 <body class="page-catalog">
 <noscript>
-    <div><span>Для полной функциональности этого сайта необходимо включить JavaScript. Вот </span><a href="https://artjoker.ua/ru/blog/how-to-enable-javascript/" target="_blank">инструкции,</a>как включить JavaScript в вашем браузере. </div>
+    <div><span>Для полной функциональности этого сайта необходимо включить JavaScript. Вот </span><a
+            href="https://artjoker.ua/ru/blog/how-to-enable-javascript/" target="_blank">инструкции,</a>как включить
+        JavaScript в вашем браузере.
+    </div>
 </noscript>
 <!--- BEGIN HEADER -->
 <header class="header-inner">
@@ -24,7 +27,8 @@
                     <li><a href="#" class="contact-item">Контакты</a></li>
                     <li class="dropdown-currency">
                         <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Украина - UAH
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -115,7 +119,8 @@
                             <!--<img src="assets/images/user.jpg" alt="#">-->
                         </div>
                         <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle user-login-btn" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <button class="btn btn-secondary dropdown-toggle user-login-btn" type="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Александра
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -138,7 +143,8 @@
                         <input type="text" placeholder="Введите текст">
                     </div>
                     <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle user-login-btn" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <button class="btn btn-secondary dropdown-toggle user-login-btn" type="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Вся продукция
                         </button>
                         <div class="dropdown-menu js-scroll" aria-labelledby="dropdownMenuButton">
@@ -182,10 +188,10 @@
                 </ul>
             </div>
             <div class="title-page">Личный кабинет</div>
-            <ul class="nav nav-tabs">
+            <ul class="nav nav-tabs tabs-info">
                 <li><a data-toggle="tab" href="#personal-information">Мои данные</a></li>
                 <li><a data-toggle="tab" href="#personal-orders">Топ продаж</a></li>
-                <li><a data-toggle="tab" href="#top-sales">Подписка</a></li>
+                <li><a data-toggle="tab" href="#personal-subscribe">Подписка</a></li>
             </ul>
             <div class="tab-content">
                 <div id="personal-information" class="tab-pane fade personal-information">
@@ -199,28 +205,32 @@
                                             <img class="icon-profile-photo" src="images/profile-photo.svg" alt="#">
                                         </div>
                                         <div class="upload-photo-overlay" id="file">
-                                            <input name="photo" type="file" id="download-photo" class="input-file" accept="image/jpeg,image/png,image/gif">
+                                            <input name="photo" type="file" id="download-photo" class="input-file"
+                                                   accept="image/jpeg,image/png,image/gif">
                                             <label class="upload-link" for="download-photo">Загрузить фото</label>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label" for="username">Имя</label>
                                         <div class="input-group">
-                                            <input type="text" class="form-control" name="profile[fullname]" required value="" id="username">
+                                            <input type="text" class="form-control" name="profile[fullname]" required
+                                                   value="" id="username">
                                             <div class="error-text">Поле "Имя" не должно быть пустым</div>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label" for="userlastname">Фамилия</label>
                                         <div class="input-group">
-                                            <input type="text" class="form-control" name="profile[middlename]" value="" id="userlastname" required>
+                                            <input type="text" class="form-control" name="profile[middlename]" value=""
+                                                   id="userlastname" required>
                                             <div class="error-text">Поле "Фамилия" не должно быть пустым</div>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label" for="useremail">Email</label>
                                         <div class="input-group">
-                                            <input type="email" class="form-control" name="profile[email]" data-validate="email" required value="" id="useremail">
+                                            <input type="email" class="form-control" name="profile[email]"
+                                                   data-validate="email" required value="" id="useremail">
                                             <div class="error-text">Поле "Email" не должно быть пустым</div>
                                         </div>
                                     </div>
@@ -228,26 +238,31 @@
                                         <label class="control-label" for="usertel">Телефон</label>
                                         <div class="input-group phone-field">
                                             <div class="input-group-btn dropdown">
-                                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                                <button type="button" class="btn btn-default dropdown-toggle"
+                                                        data-toggle="dropdown">
                                                     +38 <span class="caret"></span>
                                                 </button>
                                                 <ul class="dropdown-menu pull-right">
                                                     <li><a href="#">+7</a></li>
                                                 </ul>
                                             </div>
-                                            <input type="tel" class="form-control js-phone-mask" name="profile[phone]" data-validate="phone" value="" required placeholder="(050) 123 45 67" id="usertel">
+                                            <input type="tel" class="form-control js-phone-mask" name="profile[phone]"
+                                                   data-validate="phone" value="" required placeholder="(050) 123 45 67"
+                                                   id="usertel">
                                             <div class="error-text">Поле "Телефон" не должно быть пустым</div>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label control-label--lg">Пароль</label>
                                         <div class="input-group password-field">
-                                            <input type="password" name="profile[cfm]" class=" form-control password_2" data-validate="pass2">
+                                            <input type="password" name="profile[cfm]" class=" form-control password_2"
+                                                   data-validate="pass2">
                                             <div class="error-text">Поле "Пароль" не должно быть пустым</div>
                                         </div>
                                         <a href="#" class="pwd-link">Сменить пароль</a>
                                     </div>
-                                    <button type="submit" class="btn btn--default btn-primary">Сохранить изменения</button>
+                                    <button type="submit" class="btn btn--default btn-primary">Сохранить изменения
+                                    </button>
                                 </form>
                             </div>
                         </div>
@@ -285,7 +300,8 @@
                                                 <option value="">Улица</option>
                                                 <option value="">Проспект</option>
                                             </select>
-                                            <input type="text" class="form-control" name="address" value="" id="address">
+                                            <input type="text" class="form-control" name="address" value=""
+                                                   id="address">
                                         </div>
                                         <div class="exact-street-field">
                                             <div class="exact-field">
@@ -308,7 +324,8 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="note-user" class="control-label">Примечание</label>
-                                        <textarea name="note" id="note-user" placeholder="например, номер домофона"></textarea>
+                                        <textarea name="note" id="note-user"
+                                                  placeholder="например, номер домофона"></textarea>
                                     </div>
                                     <div class="form-group">
                                         <span class="control-label">Способ доставки</span>
@@ -328,135 +345,521 @@
                                             <option value=""></option>
                                         </select>
                                     </div>
-                                    <button type="submit" class="btn btn--default btn-primary">Сохранить изменения</button>
+                                    <button type="submit" class="btn btn--default btn-primary">Сохранить изменения
+                                    </button>
                                 </form>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div id="personal-orders" class="tab-pane fade active in">
+                <div id="personal-orders" class="tab-pane fade">
                     <div class="personal-title">Мои заказы</div>
-                    <div class="tab-content">
-                        <div class="order-table">
-                            <table>
-                                <thead>
-                                <tr>
-                                    <td class="col-table-md">Дата заказа</td>
-                                    <td class="col-table-sm"># Заказа</td>
-                                    <td class="col-table-lg">Товар</td>
-                                    <td class="col-table-sm qty">Кол-во</td>
-                                    <td class="col-table-sm">Цена</td>
-                                    <td class="col-table-sm">Скидка</td>
-                                    <td class="col-table-sm">Итого</td>
-                                    <td>Статус</td>
-                                    <td class="col-table-sm">Общая сумма</td>
-                                </tr>
-                                </thead>
-                                <tbody class="js-scroll">
-                                <tr>
-                                    <td class="col-table-md">12 сентября 2017</td>
-                                    <td class="col-table-sm">2354</td>
-                                    <td class="col-table-lg">
-                                        <ul class="product-list">
-                                            <li>
-                                                <a href="#">Зеленое платье с длинными расклешенными расклешенными расклешенными</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Длинное платье бежевого цвета с большими большими большими</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Лазурная юбка с широким поясом</a>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                    <td class="col-table-sm">
-                                        <ul class="product-qty">
-                                            <li>1</li>
-                                            <li>1</li>
-                                            <li>2</li>
-                                        </ul>
-                                    </td>
-                                    <td class="col-table-sm">
-                                        <ul class="product-price">
-                                            <li>235 UAH</li>
-                                            <li>499 UAH</li>
-                                            <li>399 UAH</li>
-                                        </ul>
-                                    </td>
-                                    <td class="col-table-sm">
-                                        <ul class="product-sales">
-                                            <li>5%</li>
-                                        </ul>
-                                    </td>
-                                    <td class="col-table-sm">
-                                        <ul class="product-total">
-                                            <li>235 UAH</li>
-                                            <li>499 UAH</li>
-                                            <li>399 UAH</li>
-                                        </ul>
-                                    </td>
-                                    <td class="col-table-1">
-                                        <div class="status-order">
-                                            <span class="status not-pay">Не оплачен</span>
-                                            <a href="#" class="btn btn-pay">Оплатить</a>
-                                        </div>
-                                    </td>
-                                    <td class="col-table-sm">
-                                        <strong>1532 UAH</strong>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-table-md">10 сентября 2017</td>
-                                    <td class="col-table-sm">2354</td>
-                                    <td class="col-table-lg">
-                                        <ul class="product-list">
-                                            <li>
-                                                <a href="#">Зеленое платье с длинными расклешенными расклешенными расклешенными</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Длинное платье бежевого цвета с большими большими большими</a>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                    <td class="col-table-sm">
-                                        <ul class="product-qty">
-                                            <li>1</li>
-                                            <li>1</li>
-                                        </ul>
-                                    </td>
-                                    <td class="col-table-sm">
-                                        <ul class="product-price">
-                                            <li>235 UAH</li>
-                                            <li>499 UAH</li>
-                                        </ul>
-                                    </td>
-                                    <td class="col-table-sm">
-                                        <ul class="product-sales">
-                                            <li>10%</li>
-                                        </ul>
-                                    </td>
-                                    <td class="col-table-sm">
-                                        <ul class="product-total">
-                                            <li>235 UAH</li>
-                                            <li>499 UAH</li>
-                                        </ul>
-                                    </td>
-                                    <td class="col-table-1">
-                                        <div class="status-order">
-                                            <span class="status pay">Звершено</span>
-                                        </div>
-                                    </td>
-                                    <td class="col-table-sm">
-                                        <strong>734 UAH</strong>
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
+                    <div class="order-table js-scroll">
+                        <table>
+                            <thead>
+                            <tr>
+                                <td class="col-table-md">Дата заказа</td>
+                                <td class="col-table-sm"># Заказа</td>
+                                <td class="col-table-lg">Товар</td>
+                                <td class="col-table-sm qty">Кол-во</td>
+                                <td class="col-table-sm">Цена</td>
+                                <td class="col-table-sm">Скидка</td>
+                                <td class="col-table-sm">Итого</td>
+                                <td>Статус</td>
+                                <td class="col-table-sm">Общая сумма</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="col-table-md">12 сентября 2017</td>
+                                <td class="col-table-sm">2354</td>
+                                <td class="col-table-lg">
+                                    <ul class="product-list js-accordion">
+                                        <li>
+                                            <a href="#">Зеленое платье с длинными расклешенными расклешенными
+                                                расклешенными</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Длинное платье бежевого цвета с большими большими
+                                                большими</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Лазурная юбка с широким поясом</a>
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td class="col-table-sm">
+                                    <ul class="product-qty js-accordion">
+                                        <li>1</li>
+                                        <li>1</li>
+                                        <li>2</li>
+                                    </ul>
+                                </td>
+                                <td class="col-table-sm">
+                                    <ul class="product-price js-accordion">
+                                        <li>235 UAH</li>
+                                        <li>499 UAH</li>
+                                        <li>399 UAH</li>
+                                    </ul>
+                                </td>
+                                <td class="col-table-sm">
+                                    <ul class="product-sales">
+                                        <li>5%</li>
+                                    </ul>
+                                </td>
+                                <td class="col-table-sm">
+                                    <ul class="product-total js-accordion">
+                                        <li>235 UAH</li>
+                                        <li>499 UAH</li>
+                                        <li>399 UAH</li>
+                                    </ul>
+                                </td>
+                                <td class="col-table-1">
+                                    <div class="status-order">
+                                        <span class="status not-pay">Не оплачен</span>
+                                        <a href="#" class="btn btn-pay">Оплатить</a>
+                                    </div>
+                                </td>
+                                <td class="col-table-sm js-total">
+                                    <strong>1532 UAH</strong>
+                                    <span class="caret"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-table-md">12 сентября 2017</td>
+                                <td class="col-table-sm">2354</td>
+                                <td class="col-table-lg">
+                                    <ul class="product-list js-accordion">
+                                        <li>
+                                            <a href="#">Лазурная юбка с широким поясом</a>
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td class="col-table-sm">
+                                    <ul class="product-qty js-accordion">
+                                        <li>1</li>
+                                    </ul>
+                                </td>
+                                <td class="col-table-sm">
+                                    <ul class="product-price js-accordion">
+                                        <li>235 UAH</li>
+                                    </ul>
+                                </td>
+                                <td class="col-table-sm">
+                                    <ul class="product-sales">
+                                        <li>5%</li>
+                                    </ul>
+                                </td>
+                                <td class="col-table-sm">
+                                    <ul class="product-total js-accordion">
+                                        <li>235 UAH</li>
+                                    </ul>
+                                </td>
+                                <td class="col-table-1">
+                                    <div class="status-order">
+                                        <span class="status pay">Завершено</span>
+                                    </div>
+                                </td>
+                                <td class="col-table-sm js-total">
+                                    <strong>235 UAH</strong>
+                                    <span class="caret"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-table-md">12 сентября 2017</td>
+                                <td class="col-table-sm">2354</td>
+                                <td class="col-table-lg">
+                                    <ul class="product-list js-accordion">
+                                        <li>
+                                            <a href="#">Зеленое платье с длинными расклешенными расклешенными
+                                                расклешенными</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Длинное платье бежевого цвета с большими большими
+                                                большими</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Лазурная юбка с широким поясом</a>
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td class="col-table-sm">
+                                    <ul class="product-qty js-accordion">
+                                        <li>1</li>
+                                        <li>1</li>
+                                        <li>2</li>
+                                    </ul>
+                                </td>
+                                <td class="col-table-sm">
+                                    <ul class="product-price js-accordion">
+                                        <li>235 UAH</li>
+                                        <li>499 UAH</li>
+                                        <li>399 UAH</li>
+                                    </ul>
+                                </td>
+                                <td class="col-table-sm">
+                                    <ul class="product-sales">
+                                        <li>5%</li>
+                                    </ul>
+                                </td>
+                                <td class="col-table-sm">
+                                    <ul class="product-total js-accordion">
+                                        <li>235 UAH</li>
+                                        <li>499 UAH</li>
+                                        <li>399 UAH</li>
+                                    </ul>
+                                </td>
+                                <td class="col-table-1">
+                                    <div class="status-order">
+                                        <span class="status not-pay">Не оплачен</span>
+                                        <a href="#" class="btn btn-pay">Оплатить</a>
+                                    </div>
+                                </td>
+                                <td class="col-table-sm js-total">
+                                    <strong>1532 UAH</strong>
+                                    <span class="caret"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-table-md">12 сентября 2017</td>
+                                <td class="col-table-sm">2354</td>
+                                <td class="col-table-lg">
+                                    <ul class="product-list js-accordion">
+                                        <li>
+                                            <a href="#">Лазурная юбка с широким поясом</a>
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td class="col-table-sm">
+                                    <ul class="product-qty js-accordion">
+                                        <li>1</li>
+                                    </ul>
+                                </td>
+                                <td class="col-table-sm">
+                                    <ul class="product-price js-accordion">
+                                        <li>235 UAH</li>
+                                    </ul>
+                                </td>
+                                <td class="col-table-sm">
+                                    <ul class="product-sales">
+                                        <li>5%</li>
+                                    </ul>
+                                </td>
+                                <td class="col-table-sm">
+                                    <ul class="product-total js-accordion">
+                                        <li>235 UAH</li>
+                                    </ul>
+                                </td>
+                                <td class="col-table-1">
+                                    <div class="status-order">
+                                        <span class="status pay">Завершено</span>
+                                    </div>
+                                </td>
+                                <td class="col-table-sm js-total">
+                                    <strong>235 UAH</strong>
+                                    <span class="caret"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-table-md">12 сентября 2017</td>
+                                <td class="col-table-sm">2354</td>
+                                <td class="col-table-lg">
+                                    <ul class="product-list js-accordion">
+                                        <li>
+                                            <a href="#">Зеленое платье с длинными расклешенными расклешенными
+                                                расклешенными</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Длинное платье бежевого цвета с большими большими
+                                                большими</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Лазурная юбка с широким поясом</a>
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td class="col-table-sm">
+                                    <ul class="product-qty js-accordion">
+                                        <li>1</li>
+                                        <li>1</li>
+                                        <li>2</li>
+                                    </ul>
+                                </td>
+                                <td class="col-table-sm">
+                                    <ul class="product-price js-accordion">
+                                        <li>235 UAH</li>
+                                        <li>499 UAH</li>
+                                        <li>399 UAH</li>
+                                    </ul>
+                                </td>
+                                <td class="col-table-sm">
+                                    <ul class="product-sales">
+                                        <li>5%</li>
+                                    </ul>
+                                </td>
+                                <td class="col-table-sm">
+                                    <ul class="product-total js-accordion">
+                                        <li>235 UAH</li>
+                                        <li>499 UAH</li>
+                                        <li>399 UAH</li>
+                                    </ul>
+                                </td>
+                                <td class="col-table-1">
+                                    <div class="status-order">
+                                        <span class="status not-pay">Не оплачен</span>
+                                        <a href="#" class="btn btn-pay">Оплатить</a>
+                                    </div>
+                                </td>
+                                <td class="col-table-sm js-total">
+                                    <strong>1532 UAH</strong>
+                                    <span class="caret"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-table-md">12 сентября 2017</td>
+                                <td class="col-table-sm">2354</td>
+                                <td class="col-table-lg">
+                                    <ul class="product-list js-accordion">
+                                        <li>
+                                            <a href="#">Лазурная юбка с широким поясом</a>
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td class="col-table-sm">
+                                    <ul class="product-qty js-accordion">
+                                        <li>1</li>
+                                    </ul>
+                                </td>
+                                <td class="col-table-sm">
+                                    <ul class="product-price js-accordion">
+                                        <li>235 UAH</li>
+                                    </ul>
+                                </td>
+                                <td class="col-table-sm">
+                                    <ul class="product-sales">
+                                        <li>5%</li>
+                                    </ul>
+                                </td>
+                                <td class="col-table-sm">
+                                    <ul class="product-total js-accordion">
+                                        <li>235 UAH</li>
+                                    </ul>
+                                </td>
+                                <td class="col-table-1">
+                                    <div class="status-order">
+                                        <span class="status pay">Завершено</span>
+                                    </div>
+                                </td>
+                                <td class="col-table-sm js-total">
+                                    <strong>235 UAH</strong>
+                                    <span class="caret"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-table-md">12 сентября 2017</td>
+                                <td class="col-table-sm">2354</td>
+                                <td class="col-table-lg">
+                                    <ul class="product-list js-accordion">
+                                        <li>
+                                            <a href="#">Зеленое платье с длинными расклешенными расклешенными
+                                                расклешенными</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Длинное платье бежевого цвета с большими большими
+                                                большими</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Лазурная юбка с широким поясом</a>
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td class="col-table-sm">
+                                    <ul class="product-qty js-accordion">
+                                        <li>1</li>
+                                        <li>1</li>
+                                        <li>2</li>
+                                    </ul>
+                                </td>
+                                <td class="col-table-sm">
+                                    <ul class="product-price js-accordion">
+                                        <li>235 UAH</li>
+                                        <li>499 UAH</li>
+                                        <li>399 UAH</li>
+                                    </ul>
+                                </td>
+                                <td class="col-table-sm">
+                                    <ul class="product-sales">
+                                        <li>5%</li>
+                                    </ul>
+                                </td>
+                                <td class="col-table-sm">
+                                    <ul class="product-total js-accordion">
+                                        <li>235 UAH</li>
+                                        <li>499 UAH</li>
+                                        <li>399 UAH</li>
+                                    </ul>
+                                </td>
+                                <td class="col-table-1">
+                                    <div class="status-order">
+                                        <span class="status not-pay">Не оплачен</span>
+                                        <a href="#" class="btn btn-pay">Оплатить</a>
+                                    </div>
+                                </td>
+                                <td class="col-table-sm js-total">
+                                    <strong>1532 UAH</strong>
+                                    <span class="caret"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-table-md">12 сентября 2017</td>
+                                <td class="col-table-sm">2354</td>
+                                <td class="col-table-lg">
+                                    <ul class="product-list js-accordion">
+                                        <li>
+                                            <a href="#">Лазурная юбка с широким поясом</a>
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td class="col-table-sm">
+                                    <ul class="product-qty js-accordion">
+                                        <li>1</li>
+                                    </ul>
+                                </td>
+                                <td class="col-table-sm">
+                                    <ul class="product-price js-accordion">
+                                        <li>235 UAH</li>
+                                    </ul>
+                                </td>
+                                <td class="col-table-sm">
+                                    <ul class="product-sales">
+                                        <li>5%</li>
+                                    </ul>
+                                </td>
+                                <td class="col-table-sm">
+                                    <ul class="product-total js-accordion">
+                                        <li>235 UAH</li>
+                                    </ul>
+                                </td>
+                                <td class="col-table-1">
+                                    <div class="status-order">
+                                        <span class="status pay">Завершено</span>
+                                    </div>
+                                </td>
+                                <td class="col-table-sm js-total">
+                                    <strong>235 UAH</strong>
+                                    <span class="caret"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-table-md">10 сентября 2017</td>
+                                <td class="col-table-sm">2354</td>
+                                <td class="col-table-lg">
+                                    <ul class="product-list js-accordion">
+                                        <li>
+                                            <a href="#">Зеленое платье с длинными расклешенными расклешенными
+                                                расклешенными</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Длинное платье бежевого цвета с большими большими
+                                                большими</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Длинное платье бежевого цвета с большими большими
+                                                большими</a>
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td class="col-table-sm">
+                                    <ul class="product-qty js-accordion">
+                                        <li>1</li>
+                                        <li>1</li>
+                                    </ul>
+                                </td>
+                                <td class="col-table-sm">
+                                    <ul class="product-price js-accordion">
+                                        <li>235 UAH</li>
+                                        <li>499 UAH</li>
+                                    </ul>
+                                </td>
+                                <td class="col-table-sm">
+                                    <ul class="product-sales">
+                                        <li>10%</li>
+                                    </ul>
+                                </td>
+                                <td class="col-table-sm">
+                                    <ul class="product-total js-accordion">
+                                        <li>235 UAH</li>
+                                        <li>499 UAH</li>
+                                    </ul>
+                                </td>
+                                <td class="col-table-1">
+                                    <div class="status-order">
+                                        <span class="status pay">Звершено</span>
+                                    </div>
+                                </td>
+                                <td class="col-table-sm js-total">
+                                    <strong>734 UAH</strong>
+                                    <span class="caret"></span>
+                                </td>
+                            </tr>
+                            <tr class="order-cancel">
+                                <td class="col-table-md">25 июля 2017</td>
+                                <td class="col-table-sm">2354</td>
+                                <td class="col-table-lg">
+                                    <ul class="product-list js-accordion">
+                                        <li>
+                                            <a href="#">Лазурная юбка с широким поясом</a>
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td class="col-table-sm">
+                                    <ul class="product-qty js-accordion">
+                                        <li>1</li>
+                                    </ul>
+                                </td>
+                                <td class="col-table-sm">
+                                    <ul class="product-price js-accordion">
+                                        <li>235 UAH</li>
+                                    </ul>
+                                </td>
+                                <td class="col-table-sm">
+                                    <ul class="product-sales">
+                                        <li>10%</li>
+                                    </ul>
+                                </td>
+                                <td class="col-table-sm">
+                                    <ul class="product-total js-accordion">
+                                        <li>235 UAH</li>
+                                    </ul>
+                                </td>
+                                <td class="col-table-1">
+                                    <div class="status-order">
+                                        <span class="status cancel">Отменено</span>
+                                    </div>
+                                </td>
+                                <td class="col-table-sm js-total">
+                                    <strong>235 UAH</strong>
+                                    <span class="caret"></span>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
+                <div id="personal-subscribe" class="tab-pane fade active in personal-subscribe">
+                    <div class="personal-title">Подписка</div>
+                    <div class="subscribe-form">
+                        <form action="/" class="js-validate">
+                            <div class="form-group">
+                                <label for="subscribe-email" class="control-label">Подписаться на рассылку</label>
+                                <input type="text" name="subscribe" value="" id="subscribe-email">
+                            </div>
+                            <span class="info">После подписки вам будет выслано письмо с подтверждением.</span>
+                            <button class="btn btn-primary">Подписаться</button>
+                        </form>
+                    </div>
                 </div>
+            </div>
         </div>
     </div>
 </main>
@@ -514,9 +917,9 @@
                 </div>
                 <div class="social-link">
                     <ul>
-                        <li><a href="#" class="facebook">Facebook</a></li>
-                        <li><a href="#" class="instagram">Instagram</a></li>
-                        <li><a href="#" class="youtube">Youtube</a></li>
+                        <li><a href="#" class="facebook"></a></li>
+                        <li><a href="#" class="instagram"></a></li>
+                        <li><a href="#" class="youtube"></a></li>
                     </ul>
                 </div>
             </div>
@@ -525,7 +928,8 @@
     <div class="bottom-footer wrapper container-fluid">
         <div class="row">
             <div class="copyright col-md-6 col-sm-6 col-xs-12">© Bafimoda, 2017. Все права защищены.</div>
-            <div class="developers col-md-6 col-sm-6 col-xs-12">Разработка и поддержка сайта - <a href="#">Artjoker</a></div>
+            <div class="developers col-md-6 col-sm-6 col-xs-12">Разработка и поддержка сайта - <a href="#">Artjoker</a>
+            </div>
         </div>
     </div>
 </footer>

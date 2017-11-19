@@ -28,19 +28,30 @@ footer { padding: 67px 0 34px; border-top: 1px solid $color-light-gray; }
       ul {
         display: flex;
         li {
-          text-indent: -9999px; overflow:hidden; margin-right: 10px;
-          a { display: block; }
-          .facebook {
-            @include sprite($fb-round-ico);
-            &:hover, &:focus, &:active { @include sprite($fb-round-hover-ico); }
-          }
-          .instagram {
-            @include sprite($instagram-round-ico);
-            &:hover, &:focus, &:active { @include sprite($instagram-round-hover-ico); }
-          }
-          .youtube {
-            @include sprite($youtube-round-ico);
-            &:hover, &:focus, &:active { @include sprite($youtube-round-hover-ico); }
+          overflow:hidden; margin-right: 10px;
+          a {
+            display: block; width: 41px; height: 41px; border-radius: 50%; text-align: center; border: 1px solid $color-light-gray; line-height: 41px;
+            &:before {
+              content: ''; display: block;  font-family: "icomoon"; transition: all .3s ease; color: $color-button-text; font-size: 15px;
+            }
+            &:hover, &:focus, &:active {
+              border-color: $color-blue-text;
+             &:before {
+               color: $color-blue-text;
+             }
+            }
+            &.facebook:before {
+              content: '\e916';
+            }
+            &.instagram:before {
+              content: '\e92c';
+            }
+            &.youtube {
+              @include sprite($youtube-round-ico); border-radius: 0; border: none;
+              &:hover, &:focus, &:active {
+                @include sprite($youtube-round-hover-ico);
+              }
+            }
           }
           &:last-child { margin-right: 0; }
         }

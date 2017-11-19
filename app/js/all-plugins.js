@@ -9,3 +9,4 @@
 //= validate.js
 //= nouislider.min.js
 //= bootstrap-select.min.js
+//= jquery.magnific-popup.min.js
