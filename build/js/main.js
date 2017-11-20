@@ -121,8 +121,7 @@ $(document).ready(function () {
     /* ========================================end parallax======================================*/
 
 
-    $(".search-block .js-scroll").mCustomScrollbar();
-    $(".order-table.js-scroll").mCustomScrollbar();
+    $(".js-scroll").mCustomScrollbar();
     /* ========================================same validate======================================*/
     $('.js_validate [type="submit"]').on("click", function () {
         return validate($(this).parents(".js_validate"));
@@ -271,5 +270,9 @@ $(document).ready(function () {
             },
             fixedContentPos: false
         });
+    });
+    $('.js-size-open').on('click', function () {
+       $(this).parent().toggleClass('open');
+       $(this).parent().siblings().removeClass('open');
     });
 });

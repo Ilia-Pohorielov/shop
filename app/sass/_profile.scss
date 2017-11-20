@@ -205,8 +205,12 @@
     }
   }
   .product-list {
+    transition: all .3s ease; max-height: 50px; overflow: hidden;
     li a {
      display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 345px;
+    }
+    &.open {
+      max-height: 1000px;
     }
   }
   .product-qty {
