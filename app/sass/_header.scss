@@ -55,6 +55,9 @@ header {
 }
 .bottom-header {
   padding: 24px 40px 0; line-height: 45px; border-bottom: 1px solid rgba($color-white, .10); position: relative;
+  >.row {
+    margin-right: 0;
+  }
   .logo { padding-top: 9px; width: 216px; }
   .header-menu {
     display: flex; align-items: center;  position: static;
@@ -359,7 +362,7 @@ header {
     background: $color-button-text;
   }
   .bottom-header {
-    border-bottom: 1px solid rgba($color-button-text, 0.1);
+    border-bottom: 1px solid rgba($color-button-text, 0.1); background: $color-white;
     .logo {
       width: 15%;
     }

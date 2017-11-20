@@ -18,7 +18,7 @@ $(document).ready(function () {
         slidesToShow: 4,
         initialSlide: 0,
         slidesToScroll: 1,
-        infinite: false,
+        infinite: true,
         responsive: [
             {
                 breakpoint: 1320,
@@ -47,7 +47,7 @@ $(document).ready(function () {
         slidesToShow: 3,
         initialSlide: 0,
         slidesToScroll: 1,
-        infinite: false,
+        infinite: true,
         responsive: [
             {
                 breakpoint: 991,

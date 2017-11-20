@@ -30,31 +30,6 @@
 }
 .block-collection {
   margin-bottom: 69px;
-  .nav {
-    margin-bottom: 49px; border: none;
-    li {
-      margin-right: 14px;
-      a {
-        font-family: "Roboto","Gotham", "Arial", sans-serif; font-weight: bold; text-transform: uppercase; font-size: 18px; letter-spacing: 2.5px; padding: 7px 13px 3px; position: relative;
-        transition: color .3s ease; border-radius: 0; border: none;
-        &:hover, &:active, &:focus {
-          color: $color-blue-text;
-        }
-      }
-      &.active {
-        a {
-          background: $color-button-text; color: $color-white; font-weight: 500; border: none;
-          &:before {
-            content: ''; display: block; width: 0; height: 0; border-style: solid; border-width: 17px 17px 0 0; border-color: #393939 transparent transparent transparent;
-            position: absolute; bottom: -17px; left: 0;
-          }
-          &:hover, &:focus, &:active {
-            color: $color-white;
-          }
-        }
-      }
-    }
-  }
   .collection .slick-arrow { top: 40%; }
   .tab-content {
     text-align: center; position: relative; padding-bottom: 96px;
@@ -80,7 +55,7 @@
     img { height: 100%; object-fit: cover; }
     .favorite {
       position: absolute; top: 10px; right: 8px; background: $color-white; width: 39px; height: 38px; border-radius: 50%;
-      &:before { content: '\e937'; display: block; font-size: 15px; font-family: "icomoon"; color: $color-button-text; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); transition: all .3s ease; line-height: normal; }
+      &:before { content: '\e95d'; display: block; font-size: 15px; font-family: "icomoon"; color: $color-button-text; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); transition: all .3s ease; line-height: normal; }
       &:hover, &:focus, &:active {
         &:before { color: $color-light-blue; }
       }
@@ -138,7 +113,12 @@
       &:before { background: rgba($color-white, .2); }
       .title-product {
         color: $color-button-text;
-        span {  background: $color-light-blue; }
+        span {
+          background: $color-light-blue; transform: translateX(5px);
+          &.sub-title {
+            transform: translateX(-5px);
+          }
+        }
       }
     }
   }
@@ -160,7 +140,7 @@
     }
     .favorite {
       right: 13px;
-      &:before { content: '\0061'; transform: translate(-50%, -50%); }
+      &:before { content: '\e92c'; transform: translate(-50%, -50%); }
     }
     .name {
       display: block; background: $color-white; position: absolute; left: 0; bottom: 0; font-family: "Roboto", "Gotham", "Arial", sans-serif; font-size: 15px; color: $color-button-text;
@@ -173,6 +153,14 @@
   position: relative; margin-bottom: 119px; background-position: 50% 0; background-repeat: no-repeat; background-size: cover; height: 550px;
   .wrap-subscribe {
     position: absolute; top: 23.2%; left: 47%;
+    .title-block {
+      span {
+        display: inline-block;
+        &.sub-title {
+          display: block;
+        }
+      }
+    }
   }
   .subscribe-form {
     max-width: 689px; background: $color-gray-bg; padding: 47px 70px 60px;

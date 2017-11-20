@@ -34,14 +34,14 @@ $color-green-light: #40b288;
 }
 
 .homepage main {
-  position: relative; flex: 1;
+  position: relative; background: transparent;
   &:before {
     content: ''; display: block; position: absolute; left: 0; right: 0; height: 50%; background: $color-gray-bg;
   }
 }
 
 main {
-  background: $color-gray-bg;
+  background: $color-gray-bg; flex: 1;
 }
 
 .breadcrumbs {
@@ -164,7 +164,31 @@ main {
   }
 }
 /* END BUTTON STYLE*/
-
+.tab-flags {
+  margin-bottom: 49px; border: none;
+  li {
+    margin-right: 14px;
+    a {
+      font-family: "Roboto","Gotham", "Arial", sans-serif; font-weight: bold; text-transform: uppercase; font-size: 18px; letter-spacing: 2.5px; padding: 7px 13px 3px; position: relative;
+      transition: color .3s ease; border-radius: 0; border: none;
+      &:hover, &:active, &:focus {
+        color: $color-blue-text;
+      }
+    }
+    &.active {
+      a {
+        background: $color-button-text; color: $color-white; font-weight: 500; border: none;
+        &:before {
+          content: ''; display: block; width: 0; height: 0; border-style: solid; border-width: 17px 17px 0 0; border-color: #393939 transparent transparent transparent;
+          position: absolute; bottom: -17px; left: 0;
+        }
+        &:hover, &:focus, &:active {
+          color: $color-white; background: $color-button-text; border: none;
+        }
+      }
+    }
+  }
+}
 /* BEGIN DROPDOWN STYLE*/
 .dropdown {
   padding: 0 7px;
@@ -205,10 +229,19 @@ main {
 .title-block,
 .title-product {
   display: flex; flex-direction: column; align-items: baseline; color: $color-white; font-family: "Roboto", "Gotham", "Arial", sans-serif; font-weight: 500; text-transform: uppercase; font-size: 20px; line-height: normal;
+  transition: all .5s linear;
   span {
-    display: block; background: $color-button-text; padding: 5px 11px 5px 10px; transition: all .3s ease;
+    display: block; background: $color-button-text; padding: 5px 11px 5px 10px; transition: all .5s linear;
     &.sub-title {
       margin-left: 40px; padding: 5px 5px 5px 10px;
+    }
+  }
+  &:hover, &:focus, &:active {
+    span {
+      transform: translateX(5px);
+      &.sub-title {
+        transform: translateX(-5px);
+      }
     }
   }
 }

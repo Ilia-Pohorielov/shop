@@ -1,5 +1,5 @@
 .content-product {
-  margin-top: 36px;
+  margin-top: 36px; padding-bottom: 70px; border-bottom: 1px solid $color-border; margin-bottom: 68px;
 }
 .product-slider {
   display: flex; padding: 0;
@@ -62,8 +62,32 @@
       font-size: 15px; color: $color-green-light;
     }
   }
+  .block-button {
+    .btn-primary {
+      max-width: 360px; width: 100%; padding: 18px 77px 18px 22px; font-size: 15px;
+      &.btn-add {
+        margin-right: 24px;
+        &:before {
+          content: '\e907';
+        }
+      }
+      &.btn-wishlist {
+        background: $color-white; border: 1px solid $color-border; color: $color-button-text;
+        &:before {
+          content: '\e95d'; color: $color-button-text;
+        }
+      }
+      &:before {
+        right: 19px; font-size: 18px;
+      }
+    }
+    .btn-link {
+      margin-top: 35px; display: block;
+    }
+  }
 }
 .product-more-about {
+  margin-bottom: 34px;
   .nav-tabs.tabs-info {
     margin-bottom: -5px; border-bottom: none;
     li a {
@@ -95,21 +119,22 @@
   }
 }
 .title-info {
-  font-weight: 500; font-size: 14px; color: $color-button-text; margin-bottom: 27px; line-height: normal;
+  font-weight: 500; font-size: 14px; color: $color-button-text; margin-bottom: 9px; line-height: normal;
 }
 .more-info {
   display: flex; align-items: flex-end; justify-content: space-between;
   .product-color {
     width: 236px; font-size: 0; line-height: 0;
     .color {
-     display: inline-block; width: 72px; height: 110px; overflow: hidden; background-repeat: no-repeat; background-position: 0 0; background-size: contain;
-      &:not(:nth-child(3n)) {
-        margin-right: 10px;
+     display: inline-block; width: 72px; height: 110px; overflow: hidden; background-repeat: no-repeat; background-position: 0 0; background-size: contain; margin-right: 10px;
+      &:nth-child(3n+1) {
+        margin-right: 0;
       }
     }
   }
 }
 .size-amount {
+  margin-bottom: 31px;
   .size {
     display: flex;
     .size-item {
@@ -145,6 +170,77 @@
       .count {
         width: 60px; height: 39px; text-align: center; line-height: 39px; border-top: 1px solid $color-border; border-bottom: 1px solid $color-border;
       }
+    }
+  }
+  .top {
+    display: flex; justify-content: space-between;
+  }
+}
+.block-comments {
+  max-width: 1010px; margin: 0 auto 67px auto;
+  .tab-flags {
+    text-align: center;
+    li {
+      display: inline-block; float: none; margin-bottom: 0; margin-right: 0;
+      a {
+        padding: 6px 10px 3px; font-size: 15px; color: rgba($color-button-text, .7);
+      }
+      &.active {
+        a {
+          color: $color-white;
+        }
+      }
+    }
+  }
+}
+.reviews-item {
+  background: $color-white; border: 1px solid $color-border; margin-bottom: 20px; position: relative; padding: 21px 20px 25px 111px;
+  .avatar-user {
+    width: 74px; height: 74px; border-radius: 50%; overflow: hidden; position: absolute; left: 20px;
+  }
+  .top {
+    display: flex; justify-content: space-between; margin-bottom: 10px;
+    .info-user {
+      display: flex; align-items: center;
+      .name {
+        font-size: 14px; font-weight: 500; color: $color-button-text; margin-right: 7px;
+      }
+    }
+    .status {
+      margin-left: 9px;
+    }
+    .status, .date-create {
+      font-size: 12px; color: #b0b0b0;
+    }
+  }
+  .text {
+    font-size: 14px; color: $color-button-text; line-height: 22px;
+  }
+}
+.pagination {
+  font-size: 0; margin: 6px 0 0;
+  .prev-pagination, .next-pagination {
+    width: 47px; height: 36px; line-height: 36px; text-align: center; background: $color-white; border: 1px solid $color-border; border-radius: 0!important;
+    &:before {
+      font-family: "icomoon"; font-size: 8px;
+    }
+  }
+  .prev-pagination:before {
+    content: '\e904';
+  }
+  .next-pagination:before {
+    content: '\e905';
+  }
+  li {
+    margin-right: 6px; float: none; display: inline-block;
+    a {
+      width: 36px; height: 36px; background: $color-white; text-align: center; line-height: 36px; color: $color-black; border-radius: 0; font-size: 14px; padding: 0; transition: all .3s ease;
+      &:hover, &:focus, &:active {
+        background: $color-button-text; color: rgba($color-white, .7);
+      }
+    }
+    &:last-child {
+      margin-right: 0;
     }
   }
 }

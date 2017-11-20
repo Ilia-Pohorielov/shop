@@ -36,7 +36,7 @@
   padding-top: 34px;
 }
 .personal-information {
-  margin-bottom: 60px;
+  margin-bottom: 51px;
   .delivery-data-form {
     padding: 22px 11px 18px 27px;
     input {
@@ -112,7 +112,7 @@
         input[type="file"] { display: none; }
         .upload-link {
           cursor: pointer; font-size: 12px; font-weight: normal; margin-bottom: 0; border-bottom: 1px solid $color-gray; line-height: normal; position: relative; margin-left: 25px; transition: all .3s ease;
-          &:before { content: '\0050'; font-family: "Glyphter";  display: block; position: absolute; left: -25px; top: 0; font-size: 13px; transition: all .3s ease;  }
+          &:before { content: '\e914'; font-family: "icomoon";  display: block; position: absolute; left: -25px; top: 0; font-size: 13px; transition: all .3s ease;  }
           &:hover, &:focus, &:active {
             color: $color-blue-text;
             &:before { color: $color-blue-text; }
@@ -259,7 +259,10 @@
       }
     }
     .btn-pay {
-      display: block; background: $color-button-text; color: $color-white; max-width: 139px; padding: 10px 0 10px 15px; text-align: left; font-size: 12px; font-weight: 500;
+      display: block; background: $color-button-text; color: $color-white; max-width: 139px; padding: 10px 0 10px 15px; text-align: left; font-size: 12px; font-weight: 500; position: relative;
+      &:before {
+        content: '\e91e'; color: $color-white; position: absolute; right: 15px; top: 50%; transform: translateY(-50%); font-size: 15px; font-family: "icomoon";
+      }
     }
   }
 }
