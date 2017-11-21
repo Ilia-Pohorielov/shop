@@ -19,6 +19,7 @@ $color-border: #dee0e2;
 $color-border: #dee0e2;
 $color-blue-s: #d2f4f1;
 $color-green-light: #40b288;
+$color-link-blue: #5c666f;
 
 @mixin placeholder {
   ::-webkit-input-placeholder {@content}
@@ -56,6 +57,9 @@ main {
       }
       &:last-child { margin: 0; padding: 0; }
     }
+  }
+  &.faq {
+    padding-top: 34px;
   }
 }
 
@@ -387,6 +391,52 @@ main {
     }
   }
 }
+/* BEGIN BLOCK-HELP STYLE */
+.block-help {
+  margin-bottom: 70px;
+  .more-info, a[href^="mailto"] {
+    border-bottom: 1px solid #cbccce;
+  }
+  .more-info {
+    display: inline-block; font-size: 12px; line-height: 13px;
+  }
+  .help-item {
+    color: $color-button-text;
+    .title-help {
+      font-weight: 500; font-size: 14px; margin-bottom: 12px;
+    }
+    .text {
+      font-size: 12px; line-height: 18px;
+    }
+    &.delivery-pay .content-help:before {
+         content: '\e912'; font-size: 34px;
+     }
+    &.call-help .content-help:before {
+      content: '\e908'; font-size: 27px;
+    }
+    &.feedback-email .content-help:before {
+      content: '\e915'; font-size: 25px;
+    }
+  }
+  .content-help {
+    position: relative; max-width: 350px; padding-left: 83px;
+    &:before {
+      content: ''; display: block; width: 64px; height: 64px; background: $color-white; border: 1px solid $color-border; border-radius: 50%; text-align: center; line-height: 64px; font-family: "icomoon";
+      position: absolute; top: 12px; left: 0; color: $color-black;
+    }
+  }
+  .text {
+    margin-bottom: 18px;
+  }
+  .info-help {
+    color: $color-text-light; font-size: 12px; line-height: 18px;
+  }
+  .call-help .text a[href^="tel"]:nth-child(odd){
+    border-right: 1px solid $color-button-text;
+    padding-right: 6px;
+  }
+}
+/* END BLOCK-HELP STYLE */
 @keyframes animation-scroll {
   0% { top: 0; }
   100% { top: 90%; }

@@ -1,0 +1,31 @@
+.contact-page {
+  .contact-form {
+    max-width: 1270px; margin: 0 auto; background: $color-white; padding: 60px 0; color: $color-button-text;
+    .contact-form-title {
+      text-align: center; font-size: 25px;
+      .sub-text {
+        font-size: 14px; line-height: 20px; max-width: 430px; margin: 20px auto 20px auto;
+      }
+    }
+    form {
+      max-width: 490px; margin: 0 auto;
+      .phone-field {
+        .input-group-btn {
+          border-top: 1px solid $color-border; border-bottom: 1px solid $color-border; border-left: 1px solid $color-border; height: 45px; padding: 0;
+          .btn-default {
+            padding: 10px 15px; font-size: 14px; color: $color-button-text;
+            &:hover, &:focus, &:active {
+              box-shadow: none; background: transparent; border: none;
+            }
+            &:before {
+              content: none;
+            }
+          }
+          &.open .btn {
+            box-shadow: none; background: transparent; border: none;
+          }
+        }
+      }
+    }
+  }
+}

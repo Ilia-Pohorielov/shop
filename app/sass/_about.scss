@@ -1,0 +1,98 @@
+.top-banner {
+  background-repeat: no-repeat; background-size: cover; background-position: 0 50%; height: 497px; position: relative;
+  .title {
+    top: 42%; transform: translateY(-50%); font-size: 8.15vw;
+  }
+}
+.content-about {
+  max-width: 1270px; margin: -69px auto 70px auto; background: $color-white; transform: perspective(1px); padding: 62px 0 83px;
+  .content {
+    max-width: 1015px; margin: 0 auto; font-size: 14px; color: $color-button-text; line-height: 22px;
+    .title-page { margin-bottom: 32px; }
+    .text {
+      margin-bottom: 34px;
+    }
+  }
+}
+figure {
+  text-align: center; margin-bottom: 30px;
+  img {
+    display: inline-block;
+  }
+  figcaption {
+    color: #a2a2a2; padding-top: 13px;
+  }
+}
+blockquote {
+  position: relative; border: none; margin-bottom: 28px;
+  &.indention-left {
+    padding-left: 12.8%;
+    &:before {
+      top: 17px; left: 75px;
+    }
+  }
+  &:before {
+    content: '‘‘'; display: inline-block; font-size: 71px; position: absolute; top: 21px; left: -56px;
+  }
+}
+mark {
+  background: rgba(#00cdbc, .2); font-size: 16px; line-height: 28px;
+}
+.bottom-content {
+  padding: 0 15px;
+  .image {
+    position: relative; padding: 0 0 53.5%;
+    img {
+      position: absolute; top: 13px; left: 0;
+      &.image-front {
+        margin: 20px 0 0 20px;
+      }
+    }
+  }
+}
+.content-about .text-right {
+  text-align: left;
+  .about-title {
+    font-size: 25px; color: $color-button-text; margin-bottom: 28px; margin-top: 37px;
+  }
+  p {
+    margin-bottom: 8px;
+  }
+  .text {
+    margin-bottom: 23px;
+  }
+}
+.block-trend {
+  padding: 0 15px; margin-bottom: 70px;
+  .title-page {
+    text-align: center; font-size: 25px; margin-bottom: 52px;
+  }
+  .trend-item {
+    max-width: 510px; max-height: 567px; overflow: hidden; position: relative; padding: 0;
+    .title-product {
+      position: absolute; top: 29px; left: 29px;
+      span {
+        font-size: 16px; letter-spacing: 1.4px; padding: 5px 11px 5px 7px;
+      }
+    }
+    &.image-center {
+      margin-top: 20px;
+    }
+    &.image-right {
+      margin-top: -20px;
+    }
+    &:before { content: ''; display: block; position: absolute; left: 0; right: 0; top: 0; bottom: 0; background: transparent; transition: all .3s ease; }
+    &:hover, &:focus, &:active {
+      &:before { background: rgba($color-white, .2); }
+      .title-product {
+        color: $color-button-text;
+        span {
+          background: $color-light-blue; transform: translateX(5px);
+          &.sub-title {
+            transform: translateX(-5px);
+          }
+        }
+      }
+    }
+  }
+}

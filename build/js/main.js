@@ -275,4 +275,13 @@ $(document).ready(function () {
        $(this).parent().toggleClass('open');
        $(this).parent().siblings().removeClass('open');
     });
+    $('.js-anchor').on('click', function() {
+        var item = $('.block-question-answer .navigation-item').attr('id');
+        if ($(this).attr('href') == item) {
+            $("html, body").animate({
+                scrollTop: item
+            }, 600);
+        return false;
+        }
+    });
 });
