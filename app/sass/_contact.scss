@@ -1,19 +1,20 @@
 .contact-page {
+  padding-top: 34px;
   .contact-form {
-    max-width: 1270px; margin: 0 auto; background: $color-white; padding: 60px 0; color: $color-button-text;
+    max-width: 1270px; margin: 0 auto 59px; background: $color-white; padding: 60px 0; color: $color-button-text;
     .contact-form-title {
       text-align: center; font-size: 25px;
       .sub-text {
-        font-size: 14px; line-height: 20px; max-width: 430px; margin: 20px auto 20px auto;
+        font-size: 14px; line-height: 20px; max-width: 450px; margin: 18px auto 31px auto;
       }
     }
     form {
-      max-width: 490px; margin: 0 auto;
+      max-width: 490px; margin: 0 auto; text-align: center;
       .phone-field {
         .input-group-btn {
-          border-top: 1px solid $color-border; border-bottom: 1px solid $color-border; border-left: 1px solid $color-border; height: 45px; padding: 0;
+          border-top: 1px solid $color-border; border-bottom: 1px solid $color-border; border-left: 1px solid $color-border; height: 45px; padding: 0; max-width: 58px;
           .btn-default {
-            padding: 10px 15px; font-size: 14px; color: $color-button-text;
+            padding: 10px; font-size: 14px; color: $color-button-text;
             &:hover, &:focus, &:active {
               box-shadow: none; background: transparent; border: none;
             }
@@ -24,6 +25,67 @@
           &.open .btn {
             box-shadow: none; background: transparent; border: none;
           }
+        }
+      }
+      textarea {
+        height: 97px; margin-bottom: 15px;
+      }
+      .btn-primary {
+        max-width: 156px; padding: 13px 15px 13px 15px; text-align: center;
+        &:before {
+          content: none;
+        }
+      }
+      .form-group {
+        text-align: left;
+      }
+    }
+  }
+  .block-info {
+    max-width: 1270px; margin: 0 auto; position: relative;
+    .image-bg-block {
+      padding: 0 0 48.9%; background-position: 0 50%; background-repeat: no-repeat; background-size: cover;
+    }
+    .feedback-information {
+      position: absolute; right: 0; top: 77px; max-width: 620px; background: $color-white; padding: 39px 50px 39px 39px; color: $color-button-text; overflow: hidden;
+      .tab-flags {
+        margin-bottom: 32px;
+        li {
+          a {
+            font-size: 16px; padding: 7px 9px 2px 13px; letter-spacing: 1.7px; color: rgba($color-button-text, .7);
+            &:hover, &:focus, &:active {
+              background: transparent;
+            }
+          }
+          &.active a {
+            color: $color-white;
+            &:hover, &:focus, &:active {
+              background: $color-button-text;
+            }
+          }
+        }
+      }
+      .description {
+        margin-bottom: 23px;
+      }
+      .contact {
+        padding-bottom: 17px; position: relative; margin-bottom: 27px;
+        ul {
+          display: flex; flex-wrap: wrap; font-size: 14px;
+          li {
+            width: 34%; margin-bottom: 20px;
+            &.contact-name {
+             font-weight: 500;
+            }
+            &.contact-item {
+              a {
+                display: block; margin-bottom: 3px;
+              }
+            }
+          }
+        }
+        &:before {
+          content: ''; display: block; position: absolute; left: 0; right: 0; margin: 0 -5000px; padding: 0 5000px; height: 1px; background: $color-border; bottom: 0;
         }
       }
     }

@@ -3612,45 +3612,123 @@ mark {
           -webkit-transform: translateX(-5px);
                   transform: translateX(-5px); }
 
-.contact-page .contact-form {
-  max-width: 1270px;
-  margin: 0 auto;
-  background: #ffffff;
-  padding: 60px 0;
-  color: #393939; }
-  .contact-page .contact-form .contact-form-title {
-    text-align: center;
-    font-size: 25px; }
-    .contact-page .contact-form .contact-form-title .sub-text {
-      font-size: 14px;
-      line-height: 20px;
-      max-width: 430px;
-      margin: 20px auto 20px auto; }
-  .contact-page .contact-form form {
-    max-width: 490px;
-    margin: 0 auto; }
-    .contact-page .contact-form form .phone-field .input-group-btn {
-      border-top: 1px solid #dee0e2;
-      border-bottom: 1px solid #dee0e2;
-      border-left: 1px solid #dee0e2;
-      height: 45px;
-      padding: 0; }
-      .contact-page .contact-form form .phone-field .input-group-btn .btn-default {
-        padding: 10px 15px;
+.contact-page {
+  padding-top: 34px; }
+  .contact-page .contact-form {
+    max-width: 1270px;
+    margin: 0 auto 59px;
+    background: #ffffff;
+    padding: 60px 0;
+    color: #393939; }
+    .contact-page .contact-form .contact-form-title {
+      text-align: center;
+      font-size: 25px; }
+      .contact-page .contact-form .contact-form-title .sub-text {
         font-size: 14px;
-        color: #393939; }
-        .contact-page .contact-form form .phone-field .input-group-btn .btn-default:hover, .contact-page .contact-form form .phone-field .input-group-btn .btn-default:focus, .contact-page .contact-form form .phone-field .input-group-btn .btn-default:active {
+        line-height: 20px;
+        max-width: 450px;
+        margin: 18px auto 31px auto; }
+    .contact-page .contact-form form {
+      max-width: 490px;
+      margin: 0 auto;
+      text-align: center; }
+      .contact-page .contact-form form .phone-field .input-group-btn {
+        border-top: 1px solid #dee0e2;
+        border-bottom: 1px solid #dee0e2;
+        border-left: 1px solid #dee0e2;
+        height: 45px;
+        padding: 0;
+        max-width: 58px; }
+        .contact-page .contact-form form .phone-field .input-group-btn .btn-default {
+          padding: 10px;
+          font-size: 14px;
+          color: #393939; }
+          .contact-page .contact-form form .phone-field .input-group-btn .btn-default:hover, .contact-page .contact-form form .phone-field .input-group-btn .btn-default:focus, .contact-page .contact-form form .phone-field .input-group-btn .btn-default:active {
+            -webkit-box-shadow: none;
+                    box-shadow: none;
+            background: transparent;
+            border: none; }
+          .contact-page .contact-form form .phone-field .input-group-btn .btn-default:before {
+            content: none; }
+        .contact-page .contact-form form .phone-field .input-group-btn.open .btn {
           -webkit-box-shadow: none;
                   box-shadow: none;
           background: transparent;
           border: none; }
-        .contact-page .contact-form form .phone-field .input-group-btn .btn-default:before {
+      .contact-page .contact-form form textarea {
+        height: 97px;
+        margin-bottom: 15px; }
+      .contact-page .contact-form form .btn-primary {
+        max-width: 156px;
+        padding: 13px 15px 13px 15px;
+        text-align: center; }
+        .contact-page .contact-form form .btn-primary:before {
           content: none; }
-      .contact-page .contact-form form .phone-field .input-group-btn.open .btn {
-        -webkit-box-shadow: none;
-                box-shadow: none;
-        background: transparent;
-        border: none; }
+      .contact-page .contact-form form .form-group {
+        text-align: left; }
+  .contact-page .block-info {
+    max-width: 1270px;
+    margin: 0 auto;
+    position: relative; }
+    .contact-page .block-info .image-bg-block {
+      padding: 0 0 48.9%;
+      background-position: 0 50%;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    .contact-page .block-info .feedback-information {
+      position: absolute;
+      right: 0;
+      top: 77px;
+      max-width: 620px;
+      background: #ffffff;
+      padding: 39px 50px 39px 39px;
+      color: #393939;
+      overflow: hidden; }
+      .contact-page .block-info .feedback-information .tab-flags {
+        margin-bottom: 32px; }
+        .contact-page .block-info .feedback-information .tab-flags li a {
+          font-size: 16px;
+          padding: 7px 9px 2px 13px;
+          letter-spacing: 1.7px;
+          color: rgba(57, 57, 57, 0.7); }
+          .contact-page .block-info .feedback-information .tab-flags li a:hover, .contact-page .block-info .feedback-information .tab-flags li a:focus, .contact-page .block-info .feedback-information .tab-flags li a:active {
+            background: transparent; }
+        .contact-page .block-info .feedback-information .tab-flags li.active a {
+          color: #ffffff; }
+          .contact-page .block-info .feedback-information .tab-flags li.active a:hover, .contact-page .block-info .feedback-information .tab-flags li.active a:focus, .contact-page .block-info .feedback-information .tab-flags li.active a:active {
+            background: #393939; }
+      .contact-page .block-info .feedback-information .description {
+        margin-bottom: 23px; }
+      .contact-page .block-info .feedback-information .contact {
+        padding-bottom: 17px;
+        position: relative;
+        margin-bottom: 27px; }
+        .contact-page .block-info .feedback-information .contact ul {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap;
+          font-size: 14px; }
+          .contact-page .block-info .feedback-information .contact ul li {
+            width: 34%;
+            margin-bottom: 20px; }
+            .contact-page .block-info .feedback-information .contact ul li.contact-name {
+              font-weight: 500; }
+            .contact-page .block-info .feedback-information .contact ul li.contact-item a {
+              display: block;
+              margin-bottom: 3px; }
+        .contact-page .block-info .feedback-information .contact:before {
+          content: '';
+          display: block;
+          position: absolute;
+          left: 0;
+          right: 0;
+          margin: 0 -5000px;
+          padding: 0 5000px;
+          height: 1px;
+          background: #dee0e2;
+          bottom: 0; }
 
 footer {
   padding: 67px 0 34px;
