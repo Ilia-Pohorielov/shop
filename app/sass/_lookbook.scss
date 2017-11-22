@@ -1,0 +1,82 @@
+.lookbook-page {
+  padding-top: 24px;
+}
+.lookbook {
+  max-width: 1475px;
+}
+.lookbook-item {
+  position: relative;
+  display: flex;
+  width: 100%;
+  min-height: 589px;
+  margin-bottom: 200px;
+  .image {
+    position: absolute; overflow: hidden;
+    &.image-left, &.image-right {
+      max-width: 422px;
+      max-height: 589px;
+      img {
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &.image-center {
+      left: 52%; transform: translateX(-50%); width: 846px;
+    }
+  }
+  &.align-top {
+    .image.image-left {
+      left: 0;
+    }
+    .image.image-right {
+      right: 0;
+      top: 48px;
+    }
+    .image.image-center {
+      top: 100px;
+    }
+  }
+  &.align-middle {
+    .image.image-left {
+      left: 0;
+      top: 16.4%;
+    }
+    .image.image-right {
+      right: 0;
+      top: 8.4%;
+    }
+    .title {
+      top: 48.9%;
+    }
+  }
+  &.align-bottom {
+    .image.image-left {
+      left: 0;
+      top: 7.8%;
+    }
+    .image.image-right {
+      right: 0;
+    }
+    .image.image-center {
+      top: 16%;
+    }
+    .title {
+      top: 32.9%;
+    }
+  }
+  .title {
+    mix-blend-mode: unset; top: 31.9%; line-height: inherit;
+    .sub-title {
+      font-size: 20px; color: $color-white; margin-bottom: 38px; display: inline-block; background: $color-button-text; padding: 7px;
+    }
+    p {
+      font-size: 75px; font-weight: bold; font-family: "Gotham", "Roboto", "Arial", sans-serif; mix-blend-mode: difference;
+    }
+  }
+  &:last-child {
+    margin-bottom: 174px;
+  }
+}
+.title-lookbook {
+
+}

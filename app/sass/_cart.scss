@@ -1,5 +1,5 @@
 .cart-info {
-  position: relative; padding-top: 34px;
+  position: relative; padding-top: 34px; margin-bottom: 89px;
   .title-page {
     margin-bottom: 45px;
   }
@@ -35,11 +35,23 @@
   }
 }
 .total-cart {
-  background: $color-white; color: $color-button-text;
+  background: $color-white; color: $color-button-text; margin-bottom: 20px;
   .total-info {
     padding: 15px 20px;
   }
   .total-info-item {
-    display: flex; justify-content: space-between;
+    display: flex; justify-content: space-between; margin-bottom: 13px;
+  }
+  .btn-primary {
+      width: 100%;
+    &:before {
+      content: '\e91e';
+    }
+  }
+}
+.btn-back {
+  display: block; font-size: 12px; padding-left: 30px; position: relative; text-decoration: underline; text-decoration-color: rgba($color-button-text, .3); margin-left: 33px;
+  &:before {
+    content: '\e906'; position: absolute; left: 0; font-family: "icomoon"; transform: scaleY(-1); font-size: 21px;
   }
 }

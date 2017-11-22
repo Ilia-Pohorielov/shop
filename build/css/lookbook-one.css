@@ -1,0 +1,4 @@
+.lookbook-inner .image {
+  padding: 0; }
+  .lookbook-inner .image:not(:last-child) {
+    margin-right: 1px; }

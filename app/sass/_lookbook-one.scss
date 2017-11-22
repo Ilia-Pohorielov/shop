@@ -1,0 +1,37 @@
+.lookbook-inner {
+  position: relative; height: 100%;
+  .image {
+    padding: 0;
+    min-height: 889px;
+    overflow: hidden;
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+    &:not(:last-child) {
+      border-right: 1px solid $color-white;
+    }
+  }
+  .col-lookbook-3:not(:first-child) {
+    .image {
+      border-top: 1px solid $color-white;
+    }
+  }
+  .col-lookbook-2 {
+    .image {
+      border-top: 1px solid $color-white;
+    }
+  }
+  .title-lookbook {
+    position: absolute; left: 0; right: 0; z-index: 20; top: 14.7%; text-align: center;
+    .sub-title {
+      font-size: 20px; color: $color-white; margin-bottom: 38px; display: inline-block; background: $color-button-text; padding: 7px;
+    }
+  }
+  .title {
+     mix-blend-mode: difference; z-index: 10; top: 16.6%; line-height: inherit;
+     p {
+       font-size: 75px; font-weight: bold; font-family: "Gotham", "Roboto", "Arial", sans-serif;
+     }
+   }
+}

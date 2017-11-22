@@ -3964,7 +3964,8 @@ mark {
 
 .cart-info {
   position: relative;
-  padding-top: 34px; }
+  padding-top: 34px;
+  margin-bottom: 89px; }
   .cart-info .title-page {
     margin-bottom: 45px; }
   .cart-info .cart-item {
@@ -4017,7 +4018,8 @@ mark {
 
 .total-cart {
   background: #ffffff;
-  color: #393939; }
+  color: #393939;
+  margin-bottom: 20px; }
   .total-cart .total-info {
     padding: 15px 20px; }
   .total-cart .total-info-item {
@@ -4026,7 +4028,143 @@ mark {
     display: flex;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
-            justify-content: space-between; }
+            justify-content: space-between;
+    margin-bottom: 13px; }
+  .total-cart .btn-primary {
+    width: 100%; }
+    .total-cart .btn-primary:before {
+      content: '\e91e'; }
+
+.btn-back {
+  display: block;
+  font-size: 12px;
+  padding-left: 30px;
+  position: relative;
+  text-decoration: underline;
+  -webkit-text-decoration-color: rgba(57, 57, 57, 0.3);
+          text-decoration-color: rgba(57, 57, 57, 0.3);
+  margin-left: 33px; }
+  .btn-back:before {
+    content: '\e906';
+    position: absolute;
+    left: 0;
+    font-family: "icomoon";
+    -webkit-transform: scaleY(-1);
+            transform: scaleY(-1);
+    font-size: 21px; }
+
+.lookbook-page {
+  padding-top: 24px; }
+
+.lookbook {
+  max-width: 1475px; }
+
+.lookbook-item {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  min-height: 589px;
+  margin-bottom: 200px; }
+  .lookbook-item .image {
+    position: absolute;
+    overflow: hidden; }
+    .lookbook-item .image.image-left, .lookbook-item .image.image-right {
+      max-width: 422px;
+      max-height: 589px; }
+      .lookbook-item .image.image-left img, .lookbook-item .image.image-right img {
+        height: 100%;
+        -o-object-fit: cover;
+           object-fit: cover; }
+    .lookbook-item .image.image-center {
+      left: 52%;
+      -webkit-transform: translateX(-50%);
+              transform: translateX(-50%);
+      width: 846px; }
+  .lookbook-item.align-top .image.image-left {
+    left: 0; }
+  .lookbook-item.align-top .image.image-right {
+    right: 0;
+    top: 48px; }
+  .lookbook-item.align-top .image.image-center {
+    top: 100px; }
+  .lookbook-item.align-middle .image.image-left {
+    left: 0;
+    top: 16.4%; }
+  .lookbook-item.align-middle .image.image-right {
+    right: 0;
+    top: 8.4%; }
+  .lookbook-item.align-middle .title {
+    top: 48.9%; }
+  .lookbook-item.align-bottom .image.image-left {
+    left: 0;
+    top: 7.8%; }
+  .lookbook-item.align-bottom .image.image-right {
+    right: 0; }
+  .lookbook-item.align-bottom .image.image-center {
+    top: 16%; }
+  .lookbook-item.align-bottom .title {
+    top: 32.9%; }
+  .lookbook-item .title {
+    mix-blend-mode: unset;
+    top: 31.9%;
+    line-height: inherit; }
+    .lookbook-item .title .sub-title {
+      font-size: 20px;
+      color: #ffffff;
+      margin-bottom: 38px;
+      display: inline-block;
+      background: #393939;
+      padding: 7px; }
+    .lookbook-item .title p {
+      font-size: 75px;
+      font-weight: bold;
+      font-family: "Gotham", "Roboto", "Arial", sans-serif;
+      mix-blend-mode: difference; }
+  .lookbook-item:last-child {
+    margin-bottom: 174px; }
+
+.lookbook-inner {
+  position: relative;
+  height: 100%; }
+  .lookbook-inner .image {
+    padding: 0;
+    min-height: 889px;
+    overflow: hidden; }
+    .lookbook-inner .image img {
+      height: 100%;
+      -o-object-fit: cover;
+         object-fit: cover; }
+    .lookbook-inner .image:not(:last-child) {
+      border-right: 1px solid #ffffff; }
+  .lookbook-inner .col-lookbook-3:not(:first-child) .image {
+    border-top: 1px solid #ffffff; }
+  .lookbook-inner .col-lookbook-2 .image {
+    border-top: 1px solid #ffffff; }
+  .lookbook-inner .title-lookbook {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    top: 14.7%;
+    text-align: center; }
+    .lookbook-inner .title-lookbook .sub-title {
+      font-size: 20px;
+      color: #ffffff;
+      margin-bottom: 38px;
+      display: inline-block;
+      background: #393939;
+      padding: 7px; }
+  .lookbook-inner .title {
+    mix-blend-mode: difference;
+    z-index: 10;
+    top: 16.6%;
+    line-height: inherit; }
+    .lookbook-inner .title p {
+      font-size: 75px;
+      font-weight: bold;
+      font-family: "Gotham", "Roboto", "Arial", sans-serif; }
 
 footer {
   padding: 67px 0 34px;
