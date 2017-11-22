@@ -1,0 +1,151 @@
+.checkout-info {
+  padding-top: 34px; margin-bottom: 17px;
+  .tab-flags {
+    margin-bottom: 26px;
+    li {
+      a {
+        color: rgba($color-button-text, .5); font-size: 16px; letter-spacing: 1.6px; padding: 7px 0px 3px;
+      }
+      &.active a {
+        padding: 7px 7px 3px 9px; color: $color-white;
+      }
+    }
+  }
+  .title-page {
+    margin-bottom: 44px;
+  }
+  .information-item {
+    background: $color-white; padding: 25px 30px 21px; margin-bottom: 20px;
+  }
+  .delivery-data-form, .profile-user {
+    padding: 0;
+  }
+  .personal-title {
+    text-transform: uppercase; font-size: 16px; padding-bottom: 16px; border-bottom: 1px solid $color-border; margin-bottom: 30px;
+  }
+  .profile .input-group {
+    max-width: 590px;
+    &.phone-field {
+      max-width: 230px;
+      .btn-default {
+        font-size: 14px;
+      }
+    }
+  }
+  .personal-information .control-label {
+    width: 15.6%;
+  }
+  .checkbox {
+    input[type="checkbox"] {
+      display: none;
+    }
+    label {
+      font-size: 14px; font-style: italic; color: $color-link-blue; border-bottom: 1px dotted $color-link-blue; padding-left: 0; position: relative; margin-left: 33px;
+      &:before {
+        content: ''; display: block; width: 22px; height: 22px; border: 1px solid $color-border; position: absolute; left: -30px;
+      }
+      &:after {
+        content: ''; display: none; width: 15px; height: 15px; background-image: url("../images/tick.svg"); background-repeat: no-repeat; background-size: contain; position: absolute; left: -26px; top: 50%; transform: translateY(-50%);
+      }
+    }
+    label[for="personal-agreement"] {
+      font-style: normal; color: $color-button-text; border: none;
+    }
+    input[type="checkbox"]:checked + label:after {
+      display: block;
+    }
+  }
+  .street-field, .bootstrap-select {
+    max-width: 590px;
+  }
+  .street-field {
+    .bootstrap-select {
+      margin-right: 14px;
+    }
+    input {
+      max-width: 443px;
+    }
+  }
+  .exact-street-field {
+    padding-left: 16.1%;
+  }
+  .exact-field {
+    .control-label {
+      width: auto;
+    }
+  }
+  textarea {
+    max-width: 590px;
+  }
+  .btn-primary {
+    margin-left: 0;
+    &:before {
+      content: '\e91e';
+    }
+  }
+}
+.right-sidebar {
+  text-align: right; color: $color-button-text; padding-top: 18px;
+  .btn-print {
+    font-size: 14px; line-height: 15px; display: inline-block; position: relative; border-bottom: 1px solid #cbccce;  margin: 7px 19px 16px 25px;
+    &:before {
+      content: '\e94c'; display: block; position: absolute; left: -25px; top: 50%; transform: translateY(-50%); font-family: "icomoon"; font-size: 19px;
+    }
+  }
+}
+.checkout-cart {
+  background: $color-white; text-align: left;
+  .total-amount {
+    display: block; padding-left: 40px; position: relative;
+    &:before {
+      content: ''; display: block; width: 20px; height: 23px; background: url("../images/sum.svg") no-repeat; background-size: cover; position: absolute; left: 0; top: 50%; transform: translateY(-50%);
+    }
+  }
+  .amount {
+    font-weight: bold;
+  }
+  .cart {
+    height: 620px;
+    .mCSB_inside>.mCSB_container {
+      margin-right: 0;
+    }
+    .mCSB_scrollTools {
+
+    }
+    .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+      height: 34px; background: $color-button-text;
+    }
+  }
+}
+.cart-item {
+  display: flex; border-bottom: 1px solid $color-border;
+  .image {
+    max-width: 81px; max-height: 123px; overflow: hidden; width: 25%; margin-right: 31px;
+  }
+  .content {
+    font-size: 14px; width: 48%; padding: 13px 0 0;
+    .description {
+      margin-bottom: 10px;
+    }
+    .options {
+      .option-name {
+        font-weight: 500;
+      }
+      .option-color {
+        width: 11px; height: 11px; overflow: hidden; background-size: cover; background-repeat: no-repeat; background-position: 0 0; display: inline-block; vertical-align: middle;
+      }
+    }
+  }
+  .price {
+    font-weight: bold; color: $color-black; font-size: 14px; padding: 12px 0 0; text-align: right; width: 25%;
+  }
+}
+.bottom-cart, .top-cart {
+  display: flex; justify-content: space-between; padding: 15px 20px; border-bottom: 1px solid $color-border;
+  .cart-title {
+    font-weight: 500; font-size: 16px;
+  }
+  a {
+    font-size: 14px; border-bottom: 1px solid #cbccce;
+  }
+}

@@ -284,4 +284,21 @@ $(document).ready(function () {
         return false;
         }
     });
+    function blueHideTitle(el,size) {
+        var itemLenght = $(el);
+        var textItem = itemLenght.text();
+        var lengItem = textItem.length;
+        var maxL = size;
+        if (textItem.length >= maxL) {
+            var text = textItem.slice(0, maxL);
+            textItem = text + '..';
+            $(itemLenght).text(textItem);
+        }
+    };
+    var hide = $('.cart-item').find('.js-hide');
+    hide.each(function (i,e) {
+        blueHideTitle($(e), 50);
+
+    });
+
 });

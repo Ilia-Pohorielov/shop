@@ -42,9 +42,19 @@
     }
   }
   .block-info {
-    max-width: 1270px; margin: 0 auto; position: relative;
+    max-width: 1270px; margin: 0 auto 69px auto; position: relative;
     .image-bg-block {
-      padding: 0 0 48.9%; background-position: 0 50%; background-repeat: no-repeat; background-size: cover;
+      padding: 0 0 59%; background-position: 0 50%; background-repeat: no-repeat; background-size: cover;
+    }
+    .title {
+      top: 16%; font-size: 21vw; mix-blend-mode: unset; line-height: normal;
+      > p {
+        mix-blend-mode: difference;
+      }
+      .mini-text {
+        font-size: 28px;
+        margin-top: -38px;
+      }
     }
     .feedback-information {
       position: absolute; right: 0; top: 77px; max-width: 620px; background: $color-white; padding: 39px 50px 39px 39px; color: $color-button-text; overflow: hidden;
@@ -87,6 +97,20 @@
         }
         &:before {
           content: ''; display: block; position: absolute; left: 0; right: 0; margin: 0 -5000px; padding: 0 5000px; height: 1px; background: $color-border; bottom: 0;
+        }
+      }
+    }
+    .feedback-administration {
+      .feedback-title {
+        font-size: 20px; font-weight: 500; margin-bottom: 15px;
+      }
+      .text {
+        margin-bottom: 18px;
+      }
+      .btn-primary.btn-big {
+        max-width: 321px;
+        &:before {
+          content: '\e960'; font-size: 16px; right: 18px;
         }
       }
     }

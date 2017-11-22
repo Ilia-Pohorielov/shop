@@ -42,7 +42,7 @@ $color-link-blue: #5c666f;
 }
 
 main {
-  background: $color-gray-bg; flex: 1;
+  background: $color-gray-bg; flex: 1; position: relative;
 }
 
 .breadcrumbs {
@@ -135,6 +135,9 @@ main {
   &:hover, &:focus, &:active {
     color: rgba($color-white, .3); border: none; background: $color-button-text;
     &:before { color: rgba($color-white, .3); }
+  }
+  &.btn-big {
+    width: 100%; max-width: 361px; font-size: 15px; padding: 18px 0 18px 24px;
   }
 }
 .btn-filter {
@@ -379,7 +382,7 @@ main {
 /* BEGIN FORM STYLE*/
 .sales-advertising {
   display: flex; background: $color-blue-s; font-size: 14px; color: $color-button-text; border-radius: 16px; border: 1px solid #8adad3; padding: 7px 10px 7px 67px;
-  position: absolute; top: 42px; right: 0; max-width: 485px; width: 100%;
+  position: absolute; top: 42px; right: 0;
   strong { font-size: 20px; }
   .sale-img {
     position: absolute; left: 6px; top: 50%; transform: translateY(-50%);
@@ -388,6 +391,12 @@ main {
     display: block; margin-left: 35px; padding-right: 15px; position: relative;
     &:after {
       content: '\e905'; font-family: "icomoon"; position: absolute; right: 0; top: 53%; transform: translateY(-50%); font-size: 10px; font-weight: bold;
+    }
+  }
+  &.no-img {
+    padding: 7px 10px 7px 10px;
+    strong {
+      font-size: 14px;
     }
   }
 }
@@ -416,6 +425,9 @@ main {
     }
     &.feedback-email .content-help:before {
       content: '\e915'; font-size: 25px;
+    }
+    &.question-answer .content-help:before {
+      content: '\e901'; font-size: 24px;
     }
   }
   .content-help {

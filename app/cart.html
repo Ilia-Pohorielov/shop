@@ -8,9 +8,12 @@
     <link rel="stylesheet" href="./css/all-plugins.css">
     <link rel="stylesheet" href="./css/main.css">
 </head>
-<body class="page-sign">
+<body class="page-catalog">
 <noscript>
-    <div><span>Для полной функциональности этого сайта необходимо включить JavaScript. Вот </span><a href="https://artjoker.ua/ru/blog/how-to-enable-javascript/" target="_blank">инструкции,</a>как включить JavaScript в вашем браузере. </div>
+    <div><span>Для полной функциональности этого сайта необходимо включить JavaScript. Вот </span><a
+            href="https://artjoker.ua/ru/blog/how-to-enable-javascript/" target="_blank">инструкции,</a>как включить
+        JavaScript в вашем браузере.
+    </div>
 </noscript>
 <!--- BEGIN HEADER -->
 <header class="header-inner">
@@ -24,7 +27,8 @@
                     <li><a href="#" class="contact-item">Контакты</a></li>
                     <li class="dropdown-currency">
                         <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Украина - UAH
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -111,12 +115,57 @@
             <div class="personal-area col-lg-4">
                 <div class="user-info">
                     <div class="user-login">
-                        <a href="#" class="user-login-btn">Войти</a>
+                        <div class="user-image" style="background-image: url('assets/images/user.jpg');">
+                            <!--<img src="assets/images/user.jpg" alt="#">-->
+                        </div>
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle user-login-btn" type="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Александра
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Мои данные</a>
+                                <a class="dropdown-item" href="#">Мои заказы</a>
+                                <a class="dropdown-item" href="#">Подписка</a>
+                                <a class="dropdown-item" href="#">Избранное</a>
+                                <a class="dropdown-item" href="#">Мой LookBook</a>
+                                <a class="dropdown-item logout" href="#">Выйти</a>
+                            </div>
+                        </div>
+                        <a href="#" class="wishlist active">10</a>
                     </div>
-                    <a href="#" class="wishlist active">10</a>
+                    <div class="cart">
+                        <a href="#" class="btn btn-cart btn-cart-ico">2 товара</a>
+                    </div>
                 </div>
-                <div class="cart">
-                    <a href="#" class="btn btn-cart btn-cart-ico">2 товара</a>
+                <div class="search-block">
+                    <div class="field-search">
+                        <input type="text" placeholder="Введите текст">
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle user-login-btn" type="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Вся продукция
+                        </button>
+                        <div class="dropdown-menu js-scroll" aria-labelledby="dropdownMenuButton">
+                            <span class="dropdown-item">Новинки</span>
+                            <span class="dropdown-item">Новинки</span>
+                            <span class="dropdown-item">Сумки и кошельки</span>
+                            <span class="dropdown-item">Сумки и кошельки</span>
+                            <span class="dropdown-item">Ремни</span>
+                            <span class="dropdown-item">Ремни</span>
+                            <span class="dropdown-item">Блузы</span>
+                            <span class="dropdown-item">Блузы</span>
+                            <span class="dropdown-item">Бижутерия</span>
+                            <span class="dropdown-item">Бижутерия</span>
+                            <span class="dropdown-item">Шапки, шарфи, перчатки</span>
+                            <span class="dropdown-item">Шапки, шарфи, перчатки</span>
+                            <span class="dropdown-item">Шапки, шарфи, перчатки</span>
+                            <span class="dropdown-item">Летний стиль</span>
+                            <span class="dropdown-item">Летний стиль</span>
+                            <span class="dropdown-item">Летний стиль</span>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="main-hamburger js-mobile-menu">
@@ -124,172 +173,95 @@
                 <i></i>
                 <i></i>
             </div>
-            <div class="search-block">
-                <div class="field-search">
-                    <input type="text" placeholder="Введите текст">
-                </div>
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle user-login-btn" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Вся продукция
-                    </button>
-                    <div class="dropdown-menu js-scroll" aria-labelledby="dropdownMenuButton">
-                        <span class="dropdown-item">Новинки</span>
-                        <span class="dropdown-item">Новинки</span>
-                        <span class="dropdown-item">Сумки и кошельки</span>
-                        <span class="dropdown-item">Сумки и кошельки</span>
-                        <span class="dropdown-item">Ремни</span>
-                        <span class="dropdown-item">Ремни</span>
-                        <span class="dropdown-item">Блузы</span>
-                        <span class="dropdown-item">Блузы</span>
-                        <span class="dropdown-item">Бижутерия</span>
-                        <span class="dropdown-item">Бижутерия</span>
-                        <span class="dropdown-item">Шапки, шарфи, перчатки</span>
-                        <span class="dropdown-item">Шапки, шарфи, перчатки</span>
-                        <span class="dropdown-item">Шапки, шарфи, перчатки</span>
-                        <span class="dropdown-item">Летний стиль</span>
-                        <span class="dropdown-item">Летний стиль</span>
-                        <span class="dropdown-item">Летний стиль</span>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </header>
 <!--- END HEADER -->
 <!--- BEGIN MAIN -->
 <main>
-    <div class="contact-page">
-        <div class="wrapper">
+    <div class="wrapper">
+        <div class="cart-info">
             <div class="breadcrumbs">
                 <ul>
                     <li><a href="#">Главная</a></li>
-                    <li>Контакты</li>
+                    <li>Корзина</li>
                 </ul>
             </div>
-            <div class="title-page">Контакты</div>
-            <div class="contact-form">
-                <div class="contact-form-title">
-                    Написать нам
-                    <div class="sub-text">Заполните форму ниже, и наш менеджер свяжется с вами в течение 15 минут</div>
-                </div>
-                <form action="/" class="js-validate">
-                    <div class="form-group">
-                        <label class="control-label" for="username">Имя</label>
-                        <div class="input-group">
-                            <input type="text" class="form-control" name="profile[fullname]" required value="" id="username">
-                            <div class="error-text">Поле "Имя" не должно быть пустым</div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label" for="usertel">Телефон</label>
-                        <div class="input-group phone-field">
-                            <div class="input-group-btn dropdown">
-                                <button type="button" class="btn btn-default dropdown-toggle"
-                                        data-toggle="dropdown">
-                                    +38 <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu pull-right">
-                                    <li><a href="#">+7</a></li>
-                                </ul>
-                            </div>
-                            <input type="tel" class="form-control js-phone-mask" name="profile[phone]"
-                                   data-validate="phone" value="" required placeholder="(___) ___-__-__"
-                                   id="usertel">
-                            <div class="error-text">Поле "Телефон" не должно быть пустым</div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label" for="username">Сообщение</label>
-                        <textarea name="message"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn--default btn-primary">Отправить</button>
-                </form>
+            <div class="title-page">Корзина</div>
+            <div class="sales-advertising no-img">
+                <span>Чтобы получить скидку <strong>100</strong> грн, закажите еще <strong>10</strong></span>
+                <a href="#">В каталог</a>
             </div>
-            <div class="block-info container-fluid">
-                <div class="row">
-                    <div class="image-bg-block col-md-7" style="background-image: url('assets/images/con-1.jpg'); position: relative;">
-                        <div class="title">
-                            <p>B</p>
-                            <span class="mini-text">Bafimoda</span>
+            <div class="row">
+                <div class="col-md-8 col-sm-8 col-xs-12">
+                    <div class="cart">
+                        <div class="cart-item">
+                            <div class="image">
+                                <img src="assets/images/cart-1.jpg" alt="#">
+                            </div>
+                            <div class="content">
+                                <a href="#" class="description">Костюм небесно-голубого цвета с большими голубыми пуговицами</a>
+                                <div class="options">
+                                    <div class="option-item">
+                                        <span class="option-name">Размер: </span>М <a href="#">Изменить</a>
+                                    </div>
+                                    <div class="option-item">
+                                        <span class="option-name">Количество: </span>2 <a href="#">Изменить</a>
+                                    </div>
+                                    <div class="option-item">
+                                        <span class="option-name">Цвет: </span>Светло-голубой <span class="option-color" style="background-image: url('assets/images/c-b.png')"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="price">858 UAH</div>
+                            <div class="change-item">
+                                <a href="#">Переместить в Избранное</a>
+                                <a href="#">Удалить</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="feedback-information">
-                        <ul class="nav nav-tabs tab-flags">
-                            <li class="active"><a data-toggle="tab" href="#feedback-contact">украина</a></li>
-                            <li><a data-toggle="tab" href="#top-sales">Другие страны</a></li>
-                        </ul>
-                        <div class="tab-content">
-                            <div id="feedback-contact" class="feedback-contact">
-                                <div class="description">
-                                    По вопросам сотрудничества и оформления заказов Вы можете связаться с менеджерами компании по телефонам в Украине:
+                        <div class="cart-item">
+                            <div class="image">
+                                <img src="assets/images/cart-2.jpg" alt="#">
+                            </div>
+                            <div class="content">
+                                <a href="#" class="description">Расклешенная юбка ярко-красного цвета</a>
+                                <div class="options">
+                                    <div class="option-item">
+                                        <span class="option-name">Размер: </span>М <a href="#">Изменить</a>
+                                    </div>
+                                    <div class="option-item">
+                                        <span class="option-name">Количество: </span>1 <a href="#">Изменить</a>
+                                    </div>
+                                    <div class="option-item">
+                                        <span class="option-name">Цвет: </span>Ярко-красный <span class="option-color" style="background-image: url('assets/images/c-r.png')"></span>
+                                    </div>
                                 </div>
-                                <div class="contact">
-                                    <ul>
-                                        <li class="contact-name">Телефоны:</li>
-                                        <li class="contact-item">
-                                            <a href="tel:+380665898989">+38 (066) 589 89 89</a>
-                                            <a href="tel:+380965898989">+38 (096) 589 89 89</a>
-                                            <a href="tel:+380575898989">+38 (057) 589 89 89</a>
-                                        </li>
-                                        <li class="contact-name">Viber, Whatsapp:</li>
-                                        <li class="contact-item">
-                                            <a href="tel:+380985898989">+38 (098) 589 89 89</a>
-                                        </li>
-                                        <li class="contact-name">Email:</li>
-                                        <li class="contact-item">
-                                            <a href="mailto:info@domain.com">info@domain.com</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="feedback-administration">
-                                    <div class="feedback-title">Связаться с администрацией</div>
-                                    <div class="text">Для того, чтобы связаться с администрацией, заполните, пожалуйста, форму</div>
-                                    <a href="#" class="btn btn-primary btn-big">Написать администрации</a>
-                                </div>
+                            </div>
+                            <div class="price">350 UAH</div>
+                            <div class="change-item">
+                                <a href="#">Переместить в Избранное</a>
+                                <a href="#">Удалить</a>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="block-help">
-                <div class="row">
-                    <div class="delivery-pay help-item col-md-3 col-sm-4 col-xs-12">
-                        <div class="content-help">
-                            <div class="title-help">Оплата и доставка</div>
-                            <div class="text">Для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, </div>
-                            <a href="#" class="more-info">Подробнее</a>
+                <aside class="col-md-3 col-sm-3 col-xs-12">
+                    <div class="total-cart">
+                        <div class="top-cart">
+                            <div class="cart-title">Итого</div>
                         </div>
-                    </div>
-                    <div class="question-answer help-item col-md-3 col-sm-4 col-xs-12">
-                        <div class="content-help">
-                            <div class="title-help">Вопросы и ответы</div>
-                            <div class="text">Вы можете найти ответ на ваш вопрос в секции Вопросы и ответы.</div>
-                            <a href="#" class="more-info">Подробнее</a>
-                        </div>
-                    </div>
-                    <div class="call-help help-item col-md-3 col-sm-4 col-xs-12">
-                        <div class="content-help">
-                            <div class="title-help">Нужна помощь? Звоните!</div>
-                            <div class="text">
-                                <a href="tel:+380665898989" class="tel">+38 (066) 589 89 89</a>
-                                <a href="tel:+380965898989" class="tel">+38 (096) 589 89 89</a>
-                                <a href="tel:+380665898989" class="tel">+38 (066) 589 89 89</a>
-                                <a href="tel:+380965898989" class="tel">+38 (096) 589 89 89</a>
+                        <div class="total-info">
+                            <div class="total-info-item">
+                                Общее кол-во товаров <strong><span class="count">2</span> товара</strong>
                             </div>
-                            <div class="info-help">
-                                Линии открыты с понедельника по пятницу, с 9:00 утра до 6:00 вечера по киевскому времени
+                            <div class="total-info-item amount">
+                                Итого к оплате <strong><span class="count">1208</span>UAH</strong>
                             </div>
+                            <a href="#" class="btn btn-primary btn-big">Перейти к оплате</a>
                         </div>
                     </div>
-                    <div class="feedback-email help-item col-md-3 col-sm-4 col-xs-12">
-                        <div class="content-help">
-                            <div class="title-help">Свяжитесь с нами</div>
-                            <div class="text">
-                                Есть вопросы и предложения? Свяжитесь с нами, отправив письмо по <a href="mailto:">электронной почте</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    <a href="#" class="btn-back">Вернуться к покупкам</a>
+                </aside>
             </div>
         </div>
     </div>
@@ -359,7 +331,8 @@
     <div class="bottom-footer wrapper container-fluid">
         <div class="row">
             <div class="copyright col-md-6 col-sm-6 col-xs-12">© Bafimoda, 2017. Все права защищены.</div>
-            <div class="developers col-md-6 col-sm-6 col-xs-12">Разработка и поддержка сайта - <a href="#">Artjoker</a></div>
+            <div class="developers col-md-6 col-sm-6 col-xs-12">Разработка и поддержка сайта - <a href="#">Artjoker</a>
+            </div>
         </div>
     </div>
 </footer>
