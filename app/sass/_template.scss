@@ -20,6 +20,7 @@ $color-border: #dee0e2;
 $color-blue-s: #d2f4f1;
 $color-green-light: #40b288;
 $color-link-blue: #5c666f;
+$color-gray-text: #b0b0b0;
 
 @mixin placeholder {
   ::-webkit-input-placeholder {@content}
@@ -133,8 +134,8 @@ main {
   display:inline-block; background: $color-button-text; color: $color-white; font-size: 13px; font-weight: 500; padding: 13px 77px 13px 15px; position: relative; transition: all .3s ease; width: 230px; text-align: left;
   &:before { content: '\e938'; display: block; position: absolute; right: 15px; top: 50%; transform: translateY(-50%); transition: all .3s ease; font-size: 15px; font-family: "icomoon";}
   &:hover, &:focus, &:active {
-    color: rgba($color-white, .3); border: none; background: $color-button-text;
-    &:before { color: rgba($color-white, .3); }
+    color: rgba($color-white, .6); border: none; background: $color-button-text;
+    &:before { color: rgba($color-white, .6); }
   }
   &.btn-big {
     width: 100%; max-width: 361px; font-size: 15px; padding: 18px 0 18px 24px;

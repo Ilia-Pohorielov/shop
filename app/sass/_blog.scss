@@ -1,0 +1,97 @@
+.blog-page {
+  padding-top: 34px;
+  .title-page {
+    margin-bottom: 31px;
+  }
+  .pagination {
+    margin: 0 0 60px;
+    li {
+      margin-right: 7px;
+    }
+  }
+}
+.title-blog {
+  font-weight: 500;
+}
+.publish-info {
+  color: $color-gray-text;
+}
+.popular-blogs {
+  margin-bottom: 31px;
+}
+.popular-blog {
+  position: relative;
+  .description {
+    background: $color-white; color: $color-button-text; padding: 38px 47px 36px 36px; position: absolute; bottom: 30px; left: 47px;
+    .title-blog {
+      font-size: 25px; margin-bottom: 23px;
+    }
+    .publish-info {
+      font-size: 14px;
+    }
+  }
+}
+.popular-blog-list {
+  padding-top: 16px; padding-left: 33px;
+  .title-list {
+    text-transform: uppercase; color: $color-button-text; font-size: 14px; font-weight: 500; margin-bottom: 29px;
+  }
+  .list-item {
+    margin-bottom: 38px;
+    a {
+      display: flex;
+      .image {
+        width: 58px; height: 58px; border-radius: 50%; overflow: hidden; margin-right: 22px;
+        img {
+          height: 100%; object-fit: cover;
+        }
+      }
+      .description {
+        width: 67%;
+      }
+      .title-blog {
+        font-size: 14px; line-height: 18px; margin-bottom: 3px;
+      }
+      .publish-info {
+        font-size: 12px;
+      }
+    }
+  }
+}
+.blog-list {
+  .blog-item {
+    display: block; margin-bottom: 30px;
+    .description {
+      background: $color-white; padding: 22px 20px;
+      .title-blog {
+        font-size: 18px; margin-bottom: 15px; line-height: 21px;
+      }
+      .publish-info {
+        font-size: 12px;
+      }
+    }
+    .image {
+      max-width: 490px; max-height: 286px; overflow: hidden; position: relative;
+      &:before {
+        content: ''; display: block; position: absolute; left: 0; right: 0; height: 100%; background: transparent; transition: all .3s ease;
+      }
+      img {
+        height: 100%; object-fit: cover;
+      }
+    }
+    &:hover, &:focus, &:active {
+      .image:before {
+        background: rgba($color-white, .2);
+      }
+    }
+  }
+}
+.blog-subscribe {
+  padding: 0 0 23.9%; height: auto; margin-bottom: 0;
+  .wrap-subscribe {
+    top: 21.4%; left: 50.8%;
+  }
+  .subscribe-form {
+    background: $color-white;
+  }
+}
