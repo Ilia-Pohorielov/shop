@@ -135,43 +135,6 @@
 }
 .size-amount {
   margin-bottom: 31px;
-  .size {
-    display: flex;
-    .size-item {
-      display: flex; position: relative; transition: all .5s linear;
-      span {
-        display: block; width: 60px; height: 39px; text-align: center; line-height: 39px; background: $color-white; border: 1px solid $color-border; color: $color-black;
-        font-size: 14px; font-weight: 500; cursor: pointer;
-      }
-      &:not(:last-child) {
-        margin-right: 10px;
-      }
-      &.open {
-        padding-right: 137px;
-        > span {
-          border-right: none; background: $color-light-blue;
-          &.btn-count {
-            background: $color-white;
-          }
-        }
-        .amount {
-           visibility: visible; transition: all .5s linear;
-        }
-      }
-    }
-    .amount {
-      display: flex; position: absolute; left: 60px;  visibility: hidden;
-      .btn-count {
-        width: 39px; text-align: center; line-height: 39px; font-size: 16px; font-weight: normal; background: $color-white;
-        &.minus-count {
-          border-left: none;
-        }
-      }
-      .count {
-        width: 60px; height: 39px; text-align: center; line-height: 39px; border-top: 1px solid $color-border; border-bottom: 1px solid $color-border;
-      }
-    }
-  }
   .top {
     display: flex; justify-content: space-between;
   }
@@ -241,6 +204,43 @@
     }
     &:last-child {
       margin-right: 0;
+    }
+  }
+}
+.size {
+  display: flex;
+  .size-item {
+    display: flex; position: relative; transition: all .5s linear;
+    span {
+      display: block; width: 60px; height: 39px; text-align: center; line-height: 39px; background: $color-white; border: 1px solid $color-border; color: $color-black;
+      font-size: 14px; font-weight: 500; cursor: pointer;
+    }
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+    &.open {
+      padding-right: 137px;
+      > span {
+        border-right: none; background: $color-light-blue;
+        &.btn-count {
+          background: $color-white;
+        }
+      }
+      .amount {
+        visibility: visible; transition: all .5s linear;
+      }
+    }
+  }
+  .amount {
+    display: flex; position: absolute; left: 60px;  visibility: hidden;
+    .btn-count {
+      width: 39px; text-align: center; line-height: 39px; font-size: 16px; font-weight: normal; background: $color-white;
+      &.minus-count {
+        border-left: none;
+      }
+    }
+    .count {
+      width: 60px; height: 39px; text-align: center; line-height: 39px; border-top: 1px solid $color-border; border-bottom: 1px solid $color-border;
     }
   }
 }

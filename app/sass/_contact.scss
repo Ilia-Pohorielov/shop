@@ -41,77 +41,77 @@
       }
     }
   }
-  .block-info {
-    max-width: 1270px; margin: 0 auto 69px auto; position: relative;
-    .image-bg-block {
-      padding: 0 0 59%; background-position: 0 50%; background-repeat: no-repeat; background-size: cover;
+}
+.block-info {
+  max-width: 1270px; margin: 0 auto 69px auto; position: relative;
+  .image-bg-block {
+    padding: 0 0 59%; background-position: 0 50%; background-repeat: no-repeat; background-size: cover;
+  }
+  .title {
+    top: 16%; font-size: 21vw; mix-blend-mode: unset; line-height: normal;
+    > p {
+      mix-blend-mode: difference;
     }
-    .title {
-      top: 16%; font-size: 21vw; mix-blend-mode: unset; line-height: normal;
-      > p {
-        mix-blend-mode: difference;
-      }
-      .mini-text {
-        font-size: 28px;
-        margin-top: -38px;
-      }
+    .mini-text {
+      font-size: 28px;
+      margin-top: -38px;
     }
-    .feedback-information {
-      position: absolute; right: 0; top: 77px; max-width: 620px; background: $color-white; padding: 39px 50px 39px 39px; color: $color-button-text; overflow: hidden;
-      .tab-flags {
-        margin-bottom: 32px;
-        li {
-          a {
-            font-size: 16px; padding: 7px 9px 2px 13px; letter-spacing: 1.7px; color: rgba($color-button-text, .7);
-            &:hover, &:focus, &:active {
-              background: transparent;
-            }
+  }
+  .feedback-information {
+    position: absolute; right: 0; top: 77px; max-width: 620px; background: $color-white; padding: 39px 50px 39px 39px; color: $color-button-text; overflow: hidden;
+    .tab-flags {
+      margin-bottom: 32px;
+      li {
+        a {
+          font-size: 16px; padding: 7px 9px 2px 13px; letter-spacing: 1.7px; color: rgba($color-button-text, .7);
+          &:hover, &:focus, &:active {
+            background: transparent;
           }
-          &.active a {
-            color: $color-white;
-            &:hover, &:focus, &:active {
-              background: $color-button-text;
-            }
+        }
+        &.active a {
+          color: $color-white;
+          &:hover, &:focus, &:active {
+            background: $color-button-text;
           }
         }
       }
-      .description {
-        margin-bottom: 23px;
-      }
-      .contact {
-        padding-bottom: 17px; position: relative; margin-bottom: 27px;
+    }
+    .description {
+      margin-bottom: 23px;
+    }
+    .contact {
+      padding-bottom: 17px; position: relative; margin-bottom: 27px;
 
-        ul {
-          display: flex; flex-wrap: wrap; font-size: 14px;
-          li {
-            width: 34%; margin-bottom: 20px;
-            &.contact-name {
-             font-weight: 500;
-            }
-            &.contact-item {
-              a {
-                display: block; margin-bottom: 3px;
-              }
+      ul {
+        display: flex; flex-wrap: wrap; font-size: 14px;
+        li {
+          width: 34%; margin-bottom: 20px;
+          &.contact-name {
+            font-weight: 500;
+          }
+          &.contact-item {
+            a {
+              display: block; margin-bottom: 3px;
             }
           }
         }
-        &:before {
-          content: ''; display: block; position: absolute; left: 0; right: 0; margin: 0 -5000px; padding: 0 5000px; height: 1px; background: $color-border; bottom: 0;
-        }
+      }
+      &:before {
+        content: ''; display: block; position: absolute; left: 0; right: 0; margin: 0 -5000px; padding: 0 5000px; height: 1px; background: $color-border; bottom: 0;
       }
     }
-    .feedback-administration {
-      .feedback-title {
-        font-size: 20px; font-weight: 500; margin-bottom: 15px;
-      }
-      .text {
-        margin-bottom: 18px;
-      }
-      .btn-primary.btn-big {
-        max-width: 321px;
-        &:before {
-          content: '\e960'; font-size: 16px; right: 18px;
-        }
+  }
+  .feedback-administration {
+    .feedback-title {
+      font-size: 20px; font-weight: 500; margin-bottom: 15px;
+    }
+    .text {
+      margin-bottom: 18px;
+    }
+    .btn-primary.btn-big {
+      max-width: 321px;
+      &:before {
+        content: '\e960'; font-size: 16px; right: 18px;
       }
     }
   }

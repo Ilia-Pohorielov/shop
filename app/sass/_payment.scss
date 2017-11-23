@@ -1,0 +1,53 @@
+.payment-page {
+  padding-top: 35px; overflow: hidden;
+  .text {
+    line-height: 22px; margin-bottom: 55px;
+  }
+  .block-info {
+    margin: 0 auto 64px auto; padding-bottom: 71px; position: relative;
+    .title {
+      top: 13%;
+    }
+    .feedback-information {
+      top: 144px; padding: 37px 44px 32px 30px;
+      .title-feedback {
+        font-size: 20px; font-weight: 500; margin-bottom: 29px;
+      }
+      .description {
+        margin-bottom: 6px; line-height: 22px;
+      }
+    }
+    &:after {
+      content: ''; display: block; position: absolute; left: 0; right: 0; bottom: 0; margin: 0 -5000px; padding: 0 5000px; height: 1px; background: #dddddd;
+    }
+  }
+}
+.title-payment {
+  font-size: 20px; font-weight: 500; margin-bottom: 29px;
+}
+.block-payment {
+  margin-bottom: 35px;
+}
+.payment-item {
+  .payment-content {
+    background: $color-white; padding: 21px 40px 8px 123px;  border-bottom: 3px solid $color-button-text; position: relative;
+    .text {
+      font-size: 14px; line-height: 21px; margin-bottom: 16px;
+    }
+    &:before {
+      content: ''; display: block; width: 64px; height: 64px; border-radius: 50%; border: 1px solid $color-border; font-size: 33px; line-height: 64px; text-align: center; position: absolute; top: 29px; left: 32px; font-family: "icomoon";
+    }
+    &.transfer:before {
+      content: '\e90a';
+    }
+    &.bank-transfer:before {
+      content: '\e94d';
+    }
+    &.international-transfer {
+      padding: 21px 40px 29px 123px;
+      &:before {
+        content: '\e93a';
+      }
+    }
+  }
+}

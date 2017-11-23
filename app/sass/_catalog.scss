@@ -34,6 +34,18 @@
 }
 .block-criteria {
   background: $color-white; margin-bottom: 8px;
+  .noUi-horizontal .noUi-handle {
+    width: 20px; height: 20px; border-radius: 50%; background: $color-light-blue-text; border: none; box-shadow: none; left: 50%; top: 50%; transform: translate(-50%, -50%); outline: 0; cursor: pointer;
+    &:after {
+      content: none;
+    }
+    &:before {
+      width: 10px; height: 10px; border-radius: 50%; background: $color-white; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    }
+  }
+  .noUi-target {
+    height: 3px; border-radius: 0; border: none; background: $color-gray-bg; margin-bottom: 20px;
+  }
 }
 .product {
   text-align: right; position: relative; margin-bottom: 5px; display: block;
@@ -206,5 +218,56 @@
       padding-left: 15px; left: 0; font-size: 45px;
       .sub-title { margin-left: 25px; }
     }
+  }
+}
+.price-slider-input {
+  display: flex; align-items: center; justify-content: space-between; color: $color-gray-text;
+  .form-group {
+    max-width: 120px; height: 40px; margin: 0;
+  }
+}
+.size-list {
+  display: flex;
+  input[type="checkbox"] {
+    display: none;
+  }
+  .size-name {
+    display: block; width: 60px; height: 39px; text-align: center; line-height: 39px; background: $color-white; border: 1px solid $color-border; color: #000000; font-size: 14px; font-weight: 500; cursor: pointer;
+    transition: all .3s ease;
+    &:hover, &:focus, &:active {
+      background: $color-light-blue; color: $color-white;
+    }
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+  input[type="checkbox"]:checked + label {
+    background: $color-light-blue; color: $color-white;
+  }
+}
+.color-list {
+  display: flex; flex-wrap: wrap;
+  input[type="checkbox"] {
+    display: none;
+  }
+  .color-item {
+    display: block; width: 40px; height: 40px;border-radius: 50%; background: no-repeat; background-position: 0 50%; background-size: cover; position: relative; cursor: pointer;
+    &:before {
+      content: ''; display: block; position: absolute; left: 0; right: 0; height: 100%; background: transparent; transition: all .3s ease;
+    }
+    &:after {
+      content: '\e903'; display: block; position: absolute; left: 0; right: 0; height: 100%; line-height: 40px; font-family: "icomoon"; text-align: center; font-size: 14px; background: rgba($color-white, .4); color: $color-button-text; opacity: 0; transition: all .3s ease;
+    }
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+    &:hover, &:focus, &:active {
+      &:before {
+        background: rgba($color-white, .2);
+      }
+    }
+  }
+  input[type="checkbox"]:checked + label:after {
+    opacity: 1;
   }
 }

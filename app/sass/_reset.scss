@@ -4,7 +4,7 @@ html {
 }
 body {
   display: flex; flex-direction: column; font-family: "Gotham","Roboto", "Arial", sans-serif; font-size: 14px; font-weight: normal; background: $color-white; line-height: 20px;
-  height:100%; min-width: 320px; color: $color-text; margin: 0;
+  height:100%; min-width: 320px; color: $color-button-text; margin: 0;
 }
 *,:after,:before {
   box-sizing: border-box;

@@ -402,6 +402,7 @@ main {
   }
 }
 /* BEGIN BLOCK-HELP STYLE */
+.block-payment,
 .block-help {
   margin-bottom: 70px;
   .more-info, a[href^="mailto"] {
@@ -410,13 +411,13 @@ main {
   .more-info {
     display: inline-block; font-size: 12px; line-height: 13px;
   }
+  .title-help {
+    font-weight: 500; font-size: 14px; margin-bottom: 12px;
+  }
   .help-item {
     color: $color-button-text;
-    .title-help {
-      font-weight: 500; font-size: 14px; margin-bottom: 12px;
-    }
     .text {
-      font-size: 12px; line-height: 18px;
+      font-size: 12px; line-height: 18px; margin-bottom: 18px;
     }
     &.delivery-pay .content-help:before {
          content: '\e912'; font-size: 34px;
@@ -437,9 +438,6 @@ main {
       content: ''; display: block; width: 64px; height: 64px; background: $color-white; border: 1px solid $color-border; border-radius: 50%; text-align: center; line-height: 64px; font-family: "icomoon";
       position: absolute; top: 12px; left: 0; color: $color-black;
     }
-  }
-  .text {
-    margin-bottom: 18px;
   }
   .info-help {
     color: $color-text-light; font-size: 12px; line-height: 18px;
