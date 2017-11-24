@@ -351,6 +351,9 @@ main {
     left: 0;
     top: 50%;
     margin-top: -16.5px; }
+  .btn-link:hover, .btn-link:focus, .btn-link:active {
+    text-decoration: none;
+    color: #69d5cc; }
 
 /* END BUTTON STYLE*/
 .tab-flags {
@@ -2989,10 +2992,12 @@ header {
           .order-table table tbody tr.order-cancel td .product-list li a {
             color: #8f98a4; }
       .order-table table tbody tr .caret {
-        display: block;
+        display: none;
         cursor: pointer; }
-      .order-table table tbody tr.caret-open .caret {
-        display: inline-block; }
+      .order-table table tbody tr.accordion {
+        max-height: 1000px; }
+        .order-table table tbody tr.accordion .caret {
+          display: inline-block; }
   .order-table .col-table-lg {
     width: 25.8%; }
   .order-table .col-table-md {
@@ -3002,13 +3007,15 @@ header {
     width: 8%; }
   .order-table .col-table-1 {
     width: 11%; }
-  .order-table .product-list, .order-table .product-qty, .order-table .product-total, .order-table .product-price {
+  .order-table .js-accordion {
     max-height: 50px;
     overflow: hidden;
-    -webkit-transition: all .5s linear;
-    transition: all .5s linear; }
-    .order-table .product-list.open, .order-table .product-qty.open, .order-table .product-total.open, .order-table .product-price.open {
-      max-height: 1000px; }
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease; }
+    .order-table .js-accordion.open {
+      max-height: 1000px;
+      -webkit-transition: all 2s ease;
+      transition: all 2s ease; }
   .order-table .product-list {
     -webkit-transition: all .3s ease;
     transition: all .3s ease;

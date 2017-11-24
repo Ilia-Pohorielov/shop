@@ -178,10 +178,13 @@
           }
         }
         .caret {
-          display: block; cursor: pointer;
+          display: none; cursor: pointer;
         }
-        &.caret-open {
-          .caret { display: inline-block; }
+        &.accordion {
+          max-height: 1000px;
+          .caret {
+            display: inline-block;
+          }
         }
       }
     }
@@ -198,10 +201,10 @@
   .col-table-1 {
     width: 11%;
   }
-  .product-list, .product-qty, .product-total, .product-price {
-    max-height: 50px; overflow: hidden; transition: all .5s linear;
+  .js-accordion {
+    max-height: 50px; overflow: hidden; transition: all .5s ease;
     &.open {
-      max-height: 1000px;
+      max-height: 1000px; transition: all 2s ease;
     }
   }
   .product-list {
