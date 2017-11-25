@@ -9,6 +9,9 @@
       &.active a {
         padding: 7px 7px 3px 9px; color: $color-white;
       }
+      @media (max-width: 767px) {
+        margin-bottom: 15px;
+      }
     }
   }
   .title-page {
@@ -34,6 +37,9 @@
   }
   .personal-information .control-label {
     width: 15.6%;
+    @media (max-width: 767px) {
+      width: 100%;
+    }
   }
   .checkbox {
     input[type="checkbox"] {
@@ -64,10 +70,16 @@
     }
     input {
       max-width: 443px;
+      @media (max-width: 767px) {
+        max-width: none;
+      }
     }
   }
   .exact-street-field {
     padding-left: 16.1%;
+    @media (max-width: 767px) {
+      padding-left: 0;
+    }
   }
   .exact-field {
     .control-label {
@@ -115,6 +127,9 @@
     .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
       height: 34px; background: $color-button-text;
     }
+  }
+  .cart-item {
+    padding-right: 15px;
   }
 }
 .cart-item {

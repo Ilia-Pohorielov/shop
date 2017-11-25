@@ -32,6 +32,23 @@
         display: block; text-decoration: underline; text-decoration-color: rgba($color-button-text, .3); line-height: 12px; font-size: 12px; margin-bottom: 16px;
       }
     }
+    @media (max-width: 767px) {
+      flex-wrap: wrap;
+      .image, .content {
+        width: 100%;
+      }
+      .price, .change-item {
+        width: 50%;
+      }
+      .price, .content {
+        padding-left: 15px;
+      }
+    }
+  }
+  @media (max-width: 767px) {
+    .cart {
+      padding-top: 50px;
+    }
   }
 }
 .total-cart {

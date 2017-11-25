@@ -29,6 +29,12 @@
     .publish-info {
       font-size: 14px;
     }
+    @media (max-width: 767px) {
+      padding: 25px 35px 25px 23px; left: 15px;
+      .title-blog {
+        font-size: 19px;
+      }
+    }
   }
 }
 .popular-blog-list {
@@ -87,9 +93,15 @@
   }
 }
 .blog-subscribe {
-  padding: 0 0 23.9%; height: auto; margin-bottom: 0;
+  padding: 0 0 23.9%; height: auto; margin-bottom: 0; min-height: 455px;
   .wrap-subscribe {
     top: 21.4%; left: 50.8%;
+    @media (max-width: 1310px) {
+      top: 50%; left: 50%; transform: translate(-50%, -50%);
+    }
+    @media (max-width: 767px) {
+      top: 50%; left: 0; right: 0; transform: translateY(-50%);
+    }
   }
   .subscribe-form {
     background: $color-white;

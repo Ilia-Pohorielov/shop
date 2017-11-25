@@ -5,9 +5,9 @@
   }
 }
 .content-about {
-  max-width: 1270px; margin: -69px auto 70px auto; background: $color-white; transform: perspective(1px); padding: 62px 0 83px;
+  max-width: 1270px; margin: -69px auto 70px auto; background: $color-white; transform: perspective(1px); padding: 62px 15px 83px;
   .content {
-    max-width: 1015px; margin: 0 auto; font-size: 14px; color: $color-button-text; line-height: 22px;
+    max-width: 1045px; margin: 0 auto; font-size: 14px; color: $color-button-text; line-height: 22px; padding: 0 15px;
     .title-page { margin-bottom: 32px; }
     .text {
       margin-bottom: 34px;
@@ -30,9 +30,19 @@ blockquote {
     &:before {
       top: 17px; left: 75px;
     }
+    @media (max-width: 991px) {
+      &:before {
+        left: 0;
+      }
+    }
   }
   &:before {
     content: '‘‘'; display: inline-block; font-size: 71px; position: absolute; top: 21px; left: -56px;
+  }
+  @media (max-width: 991px) {
+    &:before {
+      left: -35px;
+    }
   }
 }
 mark {
@@ -47,6 +57,21 @@ mark {
       &.image-front {
         margin: 20px 0 0 20px;
       }
+    }
+  }
+  @media (max-width: 991px) {
+    text-align: center;
+    .image {
+      display: inline-block; float: none; padding: 0 0 75%;
+      img {
+        left: 50%; transform: translateX(-50%); height: 100%;
+        &.image-front {
+          left: 53.2%;
+        }
+      }
+    }
+    .text-right {
+      display: inline-block; float: none;
     }
   }
 }
@@ -68,7 +93,7 @@ mark {
     text-align: center; font-size: 25px; margin-bottom: 52px;
   }
   .trend-item {
-    max-width: 510px; max-height: 567px; overflow: hidden; position: relative; padding: 0;
+    max-width: 510px; max-height: 567px; overflow: hidden; position: relative; padding: 0; display: inline-block;
     .title-product {
       position: absolute; top: 29px; left: 29px;
       span {
@@ -91,6 +116,23 @@ mark {
           &.sub-title {
             transform: translateX(-5px);
           }
+        }
+      }
+    }
+  }
+  @media (max-width: 767px) {
+    .trend {
+      text-align: center;
+      .trend-item {
+        float: none;
+        &.image-center {
+          margin-top: 0;
+        }
+        &.image-right {
+          margin-top: 0;
+        }
+        &:not(:last-child) {
+          margin-bottom: 20px;
         }
       }
     }

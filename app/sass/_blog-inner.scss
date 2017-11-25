@@ -4,7 +4,7 @@
 .inner-blog {
   max-width: 1270px; margin: -150px auto 35px auto; background: $color-white; padding-top: 64px; transform: perspective(1px); color: $color-button-text; padding-bottom: 26px;
   .wrap {
-    max-width: 1015px; margin: 0 auto;
+    max-width: 1045px; margin: 0 auto; padding: 0 15px;
   }
   .title-page {
     margin-bottom: 45px;
@@ -52,6 +52,17 @@
       }
     }
   }
+  @media (max-width: 660px) {
+    .reading-time {
+      display: none;
+    }
+  }
+  @media (max-width: 420px) {
+    flex-direction: column; align-items: flex-start; border: none;
+    > div {
+      border: none;
+    }
+  }
 }
 .product-integration {
   .title-product {
@@ -89,11 +100,16 @@
       border-bottom: 1px solid #e4e4e4; margin-bottom: 40px;
     }
   }
+  @media (max-width: 767px) {
+    .title-image {
+      display: none;
+    }
+  }
 }
 .transition-blogs {
   max-width: 1270px; margin: 0 auto 74px auto; display: flex; justify-content: space-between;
   span {
-    display: block; font-size: 18px; line-height: 21px;
+    display: block; font-size: 18px; line-height: 21px; color: $color-gray-text;
   }
   a {
     font-size: 18px; font-weight: 500; display: block; position: relative; line-height: 21px;
@@ -109,5 +125,22 @@
   }
   .next-blog {
     text-align: right; padding-right: 18px;
+  }
+  @media (max-width: 767px) {
+    span {
+      font-size: 12px;
+    }
+    a {
+      font-size: 12px;
+    }
+  }
+  @media (max-width: 350px) {
+    flex-direction: column;
+    .next-blog {
+      text-align: left; margin-top: 10px;
+      a {
+        &:after { right: 0; }
+      }
+    }
   }
 }

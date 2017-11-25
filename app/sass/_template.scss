@@ -166,6 +166,9 @@ main {
   &.btn-share:before {
     content: '\e956';
   }
+  &.btn-cart:before {
+    content: '\e907';
+  }
   &:before {
     display: block; font-family: "icomoon"; background: $color-white; width: 33px; height: 33px; border: 1px solid $color-border; line-height: 33px; text-align: center; border-radius: 50%;
     position: absolute; left: 0; top: 50%; margin-top: -16.5px;
@@ -276,7 +279,7 @@ main {
   }
 }
 .title-page {
-  font-size: 30px; color: $color-button-text; text-align: left; margin-bottom: 40px;
+  font-size: 30px; color: $color-button-text; text-align: left; margin-bottom: 31px; line-height: 30px;
 }
 .price {
   display: inline-block; font-weight: bold; font-size: 18px; color: $color-black;
@@ -382,6 +385,9 @@ main {
     }
     .error-text { display: block; }
   }
+  .input-group.has-error {
+    .error-text { display: block; }
+  }
 }
 /* BEGIN FORM STYLE*/
 .sales-advertising {
@@ -401,6 +407,15 @@ main {
     padding: 7px 10px 7px 10px;
     strong {
       font-size: 14px;
+    }
+  }
+  @media (max-width: 767px) {
+    font-size: 12px; top: 94px; left: 0; justify-content: space-between; flex-wrap: wrap;
+    strong {
+      font-size: 15px;
+    }
+    a {
+      margin-left: 0;
     }
   }
 }

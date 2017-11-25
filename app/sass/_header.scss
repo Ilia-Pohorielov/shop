@@ -1,5 +1,29 @@
 header {
   position: absolute; top: 0; left: 0; right: 0; z-index: 10;
+  @media (max-width: 515px) {
+    .top-header {
+      position: absolute; left: 0; right: 0; bottom: -47px; z-index: 10; display: none;
+      .contact-info {
+        ul li {
+          &:nth-child(2) {
+            display: none;
+          }
+          &:nth-child(4) {
+            display: none;
+          }
+        }
+      }
+      &.open {
+        display: block;
+      }
+    }
+    .bottom-header {
+      padding: 15px 15px 20px; background: rgba($color-black, .7);
+      .header-menu {
+        padding: 45px 15px 0;
+      }
+    }
+  }
 }
 .top-header {
   background: rgba($color-light-black,.8); padding: 0 40px;
@@ -56,11 +80,11 @@ header {
 .bottom-header {
   padding: 24px 40px 0; line-height: 45px; border-bottom: 1px solid rgba($color-white, .10); position: relative;
   >.row {
-    margin-right: 0;
+    margin-right: 0; display: flex;
   }
-  .logo { padding-top: 9px; width: 216px; }
+  .logo { padding-top: 9px; width: 15%; }
   .header-menu {
-    display: flex; align-items: center;  position: static;
+    display: flex; align-items: flex-start;  position: static; width: 85%; padding-right: 0; justify-content: space-between;
   }
   .main-menu {
     display: flex; font-weight: 500;
@@ -158,7 +182,7 @@ header {
       .dropdown.open .user-login-btn { box-shadow: none; }
       .dropdown-item { text-transform: none; }
       .user-login-btn {
-        position: relative; font-weight: 500; color: rgba($color-white,.5); padding: 0 15px 0 30px; margin-right: 19px; text-transform: none; font-size: 13px;
+        position: relative; font-weight: 500; color: rgba($color-white,.5); padding: 0 15px 0 30px; margin-right: 31px; text-transform: none; font-size: 13px;
         &:after, &:before { content: ''; display: block; font-family: 'icomoon'; color: rgba($color-white,.5); position: absolute; top: 50%; transform: translateY(-50%);}
         &:before { content:'\e95e'; left: 0; right: auto; font-size: 22px; }
         &:hover, &:focus, &:active {
@@ -166,7 +190,7 @@ header {
         }
       }
       .wishlist {
-        display: block; margin-right: 30px; padding-left: 30px; position: relative; color: rgba($color-white,.5); font-size: 12px;
+        display: block; margin-right: 22px; padding-left: 30px; position: relative; color: rgba($color-white,.5); font-size: 12px;
         &:before {
           content: '\e95d'; font-family: 'icomoon'; font-size: 20px; color: rgba($color-white,.5); transition: all .3s ease; position: absolute; left: 0; top: 50%; transform: translateY(-50%);
         }
@@ -176,6 +200,14 @@ header {
         }
         &.active:before {
           color: $color-blue-text;
+        }
+      }
+    }
+    @media (max-width: 400px) {
+      .user-info {
+        justify-content: center;
+        .user-login {
+          margin-bottom: 10px;
         }
       }
     }
@@ -240,23 +272,49 @@ header {
         }
       }
     }
-    .header-menu { width: 52%; }
     .main-menu .menu-item { margin-right: 10px; }
   }
   @media (max-width: 1331px) {
     padding: 26px 15px 0;
   }
-  @media (max-width: 1287px) {
+  @media (max-width: 1215px) {
     padding: 24px 15px 28px;
+    > .row {
+      justify-content: space-between;
+      &:after, &:before {
+        content: none;
+      }
+    }
     .main-hamburger {
       display: block; float: right; top: 9px;
     }
     .logo {
-      float: left; width: 180px;
+      float: left; width: 216px;
     }
-    .personal-area { width: 315px; }
+    .personal-area {
+      padding: 0; width: 100%; margin-bottom: 0; justify-content: center;
+      .user-info {
+        .user-login {
+          margin-bottom: 0;
+        }
+        .user-login-btn {
+          color: $color-button-text;
+          &:after, &:before {
+            color: $color-button-text;
+          }
+        }
+        .wishlist:before {
+          color: $color-button-text;
+        }
+      }
+      .btn-cart {
+        background: rgba($color-black, 0.15);
+        color: rgba($color-black, 0.5);
+      }
+    }
     .header-menu {
-      position: absolute; background: $color-white; top: 100px; left: 0; right: 0; width: 100%; padding: 0 15px; box-shadow: 0 5px 20px 0px #000; transform: translateY(50px); visibility: hidden; opacity: 0;
+      position: absolute; background: $color-white; top: 100%; left: 0; right: 0; width: 100%; padding: 0 15px 20px; box-shadow: 0 5px 20px 0px #000; transform: translateY(50px); visibility: hidden; opacity: 0;
+      flex-direction: column;
       &.open { transform: translateY(0); visibility: visible; opacity: 1; transition: all .3s ease; }
       .main-menu {
         width: 100%; flex-direction: column;
@@ -338,7 +396,7 @@ header {
         }
       }
     }
-    .search-block, .header-menu { top: 90%; }
+    .search-block, .header-menu { top: 100%; }
     .search-block {
       flex-wrap: wrap; height: auto;
       .field-search, .dropdown { width: 100%; }
@@ -347,7 +405,7 @@ header {
   }
 }
 .header-inner {
-  position: static; background: #f0f2f3;
+  position: relative; background: #f0f2f3;
   .personal-area .user-info .user-login-btn,
   .personal-area .user-info .user-login-btn:after,
   .personal-area .user-info .user-login-btn:before,
@@ -414,14 +472,12 @@ header {
     }
   }
   .main-hamburger i { background: $color-button-text; }
-  @media (max-width: 1507px) {
-    .personal-area {
-      width: 33%;
-    }
-  }
-  @media (max-width: 1287px){
-    .bottom-header .personal-area {
-      width: 385px;
+  @media (max-width: 1215px) {
+    .bottom-header .personal-area .btn-cart {
+      background: transparent;
+      &:hover, &:focus, &:active {
+        background: $color-button-text;
+      }
     }
   }
 }

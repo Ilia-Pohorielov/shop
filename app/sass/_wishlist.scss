@@ -37,13 +37,18 @@
   &:after {
     content: '\e95d'; font-family: 'icomoon'; font-size: 12px; color: $color-button-text; position: absolute; right: 0; top: 50%; transform: translateY(-50%);
   }
-
+  @media (max-width: 991px) {
+    width: 88%;
+  }
 }
 .block-content {
   position: relative;
 }
 .wishlist-sidebar {
   padding: 0 14px;
+  @media (max-width: 767px) {
+    padding: 50px 14px 0;
+  }
 }
 .tab-top {
   display: flex; justify-content: space-between; margin-bottom: 32px; margin-top: 15px;

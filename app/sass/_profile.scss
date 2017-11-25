@@ -2,7 +2,7 @@
   display: flex; justify-content: space-between;
 }
 .personal-col {
-  width: 49.4%; overflow: hidden;
+  width: 49%; overflow: hidden;
 }
 .profile, .delivery {
   background: $color-white; height: 100%;
@@ -31,14 +31,33 @@
       box-shadow: 0 3px 0 $color-blue-text;
     }
   }
+  @media (max-width: 925px) {
+    margin-bottom: 5px;
+  }
+  @media (max-width: 737px) {
+    border: none;
+    li{
+      margin-bottom: 5px;
+      a {
+        border: none;
+      }
+    }
+  }
 }
 .personal-area-information {
   padding-top: 34px;
+  .btn-link {
+    float: right;
+    padding: 16px 0 16px 40px;
+    @media (max-width: 925px) {
+      float: none; margin-bottom: 30px;
+    }
+  }
 }
 .personal-information {
-  margin-bottom: 51px;
+  margin-bottom: 59px;
   .delivery-data-form {
-    padding: 22px 11px 18px 27px;
+    padding: 43px 30px 28px 40px;
     input {
       display: inline-block; max-width: 128px;
     }
@@ -52,14 +71,23 @@
   span.control-label { vertical-align: top; }
   .control-label {
     display: inline-block; width: 18.7%;
+    @media (max-width: 767px) {
+      width: 100%;
+    }
   }
   .street-field {
     display: inline-block; max-width: 540px; width: 100%; margin-bottom: 18px;
     .bootstrap-select {
       max-width: 128px;
+      @media (max-width: 767px) {
+        margin-bottom: 15px;
+      }
     }
     input {
       max-width: 406px; vertical-align: bottom;
+      @media (max-width: 767px) {
+        max-width: none;
+      }
     }
   }
   .exact-street-field {
@@ -69,6 +97,9 @@
     }
     .exact-field {
       max-width: 128px; margin-right: 20px;
+    }
+    @media (max-width: 767px) {
+      padding-left: 0;
     }
   }
   .radio-field {
@@ -89,10 +120,27 @@
     }
   }
   .btn-primary { margin-left: 19.3%; }
+  @media (max-width: 1100px) {
+    flex-wrap: wrap;
+    .personal-col {
+      width: 100%; margin-bottom: 20px;
+    }
+  }
+  @media (max-width: 767px) {
+    .btn-primary {
+      margin-left: 0;
+    }
+    .delivery-data-form {
+      padding: 22px 15px 18px 15px;
+    }
+  }
 }
 .profile {
   .profile-user {
     padding: 43px 41px 18px 41px; background: $color-white;
+    @media (max-width: 767px) {
+      padding: 43px 15px 18px 15px;
+    }
   }
   .input-group {
     display: inline-block; max-width: 376px; margin-bottom: 0; vertical-align: middle;
@@ -112,12 +160,16 @@
         input[type="file"] { display: none; }
         .upload-link {
           cursor: pointer; font-size: 12px; font-weight: normal; margin-bottom: 0; border-bottom: 1px solid $color-gray; line-height: normal; position: relative; margin-left: 25px; transition: all .3s ease;
-          &:before { content: '\e914'; font-family: "icomoon";  display: block; position: absolute; left: -25px; top: 0; font-size: 13px; transition: all .3s ease;  }
+          &:before { content: '\e914'; font-family: "icomoon";  display: block; position: absolute; left: -25px; top: 0; font-size: 17px; transition: all .3s ease;  }
           &:hover, &:focus, &:active {
             color: $color-blue-text;
             &:before { color: $color-blue-text; }
           }
         }
+      }
+      @media (max-width: 1533px) {
+        position: relative;
+        margin-bottom: 20px;
       }
     }
     .password-field, .phone-field {
@@ -147,11 +199,20 @@
   }
   .pwd-link {
     position: absolute; top: 50%; left: 56.2%; display: block; transform: translateY(-50%); font-size: 12px; line-height: normal; color: $color-button-text; border-bottom: 1px solid $color-gray;
+    @media (max-width: 1500px) {
+      left: 63.2%;
+    }
+    @media (max-width: 1300px) {
+      position: relative; top: auto; transform: none; left: auto; display: inline-block;
+    }
   }
 }
 /*** BEGIN ORDER TAB ***/
 .order-table {
   background: $color-white; padding: 36px 32px 36px 39px; height: 522px; overflow: hidden;  margin-bottom: 70px;
+  .mCustomScrollBox {
+    overflow-y: hidden;  overflow-x: auto;
+  }
   ul li { margin-bottom: 7px; }
   table {
     width: 100%;
@@ -187,6 +248,9 @@
           }
         }
       }
+    }
+    @media (max-width: 1355px) {
+      width: 1355px;
     }
   }
   .col-table-lg {
@@ -258,7 +322,7 @@
         content: ''; display: block; position: absolute; left: 0; width: 15px; height: 15px; border-radius: 50%; border: 1px solid transparent;
       }
       &:after {
-        content: ''; display: block; width: 9px; height: 9px; background: transparent; border-radius: 50%; position: absolute; left: 2.5px;
+        content: ''; display: block; width: 9px; height: 9px; background: transparent; border-radius: 50%; position: absolute; left: 3px;
       }
     }
     .btn-pay {
@@ -266,6 +330,12 @@
       &:before {
         content: '\e91e'; color: $color-white; position: absolute; right: 15px; top: 50%; transform: translateY(-50%); font-size: 15px; font-family: "icomoon";
       }
+    }
+  }
+  @media (max-width: 1355px) {
+    .mCSB_container {
+      overflow-x: scroll;
+      width: 1355px;
     }
   }
 }

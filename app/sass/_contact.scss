@@ -9,7 +9,7 @@
       }
     }
     form {
-      max-width: 490px; margin: 0 auto; text-align: center;
+      max-width: 520px; margin: 0 auto; text-align: center; padding: 0 15px;
       .phone-field {
         .input-group-btn {
           border-top: 1px solid $color-border; border-bottom: 1px solid $color-border; border-left: 1px solid $color-border; height: 45px; padding: 0; max-width: 58px;
@@ -112,6 +112,29 @@
       max-width: 321px;
       &:before {
         content: '\e960'; font-size: 16px; right: 18px;
+      }
+    }
+  }
+  @media (max-width: 1200px) {
+    .image-bg-block {
+      padding: 0 0 75%;
+    }
+  }
+  @media (max-width: 925px) {
+    .image-bg-block {
+      display: none;
+    }
+    .feedback-information {
+      position: relative; max-width: none; top: 0;
+      .contact ul li {
+        width: 50%;
+      }
+    }
+  }
+  @media (max-width: 767px) {
+    .feedback-information {
+      .contact ul li {
+        width: 100%;
       }
     }
   }
