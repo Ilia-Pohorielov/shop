@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="4px" height="8px" viewBox="0 0 4 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>arrow_right_pages_ico</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="4.59739668e-16 6.93302999 4.59739668e-16 8e-05 3.83100146 8e-05 3.83100146 6.93302999 0 6.93302999"></polygon>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="arrow_right_pages_ico">
+            <g id="Page-1">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Clip-2"></g>
+                <path d="M3.6916,3.11368 L0.86,0.15448 C0.7648,0.05448 0.6368,8e-05 0.4984,8e-05 C0.3692,8e-05 0.2476,0.04888 0.154,0.13768 C-0.044,0.32928 -0.0528,0.64648 0.1372,0.84448 L2.6404,3.46168 L0.1372,6.09568 C-0.0528,6.29488 -0.044,6.61088 0.1548,6.80088 C0.3468,6.98448 0.6748,6.97568 0.8632,6.78128 L3.6932,3.80408 C3.8776,3.61128 3.8768,3.30808 3.6916,3.11368" id="Fill-1" fill="#393939" mask="url(#mask-2)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

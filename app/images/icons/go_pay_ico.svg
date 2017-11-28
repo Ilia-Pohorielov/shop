@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="12px" viewBox="0 0 14 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>go_pay_ico</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="go_pay_ico" fill="#FFFFFF">
+            <g id="Group">
+                <g id="Page-1">
+                    <path d="M14,2.8 L14,0.7 C14,0.3136 13.6864,0 13.3,0 L0.7,0 C0.3136,0 0,0.3136 0,0.7 L0,2.8 L14,2.8 Z" id="Fill-1"></path>
+                    <path d="M0,5.6 L0,10.5 C0,10.8864 0.3136,11.2 0.7,11.2 L13.3,11.2 C13.6864,11.2 14,10.8864 14,10.5 L14,5.6 L0,5.6 Z" id="Fill-3"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

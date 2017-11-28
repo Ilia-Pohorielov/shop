@@ -106,7 +106,7 @@ main {
   &.btn-cart-ico {
     font-weight: 500; font-size: 13px; padding: 12px 30px 12px 47px; transition: all .3s ease;
     &:before {
-      content: '\e907'; display: block; font-family: "icomoon"; color: $color-white; font-size: 18px; position: absolute; left: 19px; top: 8px; transition: all .3s ease;
+      content: '\e909'; display: block; font-family: "icomoon"; color: $color-white; font-size: 18px; position: absolute; left: 19px; top: 8px; transition: all .3s ease;
     }
     &:hover, &:focus, &:active {
       color: $color-button-text;
@@ -132,7 +132,7 @@ main {
 }
 .btn-primary {
   display:inline-block; background: $color-button-text; color: $color-white; font-size: 13px; font-weight: 500; padding: 13px 77px 13px 15px; position: relative; transition: all .3s ease; width: 230px; text-align: left;
-  &:before { content: '\e938'; display: block; position: absolute; right: 15px; top: 50%; transform: translateY(-50%); transition: all .3s ease; font-size: 15px; font-family: "icomoon";}
+  &:before { content: '\e93b'; display: block; position: absolute; right: 15px; top: 50%; transform: translateY(-50%); transition: all .3s ease; font-size: 15px; font-family: "icomoon";}
   &:hover, &:focus, &:active {
     color: rgba($color-white, .6); border: none; background: $color-button-text;
     &:before { color: rgba($color-white, .6); }
@@ -164,10 +164,10 @@ main {
 .btn-link {
   display: inline-block; font-size: 14px; color: $color-button-text; font-weight: 500; padding-left: 40px; position: relative;
   &.btn-share:before {
-    content: '\e956';
+    content: '\e95b';
   }
   &.btn-cart:before {
-    content: '\e907';
+    content: '\e909';
   }
   &:before {
     display: block; font-family: "icomoon"; background: $color-white; width: 33px; height: 33px; border: 1px solid $color-border; line-height: 33px; text-align: center; border-radius: 50%;
@@ -304,10 +304,10 @@ main {
 }
 .collection {
   .slick-arrow {
-    width: 86px; height: 86px; background: rgba($color-white,.9); text-indent: -9999px; z-index: 25; border-radius: 50%; right: 59px; top: 50%;
-    &:before { content: ''; display: block; width: 10px; height: 16px; background: url("../images/arrow-right.svg")no-repeat 0 0; position: absolute; top:50%; left: 50%; transform: translateX(-50%); margin-top: -8px; }
+    width: 86px; height: 86px; background: rgba($color-white,.9); font-size: 0; z-index: 25; border-radius: 50%; right: 59px; top: 50%;
+    &:before { content: '\e905'; display: block; width: 10px; height: 16px; position: absolute; top:50%; left: 39%; transform: translateY(-50%); font-family: "icomoon"; font-size: 20px; color: $color-button-text; }
     &.slick-prev[aria-disabled="true"] { display: none!important; }
-    &.slick-prev:before { background: url("../images/arrow-left.svg")no-repeat 0 0; }
+    &.slick-prev:before { content:'\e904';  }
   }
 }
 .padding-fix {
@@ -326,7 +326,7 @@ main {
   .btn-subscribe {
     width: 58px; height: 45px; background: $color-button-text; position: absolute; top: 0; right: 0; z-index: 10; transition: all .3s ease;
     &:before {
-      content: '\e915'; display: block; color: $color-white; font-size: 19px; position: absolute; top: 0; left: 50%; transform: translateX(-50%); line-height: 45px; font-family: "icomoon";
+      content: '\e917'; display: block; color: $color-white; font-size: 19px; position: absolute; top: 0; left: 50%; transform: translateX(-50%); line-height: 45px; font-family: "icomoon";
     }
     &:hover, &:focus, &:active {
       background: $color-blue-text;
@@ -438,13 +438,13 @@ main {
       font-size: 12px; line-height: 18px; margin-bottom: 18px;
     }
     &.delivery-pay .content-help:before {
-         content: '\e912'; font-size: 34px;
+         content: '\e914'; font-size: 34px;
      }
     &.call-help .content-help:before {
-      content: '\e908'; font-size: 27px;
+      content: '\e90a'; font-size: 27px;
     }
     &.feedback-email .content-help:before {
-      content: '\e915'; font-size: 25px;
+      content: '\e917'; font-size: 25px;
     }
     &.question-answer .content-help:before {
       content: '\e901'; font-size: 24px;
@@ -469,4 +469,30 @@ main {
 @keyframes animation-scroll {
   0% { top: 0; }
   100% { top: 90%; }
+}
+@keyframes animate-hamburger-1 {
+  0% {
+    transform: translateX(0); opacity: 1;
+  }
+  100% {
+    transform: translateX(-100%); opacity: 0;
+  }
+}
+@keyframes animate-hamburger-2 {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 50%;
+    transform: rotate(45deg);
+  }
+}
+@keyframes animate-hamburger-3 {
+  0% {
+    bottom: 0;
+  }
+  100% {
+    bottom: 40%;
+    transform: rotate(-45deg);
+  }
 }

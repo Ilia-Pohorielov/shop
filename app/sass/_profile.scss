@@ -328,7 +328,7 @@
     .btn-pay {
       display: block; background: $color-button-text; color: $color-white; max-width: 139px; padding: 10px 0 10px 15px; text-align: left; font-size: 12px; font-weight: 500; position: relative;
       &:before {
-        content: '\e91e'; color: $color-white; position: absolute; right: 15px; top: 50%; transform: translateY(-50%); font-size: 15px; font-family: "icomoon";
+        content: '\e920'; color: $color-white; position: absolute; right: 15px; top: 50%; transform: translateY(-50%); font-size: 15px; font-family: "icomoon";
       }
     }
   }
@@ -351,6 +351,11 @@
     }
     .info {
       display: block; font-size: 12px; margin-bottom: 20px;
+    }
+  }
+  .btn-primary {
+    &:before {
+      content: '\e95f';
     }
   }
 }

@@ -32,7 +32,7 @@ footer { padding: 67px 0 34px; border-top: 1px solid $color-light-gray; }
           a {
             display: block; width: 41px; height: 41px; border-radius: 50%; text-align: center; border: 1px solid $color-light-gray; line-height: 41px;
             &:before {
-              content: ''; display: block;  font-family: "icomoon"; transition: all .3s ease; color: $color-button-text; font-size: 15px;
+              content: ''; display: block;  font-family: "icomoon"; transition: all .3s ease; color: $color-button-text; font-size: 19px;
             }
             &:hover, &:focus, &:active {
               border-color: $color-blue-text;
@@ -41,16 +41,13 @@ footer { padding: 67px 0 34px; border-top: 1px solid $color-light-gray; }
              }
             }
             &.facebook:before {
-              content: '\e916';
+              content: '\e918';
             }
             &.instagram:before {
-              content: '\e92c';
+              content: '\e92f';
             }
-            &.youtube {
-              @include sprite($youtube-round-ico); border-radius: 0; border: none;
-              &:hover, &:focus, &:active {
-                @include sprite($youtube-round-hover-ico);
-              }
+            &.youtube:before {
+              content: '\e96e'; font-size: 18px;
             }
           }
           &:last-child { margin-right: 0; }

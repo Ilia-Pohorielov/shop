@@ -14,7 +14,7 @@
     .zoom-img {
       display: block; width: 36px; height: 36px; background: $color-white; text-align: center; border-radius: 50%; cursor: pointer;
       &:before {
-        content: '\e967'; display: inline-block; color: $color-black; line-height: 36px; font-family: "icomoon"; transition: all .3s ease;
+        content: '\e96f'; display: inline-block; color: $color-black; line-height: 36px; font-family: "icomoon"; transition: all .3s ease;
       }
       &:hover, &:focus, &:active {
         &:before {
@@ -92,13 +92,13 @@
       &.btn-add {
         margin-right: 24px;
         &:before {
-          content: '\e907';
+          content: '\e909';
         }
       }
       &.btn-wishlist {
         background: $color-white; border: 1px solid $color-border; color: $color-button-text;
         &:before {
-          content: '\e95d'; color: $color-button-text;
+          content: '\e964'; color: $color-button-text;
         }
       }
       &:before {
@@ -106,7 +106,10 @@
       }
     }
     .btn-link {
-      margin-top: 35px; display: block;
+      margin-top: 35px; display: inline-block; padding: 0; padding-left: 0; width: 15%;
+      &:before {
+        right: 0; left: auto;
+      }
     }
   }
   @media (max-width: 510px) {

@@ -5,6 +5,7 @@ var gulp = require('gulp'),
     prefixer = require('gulp-autoprefixer'),
     uglify = require('gulp-uglify'),
     sass = require('gulp-sass'),
+    iconfont = require('gulp-iconfont'),
     sourcemaps = require('gulp-sourcemaps'),
     rigger = require('gulp-rigger'),
     cssmin = require('gulp-minify-css'),
@@ -35,6 +36,25 @@ var path = {
     },
     clean: './build'
 };
+
+// собираем иконки в шрифт
+var fontName = 'Icons';
+gulp.task('iconfont', function(){
+    gulp.src(['app/images/icons/*.svg'])
+        .pipe(iconfontCss({
+            fontName: fontName,
+            path: 'app/sass/_icons.scss',
+            targetPath: '../../sass/_icons.scss',
+            fontPath: 'app/css/fonts/'
+        }))
+        .pipe(iconfont({
+            fontName: fontName,
+            formats: ['ttf', 'eot', 'woff', 'woff2', 'svg'],
+            normalize:true,
+            centerHorizontally: true
+        }))
+        .pipe(gulp.dest('app/css/fonts/'));
+});
 
 gulp.task('sprite:build', function() {
     var spriteData =

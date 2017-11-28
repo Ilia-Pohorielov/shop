@@ -62,13 +62,13 @@
   .btn-primary {
       width: 100%;
     &:before {
-      content: '\e91e';
+      content: '\e920';
     }
   }
 }
 .btn-back {
   display: block; font-size: 12px; padding-left: 30px; position: relative; text-decoration: underline; text-decoration-color: rgba($color-button-text, .3); margin-left: 33px;
   &:before {
-    content: '\e906'; position: absolute; left: 0; font-family: "icomoon"; transform: scaleY(-1); font-size: 21px;
+    content: '\e908'; position: absolute; left: 0; font-family: "icomoon"; transform: scaleY(-1); font-size: 21px;
   }
 }

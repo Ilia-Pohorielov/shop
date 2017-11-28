@@ -35,7 +35,7 @@
 .wishlist-count {
   color: $color-button-text; display: block; position: relative; padding-right: 20px; font-size: 12px; width: 80%; text-align: right; margin-right: 15px;
   &:after {
-    content: '\e95d'; font-family: 'icomoon'; font-size: 12px; color: $color-button-text; position: absolute; right: 0; top: 50%; transform: translateY(-50%);
+    content: '\e964'; font-family: 'icomoon'; font-size: 12px; color: $color-button-text; position: absolute; right: 0; top: 50%; transform: translateY(-50%);
   }
   @media (max-width: 991px) {
     width: 88%;

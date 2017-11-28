@@ -87,7 +87,7 @@
       box-shadow: none;
     }
     .dropdown-menu {
-      width: auto; right: 0; top: 40px; min-width: 0;
+      width: auto; right: 0; top: 40px; min-width: 0; max-width: none;
     }
   }
   .sort-price {
@@ -212,7 +212,10 @@
 .block-image-info {
   background-position: 50% 0; background-repeat: no-repeat; background-size: cover; padding-top: 29.157%; position: relative; min-height: 200px;
   .title-block {
-    position: absolute; left: 0; top: 46%; transform: translateY(-50%); padding-left: 104px;
+    position: absolute; left: 0; top: 46%; transform: translateY(-50%); padding-left: 104px; display: flex; flex-direction: column;
+    span {
+      display: inline-block;
+    }
     .sub-title { margin-left: 185px; }
     @media (max-width: 767px) {
       padding-left: 15px; left: 0; font-size: 45px;

@@ -46,15 +46,15 @@
       content: ''; display: block; width: 64px; height: 64px; border-radius: 50%; border: 1px solid $color-border; font-size: 33px; line-height: 64px; text-align: center; position: absolute; top: 29px; left: 32px; font-family: "icomoon";
     }
     &.transfer:before {
-      content: '\e90a';
+      content: '\e90c';
     }
     &.bank-transfer:before {
-      content: '\e94d';
+      content: '\e952';
     }
     &.international-transfer {
       padding: 21px 40px 29px 123px;
       &:before {
-        content: '\e93a';
+        content: '\e93e';
       }
     }
   }
