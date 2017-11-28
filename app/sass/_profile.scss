@@ -160,7 +160,7 @@
         input[type="file"] { display: none; }
         .upload-link {
           cursor: pointer; font-size: 12px; font-weight: normal; margin-bottom: 0; border-bottom: 1px solid $color-gray; line-height: normal; position: relative; margin-left: 25px; transition: all .3s ease;
-          &:before { content: '\e914'; font-family: "icomoon";  display: block; position: absolute; left: -25px; top: 0; font-size: 17px; transition: all .3s ease;  }
+          &:before { content: '\e916'; font-family: "icomoon";  display: block; position: absolute; left: -25px; top: 0; font-size: 17px; transition: all .3s ease;  }
           &:hover, &:focus, &:active {
             color: $color-blue-text;
             &:before { color: $color-blue-text; }

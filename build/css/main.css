@@ -3131,7 +3131,7 @@ header {
       -webkit-transition: all .3s ease;
       transition: all .3s ease; }
       .profile .personal-data-form .upload-user-photo .upload-photo-overlay .upload-link:before {
-        content: '\e914';
+        content: '\e916';
         font-family: "icomoon";
         display: block;
         position: absolute;
