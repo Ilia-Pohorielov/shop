@@ -128,9 +128,13 @@ $(document).ready(function () {
     $(".js-scroll").mCustomScrollbar();
     /* ========================================same validate======================================*/
     $('.js_validate [type="submit"]').on("click", function () {
+        $(this).siblings('.form-group').find('input').attr('placeholder', '');
+        $(this).siblings('.form-group').find('input').val('');
         return validate($(this).parents(".js_validate"));
     });
+    $('.js_validate [type="submit"]').on("click", function () {
 
+    });
     if (document.querySelector('.range-slider') !== null) {
         var range = document.getElementById('range'),
             _thisMin, _thisMax, _thisMinCur, _thisMaxCur;
@@ -214,7 +218,7 @@ $(document).ready(function () {
             // elH[i].style.lineHeight = maxHeight + "px";
         }
     }
-
+    heightEL();
     if ($(window).width() > 767) {
         $(window).on('resize', function () {
             heightEL();
@@ -315,5 +319,42 @@ $(document).ready(function () {
     $('.js-home-anchor').on('click', function () {
        var offset = $('.block-collection').offset().top;
         $("html, body").animate({scrollTop: offset}, 600);
+    });
+
+    if ($('form button[type="submit"]').hasClass('has-error')) {
+        $(this).find('input').attr('placeholder', '213123 ');
+    };
+
+    $('form .form-group').on('click', function(){
+        if ($(this).hasClass('has-error')) {
+            $(this).find('.error-text').hide();
+        }
+    });
+    $(document).on('click', '.js-minus', function () {
+        var $input = $(this).parent().find('input');
+        var count = parseInt($input.attr('value')) - 1;
+        count = count < 1 ? 1 : count;
+        $input.attr('value', count);
+        $input.change();
+        changeCountCart($input.attr('data-cart-key'), count);
+        return false;
+    });
+    $(document).on('click', '.js-plus', function () {
+        var $input = $(this).parent().find('input');
+        _max = parseInt($input.attr('max'));
+        _val = parseInt($input.attr('value')) + 1;
+        if(_val > _max)
+            alert('Ошибка', "Выбрано максимально доступное кол-во товаров.");
+        else {
+            $input.attr('value', _val);
+            $input.change();
+            if($input.hasClass('js_cart'))
+                changeCountCart($input.attr('data-cart-key'), _val);
+        }
+        return false;
+    });
+    $('.js-change').on('click', function () {
+       $(this).parent().find('.settings').toggleClass('open');
+       return false;
     });
 });

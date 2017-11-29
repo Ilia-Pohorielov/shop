@@ -228,8 +228,9 @@
                             <div class="tabs-product">
                                 <ul class="nav nav-tabs tabs-info">
                                     <li class="active"><a data-toggle="tab" href="#product-info">Информация</a></li>
-                                    <li><a data-toggle="tab" href="#personal-orders">Доставка</a></li>
-                                    <li><a data-toggle="tab" href="#personal-subscribe">Оплата</a></li>
+                                    <li><a data-toggle="tab" href="#">Доставка</a></li>
+                                    <li><a data-toggle="tab" href="#">Оплата</a></li>
+                                    <li><a data-toggle="tab" href="#">Таблица размеров</a></li>
                                 </ul>
                                 <div class="tab-content">
                                     <div id="product-info" class="tab-pane active in fade js-scroll">
@@ -247,7 +248,7 @@
                                 </div>
                             </div>
                             <div class="product-color">
-                                <div class="title-info">Цвет</div>
+                                <div class="title-info">Выберите цвет</div>
                                 <a href="#" class="color" style="background-image: url('assets/images/c-1.jpg');"></a>
                                 <a href="#" class="color" style="background-image: url('assets/images/c-2.jpg');"></a>
                                 <a href="#" class="color" style="background-image: url('assets/images/c-3.jpg');"></a>
@@ -260,7 +261,6 @@
                     <div class="size-amount">
                         <div class="top">
                             <div class="title-info">Размер и количество</div>
-                            <a href="#">Таблица размеров</a>
                         </div>
                         <div class="size">
                             <div class="size-item">
@@ -536,9 +536,12 @@
             <div class="subscribe-block col-lg-3 col-md-3 col-sm-6 col-xs-12 col-md-offset-2">
                 <div class="footer-title">Подписаться на рассылку</div>
                 <div class="subscribe-form">
-                    <form action="/">
-                        <input type="text" placeholder="Email">
-                        <button class="btn btn-subscribe"></button>
+                    <form action="/" class="js_validate" role="form" novalidate>
+                        <div class="form-group">
+                            <input type="email" placeholder="Email" required value="" name="email" data-validate="email" class="form-control">
+                            <span class="error-text">Некорректный формат Email</span>
+                        </div>
+                        <button class="btn btn-subscribe" type="submit"></button>
                     </form>
                 </div>
                 <div class="social-link">

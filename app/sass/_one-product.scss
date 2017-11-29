@@ -2,9 +2,9 @@
   margin-top: 36px; padding-bottom: 70px; border-bottom: 1px solid $color-border; margin-bottom: 68px;
 }
 .product-slider {
-  display: flex; padding: 0;
+  display: flex; padding: 0; flex-direction: column; align-items: center;
   .big-slider {
-    max-width: 489px; margin-right: 8px;  width: 100%;
+    max-width: 489px;  width: 100%;
     .image {
       position: relative;
       .zoom-img {
@@ -22,17 +22,13 @@
         }
       }
     }
-    @media (max-width: 545px) {
-      margin-right: 0;
-    }
   }
   .mini-slider {
-    max-width: 83px;
-    .slick-list {
-      top: 50%; transform: translateY(-50%);
+    .slick-track {
+      display: flex; justify-content: center; align-items: baseline;
     }
     .image {
-      border: 1px solid $color-white; cursor: pointer; outline: 0; position: relative;
+      border: 1px solid $color-white; cursor: pointer; outline: 0; position: relative; max-width: 83px;
       &:not(:last-child) {
         margin-bottom: 10px;
       }
@@ -43,25 +39,7 @@
         background: transparent;
       }
     }
-  }
-  @media (max-width: 1545px) {
-    flex-direction: column;
-    .mini-slider {
-      max-width: none;
-      .slick-list {
-        top: auto; transform: none;
-        .slick-track {
-          display: flex; justify-content: center; align-items: baseline;
-        }
-        .image {
-          max-width: 83px;
-        }
-      }
-    }
-  }
-  @media (max-width: 991px) {
-    align-items: center;
-    .mini-slider .slick-list, .mini-slider .slick-track {
+    .slick-list, .slick-track {
       height: auto!important;
     }
   }
@@ -306,15 +284,21 @@
     }
   }
   .amount {
-    display: flex; position: absolute; left: 60px;  visibility: hidden;
+    position: absolute; left: 60px;  visibility: hidden;
     .btn-count {
-      width: 39px; text-align: center; line-height: 39px; font-size: 16px; font-weight: normal; background: $color-white;
+      width: 39px; text-align: center; line-height: 39px;
       &.minus-count {
         border-left: none;
       }
     }
-    .count {
-      width: 60px; height: 39px; text-align: center; line-height: 39px; border-top: 1px solid $color-border; border-bottom: 1px solid $color-border;
-    }
+  }
+}
+.amount {
+  display: flex;
+  .btn-count {
+    width: 39px; height: 39px; text-align: center; line-height: 39px; font-size: 16px; font-weight: normal; background: $color-white; border: 1px solid $color-border; cursor: pointer;
+  }
+  .count {
+    width: 60px; height: 39px; text-align: center; line-height: 39px; border-top: 1px solid $color-border; border-bottom: 1px solid $color-border;
   }
 }

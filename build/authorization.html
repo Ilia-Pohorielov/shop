@@ -268,9 +268,12 @@
             <div class="subscribe-block col-lg-3 col-md-3 col-sm-6 col-xs-12 col-md-offset-2">
                 <div class="footer-title">Подписаться на рассылку</div>
                 <div class="subscribe-form">
-                    <form action="/">
-                        <input type="text" placeholder="Email">
-                        <button class="btn btn-subscribe"></button>
+                    <form action="/" class="js_validate" role="form" novalidate>
+                        <div class="form-group">
+                            <input type="email" placeholder="Email" required value="" name="email" data-validate="email" class="form-control">
+                            <span class="error-text">Некорректный формат Email</span>
+                        </div>
+                        <button class="btn btn-subscribe" type="submit"></button>
                     </form>
                 </div>
                 <div class="social-link">

@@ -24,6 +24,9 @@ footer { padding: 67px 0 34px; border-top: 1px solid $color-light-gray; }
     margin-left: 9.433333%;
   }
   .subscribe-block {
+    .input-group {
+      width: 100%;
+    }
     .social-link {
       ul {
         display: flex;

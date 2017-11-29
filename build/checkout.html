@@ -195,146 +195,146 @@
                         <li><a data-toggle="tab" href="#regular-customer">постоянный покупатель</a></li>
                     </ul>
                     <div id="regular-customer" class="personal-information information-order">
-                        <div class="information-item">
-                            <div class="personal-title">шаг 1. Получатель</div>
-                            <div class="profile">
-                                <div class="profile-user">
-                                    <form action="/" class="personal-data-form js_validate">
-                                        <div class="form-group">
-                                            <label class="control-label" for="username">Имя</label>
-                                            <div class="input-group">
-                                                <input type="text" class="form-control" name="profile[fullname]" required
-                                                       value="" id="username">
-                                                <div class="error-text">Поле "Имя" не должно быть пустым</div>
+                        <div class="profile">
+                            <div class="profile-user">
+                                <form action="/" class="personal-data-form js_validate">
+                                  <div class="information-item">
+                                      <div class="personal-title">шаг 1. Получатель</div>
+                                      <div class="form-group">
+                                          <label class="control-label" for="username">Имя</label>
+                                          <div class="input-group">
+                                              <input type="text" class="form-control" name="profile[fullname]" required
+                                                     value="" id="username">
+                                              <div class="error-text">Поле "Имя" не должно быть пустым</div>
+                                          </div>
+                                      </div>
+                                      <div class="form-group">
+                                          <label class="control-label" for="userlastname">Фамилия</label>
+                                          <div class="input-group">
+                                              <input type="text" class="form-control" name="profile[middlename]" value=""
+                                                     id="userlastname" required>
+                                              <div class="error-text">Поле "Фамилия" не должно быть пустым</div>
+                                          </div>
+                                      </div>
+                                      <div class="form-group">
+                                          <label class="control-label" for="useremail">Email</label>
+                                          <div class="input-group">
+                                              <input type="email" class="form-control" name="profile[email]"
+                                                     data-validate="email" required value="" id="useremail">
+                                              <div class="error-text">Поле "Email" не должно быть пустым</div>
+                                          </div>
+                                      </div>
+                                      <div class="form-group">
+                                          <label class="control-label" for="usertel">Телефон</label>
+                                          <div class="input-group phone-field">
+                                              <div class="input-group-btn dropdown">
+                                                  <button type="button" class="btn btn-default dropdown-toggle"
+                                                          data-toggle="dropdown">
+                                                      +38 <span class="caret"></span>
+                                                  </button>
+                                                  <ul class="dropdown-menu pull-right">
+                                                      <li><a href="#">+7</a></li>
+                                                  </ul>
+                                              </div>
+                                              <input type="tel" class="form-control js-phone-mask" name="profile[phone]"
+                                                     data-validate="phone" value="" required placeholder="(050) 123 45 67"
+                                                     id="usertel">
+                                              <div class="error-text">Поле "Телефон" не должно быть пустым</div>
+                                          </div>
+                                      </div>
+                                      <div class="form-group checkbox">
+                                          <input name="any-recipient" type="checkbox" id="any-recipient" value="">
+                                          <label for="any-recipient">Другой получатель</label>
+                                      </div>
+                                  </div>
+                                    <div class="information-item">
+                                        <div class="personal-title">шаг 2. Адрес и способ доставки</div>
+                                        <div class="delivery">
+                                            <div class="delivery-data-form">
+                                                <form action="/" class="delivery-data-form js_validate">
+                                                    <div class="form-group">
+                                                        <label class="control-label">Страна</label>
+                                                        <select name="country" class="selectpicker">
+                                                            <option value="">Украина</option>
+                                                            <option value="">Англия</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label">Регион</label>
+                                                        <select name="region" class="selectpicker">
+                                                            <option value="">Харьковская область</option>
+                                                            <option value="">Киев</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label">Город</label>
+                                                        <select name="city" class="selectpicker">
+                                                            <option value="">Харьков</option>
+                                                            <option value="">Киев</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label" for="address">Адрес</label>
+                                                        <div class="street-field">
+                                                            <select name="address-street" class="selectpicker">
+                                                                <option value="">Улица</option>
+                                                                <option value="">Проспект</option>
+                                                            </select>
+                                                            <input type="text" class="form-control" name="address" value=""
+                                                                   id="address">
+                                                        </div>
+                                                        <div class="exact-street-field">
+                                                            <div class="exact-field">
+                                                                <label for="house-user" class="control-label">Дом</label>
+                                                                <input type="text" name="house" value="" id="house-user">
+                                                            </div>
+                                                            <div class="exact-field">
+                                                                <label for="porch-user" class="control-label">Подъезд</label>
+                                                                <input type="text" name="porch" value="" id="porch-user">
+                                                            </div>
+                                                            <div class="exact-field">
+                                                                <label for="apartment-user" class="control-label">Квартира</label>
+                                                                <input type="text" name="apartment" value="" id="apartment-user">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="index-user" class="control-label">Индекс</label>
+                                                        <input type="text" name="index" id="index-user" value="">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="note-user" class="control-label">Примечание</label>
+                                                        <textarea name="note" id="note-user"
+                                                                  placeholder="например, номер домофона"></textarea>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <span class="control-label">Способ доставки</span>
+                                                        <div class="radio-field">
+                                                            <input type="radio" name="delivery-method" id="delivery-method1">
+                                                            <label for="delivery-method1">УкрПочта</label>
+                                                            <input type="radio" name="delivery-method" id="delivery-method2">
+                                                            <label for="delivery-method2">Новая почта</label>
+                                                            <input type="radio" name="delivery-method" id="delivery-method3">
+                                                            <label for="delivery-method3">Интайм</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label">Отделение</label>
+                                                        <select name="branch-post" class="selectpicker">
+                                                            <option value="">&nbsp;</option>
+                                                            <option value=""></option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group checkbox">
+                                                        <input type="checkbox" name="personal-agreement" id="personal-agreement">
+                                                        <label for="personal-agreement">Я согласен с условиями предоставления персональных данных интернет-магазину</label>
+                                                    </div>
+                                                    <button type="submit" class="btn btn-big btn-primary">Заказ подтверждаю</button>
+                                                </form>
                                             </div>
                                         </div>
-                                        <div class="form-group">
-                                            <label class="control-label" for="userlastname">Фамилия</label>
-                                            <div class="input-group">
-                                                <input type="text" class="form-control" name="profile[middlename]" value=""
-                                                       id="userlastname" required>
-                                                <div class="error-text">Поле "Фамилия" не должно быть пустым</div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label" for="useremail">Email</label>
-                                            <div class="input-group">
-                                                <input type="email" class="form-control" name="profile[email]"
-                                                       data-validate="email" required value="" id="useremail">
-                                                <div class="error-text">Поле "Email" не должно быть пустым</div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label" for="usertel">Телефон</label>
-                                            <div class="input-group phone-field">
-                                                <div class="input-group-btn dropdown">
-                                                    <button type="button" class="btn btn-default dropdown-toggle"
-                                                            data-toggle="dropdown">
-                                                        +38 <span class="caret"></span>
-                                                    </button>
-                                                    <ul class="dropdown-menu pull-right">
-                                                        <li><a href="#">+7</a></li>
-                                                    </ul>
-                                                </div>
-                                                <input type="tel" class="form-control js-phone-mask" name="profile[phone]"
-                                                       data-validate="phone" value="" required placeholder="(050) 123 45 67"
-                                                       id="usertel">
-                                                <div class="error-text">Поле "Телефон" не должно быть пустым</div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group checkbox">
-                                            <input name="any-recipient" type="checkbox" id="any-recipient" value="">
-                                            <label for="any-recipient">Другой получатель</label>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="information-item">
-                            <div class="personal-title">шаг 2. Адрес и способ доставки</div>
-                            <div class="delivery">
-                                <div class="delivery-data-form">
-                                    <form action="/" class="delivery-data-form js_validate">
-                                        <div class="form-group">
-                                            <label class="control-label">Страна</label>
-                                            <select name="country" class="selectpicker">
-                                                <option value="">Украина</option>
-                                                <option value="">Англия</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label">Регион</label>
-                                            <select name="region" class="selectpicker">
-                                                <option value="">Харьковская область</option>
-                                                <option value="">Киев</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label">Город</label>
-                                            <select name="city" class="selectpicker">
-                                                <option value="">Харьков</option>
-                                                <option value="">Киев</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label" for="address">Адрес</label>
-                                            <div class="street-field">
-                                                <select name="address-street" class="selectpicker">
-                                                    <option value="">Улица</option>
-                                                    <option value="">Проспект</option>
-                                                </select>
-                                                <input type="text" class="form-control" name="address" value=""
-                                                       id="address">
-                                            </div>
-                                            <div class="exact-street-field">
-                                                <div class="exact-field">
-                                                    <label for="house-user" class="control-label">Дом</label>
-                                                    <input type="text" name="house" value="" id="house-user">
-                                                </div>
-                                                <div class="exact-field">
-                                                    <label for="porch-user" class="control-label">Подъезд</label>
-                                                    <input type="text" name="porch" value="" id="porch-user">
-                                                </div>
-                                                <div class="exact-field">
-                                                    <label for="apartment-user" class="control-label">Квартира</label>
-                                                    <input type="text" name="apartment" value="" id="apartment-user">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="index-user" class="control-label">Индекс</label>
-                                            <input type="text" name="index" id="index-user" value="">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="note-user" class="control-label">Примечание</label>
-                                            <textarea name="note" id="note-user"
-                                                      placeholder="например, номер домофона"></textarea>
-                                        </div>
-                                        <div class="form-group">
-                                            <span class="control-label">Способ доставки</span>
-                                            <div class="radio-field">
-                                                <input type="radio" name="delivery-method" id="delivery-method1">
-                                                <label for="delivery-method1">УкрПочта</label>
-                                                <input type="radio" name="delivery-method" id="delivery-method2">
-                                                <label for="delivery-method2">Новая почта</label>
-                                                <input type="radio" name="delivery-method" id="delivery-method3">
-                                                <label for="delivery-method3">Интайм</label>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label">Отделение</label>
-                                            <select name="branch-post" class="selectpicker">
-                                                <option value="">&nbsp;</option>
-                                                <option value=""></option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group checkbox">
-                                            <input type="checkbox" name="personal-agreement" id="personal-agreement">
-                                            <label for="personal-agreement">Я согласен с условиями предоставления персональных данных интернет-магазину</label>
-                                        </div>
-                                        <button type="submit" class="btn btn-big btn-primary">Заказ подтверждаю</button>
-                                    </form>
-                                </div>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -507,9 +507,12 @@
             <div class="subscribe-block col-lg-3 col-md-3 col-sm-6 col-xs-12 col-md-offset-2">
                 <div class="footer-title">Подписаться на рассылку</div>
                 <div class="subscribe-form">
-                    <form action="/" class="js_validate">
-                        <input type="text" placeholder="Email">
-                        <button class="btn btn-subscribe"></button>
+                    <form action="/" class="js_validate" role="form" novalidate>
+                        <div class="form-group">
+                            <input type="email" placeholder="Email" required value="" name="email" data-validate="email" class="form-control">
+                            <span class="error-text">Некорректный формат Email</span>
+                        </div>
+                        <button class="btn btn-subscribe" type="submit"></button>
                     </form>
                 </div>
                 <div class="social-link">

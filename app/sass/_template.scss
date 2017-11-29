@@ -47,7 +47,7 @@ main {
 }
 
 .breadcrumbs {
-  color: $color-button-text; margin-bottom: 11px; text-align: left;
+  color: $color-button-text; margin-bottom: 6px; text-align: left;
   ul {
     font-size: 0;
     li {
@@ -80,7 +80,9 @@ main {
     }
   }
 }
-
+.mCSB_scrollTools .mCSB_dragger {
+  height: 73px!important;
+}
 .mCSB_scrollTools  {
   .mCSB_draggerRail {
     background: none;
