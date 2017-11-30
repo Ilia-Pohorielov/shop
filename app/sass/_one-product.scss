@@ -76,7 +76,10 @@
       &.btn-wishlist {
         background: $color-white; border: 1px solid $color-border; color: $color-button-text;
         &:before {
-          content: '\e964'; color: $color-button-text;
+          content: none; color: $color-button-text;
+        }
+        &:hover, &:focus, &:active {
+          background: $color-button-text; color: $color-white;
         }
       }
       &:before {

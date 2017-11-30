@@ -3629,8 +3629,11 @@ header {
       border: 1px solid #dee0e2;
       color: #393939; }
       .product-information .block-button .btn-primary.btn-wishlist:before {
-        content: '\e964';
+        content: none;
         color: #393939; }
+      .product-information .block-button .btn-primary.btn-wishlist:hover, .product-information .block-button .btn-primary.btn-wishlist:focus, .product-information .block-button .btn-primary.btn-wishlist:active {
+        background: #393939;
+        color: #ffffff; }
     .product-information .block-button .btn-primary:before {
       right: 19px;
       font-size: 18px; }
