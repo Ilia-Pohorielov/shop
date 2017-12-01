@@ -4744,6 +4744,12 @@ mark {
          object-fit: cover; }
     .lookbook-inner .image:not(:last-child) {
       border-right: 1px solid #ffffff; }
+    @media (max-width: 767px) {
+      .lookbook-inner .image {
+        max-width: 623px;
+        margin: 0 auto;
+        width: auto;
+        float: none; } }
   .lookbook-inner .col-lookbook-3:not(:first-child) .image {
     border-top: 1px solid #ffffff; }
   .lookbook-inner .col-lookbook-2 .image {
