@@ -1,6 +1,6 @@
 .block-authorization,
 .block-registration {
-  padding: 34px 8.1% 0 9.8%; width: 43.9%; text-align: center; font-size: 12px; color: $color-text-light;
+  padding: 34px 8.1% 0 9.8%; width: 43.6%; text-align: center; font-size: 12px; color: $color-text-light;
   .info-rules {
      margin-bottom: 24px;
   }
@@ -18,40 +18,41 @@
       }
     }
   }
-  @media (max-width: 991px) {
+  @media (max-width: 1090px) {
     width: 100%; margin-bottom: 20px;
   }
 }
 .block-info-slider {
-  padding: 0; position: relative; overflow: hidden; width: 56%;
+  padding: 0; position: relative; overflow: hidden; width: 56.2%;
   .info-slide {
     position: relative;
     &:before { content: ''; display:block; position: absolute; left: 0; right: 0; bottom: 0; height: 80%; background: linear-gradient(to top, rgba(0, 0, 0, 0.3) 0%, transparent 100%); }
   }
-  img { height: 100%; object-fit: cover; object-position: right; }
+  img { height: 100%; object-fit: cover; object-position: center; }
   .description-slide {
-    font-size: 40px; color: $color-white; position: absolute; bottom: 196px; left: 58px; max-width: 450px; line-height: 1.2;
+    font-size: 40px; color: $color-white; position: absolute; bottom: 171px; left: 58px; max-width: 450px; line-height: 1.2;
   }
   .slick-dots {
-    bottom: 130px; left: 54px; text-align: left;
+    bottom: 101px; left: 54px; text-align: left;
   }
-  @media (max-width: 991px) {
+  @media (max-width: 1090px) {
     display: none;
   }
 }
 .password-auth {
   .input-group {
-    position: relative; width: 47%;
+    position: relative; width: 229px;
     > a {
       position: absolute; top: 50%; transform: translateY(-50%); margin-left: 16px; width: 120px; font-size: 12px; text-decoration: underline; color: $color-button-text;
     }
   }
 }
 .checkbox-group {
+  margin-bottom: 13px;
   .control-label {
-    display: block; font-size: 12px; font-weight: normal; padding-left: 20px; position: relative; cursor: pointer;
+    display: inline-block; font-size: 12px; font-weight: normal; padding-left: 20px; position: relative; cursor: pointer;
     &:before { content: ''; display: block; width: 12px; height: 12px; background: $color-white; border: 1px solid $color-text-light; position: absolute; left: 0; top: 50%; margin-top: -6px; }
-    &:after { content: ''; display: none; width: 10px; height: 10px; background-image: url("../images/tick.svg"); background-repeat: no-repeat; background-size: contain; position: absolute; left: 1px; top: 50%; transform: translateY(-50%); }
+    &:after { content: '\e961'; font-family: "icomoon"; display: none; width: 10px; height: 10px; position: absolute; left: 1px; top: 50%; transform: translateY(-50%); font-size: 10px;  line-height: 10px; }
   }
   input[type="checkbox"] { display: none; }
   input[type="checkbox"]:checked + .control-label:after {
@@ -60,14 +61,17 @@
 }
 
 .block-authorization {
+  .title-page {
+    margin-bottom: 38px;
+  }
   form {
     padding-bottom: 11px; margin-bottom: 25px; border-bottom: 1px solid $color-text-light;
   }
   .info-rules {
-    text-align: left; margin-bottom: 24px; padding-bottom: 30px; border-bottom: 1px solid $color-text-light;
+    text-align: left; margin-bottom: 24px; padding-bottom: 18px; border-bottom: 1px solid $color-text-light;
   }
   .facebook, .google {
-    text-decoration: none; color: $color-white; margin-bottom: 10px;
+    text-decoration: none; color: $color-white; margin-bottom: 10px; font-weight: normal;
     &:hover, &:focus, &:active {
       color: rgba($color-white, .3);
     }

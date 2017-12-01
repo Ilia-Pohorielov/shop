@@ -242,6 +242,9 @@
     &:before {
       font-family: "icomoon"; font-size: 8px;
     }
+    @media (max-width: 400px) {
+      width: 30px; height: 30px; line-height: 30px;
+    }
   }
   .prev-pagination:before {
     content: '\e904';
@@ -256,10 +259,17 @@
       &:hover, &:focus, &:active {
         background: $color-button-text; color: rgba($color-white, .7);
       }
+      @media (max-width: 400px) {
+        width: 30px; height: 30px; line-height: 30px;
+      }
     }
     &:last-child {
       margin-right: 0;
     }
+  }
+  @media (max-width: 767px) {
+    width: 100%;
+    text-align: center;
   }
 }
 .size {

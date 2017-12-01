@@ -172,7 +172,8 @@
                     <div class="form-group">
                         <label class="control-label">Email</label>
                         <div class="input-group">
-                            <input name="email" class="form-control" type="email">
+                            <input name="email" class="form-control" type="email" required data-validate="email">
+                            <span class="error-text">Введён некорректный Email</span>
                         </div>
                     </div>
                     <div class="form-group password-auth">
@@ -196,11 +197,11 @@
                 <div class="info-rules">
                     Или войдите через социальные сети
                     <div class="social-button">
-                        <a href="#" class="btn btn-primary facebook">Зарегистрироваться</a>
-                        <a href="#" class="btn btn-primary google">Зарегистрироваться</a>
+                        <a href="#" class="btn btn-primary facebook">Войти через <b>Facebook</b></a>
+                        <a href="#" class="btn btn-primary google">Войти через <b>Google+</b></a>
                     </div>
                 </div>
-                Еще не зарегистрированы?<a href="#">Зарегистрироваться</a>
+                Еще не зарегистрированы? <a href="#">Зарегистрироваться</a>
             </div>
             <div class="block-info-slider col-lg-7 col-md-7 col-xs-12">
                 <div class="slider js-slider">
@@ -278,9 +279,9 @@
                 </div>
                 <div class="social-link">
                     <ul>
-                        <li><a href="#" class="facebook"></a></li>
-                        <li><a href="#" class="instagram"></a></li>
-                        <li><a href="#" class="youtube"></a></li>
+                        <li><a href="#" target="_blank" class="facebook"></a></li>
+                        <li><a href="#" target="_blank" class="instagram"></a></li>
+                        <li><a href="#" target="_blank" class="youtube"></a></li>
                     </ul>
                 </div>
             </div>

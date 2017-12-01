@@ -13,9 +13,9 @@ footer { padding: 67px 0 34px; border-top: 1px solid $color-light-gray; }
   .item {
     margin-bottom: 10px;
     a {
-      font-weight: normal; font-size: 14px; color: $color-button-text; border-bottom: 1px solid transparent; transition: all .3s ease;
+      font-weight: normal; font-size: 14px; color: $color-button-text; transition: all .3s ease;
       &:hover, &:focus, &:active {
-        border-color: $color-light-gray;
+        color: $color-light-blue;
       }
     }
     &:last-child { margin-bottom: 0; }
@@ -100,7 +100,12 @@ footer { padding: 67px 0 34px; border-top: 1px solid $color-light-gray; }
      }
    }
  }
-  @media (max-width: 767px) {
-    .developers { text-align: left; }
+  @media (max-width: 568px) {
+    .copyright {
+      width: 100%; text-align: center;
+    }
+    .developers {
+      width: 100%; text-align: center;
+    }
   }
 }

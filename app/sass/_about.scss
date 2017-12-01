@@ -1,17 +1,20 @@
 .top-banner {
-  background-repeat: no-repeat; background-size: cover; background-position: 0 50%; height: 497px; position: relative;
+  background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; height: 497px; position: relative; overflow: hidden;
   .title {
     top: 42%; transform: translateY(-50%); font-size: 8.15vw;
   }
 }
 .content-about {
-  max-width: 1270px; margin: -69px auto 70px auto; background: $color-white; transform: perspective(1px); padding: 62px 15px 83px;
+  max-width: 1270px; margin: -69px auto 67px auto; background: $color-white; transform: perspective(1px); padding: 62px 15px 103px;
   .content {
     max-width: 1045px; margin: 0 auto; font-size: 14px; color: $color-button-text; line-height: 22px; padding: 0 15px;
-    .title-page { margin-bottom: 32px; }
+    .title-page { margin-bottom: 30px; }
     .text {
       margin-bottom: 34px;
     }
+  }
+  @media (max-width: 600px) {
+    padding: 25px 15px 0px;
   }
 }
 figure {
@@ -24,7 +27,7 @@ figure {
   }
 }
 blockquote {
-  position: relative; border: none; margin-bottom: 28px;
+  position: relative; border: none; margin-bottom: 36px;
   &.indention-left {
     padding-left: 12.8%;
     &:before {
@@ -46,12 +49,12 @@ blockquote {
   }
 }
 mark {
-  background: rgba(#00cdbc, .2); font-size: 16px; line-height: 28px;
+  background: rgba(#00cdbc, .2); font-size: 16px; line-height: 25px; padding: 0 .2em;
 }
 .bottom-content {
   padding: 0 15px;
   .image {
-    position: relative; padding: 0 0 53.5%;
+    position: relative; top: 22px; padding: 0 0 53.5%;
     img {
       position: absolute; top: 13px; left: 0;
       &.image-front {
@@ -78,7 +81,7 @@ mark {
 .content-about .text-right {
   text-align: left;
   .about-title {
-    font-size: 25px; color: $color-button-text; margin-bottom: 28px; margin-top: 37px;
+    font-size: 25px; color: $color-button-text; margin-bottom: 28px; margin-top: 59px;
   }
   p {
     margin-bottom: 8px;
@@ -90,7 +93,7 @@ mark {
 .block-trend {
   padding: 0 15px; margin-bottom: 70px;
   .title-page {
-    text-align: center; font-size: 25px; margin-bottom: 52px;
+    text-align: center; font-size: 25px; margin-bottom: 47px;
   }
   .trend-item {
     max-width: 510px; max-height: 567px; overflow: hidden; position: relative; padding: 0; display: inline-block;

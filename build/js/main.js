@@ -194,13 +194,17 @@ $(document).ready(function () {
             heightEL();
         });
     }
-    if ($(window).width() <= 1200) {
-        $('.js-search').on('click', function () {
-            $('.header-menu').removeClass('open');
-            $('.top-header').removeClass('open');
-        });
-    }
-
+    $('.js-search').on('click', function () {
+        $('.header-menu').removeClass('open');
+        $('.main-hamburger').removeClass('open');
+        $('.top-header').removeClass('open');
+    });
+    $(document).click(function(event) {
+        if ($(event.target).closest(".bottom-header").length)
+            return;
+        $(".search-block.open").removeClass("open");
+        event.stopPropagation();
+    });
     /* ========================================same height======================================*/
 
     function heightEL() {

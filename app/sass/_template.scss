@@ -245,7 +245,7 @@ main {
 .title-block,
 .title-product {
   display: flex; flex-direction: column; align-items: baseline; color: $color-white; font-family: "Roboto", "Gotham", "Arial", sans-serif; font-weight: 500; text-transform: uppercase; font-size: 20px; line-height: normal;
-  transition: all .5s linear;
+  transition: all .5s linear; max-width: 350px;
   span {
     display: block; background: $color-button-text; padding: 5px 11px 5px 10px; transition: all .5s linear;
     &.sub-title {
@@ -379,7 +379,7 @@ main {
     border: 1px solid $color-gray; width: 100%; padding: 0 15px;
   }
   input { height: 45px; }
-  .error-text { display: none; position: absolute; top: 0; bottom: 0; left: 13px; right: 0; line-height: 45px; color: #e5231f; z-index: 10; font-size: 12px;}
+  .error-text { display: none; position: absolute; top: 0; bottom: 0; left: 25px; right: 0; line-height: 45px; color: #e5231f; z-index: 10; font-size: 12px;}
   &.has-error {
     .form-control {
       border-color: #e5231f;
@@ -406,13 +406,19 @@ main {
     }
   }
   &.no-img {
-    padding: 7px 10px 7px 10px;
+    padding: 7px 10px 7px 19px; max-width: 565px; width: 100%; right: 8.6%; justify-content: space-between;
     strong {
       font-size: 14px;
     }
+    a {
+      margin-left: 0; padding-right: 20px;
+      &:after {
+        right: 6px;
+      }
+    }
   }
-  @media (max-width: 767px) {
-    font-size: 12px; top: 94px; left: 0; justify-content: space-between; flex-wrap: wrap;
+  @media (max-width: 820px) {
+    font-size: 12px; top: 100px; left: 0; justify-content: space-between; flex-wrap: wrap;
     strong {
       font-size: 15px;
     }
@@ -424,7 +430,7 @@ main {
 /* BEGIN BLOCK-HELP STYLE */
 .block-payment,
 .block-help {
-  margin-bottom: 70px;
+  margin-bottom: 66px;
   .more-info, a[href^="mailto"] {
     border-bottom: 1px solid #cbccce;
   }
@@ -437,7 +443,7 @@ main {
   .help-item {
     color: $color-button-text;
     .text {
-      font-size: 12px; line-height: 18px; margin-bottom: 18px;
+      font-size: 12px; line-height: 18px; margin-bottom: 10px;
     }
     &.delivery-pay .content-help:before {
          content: '\e914'; font-size: 34px;
@@ -462,9 +468,16 @@ main {
   .info-help {
     color: $color-text-light; font-size: 12px; line-height: 18px;
   }
+  .call-help .text {
+    display: flex; flex-wrap: wrap; align-items: baseline;
+    a {
+      margin-bottom: 5px;
+    }
+  }
   .call-help .text a[href^="tel"]:nth-child(odd){
     border-right: 1px solid $color-button-text;
     padding-right: 6px;
+    margin-right: 4px;
   }
 }
 /* END BLOCK-HELP STYLE */

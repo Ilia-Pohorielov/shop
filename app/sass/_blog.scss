@@ -1,7 +1,7 @@
 .blog-page {
   padding-top: 34px;
   .title-page {
-    margin-bottom: 31px;
+    margin-bottom: 26px;
   }
   .pagination {
     margin: 0 0 60px;
@@ -30,7 +30,7 @@
       font-size: 14px;
     }
     @media (max-width: 767px) {
-      padding: 25px 35px 25px 23px; left: 15px;
+      padding: 25px 35px 25px 23px; left: auto; position: relative; bottom: auto;
       .title-blog {
         font-size: 19px;
       }
@@ -63,6 +63,24 @@
       }
     }
   }
+  @media (max-width: 1200px) {
+    ul {
+      display: flex; flex-wrap: wrap;
+      .list-item {
+        width: 33.333%;
+      }
+    }
+  }
+  @media (max-width: 767px) {
+    ul .list-item {
+      width: 50%;
+    }
+  }
+  @media (max-width: 600px) {
+    ul .list-item {
+      width: 100%;
+    }
+  }
 }
 .blog-list {
   .blog-item {
@@ -81,14 +99,14 @@
       &:before {
         content: ''; display: block; position: absolute; left: 0; right: 0; height: 100%; background: transparent; transition: all .3s ease;
       }
-      img {
-        height: 100%; object-fit: cover;
-      }
     }
     &:hover, &:focus, &:active {
       .image:before {
         background: rgba($color-white, .2);
       }
+    }
+    @media (max-width: 520px) {
+      width: 100%;
     }
   }
 }
@@ -104,6 +122,10 @@
     }
   }
   .subscribe-form {
-    background: $color-white;
+    background: $color-white; padding: 47px 70px 44px;
+    .error-text { line-height: 60px; }
+    @media (max-width: 767px) {
+      padding: 25px 15px 25px;
+    }
   }
 }

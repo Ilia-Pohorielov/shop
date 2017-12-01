@@ -1,6 +1,11 @@
 .block-content.container-fluid {
   padding: 24px 0 0; margin-bottom: 61px;
 }
+.block-content {
+  .title-page {
+    margin-bottom: 36px;
+  }
+}
 .left-sidebar {
   padding-right: 10px; margin-bottom: 20px;
 }
@@ -27,8 +32,11 @@
   .filters {
     padding: 15px 20px 13px; text-align: left;
     .filter {
-      margin-bottom: 5px;
+      margin-bottom: 5px; position: relative;
       .filter-name { font-weight: 500; }
+      .remove {
+        font-size: 12px; color: $color-gray-bg; cursor: pointer; position: absolute; right: 0; top: 50%; transform: translateY(-50%);
+      }
     }
   }
 }
@@ -74,7 +82,7 @@
 .block-sort {
   z-index: 50; padding: 0; display: flex; align-items: center; margin-bottom: 30px;
   .dropdown {
-    display: inline-block; vertical-align: middle; padding: 0 6px;
+    display: inline-block; vertical-align: middle; padding: 0 10px;
     .btn-secondary {
       background: $color-button-text; color: $color-white; font-weight: normal; padding: 10px 31px 10px 14px; position: relative; text-transform: none; font-size: 14px;
       &:before { content: ''; width: 0; height: 0; border-style: solid; border-width: 4px 3.5px 0 3.5px; border-color: $color-white transparent transparent transparent; right: 14px;
@@ -91,13 +99,13 @@
     }
   }
   .sort-price {
-    margin-right: 22px; display: flex; align-items: center;
+    margin-right: 17px; display: flex; align-items: center;
   }
   .sort-show {
     display: flex; align-items: center;
   }
   .sort-info {
-    width: 50%; text-align: right;
+    width: 49.6%; text-align: right;
     @media (max-width: 991px) {
       display: none;
     }
@@ -113,16 +121,25 @@
   }
 }
 .right-content {
-  padding: 0 0 0 19px; text-align: center;
+  padding: 0 0 0 17px; text-align: center;
   .collection {
-    display: flex; flex-wrap: wrap; margin-bottom: 17px;
+    display: flex; flex-wrap: wrap; margin-bottom: 23px;
     .collection-item {
-      width: 24.9%; margin-bottom: 14px;
+      width: 24.6%; margin-bottom: 8px;
       .image {
-        max-height: 431px;
+        max-height: 431px; height: 431px; margin-bottom: 0;
+        img {
+          height: auto;
+        }
+        .favorite {
+          right: 10px;
+          &:before {
+            font-size: 13px;
+          }
+        }
       }
       .description {
-        font-size: 12px; line-height: 15px; padding: 17px 15px;
+        font-size: 12px; line-height: 15px; padding: 20px 35px;
         .text { margin-bottom: 10px; }
         .price {
           font-size: 14px;
@@ -158,13 +175,14 @@
 .block-top-sales {
   border-top: 1px solid #dddddd;
   .wrap {
-    padding: 60px 15px 0; position: relative; max-width: 1545px; margin: 0 auto 81px;
+    padding: 53px 7px 0; position: relative; max-width: 1545px; margin: 0 auto 73px;
   }
   .title-page {
     font-size: 25px;
+    margin-bottom: 37px;
   }
   .btn-see-all {
-    font-weight: 500; font-size: 14px; color: $color-button-text; border-bottom: 1px solid $color-button-text; padding-bottom: 6px; position: absolute; top: 55px; right: 0; transition: all .3s ease;
+    font-weight: 500; font-size: 14px; color: $color-button-text; border-bottom: 1px solid $color-button-text; padding-bottom: 6px; position: absolute; top: 56px; right: 7px; transition: all .3s ease;
     &:hover, &:focus, &:active {
       color: $color-blue-text;
       border-color: $color-blue-text;
@@ -179,17 +197,17 @@
   .collection-item {
     width: 20%;
     .image {
-      max-height: 463px;
+      max-height: 463px; height: 463px; overflow: hidden; margin-bottom: 0;
     }
     .description {
-      font-size: 12px; line-height: 15px; padding: 17px 15px;
+      font-size: 12px; line-height: 15px; padding: 20px 35px;
       .text { margin-bottom: 10px; }
       .price {
         font-size: 14px;
       }
     }
     .favorite {
-      width: 29px; height: 28px;
+      width: 29px; height: 28px; right: 10px;
       &:before { color: #d7d7d7; }
       &:hover, &:focus, &:active {
         &:before { color: $color-light-blue; }
@@ -210,9 +228,9 @@
   }
 }
 .block-image-info {
-  background-position: 50% 0; background-repeat: no-repeat; background-size: cover; padding-top: 29.157%; position: relative; min-height: 200px;
+  background-position: 50% 0; background-repeat: no-repeat; background-size: cover; padding-top: 29.157%; position: relative; min-height: 200px; display: block;
   .title-block {
-    position: absolute; left: 0; top: 46%; transform: translateY(-50%); padding-left: 104px; display: flex; flex-direction: column;
+    position: absolute; left: 0; top: 46%; transform: translateY(-50%); display: flex; flex-direction: column; max-width: 600px; width: auto;
     span {
       display: inline-block;
     }

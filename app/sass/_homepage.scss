@@ -71,7 +71,6 @@
   position: relative; margin-right: 1px;
   .image {
     display: block; position: relative; overflow: hidden; margin-bottom: 2px; max-height: 574px;
-    img { height: 100%; object-fit: cover; }
     .favorite {
       position: absolute; top: 10px; right: 8px; background: $color-white; width: 39px; height: 38px; border-radius: 50%;
       &:before { content: '\e93a'; display: block; font-size: 15px; font-family: "icomoon"; color: $color-button-text; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); transition: all .3s ease; line-height: normal; }
@@ -177,7 +176,7 @@
   }
 }
 .block-offer-subscribe {
-  position: relative; margin-bottom: 110px; background-position: 50% 0; background-repeat: no-repeat; background-size: cover; height: 550px;
+  position: relative; margin-bottom: 110px; background-position: 25% 0; background-repeat: no-repeat; background-size: cover; height: 550px;
   .wrap-subscribe {
     position: absolute; top: 23.2%; left: 47%;
     .title-block {
@@ -195,7 +194,7 @@
       max-width: 490px; height: 60px;
     }
     .btn-subscribe {
-      width: 75px; height: 59px; right: 56px;
+      width: 75px; height: 60px; right: 56px;
       &:before { line-height: 59px; font-size: 22px; }
     }
   }
