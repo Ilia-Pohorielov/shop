@@ -307,7 +307,10 @@ $(document).ready(function () {
     var hide = $('.cart-item').find('.js-hide');
     hide.each(function (i, e) {
         blueHideTitle($(e), 50);
-
+    });
+    var text = $('.collection-item .description .text');
+    text.each(function (i, e) {
+        blueHideTitle($(e), 65);
     });
     var link = $('.js-anchor');
     link.on('click',function () {
@@ -332,6 +335,25 @@ $(document).ready(function () {
     $('form .form-group').on('click', function(){
         if ($(this).hasClass('has-error')) {
             $(this).find('.error-text').hide();
+            $(this).find('input').focus();
+        }
+    });
+    $('form .input-group').on('click', function(){
+        if ($(this).hasClass('has-error')) {
+            $(this).find('.error-text').hide();
+            $(this).find('input').focus();
+        }
+    });
+    $(".js-nav-title").click(function () {
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+            panel.classList.remove("show");
+            $(this).removeClass('rotate');
+        } else {
+            panel.style.maxHeight = panel.scrollHeight + "%";
+            panel.classList.add("show");
+            $(this).addClass('rotate');
         }
     });
     $(document).on('click', '.js-minus', function () {

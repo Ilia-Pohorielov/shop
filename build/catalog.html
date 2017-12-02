@@ -195,15 +195,15 @@
                                 <div class="filters">
                                     <div class="filter">
                                         <span class="filter-name">Категория:</span> Платья
-                                        <span class="remove">x</span>
+                                        <span class="filter-remove">+</span>
                                     </div>
                                     <div class="filter">
                                         <span class="filter-name">Цена:</span> 150 - 2500, грн
-                                        <span class="remove">x</span>
+                                        <span class="filter-remove">+</span>
                                     </div>
                                     <div class="filter">
                                         <span class="filter-name">Размер:</span> M
-                                        <span class="remove">x</span>
+                                        <span class="filter-remove">+</span>
                                     </div>
                                 </div>
                                 <a href="#" class="btn btn-filter">Очистить фильтры</a>
@@ -351,7 +351,7 @@
                                 <span class="favorite"></span>
                             </a>
                             <div class="description height">
-                                <div class="text">Костюм небесно-голубого цвета с большими голубыми пуговицами</div>
+                                <div class="text js-hide">Костюм небесно-голубого цвета с большими голубыми пуговицами</div>
                                 <div class="price-wrap">
                                     <div class="price">858 UAH</div>
                                 </div>
@@ -611,14 +611,14 @@
         </div>
         </div>
     </div>
-    <a href="#" class="block-image-info container-fluid" style="background-image: url('assets/images/info-image.jpg');">
+    <div class="block-image-info container-fluid" style="background-image: url('assets/images/info-image.jpg');">
         <div class="row">
-            <div class="col-lg-7 col-md-7 col-lg-offset-6 col-sm-offset-0 title-block">
+            <div class="col-lg-7 col-md-7 col-lg-offset-6 col-sm-offset-4 col-xs-offset-3 title-block">
                 <span>Holiday</span>
                 <span class="sub-title">новая коллекция</span>
             </div>
         </div>
-    </a>
+    </div>
     <div class="description-page description-fix" style="background-image: url('assets/images/bg-descr.jpg')">
         <div class="wrapper">
             <div class="text">
@@ -629,7 +629,7 @@
             <div class="text">
                 <div class="description-title-small">Лучшее предложение только для вас!</div>
                 <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.</p>
-                <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.</p>
+                <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице</p>
             </div>
         </div>
     </div>
@@ -640,15 +640,15 @@
     <div class="wrapper top-footer container-fluid">
         <div class="row">
             <div class="category-clothes col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                <div class="footer-title">Одежда</div>
-                <div class="row">
-                    <ul class="col-md-6 col-sm-6 col-xs-6">
+                <div class="footer-title js-nav-title">Одежда</div>
+                <div class="row box">
+                    <ul class="col-md-6 col-sm-6 col-xs-6 box-item">
                         <li class="item"><a href="#">Новинки</a></li>
                         <li class="item"><a href="#">Юбки</a></li>
                         <li class="item"><a href="#">Платья</a></li>
                         <li class="item"><a href="#">Блузы</a></li>
                     </ul>
-                    <ul class="col-md-6 col-sm-6 col-xs-6">
+                    <ul class="col-md-6 col-sm-6 col-xs-6 box-item">
                         <li class="item"><a href="#">Распродажа</a></li>
                         <li class="item"><a href="#">Сарафаны</a></li>
                         <li class="item"><a href="#">Туники</a></li>
@@ -659,8 +659,8 @@
             <div class="info-block col-lg-4 col-md-4 col-sm-6 col-xs-12 col-md-offset-1 col-xs-offset-0">
                 <div class="row">
                     <div class="about-us col-md-6 col-sm-6 col-xs-12">
-                        <div class="footer-title">о нас</div>
-                        <ul>
+                        <div class="footer-title js-nav-title">о нас</div>
+                        <ul class="box">
                             <li class="item"><a href="#">Оплата и доставка</a></li>
                             <li class="item"><a href="#">О магазине</a></li>
                             <li class="item"><a href="#">Контакты</a></li>
@@ -668,8 +668,8 @@
                         </ul>
                     </div>
                     <div class="contact col-md-6 col-sm-6 col-xs-12">
-                        <div class="footer-title">контакты</div>
-                        <ul>
+                        <div class="footer-title js-nav-title">контакты</div>
+                        <ul class="box">
                             <li class="item"><a href="tel:+380665898989">+38 (066) 589 89 89</a></li>
                             <li class="item"><a href="tel:+380665898989">+38 (066) 589 89 89</a></li>
                             <li class="item"><a href="tel:+380665898989">+38 (066) 589 89 89</a></li>
@@ -691,9 +691,9 @@
                 </div>
                 <div class="social-link">
                     <ul>
-                        <li><a href="#" class="facebook"></a></li>
-                        <li><a href="#" class="instagram"></a></li>
-                        <li><a href="#" class="youtube"></a></li>
+                        <li><a href="#" target="_blank" class="facebook"></a></li>
+                        <li><a href="#" target="_blank" class="instagram"></a></li>
+                        <li><a href="#" target="_blank" class="youtube"></a></li>
                     </ul>
                 </div>
             </div>

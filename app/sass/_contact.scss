@@ -1,29 +1,57 @@
 .contact-page {
   padding-top: 34px;
+  .title-page {
+    margin-bottom: 39px;
+  }
   .contact-form {
     max-width: 1270px; margin: 0 auto 59px; background: $color-white; padding: 60px 0; color: $color-button-text;
     .contact-form-title {
-      text-align: center; font-size: 25px;
+      text-align: center; font-size: 25px; padding: 0 15px;
       .sub-text {
-        font-size: 14px; line-height: 20px; max-width: 450px; margin: 18px auto 31px auto;
+        font-size: 14px; line-height: 20px; max-width: 450px; margin: 14px auto 32px auto;
       }
     }
     form {
       max-width: 520px; margin: 0 auto; text-align: center; padding: 0 15px;
       .phone-field {
         .input-group-btn {
-          border-top: 1px solid $color-border; border-bottom: 1px solid $color-border; border-left: 1px solid $color-border; height: 45px; padding: 0; max-width: 58px;
+          border-top: 1px solid $color-border; border-bottom: 1px solid $color-border; border-left: 1px solid $color-border; height: 45px; padding: 0; max-width: 58px; width: 58px;
           .btn-default {
-            padding: 10px; font-size: 14px; color: $color-button-text;
+            font-size: 14px; color: $color-button-text; width: 100%; font-weight: normal; padding: 0 9px; text-align: left;
             &:hover, &:focus, &:active {
               box-shadow: none; background: transparent; border: none;
             }
             &:before {
               content: none;
             }
+            .caret {
+              position: absolute; right: 8px; top: 50%; margin-top: -2px;
+            }
           }
           &.open .btn {
             box-shadow: none; background: transparent; border: none;
+          }
+          .dropdown-menu {
+            min-width: auto; top: 100%; padding: 0 5px;  text-align: center;
+            >li >a {
+              padding: 5px;
+            }
+          }
+        }
+        .error-text {
+          left: 80px;
+          @media (max-width: 345px) {
+            display: none;
+          }
+        }
+        @media (max-width: 767px) {
+          .input-group-btn {
+            .btn-default {
+              font-size: 12px; padding: 5px 15px 5px 5px;
+              .caret {
+                position: absolute; right: 3px; top: 50%; margin-top: -2px;
+              }
+            }
           }
         }
       }
@@ -48,7 +76,7 @@
     padding: 0 0 59%; background-position: 0 50%; background-repeat: no-repeat; background-size: cover;
   }
   .title {
-    top: 16%; font-size: 21vw; mix-blend-mode: unset; line-height: normal;
+    top: 13.1%; font-size: 21vw; mix-blend-mode: unset; line-height: normal;
     > p {
       mix-blend-mode: difference;
     }
@@ -77,7 +105,7 @@
       }
     }
     .description {
-      margin-bottom: 23px;
+      margin-bottom: 23px; max-height: 100px; overflow: hidden;
     }
     .contact {
       padding-bottom: 17px; position: relative; margin-bottom: 27px;
@@ -100,13 +128,16 @@
         content: ''; display: block; position: absolute; left: 0; right: 0; margin: 0 -5000px; padding: 0 5000px; height: 1px; background: $color-border; bottom: 0;
       }
     }
+    @media (max-width: 767px) {
+      padding: 20px 15px 20px 15px;
+    }
   }
   .feedback-administration {
     .feedback-title {
       font-size: 20px; font-weight: 500; margin-bottom: 15px;
     }
     .text {
-      margin-bottom: 18px;
+      margin-bottom: 18px; max-height: 100px; overflow: hidden;
     }
     .btn-primary.btn-big {
       max-width: 321px;

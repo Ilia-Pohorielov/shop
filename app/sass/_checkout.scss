@@ -1,5 +1,17 @@
 .checkout-info {
   padding-top: 34px; margin-bottom: 17px;
+  .profile {
+    width: 100%;
+  }
+  .block-authorization {
+    width: 100%; background: $color-white; padding: 35px 55px 35px 35px;
+    .btn-primary {
+      margin-left: 0;
+    }
+    @media (max-width: 767px) {
+      padding: 35px 15px;
+    }
+  }
   .tab-flags {
     margin-bottom: 26px;
     li {
@@ -19,6 +31,15 @@
   }
   .information-item {
     background: $color-white; padding: 25px 30px 21px; margin-bottom: 20px;
+    .btn-primary {
+      margin-left: 0;
+      &:before {
+        content: '\e920';
+      }
+    }
+    @media (max-width: 767px) {
+      padding: 25px 10px 21px;
+    }
   }
   .delivery-data-form, .profile-user {
     padding: 0;
@@ -36,6 +57,18 @@
     }
   }
   .personal-information {
+    .note {
+      @media (max-width: 1072px) {
+        .control-label {
+          width: 20%;
+        }
+      }
+      @media (max-width: 767px) {
+        .control-label {
+          width: 100%;
+        }
+      }
+    }
     .profile, .profile-user {
       background: transparent;
     }
@@ -44,6 +77,9 @@
       @media (max-width: 767px) {
         width: 100%;
       }
+    }
+    @media (max-width: 991px) {
+      margin-bottom: 0;
     }
   }
   .checkbox {
@@ -73,6 +109,9 @@
   .street-field {
     .bootstrap-select {
       margin-right: 14px;
+      @media (max-width: 1164px) {
+        margin-bottom: 5px;
+      }
     }
     input {
       max-width: 443px;
@@ -95,12 +134,6 @@
   textarea {
     max-width: 590px;
   }
-  .btn-primary {
-    margin-left: 0;
-    &:before {
-      content: '\e920';
-    }
-  }
 }
 .right-sidebar {
   text-align: right; color: $color-button-text; padding-top: 18px;
@@ -116,7 +149,7 @@
   .total-amount {
     display: block; padding-left: 40px; position: relative;
     &:before {
-      content: '\e960'; display: block; width: 20px; height: 23px; position: absolute; left: 0; top: 50%; transform: translateY(-50%); color: $color-border; font-family: "icomoon";
+      content: '\e960'; display: block; width: 20px; height: 23px; position: absolute; left: 0; top: 50%; transform: translateY(-50%); color: $color-border; font-family: "icomoon"; font-size: 22px;
     }
   }
   .amount {
@@ -169,4 +202,7 @@
   a {
     font-size: 14px; border-bottom: 1px solid #cbccce;
   }
+}
+.bottom-cart {
+  padding: 21px 18px;
 }

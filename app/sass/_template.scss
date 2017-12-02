@@ -34,7 +34,9 @@ $color-gray-text: #b0b0b0;
   margin: 0 auto;
   padding: 0 15px;
 }
-
+sup {
+  font-size: 12px; left: 5px; color: $color-red; top: -0.3em;
+}
 .homepage main {
   position: relative; background: transparent;
   &:before {
@@ -52,11 +54,21 @@ main {
     font-size: 0;
     li {
       padding-right: 9px; margin-right: 5px; position: relative; display: inline-block; font-size: 12px; letter-spacing: -0.4px;
-      a { color: $color-button-text; font-size: 12px; }
+      a {
+        color: $color-button-text; font-size: 12px; transition: all .3s ease;
+        &:hover, &:focus, &:active {
+          color: $color-light-blue;
+        }
+      }
       &:before {
         content: '-'; display: block; position: absolute; right: 0;
       }
-      &:last-child { margin: 0; padding: 0; }
+      &:last-child {
+        margin: 0; padding: 0;
+        &:before {
+          content: none;
+        }
+      }
     }
   }
   &.faq {
@@ -94,7 +106,7 @@ main {
 
 /* BEGIN BUTTON STYLE*/
 .btn {
-  background: none; padding: 0; border: none; border-radius: 0; line-height: inherit;
+  background: none; padding: 0; border: none; border-radius: 0; line-height: inherit; white-space: normal;
 }
 .button {
   padding: 24px 0; background: $color-light-blue; font-weight: 500; font-size: 16px; color: $color-button-text; transition: all .3s ease; max-width: 257px; width: 100%; text-align: center;
@@ -241,6 +253,9 @@ main {
   p {
     text-rendering: optimizeLegibility;
   }
+  @media (max-height: 740px) {
+    top: 35.6%;
+  }
 }
 .title-block,
 .title-product {
@@ -379,7 +394,12 @@ main {
     border: 1px solid $color-gray; width: 100%; padding: 0 15px;
   }
   input { height: 45px; }
-  .error-text { display: none; position: absolute; top: 0; bottom: 0; left: 25px; right: 0; line-height: 45px; color: #e5231f; z-index: 10; font-size: 12px;}
+  .error-text {
+    display: none; position: absolute; top: 0; bottom: 0; left: 25px; right: 0; line-height: 45px; color: #e5231f; z-index: 10; font-size: 12px;
+    @media (max-width: 767px) {
+      font-size: 11px;
+    }
+  }
   &.has-error {
     .form-control {
       border-color: #e5231f;
@@ -478,6 +498,9 @@ main {
     border-right: 1px solid $color-button-text;
     padding-right: 6px;
     margin-right: 4px;
+  }
+  @media (max-width: 767px) {
+    margin-bottom: 20px;
   }
 }
 /* END BLOCK-HELP STYLE */

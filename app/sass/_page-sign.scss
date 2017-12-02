@@ -44,6 +44,9 @@
     position: relative; width: 229px;
     > a {
       position: absolute; top: 50%; transform: translateY(-50%); margin-left: 16px; width: 120px; font-size: 12px; text-decoration: underline; color: $color-button-text;
+      @media (max-width: 410px) {
+        position: relative; margin-left: 0;
+      }
     }
   }
 }
