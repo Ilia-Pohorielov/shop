@@ -17,6 +17,9 @@
   .navigation-title {
     font-size: 20px; font-weight: 500; color: $color-button-text; margin-bottom: 20px;
   }
+  .panel-default {
+    margin-bottom: 10px;
+  }
   .panel.panel-default > .panel-heading {
     a {
       border-bottom: none; padding: 16px 35px 20px 20px; background: $color-white; letter-spacing: 1px; margin-bottom: 1px;
@@ -26,9 +29,9 @@
     }
   }
   .panel.panel-default .panel-collapse {
-    background: $color-white; color: $color-button-text; font-size: 14px; padding: 3px 20px 17px; border-bottom: 3px solid $color-button-text;  margin-bottom: 10px;
+    background: $color-white; color: $color-button-text; font-size: 14px; border-bottom: 3px solid $color-button-text;
     .text {
-      line-height: 22px;
+      line-height: 22px; padding: 3px 20px 17px;
     }
   }
   &:not(:last-child) {

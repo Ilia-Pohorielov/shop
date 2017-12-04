@@ -51,8 +51,17 @@
     max-width: 590px;
     &.phone-field {
       max-width: 230px;
+      .dropdown-menu {
+        right: 0;
+        >li>a {
+          padding: 3px 10px;
+        }
+      }
       .btn-default {
-        font-size: 14px;
+        font-size: 14px; padding: 0 9px;
+        .caret {
+          right: 8px;
+        }
       }
     }
   }
@@ -105,13 +114,13 @@
   }
   .street-field, .bootstrap-select {
     max-width: 590px;
+    @media (max-width: 810px) {
+      max-width: none;
+    }
   }
   .street-field {
     .bootstrap-select {
       margin-right: 14px;
-      @media (max-width: 1164px) {
-        margin-bottom: 5px;
-      }
     }
     input {
       max-width: 443px;

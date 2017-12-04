@@ -97,7 +97,6 @@ $(document).ready(function () {
     });
     $('.js-mini-slider').slick({
         slidesToShow: 3,
-        vertical: true,
         slidesToScroll: 1,
         asNavFor: '.js-big-slider',
         dots: false,
@@ -176,53 +175,36 @@ $(document).ready(function () {
                 range.noUiSlider.set(r);
             }
             inputs.forEach(function(input, handle) {
-
                 input.addEventListener('change', function(){
                     setSliderHandle(handle, this.value);
                 });
-
                 input.addEventListener('keydown', function( e ) {
-
                     var values = range.noUiSlider.get();
                     var value = Number(values[handle]);
                     var steps = range.noUiSlider.steps();
                     var step = steps[handle];
                     var position;
                     switch ( e.which ) {
-
                         case 13:
                             setSliderHandle(handle, this.value);
                             break;
-
                         case 38:
-
-                            // Get step to go increase slider value (up)
                             position = step[1];
-
-                            // false = no step is set
                             if ( position === false ) {
                                 position = 1;
                             }
-
-                            // null = edge of slider
                             if ( position !== null ) {
                                 setSliderHandle(handle, value + position);
                             }
-
                             break;
-
                         case 40:
-
                             position = step[0];
-
                             if ( position === false ) {
                                 position = 1;
                             }
-
                             if ( position !== null ) {
                                 setSliderHandle(handle, value - position);
                             }
-
                             break;
                     }
                 });
@@ -332,12 +314,13 @@ $(document).ready(function () {
             fixedContentPos: false
         });
     });
-
-    $('.js-size-open').on('click', function () {
-        $(this).parent().toggleClass('open');
-        $(this).parent().siblings().removeClass('open');
-    });
-
+    if ($(window).width() > 767) {
+        $('.js-size-open').on('click', function () {
+            $(this).parent().toggleClass('open');
+            $(this).parent().siblings().removeClass('open');
+        });
+        $('.js-scroll-info').mCustomScrollbar();
+    }
     $('.js-anchor').on('click', function () {
         var item = $('.block-question-answer .navigation-item').attr('id');
         if ($(this).attr('href') == item) {
@@ -438,4 +421,5 @@ $(document).ready(function () {
        $(this).parent().find('.settings').toggleClass('open');
        return false;
     });
+    $(".js-phone-mask").mask("(999) 999-99-99");
 });

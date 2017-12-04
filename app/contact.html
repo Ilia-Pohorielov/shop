@@ -183,15 +183,10 @@
                     <div class="form-group">
                         <label class="control-label" for="usertel">Телефон<sup>*</sup></label>
                         <div class="input-group phone-field">
-                            <div class="input-group-btn dropdown">
-                                <button type="button" class="btn btn-default dropdown-toggle"
-                                        data-toggle="dropdown">
-                                    +38 <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu pull-right">
-                                    <li><a href="#">+7</a></li>
-                                </ul>
-                            </div>
+                            <select name="code-phone" class="selectpicker">
+                                <option value="">+38</option>
+                                <option value="">+7</option>
+                            </select>
                             <input type="tel" class="form-control js-phone-mask" name="profile[phone]"
                                    data-validate="phone" value="" required placeholder="(___) ___-__-__"
                                    id="usertel">

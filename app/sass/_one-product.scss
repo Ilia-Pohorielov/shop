@@ -43,9 +43,23 @@
       height: auto!important;
     }
   }
+  @media (max-width: 1200px) {
+    padding-top: 105px;
+  }
+  @media (max-width: 495px) {
+    padding-top: 155px;
+  }
+  @media (max-width: 375px) {
+    padding-top: 205px;
+  }
 }
 .product-information {
-  padding: 0 0 0 10px;
+  padding: 0 0 0 10px; position: static;
+  .top-title {
+    @media (max-width: 1200px) {
+      position: absolute; top: 35px;
+    }
+  }
   .title-page {
     margin-bottom: 33px;
   }
@@ -87,7 +101,7 @@
       }
     }
     .btn-link {
-      margin-top: 35px; display: inline-block; padding: 0; padding-left: 0; width: 15%;
+      margin-top: 35px; display: inline-block; padding: 0; padding-left: 0; width: 132px;
       &:before {
         right: 0; left: auto;
       }
@@ -112,7 +126,7 @@
   .nav-tabs.tabs-info {
     margin-bottom: -5px; border-bottom: none;
     li a {
-      width: auto; padding: 16px 27px 15px 37px;
+      width: auto; padding: 16px 29.9px 15px 37px;
     }
   }
   .tab-content {
@@ -126,6 +140,15 @@
         width: 100%;
         .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
           height: 30px;
+        }
+      }
+      @media (max-width: 767px) {
+        max-height: none;
+      }
+      @media (max-width: 500px) {
+        flex-direction: column;
+        .name-info {
+          margin-bottom: 10px;
         }
       }
     }
@@ -174,6 +197,9 @@
       }
     }
   }
+  @media (max-width: 737px) {
+    max-width: none;
+  }
   @media (max-width: 467px) {
     .tabs-product li {
       margin-bottom: 5px;
@@ -184,6 +210,17 @@
   margin-bottom: 31px;
   .top {
     display: flex; justify-content: space-between;
+  }
+  @media (max-width: 767px) {
+    .size {
+      flex-direction: column;
+      .size-item > span {
+        margin-right: 20px;
+      }
+      .amount {
+        position: relative; left: 0; visibility: visible;
+      }
+    }
   }
 }
 .block-comments {

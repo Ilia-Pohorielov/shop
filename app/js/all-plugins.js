@@ -10,3 +10,4 @@
 //= nouislider.min.js
 //= bootstrap-select.min.js
 //= jquery.magnific-popup.min.js
+//= mask.js

@@ -14,7 +14,7 @@
         font-size: 20px; font-weight: 500; margin-bottom: 29px;
       }
       .description {
-        margin-bottom: 6px; line-height: 22px;
+        margin-bottom: 6px; line-height: 22px; max-height: none;
       }
       @media (max-width: 991px) {
         top: auto;

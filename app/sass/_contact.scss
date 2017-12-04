@@ -14,8 +14,12 @@
     form {
       max-width: 520px; margin: 0 auto; text-align: center; padding: 0 15px;
       .phone-field {
+        display: flex;
+        .form-control {
+          width: 88%;
+        }
         .input-group-btn {
-          border-top: 1px solid $color-border; border-bottom: 1px solid $color-border; border-left: 1px solid $color-border; height: 45px; padding: 0; max-width: 58px; width: 58px;
+          height: 45px; padding: 0; max-width: 58px; width: 58px; border-right: none;
           .btn-default {
             font-size: 14px; color: $color-button-text; width: 100%; font-weight: normal; padding: 0 9px; text-align: left;
             &:hover, &:focus, &:active {
@@ -30,12 +34,6 @@
           }
           &.open .btn {
             box-shadow: none; background: transparent; border: none;
-          }
-          .dropdown-menu {
-            min-width: auto; top: 100%; padding: 0 5px;  text-align: center;
-            >li >a {
-              padding: 5px;
-            }
           }
         }
         .error-text {

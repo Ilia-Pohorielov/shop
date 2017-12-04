@@ -12,7 +12,10 @@
       border-right: 1px solid $color-white;
     }
     @media (max-width: 767px) {
-      max-width: 623px; margin: 0 auto; width: auto; float: none;
+      max-width: 623px; margin: 0 auto; width: auto; float: none; min-height: auto;
+      img {
+        height: auto;
+      }
     }
   }
   .col-lookbook-3:not(:first-child) {

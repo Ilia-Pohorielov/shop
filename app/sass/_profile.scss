@@ -35,11 +35,11 @@
     margin-bottom: 5px;
   }
   @media (max-width: 737px) {
-    border: none;
+    border: none; width: 100%;
     li{
-      margin-bottom: 5px;
+      margin-bottom: 5px; width: 100%;
       a {
-        border: none;
+        border: none; width: 100%;
       }
     }
   }
@@ -181,7 +181,7 @@
         position: absolute; left: 0; top: 0; z-index: 10; width: 58px; height: 45px; line-height: 45px; text-align: center; background: #fafafa; padding: 0;
         border: 1px solid $color-gray;
         .btn-default {
-          width: 100%; padding: 0; color: $color-button-text;
+          width: 100%; padding: 0 9px; color: $color-button-text; font-size: 12px;
           &:before { content: none; }
           &:hover, &:focus, &:active {
             box-shadow: none;
@@ -340,6 +340,9 @@
       overflow-x: scroll;
       width: 1355px;
     }
+  }
+  @media (max-width: 767px) {
+    padding: 36px 0 36px 0; margin-bottom: 20px;
   }
 }
 /*** END ORDER TAB ***/
