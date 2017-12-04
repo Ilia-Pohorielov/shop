@@ -191,11 +191,16 @@
   }
   .subscribe-form {
     max-width: 689px; background: $color-gray-bg; padding: 47px 70px 60px;
-    input {
-      max-width: 490px; height: 60px;
+    form {
+      max-width: 490px;
+    }
+    .form-group {
+      input {
+        height: 60px;
+      }
     }
     .btn-subscribe {
-      width: 75px; height: 60px; right: 56px;
+      width: 75px; height: 60px;
       &:before { line-height: 59px; font-size: 22px; }
     }
   }

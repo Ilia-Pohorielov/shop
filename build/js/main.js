@@ -76,7 +76,7 @@ $(document).ready(function () {
         autoplaySpeed: 5000,
         pauseOnHover: false
     });
-    if ($(window).width() <= '991') {
+    if ($(window).width() <= 991) {
         $(window).on('resize', function () {
             $('.js-panel').addClass('open');
             $('.js-panel #criteria-collapse-mobile').removeClass('in');
@@ -85,6 +85,8 @@ $(document).ready(function () {
             $('.js-panel').addClass('open');
             $('.js-panel #criteria-collapse-mobile').removeClass('in');
         });
+        $('.js-panel').addClass('open');
+        $('.js-panel #criteria-collapse-mobile').removeClass('in');
     }
     $('.js-big-slider').slick({
         slidesToShow: 1,
@@ -105,7 +107,7 @@ $(document).ready(function () {
 
     /* ========================================same parallax======================================*/
     var controller = new ScrollMagic.Controller();
-    if ($(window).width() >= '991') {
+    if ($(window).width() >= 991) {
         new ScrollMagic.Scene({
             triggerElement: ".js-animate-parallax",
             triggerHook: .8,
@@ -125,7 +127,9 @@ $(document).ready(function () {
     /* ========================================end parallax======================================*/
 
 
-    $(".js-scroll").mCustomScrollbar();
+    $(".js-scroll").mCustomScrollbar({
+        mouseWheel:{ scrollAmount: 200 }
+    });
     /* ========================================same validate======================================*/
     $('.js_validate [type="submit"]').on("click", function () {
         $(this).siblings('.form-group').find('input').attr('placeholder', '');
@@ -143,6 +147,10 @@ $(document).ready(function () {
         _thisMax = parseInt(range.getAttribute('data-max'));
         _thisMinCur = parseInt(range.getAttribute('data-slider-min'));
         _thisMaxCur = parseInt(range.getAttribute('data-slider-max'));
+        var input0 = document.getElementById('input-with-keypress-0');
+        var input1 = document.getElementById('input-with-keypress-1');
+        var inputs = [input0, input1];
+
         if (!_thisMaxCur) {
             _thisMinCur = _thisMin;
         }
@@ -159,19 +167,65 @@ $(document).ready(function () {
                     'max': _thisMax
                 }
             });
-            var thisInputFrom = $(range).parents('.range-slider').find('.js_from'),
-                thisInputTo = $(range).parents('.range-slider').find('.js_to');
-            range.noUiSlider.on('update', function (values, handle) {
-                var value = parseInt(values[handle]);
-                if (handle) {
-                    thisInputTo.val(value);
-                } else {
-                    thisInputFrom.val(value);
-                }
+            range.noUiSlider.on('update', function( values, handle ) {
+                inputs[handle].value = values[handle];
             });
-            var sliderIt = range;
-            range.noUiSlider.on('end', function (values, handle) {
-                getCatalog();
+            function setSliderHandle(i, value) {
+                var r = [null,null];
+                r[i] = value;
+                range.noUiSlider.set(r);
+            }
+            inputs.forEach(function(input, handle) {
+
+                input.addEventListener('change', function(){
+                    setSliderHandle(handle, this.value);
+                });
+
+                input.addEventListener('keydown', function( e ) {
+
+                    var values = range.noUiSlider.get();
+                    var value = Number(values[handle]);
+                    var steps = range.noUiSlider.steps();
+                    var step = steps[handle];
+                    var position;
+                    switch ( e.which ) {
+
+                        case 13:
+                            setSliderHandle(handle, this.value);
+                            break;
+
+                        case 38:
+
+                            // Get step to go increase slider value (up)
+                            position = step[1];
+
+                            // false = no step is set
+                            if ( position === false ) {
+                                position = 1;
+                            }
+
+                            // null = edge of slider
+                            if ( position !== null ) {
+                                setSliderHandle(handle, value + position);
+                            }
+
+                            break;
+
+                        case 40:
+
+                            position = step[0];
+
+                            if ( position === false ) {
+                                position = 1;
+                            }
+
+                            if ( position !== null ) {
+                                setSliderHandle(handle, value - position);
+                            }
+
+                            break;
+                    }
+                });
             });
         }
     }
@@ -184,6 +238,7 @@ $(document).ready(function () {
         $('.search-block').removeClass('open');
     });
     $('.js-sub-menu').on('click', function () {
+        $('.sub-menu > span').toggleClass('active');
         $('.sub-menu-category').toggleClass('open');
     });
     if ($(window).width() > 767) {

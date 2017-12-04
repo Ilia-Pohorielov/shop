@@ -3,6 +3,9 @@
   .title {
     top: 42%; transform: translateY(-50%); font-size: 8.15vw;
   }
+  @media (max-width: 767px) {
+    height: 250px;
+  }
 }
 .content-about {
   max-width: 1270px; margin: -69px auto 67px auto; background: $color-white; transform: perspective(1px); padding: 62px 15px 103px;
@@ -12,6 +15,12 @@
     .text {
       margin-bottom: 34px;
     }
+    @media (max-width: 767px) {
+      padding: 0;
+    }
+  }
+  @media (max-width: 767px) {
+    margin: -69px auto 30px auto;
   }
   @media (max-width: 600px) {
     padding: 25px 15px 0px;
@@ -47,6 +56,14 @@ blockquote {
       left: -35px;
     }
   }
+  @media (max-width: 767px) {
+    &:not(.indention-left) {
+      padding-left: 12.8%;
+      &:before {
+        left: 0;
+      }
+    }
+  }
 }
 mark {
   background: rgba(#00cdbc, .2); font-size: 16px; line-height: 25px; padding: 0 .2em;
@@ -76,6 +93,9 @@ mark {
     .text-right {
       display: inline-block; float: none;
     }
+  }
+  @media (max-width: 767px) {
+    padding: 0;
   }
 }
 .content-about .text-right {
@@ -124,6 +144,7 @@ mark {
     }
   }
   @media (max-width: 767px) {
+    margin-bottom: 25px;
     .trend {
       text-align: center;
       .trend-item {

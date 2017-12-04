@@ -86,26 +86,32 @@
   }
 }
 .block-sort {
-  z-index: 50; padding: 0; display: flex; align-items: center; margin-bottom: 30px;
-  .dropdown {
-    display: inline-block; vertical-align: middle; padding: 0 10px;
-    .btn-secondary {
-      background: $color-button-text; color: $color-white; font-weight: normal; padding: 10px 31px 10px 14px; position: relative; text-transform: none; font-size: 14px;
-      &:before { content: ''; width: 0; height: 0; border-style: solid; border-width: 4px 3.5px 0 3.5px; border-color: $color-white transparent transparent transparent; right: 14px;
-      }
-      &:hover, &:focus, &:active {
-        box-shadow: none;
+  z-index: 50; padding: 0; display: flex; align-items: center; margin-bottom: 31px;
+  form {
+    display: flex; align-items: center; width: 100%;
+  }
+  .form-group {
+    display: flex; margin-bottom: 0;
+    .control-label {
+      font-size: 14px; margin-right: 7px;
+    }
+    .bootstrap-select {
+      width: 266px!important; padding: 0; height: 39px; border: none; outline: 0;
+      .btn-default {
+        color: $color-white; background: $color-button-text; line-height: 39px; text-transform: none; font-size: 14px; font-weight: normal; padding: 0 19px 0 0;
+        span {
+          text-align: center;
+        }
       }
     }
-    &.open .btn-secondary {
-      box-shadow: none;
-    }
-    .dropdown-menu {
-      width: 93%; top: 100%; left: 50%; transform: translateX(-50%); max-width: none; padding: 0; min-width: auto;
+    &.sort-show {
+      .bootstrap-select {
+        max-width: 60px;
+      }
     }
   }
   .sort-price {
-    margin-right: 17px; display: flex; align-items: center;
+    margin-right: 30px; display: flex; align-items: center;
   }
   .sort-show {
     display: flex; align-items: center;
@@ -114,17 +120,24 @@
     }
   }
   .sort-info {
-    width: 49.6%; text-align: right;
+    width: 49.6%; text-align: right; padding-right: 16px;
     @media (max-width: 991px) {
       display: none;
     }
   }
-  @media (max-width: 767px) {
-    flex-wrap: wrap;
+  @media (max-width: 615px) {
+    form {
+      flex-direction: column;
+    }
     .sort-price {
-      flex-direction: column; align-items: flex-start; margin-bottom: 10px;
-      .dropdown {
-        padding: 0;
+      margin-bottom: 10px; margin-right: 0;
+    }
+  }
+  @media (max-width: 400px) {
+    .sort-price {
+      flex-direction: column; align-items: flex-start;
+      .control-label {
+        margin-bottom: 5px;
       }
     }
   }
@@ -176,7 +189,7 @@
         width: 57.8%;
       }
       @media (max-width: 400px) {
-        width: 76%;
+        width: 100%;
       }
     }
     @media (max-width: 520px) {
@@ -243,7 +256,7 @@
       width: 45%;
     }
     @media (max-width: 450px) {
-      width: 69%;
+      width: 100%;
     }
   }
   @media (max-width: 1100px) {

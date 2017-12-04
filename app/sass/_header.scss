@@ -18,9 +18,9 @@ header {
       }
     }
     .bottom-header {
-      padding: 15px 15px 20px; background: rgba($color-black, .7);
+      background: rgba($color-black, .7);
       .header-menu {
-        padding: 45px 15px 0;
+        padding: 55px 15px 0;
       }
     }
   }
@@ -82,7 +82,7 @@ header {
   >.row {
     margin-right: 0; display: flex;
   }
-  .logo { padding-top: 9px; width: 15%; }
+  .logo { width: 15%; padding: 9px 15px 0; }
   .header-menu {
     display: flex; align-items: flex-start;  position: static; width: 85%; padding-right: 0; justify-content: space-between;
   }
@@ -252,7 +252,7 @@ header {
   .main-hamburger {
     width: 40px; height: 25px; position: relative; cursor: pointer; display: none;
     i {
-      height: 3px; background: rgba($color-white, .5); position: absolute; left: 0; right: 0; top: 0; border-radius: 2px;
+      height: 3px; background: rgba($color-white, .5); position: absolute; left: 0; right: 0; top: 0; border-radius: 2px; transition: all .3s cubic-bezier(.55,.055,.675,.19);
       &:nth-child(2) { top: 50%; transform: translateY(-50%); width: 80%; }
       &:last-child { top: auto; bottom: 0; }
     }
@@ -262,20 +262,21 @@ header {
     &.open {
       i {
         &:first-child {
-          animation: animate-hamburger-2 .5s .2s forwards linear;
+          top: 50%; transform: translateY(-100%) rotate(-45deg);
         }
         &:nth-child(2) {
-          animation: animate-hamburger-1 .5s forwards linear;
+          transform: translateX(-100%); opacity: 0;
         }
         &:last-child {
-          animation: animate-hamburger-3 .5s .2s forwards linear;
+          bottom: 50%; transform: rotate(45deg);
         }
       }
     }
   }
   @media (max-width: 1507px) {
+    padding: 15px 40px 0;
     .personal-area {
-      float: right; width: 22%; padding-right: 15px;
+      float: right; width: 39%; padding-right: 15px;
       .user-info {
         .user-login-btn {
           margin-right: 5px;
@@ -285,24 +286,34 @@ header {
         }
       }
     }
-    .main-menu .menu-item { margin-right: 10px; }
+    .main-menu  {
+      .menu-item {
+        margin-right: 10px;
+        li a {
+          padding-bottom: 15px;
+        }
+      }
+      .sub-menu > span {
+        padding-bottom: 15px;
+      }
+    }
   }
   @media (max-width: 1331px) {
-    padding: 26px 15px 0;
+    padding: 15px 15px 0;
   }
   @media (max-width: 1215px) {
-    padding: 24px 15px 28px;
+    padding: 25px 15px; line-height: normal;
     > .row {
-      justify-content: space-between;
+      justify-content: space-between; align-items: baseline;
       &:after, &:before {
         content: none;
       }
     }
     .main-hamburger {
-      display: block; float: right; top: 9px;
+      display: block; float: right; top: 0;
     }
     .logo {
-      float: left; width: 216px;
+      float: left; width: 216px; padding-top: 0;
     }
     .personal-area {
       padding: 0; width: 100%; margin-bottom: 0; justify-content: center;
@@ -326,18 +337,25 @@ header {
       }
     }
     .header-menu {
-      position: absolute; background: $color-white; top: 100%; left: 0; right: 0; width: 100%; padding: 0 15px 20px; box-shadow: 0 5px 20px 0px #000; transform: translateY(50px); opacity: 0;
-      flex-direction: column; overflow: hidden; visibility: hidden;
-      &.open { transform: translateY(0); visibility: visible; opacity: 1; transition: all .3s ease; }
+      position: absolute; background: $color-white; top: 100%; left: 0; right: 0; width: 100%; padding: 20px 15px 20px; box-shadow: 0 5px 20px -10px rgba($color-black, .5); transform: translateY(50px); opacity: 0;
+      flex-direction: column; overflow: hidden; visibility: hidden; transition: all .3s cubic-bezier(.55,.055,.675,.19); border-top: 1px solid rgba($color-black, .5);
+      &.open { transform: translateY(0); visibility: visible; opacity: 1; }
       .main-menu {
         width: 100%; flex-direction: column;
         .menu-item {
-          color: $color-button-text; margin-right: 0; text-align: center;
+          color: $color-button-text; margin-right: 0; text-align: center; margin-bottom: 15px;
           a { color: $color-button-text; }
           &.sub-menu {
             display: block;
             > span {
               text-align: center; padding-bottom: 0;
+                position: relative; display: inline-block; padding-right: 20px;
+                &:after {
+                  content: '\e903'; font-family: 'icomoon'; display: block; color: $color-button-text; position: absolute; right: 0; top: 50%; transform: translateY(-50%); font-size: 10px; transition: all .3s ease;
+                }
+              &.active:after {
+                transform: translateY(-50%) rotate(180deg);
+              }
             }
             .hamburger-menu {
               display: none;
@@ -357,7 +375,7 @@ header {
                 text-align: left;
               }
               &.open {
-                max-height: 500px; opacity: 1; visibility: visible; overflow-y: auto;
+                max-height: 500px; opacity: 1; visibility: visible; overflow-y: auto; padding: 15px 0;
               }
             }
             &:hover, &:focus, &:active {
@@ -386,7 +404,10 @@ header {
     }
   }
   @media (max-width: 767px) {
-    .row { text-align: center; }
+    padding: 15px; line-height: normal;
+    > .row {
+      text-align: center;
+    }
     .logo, .personal-area, .main-hamburger {
       float: none;
     }
@@ -411,7 +432,7 @@ header {
     }
     .search-block, .header-menu { top: 100%; }
     .search-block {
-      flex-wrap: wrap; height: auto;
+      flex-wrap: wrap;
       .field-search, .dropdown { width: 100%; }
       .btn-secondary { padding-left: 0; }
     }

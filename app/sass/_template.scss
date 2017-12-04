@@ -164,14 +164,30 @@ main {
 .bootstrap-select {
   width: 100%!important; max-width: 540px; height: 45px; background: $color-white; border: 1px solid $color-light-gray; padding-left: 13px;
   .btn-default {
-    height: 100%; color: $color-button-text!important;
+    height: 100%; color: $color-button-text;
     &:hover, &:focus, &:active {
-      background: transparent!important; border: none!important; box-shadow: none; outline: 0!important;
+      background: transparent; border: none; box-shadow: none; outline: 0!important;
     }
   }
   &.open {
     .btn-default {
       box-shadow: none; background: transparent; border: none;
+    }
+  }
+  .dropdown-menu {
+    margin: 0; border-radius: 0; padding: 0;
+    li a {
+      transition: all .3s ease;
+      &:hover, &:focus, &:active {
+        background: $color-light-blue; color: $color-white;
+      }
+    }
+    li {
+      &.selected {
+        a {
+          outline: 0; background: $color-light-blue; color: $color-white;
+        }
+      }
     }
   }
 }
@@ -396,6 +412,9 @@ main {
   input { height: 45px; }
   .error-text {
     display: none; position: absolute; top: 0; bottom: 0; left: 25px; right: 0; line-height: 45px; color: #e5231f; z-index: 10; font-size: 12px;
+    @media (max-width: 1200px) {
+      left: 15px; font-size: 10px;
+    }
     @media (max-width: 767px) {
       font-size: 11px;
     }
@@ -464,6 +483,9 @@ main {
     color: $color-button-text;
     .text {
       font-size: 12px; line-height: 18px; margin-bottom: 10px;
+      a {
+        display: inline-block; margin-bottom: 5px;
+      }
     }
     &.delivery-pay .content-help:before {
          content: '\e914'; font-size: 34px;
@@ -488,19 +510,15 @@ main {
   .info-help {
     color: $color-text-light; font-size: 12px; line-height: 18px;
   }
-  .call-help .text {
-    display: flex; flex-wrap: wrap; align-items: baseline;
-    a {
-      margin-bottom: 5px;
-    }
-  }
   .call-help .text a[href^="tel"]:nth-child(odd){
     border-right: 1px solid $color-button-text;
-    padding-right: 6px;
-    margin-right: 4px;
+    padding-right: 4px;
   }
   @media (max-width: 767px) {
     margin-bottom: 20px;
+    .help-item {
+      margin-bottom: 15px;
+    }
   }
 }
 /* END BLOCK-HELP STYLE */

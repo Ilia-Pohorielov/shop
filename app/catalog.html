@@ -49,7 +49,7 @@
     </div>
     <div class="bottom-header container-fluid">
         <div class="row">
-            <div class="logo col-lg-2">
+            <div class="logo">
                 <a href="#">
                     <img src="images/logo-black.png" alt="Логотип Bafimoda"/>
                 </a>
@@ -242,11 +242,11 @@
                                                 <div class="price-slider-input range-text">
                                                     <span>от</span>
                                                     <div class="form-group">
-                                                        <input type="text" class="form-control js_from" name="num">
+                                                        <input type="text" class="form-control js-from" id="input-with-keypress-0" name="num">
                                                     </div>
                                                     <span>до</span>
                                                     <div class="form-group">
-                                                        <input type="text" class="form-control js_to" name="num">
+                                                        <input type="text" class="form-control js-to" id="input-with-keypress-1" name="num">
                                                     </div>
                                                     <span>грн.</span>
                                                 </div>
@@ -315,30 +315,24 @@
                 </aside>
                 <div class="right-content col-lg-9 col-md-9 col-xs-12">
                     <div class="block-sort">
-                        <div class="sort-price">
-                            Сортировать:
-                            <div class="dropdown">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    по цене (от высокой к низкой)
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">по цене (от низкой к высокой)</a>
-                                </div>
+                        <form action="/" class="js_validate">
+                            <div class="form-group sort-price">
+                                <label class="control-label">Сортировать:</label>
+                                <select name="sort-price" class="selectpicker">
+                                    <option value="">по цене (от высокой к низкой)</option>
+                                    <option value="">по цене (от низкой к высокой)</option>
+                                </select>
                             </div>
-                        </div>
-                        <div class="sort-show">
-                            Показывать:
-                            <div class="dropdown">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    12
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">6</a>
-                                    <a class="dropdown-item" href="#">18</a>
-                                    <a class="dropdown-item" href="#">34</a>
-                                </div>
+                            <div class="form-group sort-show">
+                                <label class="control-label">Показывать:</label>
+                                <select name="sort-show" class="selectpicker">
+                                    <option value="">6</option>
+                                    <option value="">12</option>
+                                    <option value="">18</option>
+                                    <option value="">24</option>
+                                </select>
                             </div>
-                        </div>
+                        </form>
                         <span class="sort-info">Показано от 1 до 12 из 39</span>
                     </div>
                     <div class="collection">

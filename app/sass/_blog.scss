@@ -17,10 +17,13 @@
   color: $color-gray-text;
 }
 .popular-blogs {
-  margin-bottom: 31px;
+  margin-bottom: 31px; display: flex; flex-wrap: wrap;
 }
 .popular-blog {
   position: relative;
+  .image {
+    position: relative;
+  }
   .description {
     background: $color-white; color: $color-button-text; padding: 38px 47px 36px 36px; position: absolute; bottom: 30px; left: 47px;
     .title-blog {
@@ -35,6 +38,9 @@
         font-size: 19px;
       }
     }
+  }
+  @media (max-width: 1200px) {
+    order: 2;
   }
 }
 .popular-blog-list {
