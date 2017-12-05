@@ -67,11 +67,14 @@
   }
   textarea {
     max-width: 540px; height: 62px; padding-top: 15px;
+    @media (max-width: 991px) {
+      max-width: none;
+    }
   }
   span.control-label { vertical-align: top; }
   .control-label {
     display: inline-block; width: 18.7%;
-    @media (max-width: 767px) {
+    @media (max-width: 991px) {
       width: 100%;
     }
   }
@@ -88,6 +91,21 @@
       @media (max-width: 767px) {
         max-width: none;
       }
+    }
+    @media (max-width: 1271px) {
+      display: flex;
+      .bootstrap-select {
+        margin-right: 10px;
+      }
+    }
+    @media (max-width: 1100px) {
+      display: inline-block;
+      .bootstrap-select {
+        margin-right: 0;
+      }
+    }
+    @media (max-width: 991px) {
+      max-width: none;
     }
   }
   .exact-street-field {
@@ -126,10 +144,15 @@
       width: 100%; margin-bottom: 20px;
     }
   }
-  @media (max-width: 767px) {
+  @media (max-width: 991px) {
     .btn-primary {
       margin-left: 0;
     }
+    .bootstrap-select {
+      max-width: none;
+    }
+  }
+  @media (max-width: 767px) {
     .delivery-data-form {
       padding: 22px 15px 18px 15px;
     }
@@ -144,6 +167,9 @@
   }
   .input-group {
     display: inline-block; max-width: 376px; margin-bottom: 0; vertical-align: middle;
+    @media (max-width: 991px) {
+      max-width: none;
+    }
   }
   .personal-data-form {
     position: relative; color: $color-button-text;
@@ -170,6 +196,12 @@
       @media (max-width: 1533px) {
         position: relative;
         margin-bottom: 20px;
+      }
+      @media (max-width: 1100px) {
+        text-align: center;
+        .photo {
+          display: inline-block;
+        }
       }
     }
     .password-field, .phone-field {
@@ -340,6 +372,10 @@
       overflow-x: scroll;
       width: 1355px;
     }
+  }
+  @media (max-width: 991px) {
+    overflow-x: auto;
+    overflow-y: auto;
   }
   @media (max-width: 767px) {
     padding: 36px 0 36px 0; margin-bottom: 20px;

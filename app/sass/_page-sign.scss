@@ -21,6 +21,9 @@
   @media (max-width: 1090px) {
     width: 100%; margin-bottom: 20px;
   }
+  @media (max-width: 767px) {
+    padding: 34px 15px 0 15px;
+  }
 }
 .block-info-slider {
   padding: 0; position: relative; overflow: hidden; width: 56.2%;

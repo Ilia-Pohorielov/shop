@@ -24,6 +24,9 @@
           margin-bottom: 10px;
         }
       }
+      @media (max-width: 767px) {
+        padding: 37px 15px 32px 15px;
+      }
     }
     &:after {
       content: ''; display: block; position: absolute; left: 0; right: 0; bottom: 0; margin: 0 -5000px; padding: 0 5000px; height: 1px; background: #dddddd;
@@ -60,5 +63,16 @@
   }
   @media (max-width: 991px) {
     margin-bottom: 10px;
+  }
+  @media (max-width: 450px) {
+    .payment-content, .payment-content.international-transfer {
+      padding: 21px 10px 8px 10px;
+      &:before {
+        position: static; margin-bottom: 10px;
+      }
+      .title-help {
+        position: absolute; top: 45px; left: 90px;
+      }
+    }
   }
 }

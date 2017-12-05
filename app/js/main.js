@@ -129,6 +129,9 @@ $(document).ready(function () {
     $(".js-scroll").mCustomScrollbar({
         mouseWheel:{ scrollAmount: 200 }
     });
+    if ($(window).width() > 991) {
+        $('.js-scroll-table').mCustomScrollbar();
+    }
     /* ========================================same validate======================================*/
     $('.js_validate [type="submit"]').on("click", function () {
         $(this).siblings('.form-group').find('input').attr('placeholder', '');
@@ -422,4 +425,5 @@ $(document).ready(function () {
        return false;
     });
     $(".js-phone-mask").mask("(999) 999-99-99");
+
 });

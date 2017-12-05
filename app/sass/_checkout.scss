@@ -64,6 +64,9 @@
         }
       }
     }
+    @media (max-width: 991px) {
+      max-width: none;
+    }
   }
   .personal-information {
     .note {
@@ -72,7 +75,7 @@
           width: 20%;
         }
       }
-      @media (max-width: 767px) {
+      @media (max-width: 991px) {
         .control-label {
           width: 100%;
         }
@@ -83,7 +86,7 @@
     }
     .control-label {
       width: 15.6%;
-      @media (max-width: 767px) {
+      @media (max-width: 991px) {
         width: 100%;
       }
     }
@@ -114,7 +117,7 @@
   }
   .street-field, .bootstrap-select {
     max-width: 590px;
-    @media (max-width: 810px) {
+    @media (max-width: 991px) {
       max-width: none;
     }
   }
@@ -124,7 +127,7 @@
     }
     input {
       max-width: 443px;
-      @media (max-width: 767px) {
+      @media (max-width: 991px) {
         max-width: none;
       }
     }
@@ -142,6 +145,9 @@
   }
   textarea {
     max-width: 590px;
+    @media (max-width: 991px) {
+      max-width: none;
+    }
   }
 }
 .right-sidebar {

@@ -8,6 +8,9 @@
 }
 .left-sidebar {
   padding-right: 10px; margin-bottom: 20px;
+  @media (max-width: 767px) {
+    padding: 0 15px;
+  }
 }
 .main-panel {
   > .panel-heading {
@@ -206,6 +209,9 @@
   border-top: 1px solid #dddddd;
   .wrap {
     padding: 53px 7px 0; position: relative; max-width: 1545px; margin: 0 auto 73px;
+    @media (max-width: 767px) {
+      padding: 20px 15px 0; margin: 0 auto 20px;
+    }
   }
   .title-page {
     font-size: 25px;

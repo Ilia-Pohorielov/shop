@@ -1,5 +1,8 @@
 .content-product {
   margin-top: 36px; padding-bottom: 70px; border-bottom: 1px solid $color-border; margin-bottom: 68px;
+  @media (max-width: 767px) {
+    margin-bottom: 30px; padding-bottom: 20px;
+  }
 }
 .product-slider {
   display: flex; padding: 0; flex-direction: column; align-items: center;
@@ -43,23 +46,9 @@
       height: auto!important;
     }
   }
-  @media (max-width: 1200px) {
-    padding-top: 105px;
-  }
-  @media (max-width: 495px) {
-    padding-top: 155px;
-  }
-  @media (max-width: 375px) {
-    padding-top: 205px;
-  }
 }
 .product-information {
   padding: 0 0 0 10px; position: static;
-  .top-title {
-    @media (max-width: 1200px) {
-      position: absolute; top: 35px;
-    }
-  }
   .title-page {
     margin-bottom: 33px;
   }
@@ -76,6 +65,15 @@
     }
     .status-presence {
       font-size: 15px; color: $color-green-light;
+    }
+    @media (max-width: 500px) {
+      padding: 10px 0;
+      .retail {
+        margin-bottom: 10px;
+      }
+      .wholesale {
+        margin-bottom: 10px;
+      }
     }
   }
   .block-button {
@@ -105,7 +103,13 @@
       &:before {
         right: 0; left: auto;
       }
+      @media (max-width: 767px) {
+        margin-top: 15px;
+      }
     }
+  }
+  @media (max-width: 767px) {
+    padding: 0;
   }
   @media (max-width: 510px) {
     .top-info {
@@ -160,6 +164,9 @@
         margin-bottom: 6px;
       }
     }
+  }
+  @media (max-width: 1200px) {
+    max-width: 700px; margin: 0 auto 15px auto;
   }
 }
 .title-info {
@@ -244,6 +251,9 @@
       }
     }
   }
+  @media (max-width: 767px) {
+    margin-bottom: 20px;
+  }
 }
 .reviews-item {
   background: $color-white; border: 1px solid $color-border; margin-bottom: 20px; position: relative; padding: 21px 20px 25px 111px;
@@ -271,6 +281,15 @@
   .text {
     font-size: 14px; color: $color-button-text; line-height: 22px;
   }
+  @media (max-width: 500px) {
+    padding: 20px 10px;
+    .avatar-user {
+      position: static; left: 0; margin-bottom: 10px;
+    }
+    .top {
+      position: absolute; top: 45px; left: 110px;
+    }
+  }
 }
 .pagination {
   font-size: 0; margin: 6px 0 0;
@@ -291,9 +310,12 @@
   }
   li {
     margin-right: 6px; float: none; display: inline-block;
-    a {
-      width: 36px; height: 36px; background: $color-white; text-align: center; line-height: 36px; color: $color-black; border-radius: 0; font-size: 14px; padding: 0; transition: all .3s ease;
+    span, a {
+      display:block; width: 36px; height: 36px; background: $color-white; text-align: center; line-height: 36px; color: $color-black; border-radius: 0; font-size: 14px; padding: 0; transition: all .3s ease;
       &:hover, &:focus, &:active {
+        background: $color-button-text; color: rgba($color-white, .7);
+      }
+      &.active {
         background: $color-button-text; color: rgba($color-white, .7);
       }
       @media (max-width: 400px) {
@@ -350,5 +372,10 @@
   }
   .count {
     width: 60px; height: 39px; text-align: center; line-height: 39px; border-top: 1px solid $color-border; border-bottom: 1px solid $color-border;
+  }
+}
+@media (max-width: 1200px) {
+  .size-amount, .block-button {
+    max-width: 700px; margin: 0 auto 10px auto;
   }
 }
