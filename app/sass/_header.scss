@@ -1,5 +1,5 @@
 header {
-  position: absolute; top: 0; left: 0; right: 0; z-index: 10;
+  position: absolute; top: 0; left: 0; right: 0; z-index: 50;
   @media (max-width: 515px) {
     .top-header {
       position: absolute; left: 0; right: 0; bottom: -47px; z-index: 10; display: none;
@@ -52,9 +52,12 @@ header {
     }
   }
   .feedback {
-    margin-left: 39px; position: relative; border-bottom: 1px dashed $color-light-blue; line-height: 19px; cursor: pointer;
+    margin-left: 39px; position: relative; border-bottom: 1px dashed $color-light-blue; line-height: 19px; cursor: pointer; transition: all .3s ease;
     &:before {
       content: '\e94c'; display: block;  position: absolute; left: -26px ; bottom: 0; font-size: 17px; font-family: "icomoon"; color: $color-blue-text;
+    }
+    &:hover, &:focus, &:active {
+      color: $color-blue-text;
     }
   }
   @media (max-width: 1332px) {
@@ -235,7 +238,7 @@ header {
         }
       }
       .dropdown-menu {
-        width: auto; border: none; top: 94%; right: 0; margin: 0; overflow: hidden; max-height: 367px; max-width: 100%;
+        width: auto; border: none; top: 94%; right: 0; margin: 0; overflow: hidden; max-height: 355px; max-width: 100%;
         .dropdown-item {
           font-size: 15px; font-weight: normal; text-transform: none; cursor: pointer;
           &:hover, &:focus, &:active {

@@ -29,7 +29,7 @@
     }
   }
   .title-lookbook {
-    position: absolute; left: 0; right: 0; z-index: 9; top: 14.7%; text-align: center;
+    position: absolute; left: 0; right: 0; z-index: 9; top: 13.8%; text-align: center;
     .sub-title {
       font-size: 20px; color: $color-white; margin-bottom: 38px; display: inline-block; background: $color-button-text; padding: 7px;
     }
@@ -38,7 +38,7 @@
     }
   }
   .title {
-     mix-blend-mode: difference; z-index: 10; top: 16.6%; line-height: inherit;
+     mix-blend-mode: difference; z-index: 10; top: 15.7%; line-height: inherit;
      p {
        font-size: 75px; font-weight: bold; font-family: "Gotham", "Roboto", "Arial", sans-serif;
      }
@@ -49,4 +49,10 @@
       }
     }
    }
+  .wrapper {
+    clear: both;
+  }
+  .transition-blogs {
+    margin: 36px auto 67px auto; max-width: 1302px;
+  }
 }
