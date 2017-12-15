@@ -172,13 +172,15 @@
                 <div class="form-group">
                     <label class="control-label">Имя<sup>*</sup></label>
                     <div class="input-group">
-                        <input name="name" class="form-control" value="" type="text">
+                        <input name="name" class="form-control" value="" type="text" required>
+                        <span class="error-text">Поле "Имя" не может быть пустым</span>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="control-label">Фамилия<sup>*</sup></label>
                     <div class="input-group">
-                        <input name="last-name" class="form-control" value="" type="text">
+                        <input name="last-name" class="form-control" value="" type="text" required>
+                        <span class="error-text">Поле "Фамилия" не может быть пустым</span>
                     </div>
                 </div>
                 <div class="form-group">
@@ -299,8 +301,8 @@
     </div>
     <div class="bottom-footer wrapper container-fluid">
         <div class="row">
-            <div class="copyright col-md-6 col-sm-6 col-xs-12">© Bafimoda, 2017. Все права защищены.</div>
-            <div class="developers col-md-6 col-sm-6 col-xs-12">Разработка и поддержка сайта - <a href="#">Artjoker</a></div>
+            <div class="copyright col-md-6 col-sm-6 col-xs-6">© Bafimoda, 2017. Все права защищены.</div>
+            <div class="developers col-md-6 col-sm-6 col-xs-6">Разработка и поддержка сайта - <a href="#" target="_blank">Artjoker</a></div>
         </div>
     </div>
 </footer>

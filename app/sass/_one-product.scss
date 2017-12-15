@@ -245,6 +245,9 @@
         }
       }
     }
+    @media (max-width: 767px) {
+      text-align: left;
+    }
     @media (max-width: 450px) {
       li {
         margin-bottom: 15px;

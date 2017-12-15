@@ -94,12 +94,15 @@
     display: flex; align-items: center; width: 100%;
   }
   .form-group {
-    display: flex; margin-bottom: 0;
+    display: flex; margin-bottom: 0; width: auto;
     .control-label {
       font-size: 14px; margin-right: 7px;
     }
     .bootstrap-select {
       width: 266px!important; padding: 0; height: 39px; border: none; outline: 0;
+      .btn-default.dropdown-toggle .filter-option {
+        line-height: 39px;
+      }
       .btn-default {
         color: $color-white; background: $color-button-text; line-height: 39px; text-transform: none; font-size: 14px; font-weight: normal; padding: 0 19px 0 0;
         span {

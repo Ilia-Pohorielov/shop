@@ -204,14 +204,14 @@
         }
       }
     }
-    .password-field, .phone-field {
+    .password-field {
       max-width: 230px;
     }
     .phone-field {
-      position: relative;
+      position: relative; font-size: 0;
       .input-group-btn {
-        position: absolute; left: 0; top: 0; z-index: 10; width: 58px; height: 45px; line-height: 45px; text-align: center; background: #fafafa; padding: 0;
-        border: 1px solid $color-gray;
+        display: inline-block; z-index: 10; width: 58px; height: 45px; line-height: 45px; text-align: center; background: #fafafa; padding: 0;
+        border: 1px solid $color-gray; border-right: none; vertical-align: bottom;
         .btn-default {
           width: 100%; padding: 0 9px; color: $color-button-text; font-size: 12px;
           &:before { content: none; }
@@ -226,7 +226,10 @@
           min-width: auto; padding: 0;
         }
       }
-      input { padding-left: 69px; }
+      input { display: inline-block; max-width: 172px; float: none; }
+      .error-text {
+        position: relative; left: 0; line-height: 20px;
+      }
     }
   }
   .pwd-link {

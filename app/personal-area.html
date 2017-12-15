@@ -238,15 +238,10 @@
                                     <div class="form-group">
                                         <label class="control-label" for="usertel">Телефон<sup>*</sup></label>
                                         <div class="input-group phone-field">
-                                            <div class="input-group-btn dropdown">
-                                                <button type="button" class="btn btn-default dropdown-toggle"
-                                                        data-toggle="dropdown">
-                                                    +38 <span class="caret"></span>
-                                                </button>
-                                                <ul class="dropdown-menu pull-right">
-                                                    <li><a href="#">+7</a></li>
-                                                </ul>
-                                            </div>
+                                            <select name="code-phone" class="selectpicker">
+                                                <option value="">+38</option>
+                                                <option value="">+7</option>
+                                            </select>
                                             <input type="tel" class="form-control js-phone-mask" name="profile[phone]"
                                                    data-validate="phone" value="" required placeholder="(050) 123 45 67"
                                                    id="usertel">
@@ -852,13 +847,16 @@
                 <div id="personal-subscribe" class="tab-pane fade personal-subscribe">
                     <div class="personal-title">Подписка</div>
                     <div class="subscribe-form">
-                        <form action="/" class="js-validate">
+                        <form action="/" class="js_validate">
                             <div class="form-group">
                                 <label for="subscribe-email" class="control-label">Подписаться на рассылку</label>
-                                <input type="text" name="subscribe" value="" id="subscribe-email">
+                                <div class="input-group">
+                                    <input type="email" name="subscribe" value="" id="subscribe-email" required>
+                                    <span class="error-text">Некорректный формат Email</span>
+                                </div>
                             </div>
                             <span class="info">После подписки вам будет выслано письмо с подтверждением.</span>
-                            <button class="btn btn-primary">Подписаться</button>
+                            <button class="btn btn-primary" type="submit">Подписаться</button>
                         </form>
                     </div>
                 </div>
@@ -933,8 +931,8 @@
     </div>
     <div class="bottom-footer wrapper container-fluid">
         <div class="row">
-            <div class="copyright col-md-6 col-sm-6 col-xs-12">© Bafimoda, 2017. Все права защищены.</div>
-            <div class="developers col-md-6 col-sm-6 col-xs-12">Разработка и поддержка сайта - <a href="#">Artjoker</a></div>
+            <div class="copyright col-md-6 col-sm-6 col-xs-6">© Bafimoda, 2017. Все права защищены.</div>
+            <div class="developers col-md-6 col-sm-6 col-xs-6">Разработка и поддержка сайта - <a href="#" target="_blank">Artjoker</a></div>
         </div>
     </div>
 </footer>

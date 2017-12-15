@@ -19,7 +19,7 @@
           width: 88%;
         }
         .input-group-btn {
-          height: 45px; padding: 0; max-width: 58px; width: 58px; border-right: none;
+          height: 45px; padding: 0; max-width: 58px; width: 58px; border-right: none; display: block;
           .btn-default {
             font-size: 14px; color: $color-button-text; width: 100%; font-weight: normal; padding: 0 9px; text-align: left;
             &:hover, &:focus, &:active {
@@ -67,6 +67,13 @@
     }
   }
 }
+.payment-page {
+  @media (max-width: 1028px) {
+    .block-info .row .feedback-information {
+      top: auto;
+    }
+  }
+}
 .block-info {
   max-width: 1270px; margin: 0 auto 69px auto; position: relative;
   .image-bg-block {
@@ -106,9 +113,8 @@
     }
     .contact {
       padding-bottom: 17px; position: relative; margin-bottom: 27px;
-
       ul {
-        display: flex; flex-wrap: wrap; font-size: 14px;
+        display: flex; flex-wrap: wrap; -webkit-flex-wrap: wrap; font-size: 14px;
         li {
           width: 34%; margin-bottom: 20px;
           &.contact-name {
@@ -148,7 +154,7 @@
       padding: 0 0 75%;
     }
   }
-  @media (max-width: 925px) {
+  @media (max-width: 1028px) {
     .image-bg-block {
       display: none;
     }
